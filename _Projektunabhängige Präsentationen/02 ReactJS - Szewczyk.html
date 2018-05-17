@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>react.js</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# react.js
+
+---
+
+# Agenda
+
+<hr>
+1. Was ist react.js?
+
+2. write `hello world`
+
+3. Square, Board, Game Komponenten
+
+4. Daten über Props übergeben
+
+5. Keys
+
+---
+      
+# Was ist react.js?
+- eine deklarative, effiziente und flexible Jaca-Scrips Biblothek zum Erstellen von Benutzeroberflächen
+- Komponenten teilen react mit, was man rendern möchte 
+      - react aktualisiert und rendert dann effizient die richtigen Komponenten, wenn sich die daten ändern
+      
+```python
+  return React.createElement('div', {className: 'shopping-list'},
+  React.createElement('h1', /* ... h1 children ... */),
+  React.createElement('ul', /* ... ul children ... */)
+);
+```
+---
+      
+# write `hello world`
+
+
+```python
+<body>
+<div id="root"></div>
+<script src="https://unpkg.com/react@16.3.0/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@16.3.0/umd/react-dom.development.js"></script>
+<script type="text/javascript">
+const rootElement = document.getElementById(
+  'root',
+)
+const element = React.createElement('div', {
+  className: 'container',
+  children: 'Hello World',
+})
+console.log(element)
+ReactDOM.render(element, rootElement)
+</script>
+</body>
+
+```
+---
+      
+# Square, Board, Game Komponenten  
+- Square rendert eine einzelne <button> 
+- Board rendert 9 Quadrate
+- Game rendert ein Board mit einigen Platzhaltern, die amn später ausfüllen kann
+- keine Komponente ist an dieser Stelle interaktiv
+      
+---   
+      
+# Daten über Props übergeben
+- Daten werden von der Board-Komponenten an die Square_komponente übergeben
+- in `Board` renderSquare Methode ändern, um eine value Requisite an das Quadrat zu übergeben
+      
+```python
+class Board extends React.Component {
+  renderSquare(i) {
+    return <Square value={i} />;
+  }      
+```
+---
+   
+# Keys
+- Wenn man eine Liste von Elementen rendern möchte, speichert React immer Informationen zu jedem Element in der Liste
+- Wenn man eine Komponente mit einem Status rendert, wird der Status gespeichert
+      - unabhängig davon wird bei einer implementierung ein Verweis auf die systemeigenen Backing-Ansichten.
+- key ist eine spezielle Eigenschaft die von React.js reserviert ist
+- React verwendet den Schlüssel automatisch, um zu entschieden, welche Kinder Aktualisiert werden sollen
+      - Wenn eine Liste neu gerendert wird, nimmt React jedes Element in der neuen Version
+      - je nachdem ob etwas gelöscht wurde oder hinzugefügt reagier React.js mit 
+---      
+      
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>

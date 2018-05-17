@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ES6/ES2015</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# ES6/ES2015
+
+---
+
+# Agenda
+
+
+1. Pfeile
+2. Klassen
+3. Variablen
+4. Const und let
+5. Mehrzeilige Strings
+6. Array
+7. Proxies
+8. Symbole
+
+
+---
+# Pfeile
+- Unterstutzen sowohl Anweisungsblockkörper als auch Ausdruckskörper, die den Wert des Ausdrucks zurückgeben.
+- Pfeilfunktionen besitzen keine eigenen this 
+- haben keine Prototypen
+- können nicht für Konstruktoren verwendet werden
+- sollten nicht als Objektmethoden verwendet werden
+
+```python
+var output = [];
+for(var i=0; i<;input.length; i++) {
+    output[i] = input[i] * 2;
+}
+```
+```python
+var output = input.map(function(x) {
+    return x * 2;
+});
+```
+
+```python
+var output = input.map((x)=>x*2);
+```
+
+- verkürzt Funktion erheblich ohne das eigentliche Wort 'function'
+
+
+---
+# Klassen
+- einfacher gegenüber dem protoypbasierten OO-Muster
+- mit einer einzigen praktischen deklarativen Form werden Klassen einfacher zu verwenden und Interoperabilität gefördert
+- unterstützen prototypbasierte Vererbung, Superaufrufe Instanz- und statische Methoden und Konstruktoren
+---
+# Variablen
+- 'var' Schlüsselwort
+- variieren immer
+- es gibt keine Möglichkeit eine echte konstante in JS zu erstellen
+- Überschreibbarer Setter der Eigenschaft, sodass er extern nicht gesetzt werden kann, aber erfordert ein komplettes Objekt anstelle der einfachen Variablen 
+
+```python
+function badCode() {
+    if(foo) {
+        var x = 5;
+    }
+    if(bar) {
+        console.log(x);
+    }
+}
+```
+- 'var x = 5; ' ist eine globale variable, in anderen Sprachen wie Java oder C# nicht
+
+---
+# Const und let
+- 'const' macht eine echte Konstannte
+- wenn man versucht eine Konstannte zu setzen, erhält man ein fehler
+- 'let' ist genau wie 'var' aber besser
+	- wird im Block benutzt und global nicht möglich
+- 'let' und 'const' sind ein vollständiger Eersatz für 'var' 
+- Moderne Browser verwenden keine 'var' mehr
+
+```python
+function goodCode() {
+    if(foo) {
+        let x = 5;
+    }
+    if(bar) {
+        console.log(x); //error
+    }
+}
+```
+---
+# Mehrzeilige Strings
+```python
+var qq = "this is a very long"
+  + " piece of text that goes over several lines"
+  + " and would require silly hacks";
+
+var bq = `this is a very long
+    piece of text that goes over several lines
+    and would require silly hacks`;
+```
+
+
+- hier sieht man genau dass man einfach einen Zeilenumbruch ohne Probleme machen kann. 
+---
+# Array
+- angenommen man möchte mit jedem Ellement aus dem Array was tun..
+- 'for each' führt den Rückruf für jedes Element des Array durch
+- 'map' tut das gleiche, jedoch speichert die Ergebnisse jedes Rückrufs in einem neuen Array.
+
+- Arrays können mit der Funktion 'reduce' auf einen einzigen Wert redizuiert werden
+	- 'reduce' ist sehr leistungsfähig 
+	- wird verwendet um viele Dinge wie das Summieren eines Arrays zu tun
+```python
+var values = [1,2,3,4,5,6,7,8,9,10];
+values.forEach((x)=>console.log(x));
+var doubled = values.map((x) => x*2);
+```
+	
+---
+# Proxies
+- ermöglichen die Erstellung von Objekte mit allen verfügbaren Verhaltensweisen für Host-Objekte
+- Kann zum Abfragen, Objektvirtualisierung, Protokoliereun  usw. verwendet werden
+---
+# module
+- können erstellt werden, um Code zwischen Dateien zu exportieren und zu importieren
+
+```python
+<script src="export.js"></script>
+<script type="module" src="import.js"></script>
+```
+
+
+```python
+let func = a => a + a;
+let obj = {};
+let x = 0;
+
+export { func, obj, x };
+```
+
+
+```python
+import { func, obj, x } from './export.js';
+
+console.log(func(3), obj, x);
+```
+---
+# Sysmbole
+- ermöglichen die Zugriffssteuerung für den Objektstatus
+- sind neue primitiven Typen
+- sind einzigartig, aber nicht privat
+
+---
+# Quelle
+* https://github.com/mbeaudru/modern-js-cheatsheet
+* https://github.com/lukehoban/es6features
+* https://github.com/taniarascia/es6
+* https://www.taniarascia.com/es6-syntax-and-feature-overview/
+* https://scotch.io/bar-talk/five-things-you-can-use-in-es6-today
+* https://zellwk.com/blog/es6/
+
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,239 @@
+		<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+		body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+		class: center, middle
+		# ReactJS
+		
+		---
+		# Agenda I 
+		<hr>
+		1. Was ist ReactJS?
+		
+		2. ReactJS Features
+			
+			2.1. Deklarativ
+			
+			2.2. Virtuelles DOM
+			
+			2.3. Event Handling
+			
+			2.4. JSX
+			
+			2.5. Komponentenbasiert
+			
+		---
+			
+		# Agenda II
+		
+		3. ReactJS und AngularJS (soll eine 3. sein, remark.js macht eine 1 raus...)
+		
+			3.1. Gemeinsamkeiten
+			
+			3.2. Wesentliche Unterschiede
+				
+				3.2.1. DOM Manipulation
+				
+				3.2.2. Erweiterbarkeit
+				
+				3.2.3. Einfachheit
+				
+				3.2.4. Entwicklungszeit
+			
+		---
+		
+		# Was ist ReactJS?
+		<hr>
+		
+		- Komponentenbasierte Javascript Bibliothek
+		
+			- Komponenten bestehen aus HTML und Javascript (ab und zu auch CSS)
+		
+		- Hauptsächlich für 'Single Page Applications' genutzt
+		
+		- Im Model-View-Controller-Muster, ist es die View 
+		
+		- Ganze View wird in kleinere Teile gegliedert, welche am Ende das Große und Ganze abbilden
+		
+		- Es existiert für jedes DOM-Objekt ein 'Virtuelles DOM'-Objekt (später mehr)
+		
+		---
+		
+		# Deklarativ
+		<hr>
+		
+		- Benutzeroberflächen sehr interaktiv und dynamisch
+		
+		- Man kann verschiedene Ansichten für verschiedene Status erstellen
+		
+		- React aktualisiert und rendert nur die Komponenten, wo Daten geändert werden.
+		
+		- ReactJS Code liest sich (wenn man es kennt) einfach und lässt sich genauso einfach Debuggen
+		
+		---
+
+		
+		#Virtuelles DOM
+		<hr>
+		
+		- Ist eine Repräsentation eines DOM-Objekts
+		
+		- Erstellt eine virtuelle Kopie des originalen DOM-Objekts
+		
+		- Einseitige Datenanbindung (zeichnet also nichts auf den Bildschirm)
+		
+		- Daher ist es <b>schneller</b> als die Aktualisierung des DOM-Objekts
+		
+		---
+		
+		#Event Handling
+		<hr>
+		
+		- Eigenes Ereignissystem welches zu 100%, mit dem des W3C-Objektmodells kompatibel ist
+		
+		- Browser native Events werden durch Instanzen in Synthetic Events verpackt
+		
+		- Dies ermöglicht ein Cross-Browser-Interface für Events
+		
+			- D.h. man muss nicht mehrere verschiedene Events abarbeiten um dieselben Events anzusprechen etc. kümmern, wenn man für mehrere Browser entwickeln möchte.
+			
+		- Das ReactJS Event-System reduziert den Speicher Overhead durch Event-Delegation (Teilung von Ereignissen)
+		
+		---
+		
+		# JSX
+		<hr>
+		
+		- JSX ist eine Markup-Syntax, welche HTML sehr ähnlich ist.
+		
+			- Etwa wie eine Kombination aus XML und Javascript
+			
+		<br>
+		- Vereinfacht das Schreiben von React Komponenten
+		
+			- Da HTML-Strings, dem HTML der in der Website eingefügten, fast gleich sind
+			
+		---
+		
+		# Komponentenbasiert
+		<hr>
+		
+		- In React werden alle Bestandteile der Webseite in kleine Komponenten unterteilt
+		
+		- Jeder Teil der UI der Applikation wird in eigenständige Module gewickelt und dann als Komponente bezeichnet.
+		
+		- Logik in Javascript ermöglicht das einfache Leiten von Daten, ohne den DOM-Status zu ändern.
+		
+		- Komponenten definieren die UI und Interaktion in der Anwendung
+		
+		---
+		class: center, middle
+		
+		# ReactJS und AngularJS
+	
+		---
+		
+		# Gemeinsamkeiten
+		<hr>
+		<h3>Javascript:</h3>
+		In beiden Fällen ist Javascript fundamental.
+		
+		<h3>CSS3:</h3>
+		Ohne CSS kann man keinen guten Frontend-Code erstellen. CSS3 ist also auch essentiell
+		
+		<h3>HTML5:</h3>
+		Noch Fragen? HTML5 ist also auch ein Framework welches beide nutzen.
+		
+		---
+		class: center, middle
+		# Wesentliche Unterschiede
+		
+		---
+		
+		#Dom Manipulation
+		<hr>
+		
+		<b> Angular: </b>
+		
+		Aktualisiert das echte DOM direkt. Es hat eine bidirektionale Datenbindung, die den MVC aktualisiert.
+		
+		<br>
+		
+		<b> ReactJS: </b>
+		
+		Aktualisiert nicht direkt das reale DOM, sondern das virtuelle DOM. Es führt unidirektionale Datenbindung aus, 
+		die die Ansicht aktualisieren. Bei React dreht sich alles um Komponenten.
+		
+		---
+		
+		#Erweiterbarkeit
+		<hr>
+		
+		<b> Angular: </b>
+		
+		Leistungsstarkes Call Level Interface und sein Design machen es erweiterbar.
+		
+		<br>
+		
+		<b> ReactJS: </b>
+		
+		 Effizienter Workflow ist sehr wichtig, damit Code einfach getestet und eingesetzt werden 
+		 kann und somit besser erweiterbarer ist als Angular.
+		
+		---
+		
+		# Einfachheit
+		<hr>
+		
+		<b> Angular: </b>
+		
+		AngularJS ist recht einfach zu verstehen. Seine Komplexität verursacht manchmal Verwirrung.
+		
+		<br>
+		
+		<b> ReactJS: </b>
+		
+		React ist keineswegs einfach und es dauert eine ganze Weile, ein Projekt aufzusetzen.
+		
+		---
+		
+		# Entwicklungszeit
+		<hr>
+		
+		<b> Angular: </b>
+		
+		Obwohl es sehr wettbewerbsfähig ist, 
+		setzt die Menge an unnötiger Syntax, um einfache Dinge zu tun, 
+		Angular auf die letzte Stelle.
+		
+		<br>
+		
+		<b> ReactJS: </b>
+		
+		Das Einrichten dauert länger, aber dann kann man mit der Erstellung einer Anwendung 
+		beginnen und es ist relativ einfach, neue Funktionen hinzuzufügen.
+
+		
+		</textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>

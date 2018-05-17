@@ -1,8 +1,0 @@
-Präsentation 1 & 2 Szewczyk:
-https://github.com/akilegna/RichClient.git
-
-Präsentation 1 & 2 Payne:
-https://github.com/UniPayne/Rich-Client-Application
-
-Präsentation 3 & 4 Szewczyk & Payne: 
-https://github.com/akilegna/RichClient.git 
