@@ -23,12 +23,20 @@ Dieses Dokument soll der Reihenfolge der zu implementieren Komponenten dienen.
 Tabellen:
 
 	Spieler:
+		ID
+		(Spielernummer)
+		Nachname
+		Name
+		Geburtstag
+		Sekundär_TeamID
 
 	Team:
-
-	Liga:
+		
+	
 
 	Statistik:
+	
+	Pitcher Statistik:
 
 
 
