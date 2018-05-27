@@ -31,12 +31,32 @@ Tabellen:
 		Sekundär_TeamID
 
 	Team:
-		
+		ID
+		Name
+		Ort
+		Liga
+		Sekundär_SpielerID
 	
+	Liga:
+		ID
+		
+		Sekundär_SpielID
+	
+	Spiel:
+		ID
+		
+		
 
-	Statistik:
+	Offensiv Statistik:
+			
+		Sekundär_SpielerID
+		
+	Offensiv Statistik:
+	
+		Sekundär_SpielerID
 	
 	Pitcher Statistik:
-
+		
+		Sekundär_SpielerID
 
 
