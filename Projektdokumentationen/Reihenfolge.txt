@@ -39,24 +39,45 @@ Tabellen:
 	
 	Liga:
 		ID
-		
+		Name
+		Sekundär_TeamID
 		Sekundär_SpielID
 	
 	Spiel:
 		ID
-		
-		
-
-	Offensiv Statistik:
-			
+		Sekundär_LigaID
+		Sekundär_TeamID
 		Sekundär_SpielerID
 		
+	Defensiv Statistik:
+	 
+		
 	Offensiv Statistik:
-	
+		G (Games)
+		AVG (Average)
+		OBP (On Base %)
+		SLG (Slugging)
+		AB (At Bats)
+		R (Runs)
+		H (Hits)
+		RBi (Runs Batted In)
+		HR (Home Runs)
+		BB (Base on Balls)
+		K (Strikeouts)
+		SB (Stolen Bases)
 		Sekundär_SpielerID
 	
 	Pitcher Statistik:
-		
+		IP (Innings Pitch)
+		H (Hits)
+		R ( Runs)
+		ER(Earned Runs)
+		BB (Base on Balls)
+		K ( Strikeouts)
+		ERA (Earned Run Average)
+		W (Wins)
+		L (Losses)
+		SV (Saves)		
 		Sekundär_SpielerID
 
 
