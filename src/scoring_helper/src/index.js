@@ -1,8 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import './CSS/index.css';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+
+
+class Wilkommen extends React.Component {
+  render(){
+    return <h1>Wilkommen beim Scoring Helper!</h1>;
+    
+  }
+}
+
+
+ReactDOM.render(<Wilkommen/>, document.getElementById('root'));
