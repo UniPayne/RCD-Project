@@ -4,67 +4,67 @@ Scoring Helper
 
 Inhalt
 
-1 Einführung        2
+1 Einführung
 
-1.1 Beschreibung        2
+1.1 Beschreibung
 
-1.2 Ziele        2
+1.2 Ziele
 
-2 Anforderungen        2
+2 Anforderungen
 
-2.1 Funktionale Anforderungen        2
+2.1 Funktionale Anforderungen
 
-2.1.1 Use-Case Diagramm        2
+2.1.1 Use-Case Diagramm
 
-2.1.2 Funktionale Anforderungen        2
+2.1.2 Funktionale Anforderungen
 
-2.2 Nicht-funktionale Anforderungen        3
+2.2 Nicht-funktionale Anforderungen
 
-2.2.1 Rahmenbedingungen        3
+2.2.1 Rahmenbedingungen
 
-2.2.2 Betriebsbedingungen        3
+2.2.2 Betriebsbedingungen
 
-2.2.3 Qualitätsmerkmale        3
+2.2.3 Qualitätsmerkmale
 
-2.3 Graphische Benutzerschnittstelle        3
+2.3 Graphische Benutzerschnittstelle
 
-2.4 Anforderungen im Detail        4
+2.4 Anforderungen im Detail
 
-MoSCoW – Priorisierung        4
+MoSCoW – Priorisierung
 
-Must Have        4
+Must Have
 
-Should have        4
+Should have
 
-Could have        4
+Could have
 
-Won&#39;t have        4
+Won&#39;t have
 
-3 Technische Beschreibung        4
+3 Technische Beschreibung
 
-3.1 Systemübersicht        4
+3.1 Systemübersicht
 
-3.2 Softwarearchitektur        5
+3.2 Softwarearchitektur
 
-3.3 Datenmodell        5
+3.3 Datenmodell
 
-3.4 Abläufe        5
+3.4 Abläufe
 
-3.5 Entwurf        5
+3.5 Entwurf
 
-4 Projektorganisation        5
+4 Projektorganisation
 
-4.1 Annahmen        5
+4.1 Annahmen
 
-4.2 Verantwortlichkeiten        5
+4.2 Verantwortlichkeiten
 
-4.3 Grober Projektplan        6
+4.3 Grober Projektplan
 
-5 Anhänge        6
+5 Anhänge
 
-5.1 Glossar        6
+5.1 Glossar
 
-5.2 Referenzen        6
+5.2 Referenzen
 
 
 
@@ -72,19 +72,11 @@ Won&#39;t have        4
 
 ## 1.1 Beschreibung
 
-Im Rahmen der Veranstaltung „Rich Client Development&quot;, im sechsten Semester der FH-Bielefeld, soll eine Rich Client Applikation entwickelt werden. In diesem Fall wurde sich für den „Scoring-Helper&quot; entschieden. Der Scoring-Helper soll eine Webanwendung werden, welche das Scoren
-
-# 1
-, digitalisiert. Zudem soll sie den Ablauf und die Handhabung vereinfachen. Ziel ist es, dass die Statistikführer ganz einfach den Ablauf und das Spielgeschehen, digital notieren können, sodass am Ende Kosten gespart und die Umwelt geschont werden kann.
+Im Rahmen der Veranstaltung „Rich Client Development&quot;, im sechsten Semester der FH-Bielefeld, soll eine Rich Client Applikation entwickelt werden. In diesem Fall wurde sich für den „Scoring-Helper&quot; entschieden. Der Scoring-Helper soll eine Webanwendung werden, welche das Scoren(1), digitalisiert. Zudem soll sie den Ablauf und die Handhabung vereinfachen. Ziel ist es, dass die Statistikführer ganz einfach den Ablauf und das Spielgeschehen, digital notieren können, sodass am Ende Kosten gespart und die Umwelt geschont werden kann.
 
 ##  1.2 Ziele
 
-Ein Teilnehmer des Entwickler-Teams, spielt in seiner Freizeit Baseball und dieser Person ist aufgefallen, dass die Statistiken immer noch auf dem Papier niedergeschrieben werden. Der Anwendungsbereich beschränkt sich erst auf die Baseballvereine in Deutschland. Da es sich beim Scoren aber um eine „eigene Fachsprache&quot; handelt, sollte es am Ende weniger ein Problem sein, dieses Tool, für den internationalen Markt zu erweitern. Der Umfang der Software wird sich zu Beginn erst mal ausschließlich aus dem Ausfüllen und exportieren der ausgefüllten Score Sheets
-
-# 2
- beruhen. Falls es die Zeit zulässt, könnte man den Scoring-Helper um ein User-Management und einem intelligenten System erweitern. Eine Marktanforderung wird sein, dass wir uns an die Sprachnorm des Scorens halten, damit die Scorer
-# 3
-, diese Applikation als Unterstützung zu ihren bereits angesammelten Fachjargon nutzen können. Da es heutzutage immer noch brauch ist, das Scoring, schriftlich mit Zettel und Stift zu machen, ist diese Applikation an sich schon ein Alleinstellungsmerkmal.
+Ein Teilnehmer des Entwickler-Teams, spielt in seiner Freizeit Baseball und dieser Person ist aufgefallen, dass die Statistiken immer noch auf dem Papier niedergeschrieben werden. Der Anwendungsbereich beschränkt sich erst auf die Baseballvereine in Deutschland. Da es sich beim Scoren aber um eine „eigene Fachsprache&quot; handelt, sollte es am Ende weniger ein Problem sein, dieses Tool, für den internationalen Markt zu erweitern. Der Umfang der Software wird sich zu Beginn erst mal ausschließlich aus dem Ausfüllen und exportieren der ausgefüllten Score Sheets(2) beruhen. Falls es die Zeit zulässt, könnte man den Scoring-Helper um ein User-Management und einem intelligenten System erweitern. Eine Marktanforderung wird sein, dass wir uns an die Sprachnorm des Scorens halten, damit die Scorer(3), diese Applikation als Unterstützung zu ihren bereits angesammelten Fachjargon nutzen können. Da es heutzutage immer noch brauch ist, das Scoring, schriftlich mit Zettel und Stift zu machen, ist diese Applikation an sich schon ein Alleinstellungsmerkmal.
 
 #  2 Anforderungen
 
@@ -102,7 +94,7 @@ Figure 1: Use-Case Diagramm
 ### 2.1.2 Funktionale Anforderungen
 
 - Die Software muss den Spielablauf richtig abgehen.
-- Die Software muss automatisch das Inning nach drei Outs beenden.
+- Die Software muss automatisch das Inning(4) nach drei Outs(5) beenden.
 - Die Software muss dem Anwender bei dem Ausfüllen alle möglichen Aktionen auswählen lassen können.
 - Die Software muss die Aktionen visuell darstellen können.
 - Die Software muss dem Anwender die Möglichkeit bieten, die Eingaben zu korrigieren.
