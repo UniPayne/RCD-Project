@@ -82,7 +82,7 @@ Ein Teilnehmer des Entwickler-Teams, spielt in seiner Freizeit Baseball und dies
 
 [!alttext]{RCD-Project/Projektdokumentationen/UML/2.1. Use-Case Diagramm V1.0.png}
 
-![alt text](RCD-Project/Projektdokumentationen/UML/2.1. Use-Case Diagramm V1.0.png)
+![alt text](https://github.com/UniPayne/RCD-Project/blob/master/Projektdokumentationen/UML/2.1.%20Use-Case%20Diagramm%20V1.0.png)
 
 ![alt text]
 
