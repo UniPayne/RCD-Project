@@ -262,7 +262,8 @@ Dementsprechend wird sich die Frau Szewczyk, um das grafische Userinterface küm
 
 ##  4.3 Grober Projektplan
 
-Der grobe Projektplan befindet sich im Anhang (Scoring Helper Grober Projektplan.pdf).
+![alt text](https://github.com/UniPayne/RCD-Project/blob/master/Projektdokumentationen/Grober%20Projektplan.png) 
+Figure 24: Grober Projektplan
 
 #  5 Anhänge
 
