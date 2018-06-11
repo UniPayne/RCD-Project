@@ -92,7 +92,7 @@ Ein Teilnehmer des Entwickler-Teams, spielt in seiner Freizeit Baseball und dies
 
 ### 2.1.1 Use-Case Diagramm
 
-[!alttext]{https://github.com/UniPayne/RCD-Project/blob/master/Projektdokumentationen/UML/2.1.%20Use-Case%20Diagramm%20V1.0.png}
+[!alttext]{RCD-Project/Projektdokumentationen/MockupsPNG/1.0 Start.png}
 
 <p align="center">
   <img src="https://github.com/UniPayne/RCD-Project/blob/master/Projektdokumentationen/UML/2.1.%20Use-Case%20Diagramm%20V1.0.png"/>
