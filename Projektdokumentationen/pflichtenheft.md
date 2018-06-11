@@ -1,71 +1,36 @@
-﻿## Pflichtenheft
-1
-Scoring Helper
-
+﻿## Pflichtenheft Scoring Helper von Angelika Szewczyk und Sean Payne
 Inhalt
-
 1 Einführung
-
 1.1 Beschreibung
-
 1.2 Ziele
-
 2 Anforderungen
-
 2.1 Funktionale Anforderungen
-
 2.1.1 Use-Case Diagramm
-
 2.1.2 Funktionale Anforderungen
-
 2.2 Nicht-funktionale Anforderungen
-
 2.2.1 Rahmenbedingungen
-
 2.2.2 Betriebsbedingungen
-
 2.2.3 Qualitätsmerkmale
-
 2.3 Graphische Benutzerschnittstelle
-
 2.4 Anforderungen im Detail
-
-MoSCoW – Priorisierung
-
-Must Have
-
-Should have
-
-Could have
-
-Won&#39;t have
-
+2.4.1 MoSCoW – Priorisierung
+2.4.1.1. Must Have
+2.4.1.2. Should have
+2.4.1.3. Could have
+2.4.1.4. Won't have
 3 Technische Beschreibung
-
 3.1 Systemübersicht
-
 3.2 Softwarearchitektur
-
 3.3 Datenmodell
-
 3.4 Abläufe
-
 3.5 Entwurf
-
 4 Projektorganisation
-
 4.1 Annahmen
-
 4.2 Verantwortlichkeiten
-
 4.3 Grober Projektplan
-
 5 Anhänge
-
 5.1 Glossar
-
 5.2 Referenzen
-
 
 
 # 1 Einführung
