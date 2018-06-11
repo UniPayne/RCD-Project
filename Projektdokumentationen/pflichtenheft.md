@@ -92,7 +92,7 @@ Ein Teilnehmer des Entwickler-Teams, spielt in seiner Freizeit Baseball und dies
 
 ### 2.1.1 Use-Case Diagramm
 
-[!alttext]{https://github.com/UniPayne/RCD-Project/blob/master/Projektdokumentationen/UML/2.1.%20Use-Case%20Diagramm%20V1.0.png}
+[!alttext]{RCD-Project/Projektdokumentationen/UML/2.1. Use-Case Diagramm V1.0.png}
 
 
 Figure 1: Use-Case Diagramm
@@ -102,11 +102,7 @@ Figure 1: Use-Case Diagramm
 ### 2.1.2 Funktionale Anforderungen
 
 - Die Software muss den Spielablauf richtig abgehen.
-- Die Software muss automatisch das Inning
-# 4
- nach drei Outs
-# 5
- beenden.
+- Die Software muss automatisch das Inning nach drei Outs beenden.
 - Die Software muss dem Anwender bei dem Ausfüllen alle möglichen Aktionen auswählen lassen können.
 - Die Software muss die Aktionen visuell darstellen können.
 - Die Software muss dem Anwender die Möglichkeit bieten, die Eingaben zu korrigieren.
