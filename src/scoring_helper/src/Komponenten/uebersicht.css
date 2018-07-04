@@ -14,7 +14,7 @@
 }
 
 .links form{
-  width: 270px;
+  width: 250%;
   border: 1px solid gainsbro;
 }
 
@@ -23,6 +23,7 @@
 }
 
 .rechts{
+  
   padding-top: 1.2%;
   float: left;
   width: 60.4%;

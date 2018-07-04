@@ -4,7 +4,7 @@ import {
   NavLink,
   HashRouter
 } from "react-router-dom";
-
+import "./home.css";
 import Uebersicht from "./Uebersicht";
 
 class Home extends Component {
@@ -12,7 +12,7 @@ class Home extends Component {
     return (
         <HashRouter>
           <div>
-            <NavLink to="/Uebersicht"><button>Spiel starten!</button></NavLink>
+            <NavLink to="/Uebersicht"><button className="position">Spiel starten!</button></NavLink>
             <Route path="/Uebersicht" component={Uebersicht}/>
           </div>
         </HashRouter>
