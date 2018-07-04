@@ -50,27 +50,31 @@ class Uebersicht extends Component {
 
 
 {/* Popup startet hier*/}
-
               <Popup trigger={<button className="button">Informationen eintragen</button>}
                   modal
                   closeOnDocumentClick
                   >
                   <div className="SpielInfo_Popup">
                     <h1>Spielinformationen</h1>
-                    <form>
                       <label>SpielNr:</label>
-                      <input type='text' maxLength="20"></input><br/>
-                      <label>Gast:</label>
-                      <input type='text' maxLength='20'></input><br/>
-                      <label>Heim:</label>
-                      <input type='text' maxLength='20'></input><br/>
+                      <input type='text' name="form_spielnummer" maxLength="20"></input><br/>
+                      <label>Gespielt am:</label>
+                      <input type="dateTime" name="form_spieldatum"></input><br/>
                       <label>Liga:</label>
-                      <input type='text' maxLength='20'></input><br/>
+                      <input type='text' name="form_liga_name" maxLength='20'></input><br/>
                       <label>Verband:</label>
-                      <input type='text' maxLength='20'></input><br/>
-                      <button name="abbruch">Abbruch</button>
-                      <input type="submit" value ="Eingaben speichern"/>
-                      </form>
+                      <input type='text'name="form_verband_name" maxLength='20'></input><br/>
+                      <label>Gast:</label>
+                      <input type='text' name="form_gastTeam_name" maxLength='20'></input><br/>
+                      <label>Heim:</label>
+                      <input type='text'name="form_heimTeam_name" maxLength='20'></input><br/>
+                      <label>Austragungsort:</label>
+                      <input type="text" name="form_austragungsort" maxLength="20"></input><br/>
+                      <label>Zuschauer:</label>
+                      <input type="number" name="form_zuschauer" min="0"></input><br/>
+
+                      <button name="form_abbruch">Abbruch</button>
+                      <button name="form_speichern">Speichern</button>
                   </div>
                 </Popup>
               </div>
