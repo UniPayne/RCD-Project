@@ -19,39 +19,39 @@ class Uebersicht extends Component {
         <div className="links">
           <form>
             <label>Gast:</label>
-            <input type='text' maxLength='20'></input><br/>
+            <input type='text' name="gastTeam_name" maxLength='20' readOnly></input><br/>
             <label>Heim:</label>
-            <input type='text' maxLength='20'></input><br/>
+            <input type='text' name="heimTeam_name" maxLength='20'readOnly></input><br/>
             <label>Liga:</label>
-            <input type='text' maxLength='20'></input><br/>
+            <input type='text' name="liga_name" maxLength='20'readOnly></input><br/>
             <label>Verband:</label>
-            <input type='text' maxLength='20'></input><br/>
+            <input type='text' name="verband_name" maxLength='20'readOnly></input><br/>
           </form>
         </div>
 
         <div className="rechts">
           <form>
             <label>SpielNr:</label>
-            <input type='number' min='0'></input><br/>
+            <input type='number' name="spielnummer" min='0' readOnly></input><br/>
               <div>
                 <div className="gespieltAm">
                   <label>Gespielt am:</label>
-                  <input  type='Date'></input>
+                  <input type='Date' name="spielDatum" readOnly></input>
                 </div>
                 <div className="rechtsIn">
-                  <label className="in">in:</label>
-                  <input className="inInput" type='text' maxLength='20'></input>
+                  <label className="in">Austragungsort:</label>
+                  <input className="inInput" type='text' name="austragungsort" maxLength='20' readOnly></input>
                 </div>
               </div>
               <div className="zuschauer">
                 <label>Zuschauer:</label>
-                <input className="zuschauerInput" type='number' min='0'></input>
+                <input className="zuschauerInput" name="zuschauer" type='number' min='0' readOnly></input>
 
 
 
 {/* Popup startet hier*/}
 
-              <Popup trigger={<button>Informationen eintragen</button>}
+              <Popup trigger={<button className="button">Informationen eintragen</button>}
                   modal
                   closeOnDocumentClick
                   >
@@ -68,6 +68,7 @@ class Uebersicht extends Component {
                       <input type='text' maxLength='20'></input><br/>
                       <label>Verband:</label>
                       <input type='text' maxLength='20'></input><br/>
+                      <button name="abbruch">Abbruch</button>
                       <input type="submit" value ="Eingaben speichern"/>
                       </form>
                   </div>
