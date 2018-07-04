@@ -12,7 +12,7 @@ class Home extends Component {
     return (
         <HashRouter>
           <div>
-            <NavLink to="/Uebersicht"><button className="position">Spiel starten!</button></NavLink>
+            <NavLink to="/Uebersicht"><button classname="position">Spiel starten!</button></NavLink>
             <Route path="/Uebersicht" component={Uebersicht}/>
           </div>
         </HashRouter>

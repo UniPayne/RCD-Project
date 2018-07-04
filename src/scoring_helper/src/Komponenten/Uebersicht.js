@@ -19,59 +19,58 @@ class Uebersicht extends Component {
         <div className="links">
           <form>
             <label>Gast:</label>
-            <input type='text' maxLength='20'></input><br/>
+            <input type="text" maxLength={20} /><br />
             <label>Heim:</label>
-            <input type='text' maxLength='20'></input><br/>
+            <input type="text" maxLength={20} /><br />
             <label>Liga:</label>
-            <input type='text' maxLength='20'></input><br/>
+            <input type="text" maxLength={20} /><br />
             <label>Verband:</label>
-            <input type='text' maxLength='20'></input><br/>
+            <input type="text" maxLength={20} /><br />
           </form>
         </div>
 
-        <div className="rechts">
-          <form>
-            <label>SpielNr:</label>
-            <input type='number' min='0'></input><br/>
-              <div>
-                <div className="gespieltAm">
-                  <label>Gespielt am:</label>
-                  <input  type='Date'></input>
-                </div>
-                <div className="rechtsIn">
-                  <label className="in">in:</label>
-                  <input className="inInput" type='text' maxLength='20'></input>
-                </div>
-              </div>
-              <div className="zuschauer">
-                <label>Zuschauer:</label>
-                <input className="zuschauerInput" type='number' min='0'></input>
-
+        <div classname="rechts">
+  <form>
+    <label>SpielNr:</label>
+    <input type="number" min={0} /><br />
+    <div>
+      <div classname="gespieltAm">
+        <label>Gespielt am:</label>
+        <input type="Date" />
+      </div>
+      <div classname="rechtsIn">
+        <label classname="in">in:</label>
+        <input classname="inInput" type="text" maxLength={20} />
+      </div>
+    </div>
+    <div classname="zuschauer">
+      <label>Zuschauer:</label>
+      <input classname="zuschauerInput" type="number" min={0} />
 
 
 {/* Popup startet hier*/}
 
-              <Popup trigger={<button>Informationen eintragen</button>}
-                  modal
-                  closeOnDocumentClick
-                  >
-                  <div className="SpielInfo_Popup">
-                    <h1>Spielinformationen</h1>
-                    <form>
-                      <label>SpielNr:</label>
-                      <input type='text' maxLength="20"></input><br/>
-                      <label>Gast:</label>
-                      <input type='text' maxLength='20'></input><br/>
-                      <label>Heim:</label>
-                      <input type='text' maxLength='20'></input><br/>
-                      <label>Liga:</label>
-                      <input type='text' maxLength='20'></input><br/>
-                      <label>Verband:</label>
-                      <input type='text' maxLength='20'></input><br/>
-                      <input type="submit" value ="Eingaben speichern"/>
-                      </form>
-                  </div>
-                </Popup>
+        <Popup trigger={<button >Informationen eintragen</button>}
+            modal
+            closeOnDocumentClick
+            >
+            <div className="SpielInfo_Popup">
+              <h1>Spielinformationen</h1>
+              <form>
+                <label>SpielNr:</label>
+                <input type='text' maxLength={20}/><br/>
+                <label>Gast:</label>
+                <input type='text' maxLength={20}/><br/>
+                <label>Heim:</label>
+                <input type='text' maxLength={20}/><br/>
+                <label>Liga:</label>
+                <input type='text' maxLength={20}/><br/>
+                <label>Verband:</label>
+                <input type='text' maxLength={20}/><br/>
+                <input type="submit" defaultValue ="Eingaben speichern"/>
+                </form>
+            </div>
+          </Popup>
               </div>
           </form>
         </div>
