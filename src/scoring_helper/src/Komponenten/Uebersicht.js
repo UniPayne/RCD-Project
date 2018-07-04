@@ -18,36 +18,33 @@ class Uebersicht extends Component {
       <div className="spielInformationen_links">
         <div className="links">
           <form>
-            <label>Gast:</label>
-            <input type='text' name="gastTeam_name" maxLength={20} readOnly /><br/>
-            <label>Heim:</label>
-            <input type='text' name="heimTeam_name" maxLength={20} readOnly /><br/>
-            <label>Liga:</label>
-            <input type='text' name="liga_name" maxLength={20} readOnly /><br/>
+            <label>SpielNr:</label>
+            <input type='number' name="spielnummer" min={0} readOnly /><br/>
             <label>Verband:</label>
             <input type='text' name="verband_name" maxLength={20} readOnly /><br/>
+            <label>Gast:</label>
+            <input type='text' name="gastTeam_name" maxLength={20} readOnly /><br/>
+
+            <label className="in">Austragungsort:</label>
+            <input className="inInput" type='text' name="austragungsort" maxLength={20} readOnly/><br/>
+
           </form>
         </div>
 
         <div className="rechts">
           <form>
-            <label>SpielNr:</label>
-            <input type='number' name="spielnummer" min={0} readOnly /><br/>
-              <div>
-                <div className="gespieltAm">
-                  <label>Gespielt am:</label>
-                  <input type='Date' name="spielDatum" readOnly/>
-                </div>
-                <div className="rechtsIn">
-                  <label className="in">Austragungsort:</label>
-                  <input className="inInput" type='text' name="austragungsort" maxLength={20} readOnly></input>
-                </div>
-              </div>
-              <div className="zuschauer">
-                <label>Zuschauer:</label>
-                <input className="zuschauerInput" name="zuschauer" type='number' min={0} readOnly/>
+            <div className="gespieltAm">
+              <label>Gespielt am:</label>
+              <input type='Date' name="spielDatum" readOnly/>
+            </div>
+              <label>Liga:</label>
+              <input type='text' name="liga_name" maxLength={20} readOnly /><br/>
 
-
+              <label>Heim:</label>
+              <input type='text' name="heimTeam_name" maxLength={20} readOnly /><br/>
+            <div className="zuschauer">
+              <label>Zuschauer:</label>
+              <input className="zuschauerInput" name="zuschauer" type='number' min={0} readOnly/>
 
 {/* Popup startet hier*/}
               <Popup trigger={<button className="button">Informationen eintragen</button>}
@@ -72,18 +69,16 @@ class Uebersicht extends Component {
                       <input type="text" name="form_austragungsort" maxLength={20}/> <br/>
                       <label>Zuschauer:</label>
                       <input type="number" name="form_zuschauer" min={0}/> <br/>
-
                       <button name="form_abbruch">Abbruch</button>
                       <button name="form_speichern">Speichern</button>
                   </div>
                 </Popup>
               </div>
+              <div>
+              </div>
           </form>
         </div>
       </div>
-
-
-
 
       <div className="punkte_rechts">
         kjkjk
@@ -92,13 +87,12 @@ class Uebersicht extends Component {
       <div className="spielerInformationen">
         <form className="spielerInf">
           <label className="nr">Nr.</label>
-        <label>Name</label>
-        <label>Vorname</label>
-        <label>PassNr.</label>
-      </form>
+          <label>Name</label>
+          <label>Vorname</label>
+          <label>PassNr.</label>
+        </form>
       </div>
       <div className="spielfeld">
-
       </div>
     </div>
     );
