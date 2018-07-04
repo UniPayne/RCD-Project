@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 import './stuff.css';
 
 
-class Contact extends Component {
+class Stuff extends Component {
   render() {
     return (
     <div>
@@ -71,4 +71,4 @@ class Contact extends Component {
   }
 }
 
-export default Contact;
+export default Stuff;
