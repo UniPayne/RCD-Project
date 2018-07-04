@@ -5,6 +5,8 @@ import {
   HashRouter
 } from "react-router-dom";
 import { Link } from 'react-router-dom'
+import Popup from "reactjs-popup";
+import Spielinformation from "../Backend/Spielinformation.js"
 import './uebersicht.css';
 
 
@@ -20,8 +22,6 @@ class Uebersicht extends Component {
             <input type='text' maxLength='20'></input><br/>
             <label>Heim:</label>
             <input type='text' maxLength='20'></input><br/>
-            <label>LV:</label>
-            <input type='text' maxLength='20'></input><br/>
             <label>Liga:</label>
             <input type='text' maxLength='20'></input><br/>
             <label>Verband:</label>
@@ -31,7 +31,7 @@ class Uebersicht extends Component {
 
         <div className="rechts">
           <form>
-            <label>SpielerNr:</label>
+            <label>SpielNr:</label>
             <input type='number' min='0'></input><br/>
               <div>
                 <div className="gespieltAm">
@@ -46,11 +46,39 @@ class Uebersicht extends Component {
               <div className="zuschauer">
                 <label>Zuschauer:</label>
                 <input className="zuschauerInput" type='number' min='0'></input>
-                <Link to="/uebersicht"><button className="button">Informationen eintragen</button></Link>
+
+
+
+{/* Popup startet hier*/}
+
+              <Popup trigger={<button>Informationen eintragen</button>}
+                  modal
+                  closeOnDocumentClick
+                  >
+                  <div className="SpielInfo_Popup">
+                    <h1>Spielinformationen</h1>
+                    <form>
+                      <label>SpielNr:</label>
+                      <input type='text' maxLength="20"></input><br/>
+                      <label>Gast:</label>
+                      <input type='text' maxLength='20'></input><br/>
+                      <label>Heim:</label>
+                      <input type='text' maxLength='20'></input><br/>
+                      <label>Liga:</label>
+                      <input type='text' maxLength='20'></input><br/>
+                      <label>Verband:</label>
+                      <input type='text' maxLength='20'></input><br/>
+                      <input type="submit" value ="Eingaben speichern"/>
+                      </form>
+                  </div>
+                </Popup>
               </div>
           </form>
         </div>
       </div>
+
+
+
 
       <div className="punkte_rechts">
         kjkjk
