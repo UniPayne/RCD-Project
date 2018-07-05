@@ -6,12 +6,18 @@ import {
 } from "react-router-dom";
 import { Link } from 'react-router-dom'
 import Popup from "reactjs-popup";
-import Spielinformation from "../Backend/Spielinformation.js"
 import './uebersicht.css';
 
 
 
 class Uebersicht extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {value: ''};
+  }
+
+
+
   render() {
     return (
     <div>
