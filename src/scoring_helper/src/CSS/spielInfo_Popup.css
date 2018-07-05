@@ -1,29 +1,46 @@
+.SpielInfo_Popup{
+  background-color: #A3EA98;
+}
+
 .linksPop{
-background-color: green;
   float: left;
-  margin-left: 4%;
-  width:45%;
-  height: 80%;
-}
+  margin-left: 5%;
+  width:40%;
 
-.rechtsPop{
-background-color: red;
-  float: right;
-  margin-right: 3%;
-  width: 45%;
-  margin-left: 2%;
-}
-
-.rechtsPop input{
-    margin: 0 0 0.6em 4em;
 }
 
 .linksPop input{
+  margin: left;
+}
 
+.linksPop label{
+  text-align: right;
+  width: 30%;
+}
+
+
+.rechtsPop{
+  float: right;
+  margin-right: 5%;
+  width: 45%;
+  margin-left: 3%;
+
+}
+.rechtsPop label{
+  text-align: right;
+}
+
+.rechtsPop input{
+
+}
+.gespielt_am{
+  width: 19%;
+  
 }
 
 .button_pop{
   float: right;
-  margin-right: 1%;
+  margin-right: 10%;
   margin-bottom: 1%;
+  margin-top: 0.5%;
 }
