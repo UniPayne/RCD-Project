@@ -38,7 +38,6 @@ class Uebersicht extends Component {
         </div>
 
         <div className="rechts">
-          <form>
             <div className="gespieltAm">
               <label>Gespielt am:</label>
               <input type='Date' name="spielDatum" readOnly/>
@@ -60,29 +59,31 @@ class Uebersicht extends Component {
                   <div className="SpielInfo_Popup">
                     <h1>Spielinformationen</h1>
                       <label>SpielNr:</label>
-                      <input type='text' name="form_spielnummer" maxLength={20}/> <br/>
-                      <label>Gespielt am:</label>
-                      <input type="dateTime" name="form_spieldatum"/><br/>
-                      <label>Liga:</label>
-                      <input type='text' name="form_liga_name" maxLength={20}/> <br/>
-                      <label>Verband:</label>
-                      <input type='text'name="form_verband_name" maxLength={20}/> <br/>
-                      <label>Gast:</label>
-                      <input type='text' name="form_gastTeam_name" maxLength={20}/> <br/>
-                      <label>Heim:</label>
-                      <input type='text'name="form_heimTeam_name" maxLength={20}/> <br/>
-                      <label>Austragungsort:</label>
-                      <input type="text" name="form_austragungsort" maxLength={20}/> <br/>
-                      <label>Zuschauer:</label>
-                      <input type="number" name="form_zuschauer" min={0}/> <br/>
-                      <button name="form_abbruch">Abbruch</button>
-                      <button name="form_speichern">Speichern</button>
+                      <form onSubmit={this.handleSubmit}>
+                        <input type='text' name="form_spielnummer" maxLength={20}/> <br/>
+                        <label>Gespielt am:</label>
+                        <input type="dateTime" name="form_spieldatum"/><br/>
+                        <label>Liga:</label>
+                        <input type='text' name="form_liga_name" maxLength={20}/> <br/>
+                        <label>Verband:</label>
+                        <input type='text'name="form_verband_name" maxLength={20}/> <br/>
+                        <label>Gast:</label>
+                        <input type='text' name="form_gastTeam_name" maxLength={20}/> <br/>
+                        <label>Heim:</label>
+                        <input type='text'name="form_heimTeam_name" maxLength={20}/> <br/>
+                        <label>Austragungsort:</label>
+                        <input type="text" name="form_austragungsort" maxLength={20}/> <br/>
+                        <label>Zuschauer:</label>
+                        <input type="number" name="form_zuschauer" min={0}/> <br/>
+                        <button name="form_abbruch">Abbruch</button>
+                        <button name="form_speichern">Speichern</button>
+                      </form>
                   </div>
                 </Popup>
               </div>
               <div>
               </div>
-          </form>
+
         </div>
       </div>
 
