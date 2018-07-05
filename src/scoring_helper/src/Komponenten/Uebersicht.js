@@ -46,7 +46,7 @@ render() {
             <form onSubmit={this.handleSubmit}>
               <input type='text' name="form_spielnummer" maxLength={20} onChange={this.handleChange}/> <br/>
               <label>Gespielt am:</label>
-              <input type="dateTime" name="form_spieldatum" onChange={this.handleChange}/><br/>
+              <input type="Date" name="form_spieldatum" onChange={this.handleChange}/><br/>
               <label>Liga:</label>
               <input type='text' name="form_liga_name" maxLength={20} onChange={this.handleChange}/> <br/>
               <label>Verband:</label>
