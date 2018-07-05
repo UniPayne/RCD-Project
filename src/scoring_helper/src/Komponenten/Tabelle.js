@@ -25,7 +25,7 @@ export default () =>
     </Table.Row>
   </Table.Header>
 
-  <Table.Body>
+  <Table.Body >
     <Table.Row>
       <Table.Cell>125</Table.Cell>
       <Table.Cell>25</Table.Cell>

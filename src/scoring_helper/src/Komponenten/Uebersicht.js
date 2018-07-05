@@ -149,13 +149,11 @@ submitSpielinfosMain(stati){
       </div>
 
       <div className="punkte_rechts">
-          <Tabelle/>
-
+        <Tabelle/>
       </div>
 
       <div className="spielerInformationen">
         <Spieler/>
-
       </div>
       <div className="spielfeld">
       </div>
