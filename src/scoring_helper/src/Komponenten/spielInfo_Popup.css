@@ -1,0 +1,24 @@
+
+
+
+
+.links{
+  padding-top: 1%;
+  float:left;
+  margin-left: 0.5%;
+  width:38%;
+}
+
+
+.rechts{
+  padding-top: 1.2%;
+  float: left;
+  width: 55%;
+  margin-left: 5%;
+}
+
+.button_pop{
+  float: right;
+  margin-right: 2%;
+  margin-bottom: 1%;
+}

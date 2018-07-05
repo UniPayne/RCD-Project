@@ -10,6 +10,8 @@ import './uebersicht.css';
 
 import Tabelle from "./Tabelle";
 import Spieler from "./Spieler";
+import { Button } from 'semantic-ui-react';
+import './spielInfo_Popup.css';
 
 class Spielinfos extends Component{
   constructor() {
@@ -42,8 +44,10 @@ render() {
 
         <div className="SpielInfo_Popup">
           <h1>Spielinformationen</h1>
+
+          <form onSubmit={this.handleSubmit}>
+            <div>
             <label>SpielNr:</label>
-            <form onSubmit={this.handleSubmit}>
               <input type='text' name="form_spielnummer" maxLength={20} onChange={this.handleChange}/> <br/>
               <label>Gespielt am:</label>
               <input type="Date" name="form_spieldatum" onChange={this.handleChange}/><br/>
@@ -51,6 +55,8 @@ render() {
               <input type='text' name="form_liga_name" maxLength={20} onChange={this.handleChange}/> <br/>
               <label>Verband:</label>
               <input type='text'name="form_verband_name" maxLength={20} onChange={this.handleChange}/> <br/>
+            </div>
+            <div>
               <label>Gast:</label>
               <input type='text' name="form_gastTeam_name" maxLength={20} onChange={this.handleChange}/> <br/>
               <label>Heim:</label>
@@ -59,7 +65,8 @@ render() {
               <input type="text" name="form_austragungsort" maxLength={20} onChange={this.handleChange}/> <br/>
               <label>Zuschauer:</label>
               <input type="number" name="form_zuschauer" min={0} onChange={this.handleChange}/> <br/>
-              <button type="submit">Bestätigen</button>
+            </div>
+              <button className="button_pop" type="submit">Bestätigen</button>
             </form>
         </div>
 
@@ -154,6 +161,7 @@ submitSpielinfosMain(stati){
 
       <div className="spielerInformationen">
         <Spieler/>
+        <Button>Click Here</Button>
       </div>
       <div className="spielfeld">
       </div>
