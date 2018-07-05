@@ -1,21 +1,9 @@
-
-
-
-
 .linksPop{
 background-color: green;
   float: left;
   margin-left: 4%;
   width:45%;
   height: 80%;
-}
-
-.linksPop input{
-  float: right;
-}
-
-.linksPop label{
-  float: left;
 }
 
 .rechtsPop{
@@ -27,10 +15,15 @@ background-color: red;
 }
 
 .rechtsPop input{
-  float: right;
+    margin: 0 0 0.6em 4em;
 }
+
+.linksPop input{
+
+}
+
 .button_pop{
   float: right;
-  margin-right: 10%;
+  margin-right: 1%;
   margin-bottom: 1%;
 }
