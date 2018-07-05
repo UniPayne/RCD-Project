@@ -1,0 +1,10 @@
+.inf{
+  border-style: solid;
+  border-color: black;
+  background-color: lightgray;
+  width: 90%;
+  margin-left: 1%;
+  margin-top: 1%;
+  height: 40%;
+  text-align: center;
+}
