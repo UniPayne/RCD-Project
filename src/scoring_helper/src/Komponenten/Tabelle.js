@@ -1,13 +1,13 @@
 
 import React from 'react'
 import { Icon, Label, Menu, Table } from 'semantic-ui-react'
-
+import './tabelle.css';
 
 export default () =>
 
-<Table singleLine>
-  <Table.Header>
-    <Table.Row>
+<Table singleLine className="inf">
+  <Table.Header >
+    <Table.Row >
       <Table.HeaderCell>1</Table.HeaderCell>
       <Table.HeaderCell>2</Table.HeaderCell>
       <Table.HeaderCell>3</Table.HeaderCell>
@@ -27,36 +27,36 @@ export default () =>
 
   <Table.Body>
     <Table.Row>
-      <Table.Cell></Table.Cell>
-      <Table.Cell></Table.Cell>
-      <Table.Cell></Table.Cell>
-      <Table.Cell></Table.Cell>
-      <Table.Cell></Table.Cell>
-      <Table.Cell></Table.Cell>
-      <Table.Cell></Table.Cell>
-      <Table.Cell></Table.Cell>
-      <Table.Cell></Table.Cell>
-      <Table.Cell></Table.Cell>
-      <Table.Cell></Table.Cell>
-      <Table.Cell></Table.Cell>
-      <Table.Cell></Table.Cell>
-      <Table.Cell></Table.Cell>
+      <Table.Cell>125</Table.Cell>
+      <Table.Cell>25</Table.Cell>
+      <Table.Cell>25</Table.Cell>
+      <Table.Cell>2</Table.Cell>
+      <Table.Cell>4</Table.Cell>
+      <Table.Cell>45</Table.Cell>
+      <Table.Cell>5</Table.Cell>
+      <Table.Cell>6</Table.Cell>
+      <Table.Cell>98</Table.Cell>
+      <Table.Cell>87</Table.Cell>
+      <Table.Cell>4</Table.Cell>
+      <Table.Cell>3</Table.Cell>
+      <Table.Cell>4</Table.Cell>
+      <Table.Cell>7</Table.Cell>
     </Table.Row>
     <Table.Row>
-      <Table.Cell></Table.Cell>
-      <Table.Cell></Table.Cell>
-      <Table.Cell></Table.Cell>
-      <Table.Cell></Table.Cell>
-      <Table.Cell></Table.Cell>
-      <Table.Cell></Table.Cell>
-      <Table.Cell></Table.Cell>
-      <Table.Cell></Table.Cell>
-      <Table.Cell></Table.Cell>
-      <Table.Cell></Table.Cell>
-      <Table.Cell></Table.Cell>
-      <Table.Cell></Table.Cell>
-      <Table.Cell></Table.Cell>
-      <Table.Cell></Table.Cell>
+      <Table.Cell>51</Table.Cell>
+      <Table.Cell>56</Table.Cell>
+      <Table.Cell>889</Table.Cell>
+      <Table.Cell>65</Table.Cell>
+      <Table.Cell>48</Table.Cell>
+      <Table.Cell>3</Table.Cell>
+      <Table.Cell>22</Table.Cell>
+      <Table.Cell>2</Table.Cell>
+      <Table.Cell>5</Table.Cell>
+      <Table.Cell>5</Table.Cell>
+      <Table.Cell>8</Table.Cell>
+      <Table.Cell>89</Table.Cell>
+      <Table.Cell>9</Table.Cell>
+      <Table.Cell>8</Table.Cell>
     </Table.Row>
     </Table.Body>
 </Table>
