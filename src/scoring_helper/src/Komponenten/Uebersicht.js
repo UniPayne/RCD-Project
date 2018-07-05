@@ -7,16 +7,13 @@ import {
 import { Link } from 'react-router-dom'
 import Popup from "reactjs-popup";
 import './uebersicht.css';
-
-
+import Tabelle from "./Tabelle";
+import Spieler from "./Spieler";
 
 class Uebersicht extends Component {
   constructor(props) {
     super(props);
-    this.state = {value: ''};
-  }
-
-
+    this.state = {value: ''}; }
 
   render() {
     return (
@@ -87,16 +84,13 @@ class Uebersicht extends Component {
       </div>
 
       <div className="punkte_rechts">
-        kjkjk
+          <Tabelle/>
+
       </div>
 
       <div className="spielerInformationen">
-        <form className="spielerInf">
-          <label className="nr">Nr.</label>
-          <label>Name</label>
-          <label>Vorname</label>
-          <label>PassNr.</label>
-        </form>
+        <Spieler/>
+
       </div>
       <div className="spielfeld">
       </div>
