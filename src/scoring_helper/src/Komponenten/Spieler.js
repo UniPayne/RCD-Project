@@ -1,6 +1,6 @@
 import React from 'react'
 import { Table, Flag } from 'semantic-ui-react'
-import './spieler.css';
+import '../CSS/spieler.css';
 
 const spieler = [
   { nr: "1", name: 'Jansen', vorname: 'Tobias', posNr:"1", passnr:"1548" },

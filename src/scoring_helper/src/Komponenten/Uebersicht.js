@@ -6,12 +6,12 @@ import {
 } from "react-router-dom";
 import { Link } from 'react-router-dom'
 import Popup from "reactjs-popup";
-import './uebersicht.css';
+import '../CSS/uebersicht.css';
 
 import Tabelle from "./Tabelle";
 import Spieler from "./Spieler";
 import { Button } from 'semantic-ui-react';
-import './spielInfo_Popup.css';
+import '../CSS/spielInfo_Popup.css';
 
 class Spielinfos extends Component{
   constructor() {
