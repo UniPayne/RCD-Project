@@ -14,10 +14,6 @@ class Main extends Component {
       <HashRouter>
         <div>
           <h1>Scoring Helper</h1>
-          <ul className="header">
-            <li><NavLink to="/">Home</NavLink></li>
-            <li><NavLink to="/uebersicht">Uebersicht</NavLink></li>
-          </ul>
           <div className="content">
             <Route exact path="/" component={Home}/>
             <Route path="/uebersicht" component={Uebersicht}/>

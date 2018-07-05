@@ -2,23 +2,35 @@
 
 
 
-.links{
-  padding-top: 1%;
-  float:left;
-  margin-left: 0.5%;
-  width:38%;
-}
-
-
-.rechts{
-  padding-top: 1.2%;
+.linksPop{
+background-color: green;
   float: left;
-  width: 55%;
-  margin-left: 5%;
+  margin-left: 4%;
+  width:45%;
+  height: 80%;
 }
 
+.linksPop input{
+  float: right;
+}
+
+.linksPop label{
+  float: left;
+}
+
+.rechtsPop{
+background-color: red;
+  float: right;
+  margin-right: 3%;
+  width: 45%;
+  margin-left: 2%;
+}
+
+.rechtsPop input{
+  float: right;
+}
 .button_pop{
   float: right;
-  margin-right: 2%;
+  margin-right: 10%;
   margin-bottom: 1%;
 }

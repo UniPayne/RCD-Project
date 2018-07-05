@@ -46,7 +46,7 @@ render() {
           <h1>Spielinformationen</h1>
 
           <form onSubmit={this.handleSubmit}>
-            <div>
+            <div className="linksPop">
             <label>SpielNr:</label>
               <input type='text' name="form_spielnummer" maxLength={20} onChange={this.handleChange}/> <br/>
               <label>Gespielt am:</label>
@@ -56,7 +56,7 @@ render() {
               <label>Verband:</label>
               <input type='text'name="form_verband_name" maxLength={20} onChange={this.handleChange}/> <br/>
             </div>
-            <div>
+            <div className="rechtsPop">
               <label>Gast:</label>
               <input type='text' name="form_gastTeam_name" maxLength={20} onChange={this.handleChange}/> <br/>
               <label>Heim:</label>
