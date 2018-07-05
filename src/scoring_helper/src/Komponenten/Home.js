@@ -4,7 +4,7 @@ import {
   NavLink,
   HashRouter
 } from "react-router-dom";
-import "./home.css";
+import "../CSS/home.css";
 import Uebersicht from "./Uebersicht";
 
 class Home extends Component {
