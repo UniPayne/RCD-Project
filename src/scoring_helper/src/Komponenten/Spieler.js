@@ -17,7 +17,7 @@ const spieler = [
 
 export default  () => (
   <Table className="spie">
-    <Table.Header>
+    <Table.Header className="header">
       <Table.Row>
         <Table.HeaderCell>Nr.</Table.HeaderCell>
         <Table.HeaderCell>Name</Table.HeaderCell>
@@ -27,7 +27,7 @@ export default  () => (
     </Table.Header>
     <Table.Body>
       {spieler.map(spielerI => (
-        <Table.Row>
+        <Table.Row className="tabInhalt">
           <Table.Cell>{spielerI.nr}</Table.Cell>
           <Table.Cell>{spielerI.name}</Table.Cell>
           <Table.Cell>{spielerI.vorname}</Table.Cell>

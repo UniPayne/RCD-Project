@@ -6,8 +6,8 @@ import './tabelle.css';
 export default () =>
 
 <Table singleLine className="inf">
-  <Table.Header >
-    <Table.Row >
+  <Table.Header className="headerT">
+    <Table.Row>
       <Table.HeaderCell>1</Table.HeaderCell>
       <Table.HeaderCell>2</Table.HeaderCell>
       <Table.HeaderCell>3</Table.HeaderCell>
@@ -26,7 +26,7 @@ export default () =>
   </Table.Header>
 
   <Table.Body >
-    <Table.Row>
+    <Table.Row className="inhaltT">
       <Table.Cell>125</Table.Cell>
       <Table.Cell>25</Table.Cell>
       <Table.Cell>25</Table.Cell>
@@ -42,7 +42,7 @@ export default () =>
       <Table.Cell>4</Table.Cell>
       <Table.Cell>7</Table.Cell>
     </Table.Row>
-    <Table.Row>
+    <Table.Row className="inhaltT">
       <Table.Cell>51</Table.Cell>
       <Table.Cell>56</Table.Cell>
       <Table.Cell>889</Table.Cell>

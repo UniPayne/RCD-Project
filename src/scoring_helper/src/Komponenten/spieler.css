@@ -1,8 +1,18 @@
 .spie{
-  
+
   width: 98%;
   margin-left: 1%;
   margin-top: 1%;
   height: 85%;
   text-align: center;
+}
+
+.header{
+  background-color: #D8D8D8;
+  box-shadow: inset 1px 3px 5px -3px rgba(0, 0, 0, 0.5);
+}
+
+.tabInhalt{
+  background-color: #EFF5FB;
+  box-shadow: inset 1px 3px 5px -3px rgba(0, 0, 0, 0.5);
 }
