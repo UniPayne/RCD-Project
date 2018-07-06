@@ -13,8 +13,9 @@ import Tabelle from "./Tabelle";
 import Spieler from "./Spieler";
 import { Button } from 'semantic-ui-react';
 import '../CSS/spielInfo_Popup.css';
+import ReactModal from 'react-modal';
 
-class Uebersicht extends Component {
+class Uebersicht extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -25,10 +26,15 @@ class Uebersicht extends Component {
       gastTeam_name: '',
       heimTeam_name: '',
       austragungsort: '',
-      zuschauer: ''
+      zuschauer: '',
+      showPopup: false
     };
 
 
+}
+
+togglePopup() {
+  this.setState({showPopup: !this.state.showPopup});
 }
 
 submitSpielinfosMain(stati){
@@ -41,11 +47,7 @@ submitSpielinfosMain(stati){
   this.setState({heimTeam_name:stati.form_heimTeam_name});
   this.setState({austragungsort:stati.form_austragungsort});
   this.setState({zuschauer:stati.form_zuschauer});
-
-  console.log(stati);
-  console.log(this.state);
 }
-
 
 
   render() {
@@ -82,12 +84,20 @@ submitSpielinfosMain(stati){
               <input className="zuschauerInput" name="zuschauer" type='number'value={this.state.zuschauer} min={0} readOnly/>
 
 {/* Popup startet hier*/}
-              <Popup trigger={<button className="button">Informationen eintragen</button>}
-                  modal
-                  closeOnDocumentClick
-                  >
-                  <Spielinfos submitSpielinfosPopUp={this.submitSpielinfosMain.bind(this)} />
-                </Popup>
+
+            <div className="sInfo">
+              <button className="button" onClick={this.togglePopup.bind(this)}>Informationen eintragen</button>
+              {this.state.showPopup ?
+
+                  <Spielinfos submitSpielinfosPopUp={this.submitSpielinfosMain.bind(this)}
+                    closePopup={this.togglePopup.bind(this)}
+                    />
+
+
+                :null
+              }
+            </div>
+
               </div>
               <div>
               </div>

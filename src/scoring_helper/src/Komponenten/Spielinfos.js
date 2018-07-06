@@ -7,6 +7,7 @@ import {
 import { Link } from 'react-router-dom'
 import Popup from "reactjs-popup";
 import '../CSS/uebersicht.css';
+import Uebersicht from "./Uebersicht"
 
 import Tabelle from "./Tabelle";
 import Spieler from "./Spieler";
@@ -39,8 +40,7 @@ class Spielinfos extends Component{
     event.preventDefault();
     this.checkAllFields();
     this.props.submitSpielinfosPopUp(this.state);
-
-
+    this.props.closePopup();
   }
 
   checkAllFields(){
@@ -106,6 +106,7 @@ render() {
   return (
 
         <div className="SpielInfo_Popup">
+          <div className="SpielInfo_Popup_inner">
           <h1>Spielinformationen</h1>
 
           <form>
@@ -133,6 +134,7 @@ render() {
               <button className="button_pop" type="button"name="fortfahren" onClick={this.handleSubmit}>weiter</button>
             </form>
         </div>
+      </div>
 
   )
 }

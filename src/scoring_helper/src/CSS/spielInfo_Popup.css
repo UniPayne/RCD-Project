@@ -1,5 +1,23 @@
 .SpielInfo_Popup{
   background-color: #A3EA98;
+  position: fixed;
+ width: 80%;
+ height: 80%;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ margin: auto;
+}
+
+.SpielInfo_Popup_inner{
+  position: absolute;
+left: 25%;
+right: 25%;
+top: 25%;
+bottom: 25%;
+margin: auto;
+background: white;
 }
 
 .linksPop{
@@ -35,7 +53,7 @@
 }
 .gespielt_am{
   width: 19%;
-  
+
 }
 
 .button_pop{
