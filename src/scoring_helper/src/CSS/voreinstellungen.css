@@ -28,7 +28,7 @@
 
 float: right;
 width: 10%;
-height: 150px;
+height: 50px;
 }
 
 .vor_gast{
@@ -66,8 +66,11 @@ background-color: #F2F2F2;
 
 }
 
-.vor_position{
 
+
+.vor_button_weiter{
+ margin-right: 30%;
+ background-color: red;
 }
 
 .button1{

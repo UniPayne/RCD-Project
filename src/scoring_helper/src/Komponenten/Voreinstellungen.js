@@ -43,8 +43,8 @@ class Voreinstellungen extends Component {
             </div>
           </div>
 
-            <div>
-              <NavLink to="/Uebersicht"><button classname="vor_position">ftbfkzu</button></NavLink>
+            <div classname="vor_button">
+              <NavLink to="/Uebersicht"><button >weiter</button></NavLink>
               <Route path="/Uebersicht" component={Uebersicht}/>
             </div>
           </div>

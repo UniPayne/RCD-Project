@@ -7,6 +7,7 @@ import {
 import "../CSS/home.css";
 import Voreinstellungen from "./Voreinstellungen";
 
+
 class Home extends Component {
   render() {
     return (
