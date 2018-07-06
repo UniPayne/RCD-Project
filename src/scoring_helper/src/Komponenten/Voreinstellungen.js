@@ -6,6 +6,8 @@ import {
 } from "react-router-dom";
 import "../CSS/home.css";
 import "../CSS/voreinstellungen.css";
+import logo from '../logo.svg';
+
 
 import Uebersicht from "./Uebersicht";
 
@@ -16,21 +18,24 @@ class Voreinstellungen extends Component {
           <div>
             <div className="vor_oben">
             <div className="vor_spielInfo">
-              div spielinfo
+
+              <button className="button1">Spiel info</button>
             </div>
 
             <div className="vor_logo">
-              div logo
+              <img src={logo} className="logo" alt="logo" />
             </div>
           </div>
 
           <div className="vor_unten">
             <div className="vor_gast">
-              div gast
+
+              <button className="button2">Gast</button>
             </div>
 
             <div className="vor_heim">
-              div heim
+
+              <button className="button3">Heim</button>
             </div>
           </div>
 
