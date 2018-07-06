@@ -86,7 +86,7 @@ submitSpielinfosMain(stati){
 {/* Popup startet hier*/}
 
             <div className="sInfo">
-              <button className="button" onClick={this.togglePopup.bind(this)}>Informationen eintragen</button>
+              <button className="button_pop" onClick={this.togglePopup.bind(this)}>Informationen eintragen</button>
               {this.state.showPopup ?
 
                   <Spielinfos submitSpielinfosPopUp={this.submitSpielinfosMain.bind(this)}
