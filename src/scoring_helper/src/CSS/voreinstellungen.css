@@ -1,0 +1,44 @@
+.vor_unten{
+  float: right;
+  width: 100%;
+}
+
+.vor_oben{
+  float: left;
+  width: 100%;
+}
+
+.vor_spielInfo{
+border-style: solid;
+float: left;
+width: 45%;
+height: 300px;
+margin-bottom: 0.5%;
+}
+
+.vor_logo{
+border-style: solid;
+float: right;
+width: 10%;
+height: 150px;
+}
+
+.vor_gast{
+border-style: solid;
+float: left;
+width: 49.6%;
+height: 300px;
+
+}
+
+.vor_heim{
+border-style: solid;
+float: right;
+width: 49.6%;
+height: 300px;
+margin-bottom: 2%;
+}
+
+.vor_position{
+
+}
