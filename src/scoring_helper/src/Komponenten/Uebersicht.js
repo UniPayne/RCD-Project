@@ -7,75 +7,15 @@ import {
 import { Link } from 'react-router-dom'
 import Popup from "reactjs-popup";
 import '../CSS/uebersicht.css';
-
-import Spielinfo from "./Spielinfos";
+import GastTeam from "./GastTeam_Form";
+import Spielinfos from "./Spielinfos";
 import Tabelle from "./Tabelle";
 import Spieler from "./Spieler";
 import { Button } from 'semantic-ui-react';
 import '../CSS/spielInfo_Popup.css';
+import ReactModal from 'react-modal';
 
-class Spielinfos extends Component{
-  constructor() {
-    super();
-    this.state = {
-      form_spielnummer: '',
-      form_spieldatum: '',
-      form_liga_name: '',
-      form_verband_name: '',
-      form_gastTeam_name: '',
-      form_heimTeam_name: '',
-      form_austragungsort: '',
-      form_zuschauer: ''
-    };
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleChange = this.handleChange.bind(this);
-}
-
-  handleChange(event){
-    this.setState({[event.target.name]: event.target.value})
-  }
-
-  handleSubmit(event){
-    event.preventDefault();
-    this.props.submitSpielinfosPopUp(this.state);
-  }
-
-render() {
-  return (
-
-        <div className="SpielInfo_Popup">
-          <h1>Spielinformationen</h1>
-
-          <form onSubmit={this.handleSubmit}>
-            <div className="linksPop">
-            <label>SpielNr:</label>
-              <input type='text' name="form_spielnummer" maxLength={20} onChange={this.handleChange}/> <br/>
-              <label>Verband:</label>
-              <input type='text'name="form_verband_name" maxLength={20} onChange={this.handleChange}/> <br/>
-              <label>Gast:</label>
-              <input type='text' name="form_gastTeam_name" maxLength={20} onChange={this.handleChange}/> <br/>
-              <label>Austragungsort:</label>
-              <input type="text" name="form_austragungsort" maxLength={20} onChange={this.handleChange}/> <br/>
-            </div>
-            <div className="rechtsPop">
-              <label className="gespielt_am">Gespielt am:</label>
-              <input type="Date" name="form_spieldatum" onChange={this.handleChange}/><br/>
-              <label>Liga:</label>
-              <input type='text' name="form_liga_name" maxLength={20} onChange={this.handleChange}/> <br/>
-              <label>Heim:</label>
-              <input type='text'name="form_heimTeam_name" maxLength={20} onChange={this.handleChange}/> <br/>
-              <label>Zuschauer:</label>
-              <input type="number" name="form_zuschauer" min={0} onChange={this.handleChange}/> <br/>
-              <button className="button_pop" type="submit">Bestätigen</button>
-            </div>
-            </form>
-        </div>
-
-  )
-}
-}
-
-class Uebersicht extends Component {
+class Uebersicht extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -86,10 +26,15 @@ class Uebersicht extends Component {
       gastTeam_name: '',
       heimTeam_name: '',
       austragungsort: '',
-      zuschauer: ''
+      zuschauer: '',
+      showPopup: false
     };
 
 
+}
+
+togglePopup() {
+  this.setState({showPopup: !this.state.showPopup});
 }
 
 submitSpielinfosMain(stati){
@@ -102,11 +47,7 @@ submitSpielinfosMain(stati){
   this.setState({heimTeam_name:stati.form_heimTeam_name});
   this.setState({austragungsort:stati.form_austragungsort});
   this.setState({zuschauer:stati.form_zuschauer});
-
-  console.log(stati);
-  console.log(this.state);
 }
-
 
 
   render() {
@@ -143,12 +84,20 @@ submitSpielinfosMain(stati){
               <input className="zuschauerInput" name="zuschauer" type='number'value={this.state.zuschauer} min={0} readOnly/>
 
 {/* Popup startet hier*/}
-              <Popup trigger={<button className="button">Informationen eintragen</button>}
-                  modal
-                  closeOnDocumentClick
-                  >
-                  <Spielinfos submitSpielinfosPopUp={this.submitSpielinfosMain.bind(this)} />
-                </Popup>
+
+            <div className="sInfo">
+              <button className="button" onClick={this.togglePopup.bind(this)}>Informationen eintragen</button>
+              {this.state.showPopup ?
+
+                  <Spielinfos submitSpielinfosPopUp={this.submitSpielinfosMain.bind(this)}
+                    closePopup={this.togglePopup.bind(this)}
+                    />
+
+
+                :null
+              }
+            </div>
+
               </div>
               <div>
               </div>
