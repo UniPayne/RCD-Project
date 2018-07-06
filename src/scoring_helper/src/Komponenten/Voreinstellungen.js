@@ -18,6 +18,7 @@ class Voreinstellungen extends Component {
           <div>
             <div className="vor_oben">
             <div className="vor_spielInfo">
+              <label>Spielinformation</label>
 
               <button className="button1">Spiel info</button>
             </div>
@@ -29,11 +30,14 @@ class Voreinstellungen extends Component {
 
           <div className="vor_unten">
             <div className="vor_gast">
+              <label>Gast</label>
+
 
               <button className="button2">Gast</button>
             </div>
 
             <div className="vor_heim">
+                <label>Heim</label>
 
               <button className="button3">Heim</button>
             </div>
