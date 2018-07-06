@@ -80,15 +80,42 @@ clearInputs() {
   this.gast_SpielerVName.value = '';
   this.gast_SpielerPosition.value = '';
   this.gast_SpielerPNummer.value = '';
+
   this.state.form_gast_SpielerRNummer = '';
   this.state.form_gast_SpielerNName  = '';
   this.state.form_gast_SpielerVName  = '';
   this.state.form_gast_SpielerPosition = '';
-  this.state.form_gast_SpielerPNummer  = '';  
+  this.state.form_gast_SpielerPNummer  = '';
 }
 
 deleteRow(row){
-  var position = this.state
+  var position = this.state.form_gast_spieler.indexOf(row);
+  this.setState({form_gast_spieler:this.state.form_gast_spieler.slice(0,position)});
+  this.clearInputs();
+
+}
+
+editRow(row){
+  var position = this.state.form_gast_spieler.indexOf(row);
+
+  this.gast_SpielerRNummer.value = this.state.form_gast_spieler[row].form_gast_SpielerRNummer;
+  this.state.form_gast_SpielerRNummer = this.state.form_gast_spieler[row].form_gast_SpielerRNummer;
+
+  this.gast_SpielerNName.value = this.state.form_gast_spieler[row].form_gast_SpielerNName;
+  this.state.form_gast_SpielerNName = this.state.form_gast_spieler[row].form_gast_SpielerNName;
+
+  this.gast_SpielerVName.value = this.state.form_gast_spieler[row].form_gast_SpielerVName;
+  this.state.form_gast_SpielerVName = this.state.form_gast_spieler[row].form_gast_SpielerVName;
+
+  this.gast_SpielerPosition.value = this.state.form_gast_spieler[row].form_gast_SpielerPosition;
+  this.state.form_gast_SpielerPosition = this.state.form_gast_spieler[row].form_gast_SpielerPosition;
+
+  this.gast_SpielerPNummer.value = this.state.form_gast_spieler[row].form_gast_SpielerPNummer;
+  this.state.form_gast_SpielerPNummer = this.state.form_gast_spieler[row].form_gast_SpielerPNummer;
+
+  this.rowRef.value = row;
+  this.state.input = 'Edit';
+  this.forceUpdate();
 }
 
 render() {
