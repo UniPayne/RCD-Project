@@ -7,7 +7,7 @@ import {
 import { Link } from 'react-router-dom'
 import Popup from "reactjs-popup";
 import '../CSS/uebersicht.css';
-
+import GastTeam from "./GastTeam_Form";
 import Spielinfos from "./Spielinfos";
 import Tabelle from "./Tabelle";
 import Spieler from "./Spieler";

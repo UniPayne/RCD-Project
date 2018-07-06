@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 import Popup from "reactjs-popup";
 import '../CSS/uebersicht.css';
 import Uebersicht from "./Uebersicht"
-
+import GastTeam from "./GastTeam_Form";
 import Tabelle from "./Tabelle";
 import Spieler from "./Spieler";
 import { Button } from 'semantic-ui-react';
@@ -25,11 +25,16 @@ class Spielinfos extends Component{
       form_gastTeam_name: '',
       form_heimTeam_name: '',
       form_austragungsort: '',
-      form_zuschauer: ''
+      form_zuschauer: '',
+      showPopupGast: false
     };
+
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
-    this.checkSpielNr = this.checkSpielNr.bind(this);
+}
+
+toggleGastPopup(){
+  this.setState({showPopupGast: !this.state.showPopupGast});
 }
 
   handleChange(event){
@@ -54,9 +59,11 @@ class Spielinfos extends Component{
     this.checkZuschauer();
   }
 
+
+
   checkSpielNr(){
     if (this.state.form_spielnummer == ''){
-      return;
+
     }
   }
 
@@ -131,7 +138,7 @@ render() {
               <input type="number" name="form_zuschauer" min={0} onChange={this.handleChange}/> <br/>
 
           </div>
-              <button className="button_pop" type="button"name="fortfahren" onClick={this.handleSubmit}>weiter</button>
+              <button className="button_pop" type="button"name="fortfahren" onClick={this.handleSubmit}>Speichern und Fortfahren</button>
             </form>
         </div>
       </div>
