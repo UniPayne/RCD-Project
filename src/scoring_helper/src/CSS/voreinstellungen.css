@@ -10,7 +10,6 @@
 
 .vor_spielInfo{
   border-style: solid;
-  border-width: 3px;
   height: 145px;
   width: 44%;
   float: left;
@@ -22,6 +21,7 @@
   text-align: center;
   width: 100%;
   margin: center;
+  font-weight: bold;
 }
 
 .vor_logo{
@@ -43,6 +43,7 @@ background-color: #F2F2F2;
   text-align: center;
   width: 100%;
   margin: center;
+  font-weight: bold;
 }
 
 .vor_heim{
@@ -58,6 +59,7 @@ background-color: #F2F2F2;
   text-align: center;
   width: 100%;
   margin: center;
+  font-weight: bold;
 }
 
 .logo{
