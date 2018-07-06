@@ -23,7 +23,8 @@ class Voreinstellungen extends Component {
               <button className="button1">Spiel info</button>
             </div>
 
-            <div className="vor_logo">
+            <div>
+
               <img src={logo} className="logo" alt="logo" />
             </div>
           </div>
