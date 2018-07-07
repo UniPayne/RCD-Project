@@ -87,6 +87,8 @@ submitHeimMain(stati){
     return (
         <HashRouter>
           <div>
+
+            {/*Hier sind die Allgemeinen Spielinformationen eingetragen*/}
             <div className="vor_oben">
               <div>
           <div className="spielInformationen_links">
@@ -112,18 +114,16 @@ submitHeimMain(stati){
                 </div>
                   <label>Liga:</label>
                   <input type='text' name="liga_name" maxLength={20} value={this.state.liga_name} readOnly /><br/>
-
                   <label>Heim:</label>
                   <input type='text' name="heimTeam_name" maxLength={20} value={this.state.heimTeam_name} readOnly /><br/>
-                <div className="zuschauer">
-                  <label>Zuschauer:</label>
-                  <input className="zuschauerInput" name="zuschauer" type='number'value={this.state.zuschauer} min={0} readOnly/>
+                  <div className="zuschauer">
+                    <label>Zuschauer:</label>
+                      <input className="zuschauerInput" name="zuschauer" type='number'value={this.state.zuschauer} min={0} readOnly/>
 
-    {/* Popup startet hier*/}
 
-                <div className="sInfo">
-                  <button className="button_pop" onClick={this.toggleInfoPopup.bind(this)}>Informationen eintragen</button>
-                  {this.state.showInfoPopup ?
+                    <div className="sInfo">
+                      <button className="button_pop" onClick={this.toggleInfoPopup.bind(this)}>Informationen eintragen</button>
+                      {this.state.showInfoPopup ?
 
                       <Spielinfos submitSpielinfosPopUp={this.submitSpielinfosMain.bind(this)}
                         closePopup={this.toggleInfoPopup.bind(this)}
@@ -133,36 +133,30 @@ submitHeimMain(stati){
                     :null
                   }
                 </div>
-
                   </div>
-                  <div>
-                  </div>
-
             </div>
           </div>
-
               <img src={logo} className="logo" alt="logo" />
             </div>
           </div>
 
           <div className="vor_unten">
+
+            {/*Hier sind die Informationen des Gast Teams eingetragen*/}
             <div className="vor_gast">
               <label>Gast</label>
               <Vor_Spieler_Gast/>
-
-
                 <div>
-          <button className="button_pop1" onClick={this.toggleGastPopup.bind(this)}>Gastteam anlegen</button>
-          {this.state.showGastPopup ?
-
-                <GastTeam_Form submitGastPopUp={this.submitGastMain.bind(this)}
-                    closePopup={this.toggleGastPopup.bind(this)}
-                    />
-                  :null
-          }
-        </div>
+                    <button className="button_pop1" onClick={this.toggleGastPopup.bind(this)}>Gastteam anlegen</button>
+                    {this.state.showGastPopup ?
+                      <GastTeam_Form submitGastPopUp={this.submitGastMain.bind(this)}
+                        closePopup={this.toggleGastPopup.bind(this)}/>
+                      :null
+                    }
+                  </div>
             </div>
 
+            {/*Hier sind die Informationen des Heim Teams eingetragen*/}
             <div className="vor_heim">
                 <label>Heim</label>
                 <Vor_Spieler_Heim/>

@@ -19,7 +19,7 @@ class GastTeam_Form extends Component{
     super();
     this.state = {
       perro:'form-control',
-      input:'Submit',
+      input:'Speichern',
       form_gast_SpielerRNummer: '',
       form_gast_SpielerNName: '',
       form_gast_SpielerVName: '',
@@ -40,7 +40,7 @@ close(event){
 
   onSubmit(event){
     event.preventDefault();
-    if (this.submitInput.value== 'Submit'){
+    if (this.submitInput.value== 'Speichern'){
       const obj = {
         form_gast_SpielerRNummer: this.state.form_gast_SpielerRNummer,
         form_gast_SpielerNName: this.state.form_gast_SpielerNName,
@@ -54,15 +54,16 @@ close(event){
         form_gast_SpielerVName: '',
         form_gast_SpielerPosition: '',
         form_gast_SpielerPNummer: ''});
+
     }else
-      if(this.submitInput.value =='Edit'){
+      if(this.submitInput.value =='Bearbeiten'){
         const position = Number(this.rowRef.value);
         this.state.form_gast_spieler[position].form_gast_SpielerRNummer = this.gast_SpielerRNummer.value;
         this.state.form_gast_spieler[position].form_gast_SpielerNName = this.gast_SpielerNName.value;
         this.state.form_gast_spieler[position].form_gast_SpielerVName = this.gast_SpielerVName.value;
         this.state.form_gast_spieler[position].form_gast_SpielerPosition = this.gast_SpielerPosition.value;
         this.state.form_gast_spieler[position].form_gast_SpielerPNummer = this.gast_SpielerPNummer.value;
-        this.state.input = 'Submit';
+        this.state.input = 'Speichern';
         this.clearInputs();
         this.forceUpdate();
       }
@@ -108,7 +109,7 @@ editRow(row){
   this.state.form_gast_SpielerPNummer = this.state.form_gast_spieler[row].form_gast_SpielerPNummer;
 
   this.rowRef.value = row;
-  this.state.input = 'Edit';
+  this.state.input = 'Bearbeiten';
   this.forceUpdate();
 }
 
@@ -142,7 +143,7 @@ render() {
   				<div className="form-group">
   					<div className="col-sm-offset-2 col-sm-10">
   					  <input type="button"  ref={(ref) => this.submitInput = ref} value={this.state.input} onClick={this.onSubmit.bind(this)} className="btn btn-default"/>
-              <input type="button"  value="Speichern und schließen" onClick={this.close.bind(this)} className="btn btn-default"/>
+              <input type="button"  value="Schließen" onClick={this.close.bind(this)} className="btn btn-default"/>
   					</div>
   				</div>
 

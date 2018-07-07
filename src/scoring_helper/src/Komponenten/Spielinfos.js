@@ -38,70 +38,8 @@ class Spielinfos extends Component{
 
   handleSubmit(event){
     event.preventDefault();
-    this.checkAllFields();
     this.props.submitSpielinfosPopUp(this.state);
     this.props.closePopup();
-  }
-
-  checkAllFields(){
-    this.checkSpielNr();
-    this.checkSpielDatum();
-    this.checkLigaName();
-    this.checkVerbandName();
-    this.checkHeimName();
-    this.checkGastName();
-    this.checkAustragungsort();
-    this.checkZuschauer();
-  }
-
-
-
-  checkSpielNr(){
-    if (this.state.form_spielnummer == ''){
-
-    }
-  }
-
-  checkSpielDatum(){
-    if (this.state.form_spieldatum == ''){
-      return;
-    }
-  }
-
-  checkLigaName(){
-    if(this.state.form_liga_name == ''){
-      return;
-    }
-  }
-
-  checkVerbandName(){
-    if(this.state.form_verband_name ==''){
-      return;
-    }
-  }
-
-  checkGastName(){
-    if(this.state.form_gastTeam_name ==''){
-      return;
-    }
-  }
-
-  checkHeimName(){
-    if(this.state.form_heimTeam_name ==''){
-      return;
-    }
-  }
-
-  checkAustragungsort(){
-    if(this.state.form_austragungsort ==''){
-      return;
-    }
-  }
-
-  checkZuschauer(){
-    if(this.state.form_zuschauer == ''){
-      return;
-    }
   }
 
 render() {
