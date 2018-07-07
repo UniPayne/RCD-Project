@@ -27,6 +27,7 @@ class Voreinstellungen extends Component {
       austragungsort: '',
       zuschauer: '',
 
+      gast_spieler:'',
       gast_SpielerRNummer: '',
       gast_SpielerNName: '',
       gast_SpielerVName: '',
@@ -70,11 +71,31 @@ submitSpielinfosMain(stati){
 }
 
 submitGastMain(stati){
+  const obj = {
+    gast_SpielerRNummer: this.state.gast_SpielerRNummer,
+    gast_SpielerNName: this.state.gast_SpielerNName,
+    gast_SpielerVName: this.state.gast_SpielerVName,
+    gast_SpielerPosition: this.state.gast_SpielerPosition,
+    gast_SpielerPNummer: this.state.gast_SpielerPNummer
+  };
+
+
+/*  this.setState({form_gast_spieler:[...this.state.form_gast_spieler, obj],
+    form_gast_SpielerRNummer: '',
+    form_gast_SpielerNName: '',
+    form_gast_SpielerVName: '',
+    form_gast_SpielerPosition: '',
+    form_gast_SpielerPNummer: ''});
+*/
+
+
+  this.setState({gast_spieler: stati.form_gast_spieler});
   this.setState({gast_SpielerRNummer: stati.form_gast_SpielerRNummer});
   this.setState({gast_SpielerNName: stati.form_gast_SpielerNName});
   this.setState({gast_SpielerVName: stati.form_gast_SpielerVName});
   this.setState({gast_SpielerPosition: stati.form_gast_SpielerPosition});
   this.setState({gast_SpielerPNummer: stati.form_gast_SpielerPNummer});
+  console.log([...this.state.gast_spieler, obj]);
 }
 
 submitHeimMain(stati){

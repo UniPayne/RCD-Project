@@ -32,10 +32,18 @@ class GastTeam_Form extends Component{
 }
 
 close(event){
-  this.props.submitGastPopUp(this.state);
+  const obj = {
+    form_gast_SpielerRNummer: this.state.form_gast_SpielerRNummer,
+    form_gast_SpielerNName: this.state.form_gast_SpielerNName,
+    form_gast_SpielerVName: this.state.form_gast_SpielerVName,
+    form_gast_SpielerPosition: this.state.form_gast_SpielerPosition,
+    form_gast_SpielerPNummer: this.state.form_gast_SpielerPNummer
+  };
+
+  console.log([...this.state.form_gast_spieler, obj]);
+  this.props.submitGastPopUp([...this.state.form_gast_spieler,obj]);
   this.props.closePopup();
 }
-
 
 
   onSubmit(event){
@@ -48,12 +56,18 @@ close(event){
         form_gast_SpielerPosition: this.state.form_gast_SpielerPosition,
         form_gast_SpielerPNummer: this.state.form_gast_SpielerPNummer
       };
+
       this.setState({form_gast_spieler:[...this.state.form_gast_spieler, obj],
         form_gast_SpielerRNummer: '',
         form_gast_SpielerNName: '',
         form_gast_SpielerVName: '',
         form_gast_SpielerPosition: '',
         form_gast_SpielerPNummer: ''});
+
+
+
+
+
 
     }else
       if(this.submitInput.value =='Bearbeiten'){
