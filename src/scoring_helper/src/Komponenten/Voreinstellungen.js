@@ -1,9 +1,5 @@
 import React, { Component } from "react";
-import {
-  Route,
-  NavLink,
-  HashRouter
-} from "react-router-dom";
+import {Route, NavLink, HashRouter} from "react-router-dom";
 import "../CSS/home.css";
 import "../CSS/voreinstellungen.css";
 import logo from '../logo.svg';
