@@ -31,6 +31,10 @@ class GastTeam_Form extends Component{
     this.onSubmit = this.onSubmit.bind(this);
 }
 
+close(event){
+  this.props.submitGastPopUp(this.state);
+  this.props.closePopup();
+}
 
 
 
@@ -61,8 +65,6 @@ class GastTeam_Form extends Component{
         this.state.input = 'Submit';
         this.clearInputs();
         this.forceUpdate();
-        this.props.submitGastPopUp(this.state);
-        this.props.closePopup();
       }
   }
 
@@ -140,6 +142,7 @@ render() {
   				<div className="form-group">
   					<div className="col-sm-offset-2 col-sm-10">
   					  <input type="button"  ref={(ref) => this.submitInput = ref} value={this.state.input} onClick={this.onSubmit.bind(this)} className="btn btn-default"/>
+              <input type="button"  value="Speichern und schließen" onClick={this.close.bind(this)} className="btn btn-default"/>
   					</div>
   				</div>
 
