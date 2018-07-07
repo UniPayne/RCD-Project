@@ -1,4 +1,5 @@
 .spielInformationen_links{
+
   border-style: solid;
   border-width: 3px;
   height: 145px;
@@ -94,12 +95,6 @@ label{
 
 }
 
-
-.spielerInf{
-  width: 100%;
-  float: left;
-
-}
 
 
 .spielerInformationen label{

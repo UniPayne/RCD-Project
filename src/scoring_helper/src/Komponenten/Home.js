@@ -5,15 +5,16 @@ import {
   HashRouter
 } from "react-router-dom";
 import "../CSS/home.css";
-import Uebersicht from "./Uebersicht";
+import Voreinstellungen from "./Voreinstellungen";
+
 
 class Home extends Component {
   render() {
     return (
         <HashRouter>
           <div>
-            <NavLink to="/Uebersicht"><button classname="position">Spiel starten!</button></NavLink>
-            <Route path="/Uebersicht" component={Uebersicht}/>
+            <NavLink to="/Voreinstellungen"><button classname="position">Spiel starten!</button></NavLink>
+            <Route path="/Voreinstellungen" component={Voreinstellungen}/>
           </div>
         </HashRouter>
     );
