@@ -133,15 +133,15 @@ render() {
   				</div>
   				<div className="input-group">
   					<span className="input-group-addon">Vorname</span>
-  					<input type="email" required ref={(ref) => this.gast_SpielerVName = ref} onChange={event => this.setState({ form_gast_SpielerVName: event.target.value})} value={this.state.form_gast_SpielerVName} className="form-control"/>
+  					<input type="text" required ref={(ref) => this.gast_SpielerVName = ref} onChange={event => this.setState({ form_gast_SpielerVName: event.target.value})} value={this.state.form_gast_SpielerVName} className="form-control"/>
   				</div>
           <div className="input-group">
   					<span className="input-group-addon">Position</span>
-  					<input type="email" required ref={(ref) => this.gast_SpielerPosition = ref} onChange={event => this.setState({ form_gast_SpielerPosition: event.target.value})} value={this.state.form_gast_SpielerPosition} className="form-control"/>
+  					<input type="text" required ref={(ref) => this.gast_SpielerPosition = ref} onChange={event => this.setState({ form_gast_SpielerPosition: event.target.value})} value={this.state.form_gast_SpielerPosition} className="form-control"/>
   				</div>
           <div className="input-group">
   					<span className="input-group-addon">Passnummer</span>
-  					<input type="email" required ref={(ref) => this.gast_SpielerPNummer = ref} onChange={event => this.setState({ form_gast_SpielerPNummer: event.target.value})} value={this.state.form_gast_SpielerPNummer} className="form-control"/>
+  					<input type="text" required ref={(ref) => this.gast_SpielerPNummer = ref} onChange={event => this.setState({ form_gast_SpielerPNummer: event.target.value})} value={this.state.form_gast_SpielerPNummer} className="form-control"/>
   				</div>
   				<div className="form-group">
   					<div className="col-sm-offset-2 col-sm-10">
