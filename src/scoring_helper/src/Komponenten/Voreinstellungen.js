@@ -7,6 +7,9 @@ import {
 import "../CSS/home.css";
 import "../CSS/voreinstellungen.css";
 import logo from '../logo.svg';
+import Vor_Spieler_Heim from "./Vor_Spieler_Heim";
+import Vor_Spieler_Gast from "./Vor_Spieler_Gast";
+
 
 
 import Uebersicht from "./Uebersicht";
@@ -20,7 +23,7 @@ class Voreinstellungen extends Component {
             <div className="vor_spielInfo">
               <label>Spielinformation</label>
 
-              <button className="button1">Spiel info</button>
+              <button className="button_spielinfo">Spiel info</button>
             </div>
 
             <div>
@@ -32,15 +35,17 @@ class Voreinstellungen extends Component {
           <div className="vor_unten">
             <div className="vor_gast">
               <label>Gast</label>
+              <Vor_Spieler_Gast/>
 
-
-              <button className="button2">Gast</button>
+              <button className="button_gast">Gast</button>
             </div>
 
             <div className="vor_heim">
                 <label>Heim</label>
+                <Vor_Spieler_Heim/>
 
-              <button className="button3">Heim</button>
+
+              <button className="button_heim">Heim</button>
             </div>
           </div>
 
