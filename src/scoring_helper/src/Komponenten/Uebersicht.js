@@ -1,42 +1,42 @@
 import React, { Component } from "react";
-import {
-  Route,
-  NavLink,
-  HashRouter
-} from "react-router-dom";
-import { Link } from 'react-router-dom'
+import {Route, NavLink, HashRouter} from "react-router-dom";
+import { Link } from 'react-router-dom';
 import Popup from "reactjs-popup";
-import '../CSS/uebersicht.css';
-import GastTeam_Form from "./GastTeam_Form";
-import Spielinfos from "./Spielinfos";
-import Tabelle from "./Tabelle";
-import Spieler from "./Spieler";
-import { Button } from 'semantic-ui-react';
-import '../CSS/spielInfo_Popup.css';
 import ReactModal from 'react-modal';
+import { Button } from 'semantic-ui-react';
+
+//Komponenten
+import GastTeam_Form from   "./GastTeam_Form";
+import Spielinfos from      "./Spielinfos";
+import Tabelle from         "./Tabelle";
+import Spieler from         "./Spieler";
+
+//CSS
+import '../CSS/uebersicht.css';
+import '../CSS/spielInfo_Popup.css';
+
 
 class Uebersicht extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      spielnummer: '',
-      spieldatum: '',
-      liga_name: '',
-      verband_name: '',
-      gastTeam_name: '',
-      heimTeam_name: '',
-      austragungsort: '',
-      zuschauer: '',
+      spielnummer:              '',
+      spieldatum:               '',
+      liga_name:                '',
+      verband_name:             '',
+      gastTeam_name:            '',
+      heimTeam_name:            '',
+      austragungsort:           '',
+      zuschauer:                '',
 
-      gast_SpielerRNummer: '',
-      gast_SpielerNName: '',
-      gast_SpielerVName: '',
-      gast_SpielerPosition: '',
-      gast_SpielerPNummer: '',
+      gast_SpielerRNummer:      '',
+      gast_SpielerNName:        '',
+      gast_SpielerVName:        '',
+      gast_SpielerPosition:     '',
+      gast_SpielerPNummer:      '',
 
-      showGastPopup: false,
-      showInfoPopup: false
-
+      showGastPopup:            false,
+      showInfoPopup:            false
     };
 
 }
@@ -50,22 +50,22 @@ toggleInfoPopup() {
 }
 
 submitSpielinfosMain(stati){
-  this.setState({spielnummer:stati.form_spielnummer});
-  this.setState({spieldatum:stati.form_spieldatum});
-  this.setState({liga_name:stati.form_liga_name});
-  this.setState({verband_name:stati.form_verband_name});
-  this.setState({gastTeam_name:stati.form_gastTeam_name});
-  this.setState({heimTeam_name:stati.form_heimTeam_name});
-  this.setState({austragungsort:stati.form_austragungsort});
-  this.setState({zuschauer:stati.form_zuschauer});
+  this.setState({spielnummer:     stati.form_spielnummer});
+  this.setState({spieldatum:      stati.form_spieldatum});
+  this.setState({liga_name:       stati.form_liga_name});
+  this.setState({verband_name:    stati.form_verband_name});
+  this.setState({gastTeam_name:   stati.form_gastTeam_name});
+  this.setState({heimTeam_name:   stati.form_heimTeam_name});
+  this.setState({austragungsort:  stati.form_austragungsort});
+  this.setState({zuschauer:       stati.form_zuschauer});
 }
 
 submitGastMain(stati){
-  this.setState({gast_SpielerRNummer: stati.form_gast_SpielerRNummer});
-  this.setState({gast_SpielerNName: stati.form_gast_SpielerNName});
-  this.setState({gast_SpielerVName: stati.form_gast_SpielerVName});
-  this.setState({gast_SpielerPosition: stati.form_gast_SpielerPosition});
-  this.setState({gast_SpielerPNummer: stati.form_gast_SpielerPNummer});
+  this.setState({gast_SpielerRNummer:   stati.form_gast_SpielerRNummer});
+  this.setState({gast_SpielerNName:     stati.form_gast_SpielerNName});
+  this.setState({gast_SpielerVName:     stati.form_gast_SpielerVName});
+  this.setState({gast_SpielerPosition:  stati.form_gast_SpielerPosition});
+  this.setState({gast_SpielerPNummer:   stati.form_gast_SpielerPNummer});
 }
 
 
@@ -76,37 +76,76 @@ submitGastMain(stati){
         <div className="links">
           <form>
             <label>SpielNr:</label>
-            <input type='number' name="spielnummer" value={this.state.spielnummer} min={0} readOnly /><br/>
+            <input type='number'
+                   name="spielnummer"
+                   value={this.state.spielnummer}
+                   min={0}
+                   readOnly />
+                 <br/>
+
             <label>Verband:</label>
-            <input type='text' name="verband_name" value={this.state.verband_name} maxLength={20} readOnly /><br/>
+            <input type='text'
+                   name="verband_name"
+                   value={this.state.verband_name}
+                   maxLength={20}
+                   readOnly />
+                 <br/>
+
             <label>Gast:</label>
-            <input type='text' name="gastTeam_name" maxLength={20} value={this.state.gastTeam_name} readOnly /><br/>
+            <input type='text'
+                   name="gastTeam_name"
+                   maxLength={20}
+                   value={this.state.gastTeam_name}
+                   readOnly />
+                 <br/>
 
             <label className="in">Austragungsort:</label>
-            <input className="inInput" type='text' name="austragungsort" value={this.state.austragungsort} maxLength={20} readOnly/><br/>
-
+            <input className="inInput"
+                   type='text'
+                   name="austragungsort"
+                   value={this.state.austragungsort}
+                   maxLength={20}
+                   readOnly/>
+                 <br/>
           </form>
         </div>
 
         <div className="rechts">
             <div className="gespieltAm">
               <label>Gespielt am:</label>
-              <input type='Date' name="spielDatum" value={this.state.spieldatum} readOnly/>
+              <input type='Date'
+                     name="spielDatum"
+                     value={this.state.spieldatum}
+                     readOnly/>
             </div>
-              <label>Liga:</label>
-              <input type='text' name="liga_name" maxLength={20} value={this.state.liga_name} readOnly /><br/>
+
+            <label>Liga:</label>
+            <input type='text'
+                   name="liga_name"
+                   maxLength={20}
+                   value={this.state.liga_name}
+                   readOnly />
+                 <br/>
 
               <label>Heim:</label>
-              <input type='text' name="heimTeam_name" maxLength={20} value={this.state.heimTeam_name} readOnly /><br/>
-            <div className="zuschauer">
-              <label>Zuschauer:</label>
-              <input className="zuschauerInput" name="zuschauer" type='number'value={this.state.zuschauer} min={0} readOnly/>
-            </div>
+              <input type='text'
+                     name="heimTeam_name"
+                     maxLength={20}
+                     value={this.state.heimTeam_name}
+                     readOnly />
+                 <br/>
 
+                 <div className="zuschauer">
+                    <label>Zuschauer:</label>
+                    <input className="zuschauerInput"
+                           type='number'
+                           name="zuschauer"
+                           value={this.state.zuschauer}
+                           min={0}
+                           readOnly/>
+                  </div>
               </div>
-
-
-      </div>
+            </div>
 
       <div className="punkte_rechts">
         <Tabelle/>

@@ -1,45 +1,50 @@
 import React, { Component } from "react";
 import {Route, NavLink, HashRouter} from "react-router-dom";
-import "../CSS/home.css";
-import "../CSS/voreinstellungen.css";
 import logo from '../logo.svg';
-import GastTeam_Form from "./GastTeam_Form";
-import '../CSS/spielInfo_Popup.css';
+
+
+//Komponenten
 import Vor_Spieler_Heim from "./Vor_Spieler_Heim";
 import Vor_Spieler_Gast from "./Vor_Spieler_Gast";
 import Uebersicht from "./Uebersicht";
 import Spielinfos from "./Spielinfos";
+import GastTeam_Form from "./GastTeam_Form";
+
+//CSS
+import "../CSS/home.css";
+import "../CSS/voreinstellungen.css";
+import '../CSS/spielInfo_Popup.css';
 
 class Voreinstellungen extends Component {
   constructor(props){
     super(props);
     this.state = {
-      spielnummer: '',
-      spieldatum: '',
-      liga_name: '',
-      verband_name: '',
-      gastTeam_name: '',
-      heimTeam_name: '',
-      austragungsort: '',
-      zuschauer: '',
+      spielnummer:            '',
+      spieldatum:             '',
+      liga_name:              '',
+      verband_name:           '',
+      gastTeam_name:          '',
+      heimTeam_name:          '',
+      austragungsort:         '',
+      zuschauer:              '',
 
-      gast_spieler:'',
-      gast_SpielerRNummer: '',
-      gast_SpielerNName: '',
-      gast_SpielerVName: '',
-      gast_SpielerPosition: '',
-      gast_SpielerPNummer: '',
+      gast_spieler:           '',
+      gast_SpielerRNummer:    '',
+      gast_SpielerNName:      '',
+      gast_SpielerVName:      '',
+      gast_SpielerPosition:   '',
+      gast_SpielerPNummer:    '',
 
-      heim_SpielerRNummer: '',
-      heim_SpielerNName: '',
-      heim_SpielerVName: '',
-      heim_SpielerPosition: '',
-      heim_SpielerPNummer: '',
+      heim_SpielerRNummer:    '',
+      heim_SpielerNName:      '',
+      heim_SpielerVName:      '',
+      heim_SpielerPosition:   '',
+      heim_SpielerPNummer:    '',
 
 
-      showInfoPopup: false,
-      showGastPopup: false,
-      showHeimPopup: false
+      showInfoPopup:          false,
+      showGastPopup:          false,
+      showHeimPopup:          false
     }
 
 }
@@ -56,21 +61,21 @@ toggleHeimPopup(){
 }
 
 submitSpielinfosMain(stati){
-  this.setState({spielnummer:stati.form_spielnummer});
-  this.setState({spieldatum:stati.form_spieldatum});
-  this.setState({liga_name:stati.form_liga_name});
-  this.setState({verband_name:stati.form_verband_name});
-  this.setState({gastTeam_name:stati.form_gastTeam_name});
-  this.setState({heimTeam_name:stati.form_heimTeam_name});
-  this.setState({austragungsort:stati.form_austragungsort});
-  this.setState({zuschauer:stati.form_zuschauer});
+  this.setState({spielnummer:     stati.form_spielnummer});
+  this.setState({spieldatum:      stati.form_spieldatum});
+  this.setState({liga_name:       stati.form_liga_name});
+  this.setState({verband_name:    stati.form_verband_name});
+  this.setState({gastTeam_name:   stati.form_gastTeam_name});
+  this.setState({heimTeam_name:   stati.form_heimTeam_name});
+  this.setState({austragungsort:  stati.form_austragungsort});
+  this.setState({zuschauer:       stati.form_zuschauer});
 }
 
 submitGastMain(stati){
-  this.setState({gast_spieler: stati.form_gast_spieler});
+  this.setState({gast_spieler:        stati.form_gast_spieler});
   this.setState({gast_SpielerRNummer: stati.form_gast_SpielerRNummer});
-  this.setState({gast_SpielerNName: stati.form_gast_SpielerNName});
-  this.setState({gast_SpielerVName: stati.form_gast_SpielerVName});
+  this.setState({gast_SpielerNName:   stati.form_gast_SpielerNName});
+  this.setState({gast_SpielerVName:   stati.form_gast_SpielerVName});
   this.setState({gast_SpielerPNummer: stati.form_gast_SpielerPNummer});
   console.log(this.state.gast_SpielerRNummer);
 
