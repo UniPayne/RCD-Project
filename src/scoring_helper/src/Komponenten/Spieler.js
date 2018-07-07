@@ -1,7 +1,7 @@
 import React from 'react'
 import { Table, Flag } from 'semantic-ui-react'
 import '../CSS/spieler.css';
-
+//Werde hier keine Änderungen machen, diese Klasse wird höchstwahrscheinlich entfernt.
 const spieler = [
   { nr: "1", name: 'Jansen', vorname: 'Tobias', posNr:"1", passnr:"1548" },
   { nr: "2", name: 'Schütte', vorname: 'Hans', posNr:"2", passnr:"4685" },
