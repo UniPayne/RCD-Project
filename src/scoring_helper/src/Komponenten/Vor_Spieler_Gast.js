@@ -15,6 +15,7 @@ const spieler = [
 
 ]
 
+
 export default  () => (
   <Table className="spie">
     <Table.Header className="header">

@@ -101,27 +101,11 @@ submitGastMain(stati){
             <div className="zuschauer">
               <label>Zuschauer:</label>
               <input className="zuschauerInput" name="zuschauer" type='number'value={this.state.zuschauer} min={0} readOnly/>
-
-{/* Popup startet hier*/}
-
-            <div className="sInfo">
-              <button className="button_pop" onClick={this.toggleInfoPopup.bind(this)}>Informationen eintragen</button>
-              {this.state.showInfoPopup ?
-
-                  <Spielinfos submitSpielinfosPopUp={this.submitSpielinfosMain.bind(this)}
-                    closePopup={this.toggleInfoPopup.bind(this)}
-                    />
-
-
-                :null
-              }
             </div>
 
               </div>
-              <div>
-              </div>
 
-        </div>
+        
       </div>
 
       <div className="punkte_rechts">

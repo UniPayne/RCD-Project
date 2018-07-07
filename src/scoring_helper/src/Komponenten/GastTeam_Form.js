@@ -7,8 +7,8 @@ import {
 import { Link } from 'react-router-dom'
 import Popup from "reactjs-popup";
 import '../CSS/uebersicht.css';
-import Uebersicht from "./Uebersicht"
-
+import Uebersicht from "./Uebersicht";
+import Vor_Spieler_Gast from "./Vor_Spieler_Gast";
 import Tabelle from "./Tabelle";
 import Spieler from "./Spieler";
 import { Button } from 'semantic-ui-react';
