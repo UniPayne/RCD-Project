@@ -7,7 +7,7 @@ import {
 import { Link } from 'react-router-dom'
 import Popup from "reactjs-popup";
 import '../CSS/uebersicht.css';
-import GastTeam from "./GastTeam_Form";
+import GastTeam_Form from "./GastTeam_Form";
 import Spielinfos from "./Spielinfos";
 import Tabelle from "./Tabelle";
 import Spieler from "./Spieler";
@@ -27,18 +27,29 @@ class Uebersicht extends React.Component {
       heimTeam_name: '',
       austragungsort: '',
       zuschauer: '',
-      showPopup: false
-    };
 
+      gast_SpielerRNummer: '',
+      gast_SpielerNName: '',
+      gast_SpielerVName: '',
+      gast_SpielerPosition: '',
+      gast_SpielerPNummer: '',
+
+      showGastPopup: false,
+      showInfoPopup: false
+
+    };
 
 }
 
-togglePopup() {
-  this.setState({showPopup: !this.state.showPopup});
+toggleGastPopup(){
+  this.setState({showGastPopup: !this.state.showGastPopup});
+}
+
+toggleInfoPopup() {
+  this.setState({showInfoPopup: !this.state.showInfoPopup});
 }
 
 submitSpielinfosMain(stati){
-
   this.setState({spielnummer:stati.form_spielnummer});
   this.setState({spieldatum:stati.form_spieldatum});
   this.setState({liga_name:stati.form_liga_name});
@@ -47,6 +58,14 @@ submitSpielinfosMain(stati){
   this.setState({heimTeam_name:stati.form_heimTeam_name});
   this.setState({austragungsort:stati.form_austragungsort});
   this.setState({zuschauer:stati.form_zuschauer});
+}
+
+submitGastMain(stati){
+  this.setState({gast_SpielerRNummer: stati.form_gast_SpielerRNummer});
+  this.setState({gast_SpielerNName: stati.form_gast_SpielerNName});
+  this.setState({gast_SpielerVName: stati.form_gast_SpielerVName});
+  this.setState({gast_SpielerPosition: stati.form_gast_SpielerPosition});
+  this.setState({gast_SpielerPNummer: stati.form_gast_SpielerPNummer});
 }
 
 
@@ -86,11 +105,11 @@ submitSpielinfosMain(stati){
 {/* Popup startet hier*/}
 
             <div className="sInfo">
-              <button className="button_pop" onClick={this.togglePopup.bind(this)}>Informationen eintragen</button>
-              {this.state.showPopup ?
+              <button className="button_pop" onClick={this.toggleInfoPopup.bind(this)}>Informationen eintragen</button>
+              {this.state.showInfoPopup ?
 
                   <Spielinfos submitSpielinfosPopUp={this.submitSpielinfosMain.bind(this)}
-                    closePopup={this.togglePopup.bind(this)}
+                    closePopup={this.toggleInfoPopup.bind(this)}
                     />
 
 
@@ -111,7 +130,17 @@ submitSpielinfosMain(stati){
 
       <div className="spielerInformationen">
         <Spieler/>
-        <Button>Click Here</Button>
+      <div>
+        <button className="button_pop1" onClick={this.toggleGastPopup.bind(this)}>Gastteam anlegen</button>
+        {this.state.showGastPopup ?
+
+              <GastTeam_Form submitGastPopUp={this.submitGastMain.bind(this)}
+                  closePopup={this.toggleGastPopup.bind(this)}
+                  />
+                :null
+        }
+      </div>
+
       </div>
       <div className="spielfeld">
       </div>

@@ -28,23 +28,14 @@ class GastTeam_Form extends Component{
       form_gast_spieler:[]
     };
 
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleChange = this.handleChange.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
 }
 
 
-  handleChange(event){
-    this.setState({[event.target.name]: event.target.value})
-  }
 
-  handleSubmit(event){
+
+  onSubmit(event){
     event.preventDefault();
-    this.props.submitSpielinfosPopUp(this.state);
-    this.props.closePopup();
-  }
-
-  eintragen(event){
-    event.prefentDefault();
     if (this.submitInput.value== 'Submit'){
       const obj = {
         form_gast_SpielerRNummer: this.state.form_gast_SpielerRNummer,
@@ -70,7 +61,8 @@ class GastTeam_Form extends Component{
         this.state.input = 'Submit';
         this.clearInputs();
         this.forceUpdate();
-
+        this.props.submitGastPopUp(this.state);
+        this.props.closePopup();
       }
   }
 
@@ -120,32 +112,34 @@ editRow(row){
 
 render() {
   return(
+  <div className="SpielInfo_Popup">
+    <div className="SpielInfo_Popup_inner">
   		<div className="container">
-  			<form className="form-horizontal" role="form" onSubmit={this.onSubmit.bind(this)}>
-  				<label>table</label>
+  			<form className="form-horizontal" role="form">
+  				<h1>Gast Team eintragen</h1>
   				<div className="input-group">
   					<span className="input-group-addon">Rueckennummer</span>
-  					<input required type="text" ref={(ref) => this.gast_SpielerRNummer = ref} onChange={event => this.setState({ form_gast_SpielerRNummer: event.target.value})}  value={this.state.form_gast_SpielerRNummer} className={this.state.perro}/>
+  					<input required type="Number" ref={(ref) => this.gast_SpielerRNummer = ref} onChange={event => this.setState({form_gast_SpielerRNummer: event.target.value})}  value={this.state.form_gast_SpielerRNummer} className={this.state.perro}/>
   				</div>
   				<div className="input-group">
   					<span className="input-group-addon">Nachname</span>
-  					<input type="text" required ref={(ref) => this.gast_SpielerNName = ref} onChange={event => this.setState({ form_gast_SpielerNName: event.target.value})} value={this.state.form_gast_SpielerNName} className="form-control"  />
+  					<input type="text" required ref={(ref) => this.gast_SpielerNName = ref} onChange={event => this.setState({form_gast_SpielerNName: event.target.value})} value={this.state.form_gast_SpielerNName} className="form-control"  />
   				</div>
   				<div className="input-group">
   					<span className="input-group-addon">Vorname</span>
-  					<input type="text" required ref={(ref) => this.gast_SpielerVName = ref} onChange={event => this.setState({ form_gast_SpielerVName: event.target.value})} value={this.state.form_gast_SpielerVName} className="form-control"/>
+  					<input type="text" required ref={(ref) => this.gast_SpielerVName = ref} onChange={event => this.setState({form_gast_SpielerVName: event.target.value})} value={this.state.form_gast_SpielerVName} className="form-control"/>
   				</div>
           <div className="input-group">
   					<span className="input-group-addon">Position</span>
-  					<input type="text" required ref={(ref) => this.gast_SpielerPosition = ref} onChange={event => this.setState({ form_gast_SpielerPosition: event.target.value})} value={this.state.form_gast_SpielerPosition} className="form-control"/>
+  					<input type="Number" required ref={(ref) => this.gast_SpielerPosition = ref} onChange={event => this.setState({form_gast_SpielerPosition: event.target.value})} value={this.state.form_gast_SpielerPosition} className="form-control"/>
   				</div>
           <div className="input-group">
   					<span className="input-group-addon">Passnummer</span>
-  					<input type="text" required ref={(ref) => this.gast_SpielerPNummer = ref} onChange={event => this.setState({ form_gast_SpielerPNummer: event.target.value})} value={this.state.form_gast_SpielerPNummer} className="form-control"/>
+  					<input type="Number" required ref={(ref) => this.gast_SpielerPNummer = ref} onChange={event => this.setState({form_gast_SpielerPNummer: event.target.value})} value={this.state.form_gast_SpielerPNummer} className="form-control"/>
   				</div>
   				<div className="form-group">
   					<div className="col-sm-offset-2 col-sm-10">
-  					  <input type="submit"  ref={(ref) => this.submitInput = ref} value={this.state.input} className="btn btn-default"/>
+  					  <input type="button"  ref={(ref) => this.submitInput = ref} value={this.state.input} onClick={this.onSubmit.bind(this)} className="btn btn-default"/>
   					</div>
   				</div>
 
@@ -165,15 +159,17 @@ render() {
   					</thead>
   					<tbody>
 
-  						{this.state.users.map((data,index) => {
+  						{this.state.form_gast_spieler.map((data,index) => {
 
-  return <Row editRow= {this.editRow.bind(this)} users = {this.state.users}  data = {data} key={index} row={index} deleteRow={this.deleteRow.bind(this)} />
+  return <Row editRow= {this.editRow.bind(this)} users = {this.state.form_gast_spieler}  data = {data} key={index} row={index} deleteRow={this.deleteRow.bind(this)} />
   						})}
 
   					</tbody>
   				</table>
   			</div>
   		</div>
+    </div>
+  </div>
   	);
   }
   }
@@ -185,11 +181,16 @@ render() {
   	render(){
   		return (
   			<tr>
-  				<td>{this.props.data.name}</td>
+  				<td>{this.props.data.form_gast_SpielerRNummer}</td>
 
-  				<td>{this.props.data.lname}</td>
+  				<td>{this.props.data.form_gast_SpielerNName}</td>
 
-  				<td>{this.props.data.email}</td>
+  				<td>{this.props.data.form_gast_SpielerVName}</td>
+
+          <td>{this.props.data.form_gast_SpielerPosition}</td>
+
+          <td>{this.props.data.form_gast_SpielerPNummer}</td>
+
   				<td className="glyphicon glyphicon-trash" onClick={() => {this.props.deleteRow(this.props.row)}}></td>
   				<td className="glyphicon glyphicon-edit" onClick={() => {this.props.editRow(this.props.row)}} ></td>
   			</tr>

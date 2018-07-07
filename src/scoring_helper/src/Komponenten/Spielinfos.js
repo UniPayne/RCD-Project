@@ -26,15 +26,10 @@ class Spielinfos extends Component{
       form_heimTeam_name: '',
       form_austragungsort: '',
       form_zuschauer: '',
-      showPopupGast: false
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
-}
-
-toggleGastPopup(){
-  this.setState({showPopupGast: !this.state.showPopupGast});
 }
 
   handleChange(event){
@@ -119,23 +114,23 @@ render() {
           <form>
             <div className="linksPop">
             <label>SpielNr:</label>
-              <input type='text' name="form_spielnummer" maxLength={20} onChange={this.handleChange}/> <br/>
+              <input required type='text' name="form_spielnummer" maxLength={20} onChange={this.handleChange}/> <br/>
               <label>Gespielt am:</label>
-              <input type="Date" name="form_spieldatum" onChange={this.handleChange}/><br/>
+              <input required type="Date" name="form_spieldatum" onChange={this.handleChange}/><br/>
               <label>Liga:</label>
-              <input type='text' name="form_liga_name" maxLength={20} onChange={this.handleChange}/> <br/>
+              <input required type='text' name="form_liga_name" maxLength={20} onChange={this.handleChange}/> <br/>
               <label>Verband:</label>
-              <input type='text'name="form_verband_name" maxLength={20} onChange={this.handleChange}/> <br/>
+              <input required type='text'name="form_verband_name" maxLength={20} onChange={this.handleChange}/> <br/>
             </div>
             <div className="rechtsPop">
               <label>Gast:</label>
-              <input type='text' name="form_gastTeam_name" maxLength={20} onChange={this.handleChange}/> <br/>
+              <input required type='text' name="form_gastTeam_name" maxLength={20} onChange={this.handleChange}/> <br/>
               <label>Heim:</label>
-              <input type='text'name="form_heimTeam_name" maxLength={20} onChange={this.handleChange}/> <br/>
+              <input required type='text'name="form_heimTeam_name" maxLength={20} onChange={this.handleChange}/> <br/>
               <label>Austragungsort:</label>
-              <input type="text" name="form_austragungsort" maxLength={20} onChange={this.handleChange}/> <br/>
+              <input required type="text" name="form_austragungsort" maxLength={20} onChange={this.handleChange}/> <br/>
               <label>Zuschauer:</label>
-              <input type="number" name="form_zuschauer" min={0} onChange={this.handleChange}/> <br/>
+              <input required type="number" name="form_zuschauer" min={0} onChange={this.handleChange}/> <br/>
 
           </div>
               <button className="button_pop" type="button"name="fortfahren" onClick={this.handleSubmit}>Speichern und Fortfahren</button>
