@@ -57,6 +57,7 @@ close(event){
         form_gast_SpielerPNummer: this.state.form_gast_SpielerPNummer
       };
 
+{/*Hier liegt das Problem, dass immer ein leerer am Ende angehangen wird. Klärungsbedarf!!*/}
       this.setState({form_gast_spieler:[...this.state.form_gast_spieler, obj],
         form_gast_SpielerRNummer: '',
         form_gast_SpielerNName: '',
