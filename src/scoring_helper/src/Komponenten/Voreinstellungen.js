@@ -10,6 +10,8 @@ import Uebersicht from "./Uebersicht";
 import Spielinfos from "./Spielinfos";
 import GastTeam_Form from "./GastTeam_Form";
 
+
+
 //CSS
 import "../CSS/home.css";
 import "../CSS/voreinstellungen.css";
