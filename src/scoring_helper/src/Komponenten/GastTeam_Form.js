@@ -32,7 +32,6 @@ class GastTeam_Form extends Component{
 }
 
 close(event){
-  console.log(this.state.form_gast_spieler);
   this.props.submitGastPopUp(this.state);
   //this.props.submitGastPopUp(this.state.form_gast_spieler);
   this.props.closePopup();
