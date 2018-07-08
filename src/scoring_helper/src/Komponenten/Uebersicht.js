@@ -10,8 +10,6 @@ import GastTeam_Form from   "./GastTeam_Form";
 import Spielinfos from      "./Spielinfos";
 import Tabelle from         "./Tabelle";
 import Spieler from         "./Spieler";
-import SpielTabelle from    "./SpielTabelle";
-
 
 //CSS
 import '../CSS/uebersicht.css';
@@ -159,7 +157,6 @@ submitGastMain(stati){
 
       </div>
       <div className="spielfeld">
-        <SpielTabelle/>
       </div>
     </div>
     );

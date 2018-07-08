@@ -3,10 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "konva": "^2.1.7",
     "react": "^16.4.0",
-    "react-canvas-component": "^0.1.5",
-    "react-canvas-draw": "^0.1.9",
     "react-dom": "^16.4.0",
     "react-modal": "^3.5.1",
     "react-router-dom": "^4.3.1",
