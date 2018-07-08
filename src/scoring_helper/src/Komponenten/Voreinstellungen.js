@@ -28,23 +28,23 @@ class Voreinstellungen extends Component {
       austragungsort:         '',
       zuschauer:              '',
 
-      gast_spieler:           '',
-      gast_SpielerRNummer:    '',
-      gast_SpielerNName:      '',
-      gast_SpielerVName:      '',
-      gast_SpielerPosition:   '',
-      gast_SpielerPNummer:    '',
+      gast_spieler:'',
+      gast_SpielerRNummer:'',
+      gast_SpielerNName:'',
+      gast_SpielerVName:'',
+      gast_SpielerPosition:'',
+      gast_SpielerPNummer:'',
 
-      heim_SpielerRNummer:    '',
-      heim_SpielerNName:      '',
-      heim_SpielerVName:      '',
-      heim_SpielerPosition:   '',
-      heim_SpielerPNummer:    '',
+      heim_SpielerRNummer:'',
+      heim_SpielerNName:'',
+      heim_SpielerVName:'',
+      heim_SpielerPosition:'',
+      heim_SpielerPNummer:'',
 
 
-      showInfoPopup:          false,
-      showGastPopup:          false,
-      showHeimPopup:          false
+      showInfoPopup:false,
+      showGastPopup:false,
+      showHeimPopup:false
     }
 
 }
