@@ -28,12 +28,12 @@ class Voreinstellungen extends Component {
       austragungsort:         '',
       zuschauer:              '',
 
-      gast_spieler:[],
-      gast_SpielerRNummer:'',
-      gast_SpielerNName:'',
-      gast_SpielerVName:'',
-      gast_SpielerPosition:'',
-      gast_SpielerPNummer:'',
+      gast_spieler: [],
+      gast_SpielerRNummer: '',
+      gast_SpielerNName: '',
+      gast_SpielerVName: '',
+      gast_SpielerPosition: '',
+      gast_SpielerPNummer: '',
 
       heim_SpielerRNummer:'',
       heim_SpielerNName:'',
@@ -74,14 +74,15 @@ submitSpielinfosMain(stati){
 submitGastMain(stati){
 
         this.setState({gast_spieler: stati.form_gast_spieler});
-        this.setState({gast_SpielerRNummer: stati.form_gast_SpielerRNummer});
-        this.setState({gast_SpielerNName: stati.form_gast_spieler[stati.form_gast_SpielerNName]});
+        this.setState({gast_SpielerRNummer: stati.form_gast_spieler});
+        this.setState({gast_SpielerNName: stati.form_gast_SpielerNName});
         this.setState({gast_SpielerVName: stati.form_gast_SpielerVName});
         this.setState({gast_SpielerPNummer: stati.form_gast_SpielerPNummer});
 
+
   console.log(stati.form_gast_spieler);
   console.log(this.state.gast_spieler);
-  console.log(this.state.gast_SpielerNName);
+  console.log(this.state.gast_SpielerRNummer);
 }
 
 submitHeimMain(stati){
