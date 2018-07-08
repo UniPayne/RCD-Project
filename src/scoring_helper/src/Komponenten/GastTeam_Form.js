@@ -32,16 +32,9 @@ class GastTeam_Form extends Component{
 }
 
 close(event){
-  const obj = {
-    form_gast_SpielerRNummer: this.state.form_gast_SpielerRNummer,
-    form_gast_SpielerNName: this.state.form_gast_SpielerNName,
-    form_gast_SpielerVName: this.state.form_gast_SpielerVName,
-    form_gast_SpielerPosition: this.state.form_gast_SpielerPosition,
-    form_gast_SpielerPNummer: this.state.form_gast_SpielerPNummer
-  };
-
-  console.log([...this.state.form_gast_spieler, obj]);
-  this.props.submitGastPopUp([...this.state.form_gast_spieler,obj]);
+  console.log(this.state.form_gast_spieler);
+  this.props.submitGastPopUp(this.state);
+  //this.props.submitGastPopUp(this.state.form_gast_spieler);
   this.props.closePopup();
 }
 
@@ -57,7 +50,6 @@ close(event){
         form_gast_SpielerPNummer: this.state.form_gast_SpielerPNummer
       };
 
-{/*Hier liegt das Problem, dass immer ein leerer am Ende angehangen wird. Klärungsbedarf!!*/}
       this.setState({form_gast_spieler:[...this.state.form_gast_spieler, obj],
         form_gast_SpielerRNummer: '',
         form_gast_SpielerNName: '',
