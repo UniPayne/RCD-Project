@@ -6,11 +6,12 @@ import {
 } from "react-router-dom";
 import "../CSS/home.css";
 import "../CSS/voreinstellungen.css";
-
+<<<<<<< HEAD
 import logo from '../logo.png';
 import Vor_Spieler_Heim from "./Vor_Spieler_Heim";
 import Vor_Spieler_Gast from "./Vor_Spieler_Gast";
 
+=======
 import '../CSS/spielInfo_Popup.css';
 
 class Voreinstellungen extends Component {
@@ -80,7 +81,7 @@ submitGastMain(stati){
   console.log(stati.form_gast_spieler);
   console.log(this.state.gast_spieler);
 }
-
+>>>>>>> d8d2dcc0093d8ab0b8b6ab1cd229648d494a230e
 
 
 
