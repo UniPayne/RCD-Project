@@ -17,7 +17,6 @@ import '../CSS/spielInfo_Popup.css';
 class GastTeam_Form extends Component{
   constructor(props) {
     super(props);
-    this.title=props.title;
     this.state = {
       perro:'form-control',
       input:'Speichern',
@@ -129,9 +128,7 @@ render() {
     <div className="SpielInfo_Popup_inner">
   		<div className="container">
   			<form className="form-horizontal" role="form">
-          {
-          <h1>{this.title} Team eintragen</h1>
-          }
+  				<h1>Gast Team eintragen</h1>
   				<div className="input-group">
   					<span className="input-group-addon">Rueckennummer</span>
   					<input required type="Number" ref={(ref) => this.gast_SpielerRNummer = ref} onChange={event => this.setState({form_gast_SpielerRNummer: event.target.value})}  value={this.state.form_gast_SpielerRNummer} className={this.state.perro}/>

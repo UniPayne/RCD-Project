@@ -59,6 +59,8 @@ class Voreinstellungen extends Component {
       showHeimPopup:          false
     }
 
+    const tmp = this.state.gast_spieler;
+
 }
 toggleInfoPopup() {
   this.setState({showInfoPopup: !this.state.showInfoPopup});
@@ -85,11 +87,23 @@ submitSpielinfosMain(stati){
 
 
 submitGastMain(stati){
-console.log(stati.form_gast_spieler);
 
   this.setState({gast_spieler: stati.form_gast_spieler}, () => {
      console.log(this.state.gast_spieler);
    });
+
+
+
+   //Einzelne Spieler
+   //this.props.submitGastPopUp(this.state);
+   // this.setState({form_gast_spieler:[...this.state.form_gast_spieler, obj],
+   //   form_gast_SpielerRNummer: '',
+   //   form_gast_SpielerNName: '',
+   //   form_gast_SpielerVName: '',
+   //   form_gast_SpielerPosition: '',
+   //   form_gast_SpielerPNummer: ''});
+   //const map = [...this.state.gast_spieler];
+
 
 
 
@@ -160,6 +174,25 @@ submitHeimMain(stati){
 
 
   render() {
+    const tmp = this.state.gast_spieler || [];
+
+    let GastTableBody;
+    if (tmp.length > 0){
+      GastTableBody=(
+    <Table.Body>
+      {
+        tmp.map(spielerI => (
+        <Table.Row className="tabInhalt">
+          <Table.Cell>{spielerI.form_gast_SpielerRNummer}</Table.Cell>
+          <Table.Cell>{spielerI.form_gast_SpielerNName}</Table.Cell>
+          <Table.Cell>{spielerI.form_gast_SpielerVName}</Table.Cell>
+          <Table.Cell>{spielerI.form_gast_SpielerPosition}</Table.Cell>
+          <Table.Cell>{spielerI.form_gast_SpielerPNummer}</Table.Cell>
+        </Table.Row>
+      ))}
+    </Table.Body>)
+  }
+
     return (
         <HashRouter>
           <div>
@@ -231,20 +264,12 @@ submitHeimMain(stati){
                       <Table.HeaderCell>  PassNr.     </Table.HeaderCell>
                     </Table.Row>
                   </Table.Header>
-                  <Table.Body>
-                    <Table.Row className="tabInhalt">
-                      <Table.Cell>  {this.state.gast_SpielerRNummer}  </Table.Cell>
-                      <Table.Cell>  {this.state.gast_SpielerNName}    </Table.Cell>
-                      <Table.Cell>  {this.state.gast_SpielerVName}    </Table.Cell>
-                      <Table.Cell>  {this.state.gast_SpielerPosition} </Table.Cell>
-                      <Table.Cell>  {this.state.gast_SpielerPNummer}  </Table.Cell>
-                    </Table.Row>
-                  </Table.Body>
+                {GastTableBody}
                 </Table>
                 <div>
                     <button className="button_gast" onClick={this.toggleGastPopup.bind(this)}>Gastteam anlegen</button>
                     {this.state.showGastPopup ?
-                      <GastTeam_Form submitGastPopUp={this.submitGastMain.bind(this)}
+                      <GastTeam_Form submitGastPopUp={this.submitGastMain.bind(this)} title="Gast"
                         closePopup={this.toggleGastPopup.bind(this)}/>
                       :null
                     }
