@@ -194,9 +194,9 @@ submitHeimMain(stati){
                 {GastTableBody}
                 </Table>
                 <div>
-                    <button className="button_gast" onClick={this.toggleGastPopup.bind(this)}>Gastteam anlegen</button>
+                    <button className="button_gast" onClick={this.toggleGastPopup.bind(this)}>Gastteam bearbeiten</button>
                     {this.state.showGastPopup ?
-                      <GastTeam_Form submitGastPopUp={this.submitGastMain.bind(this)} title="Gast"
+                      <GastTeam_Form submitGastPopUp={this.submitGastMain.bind(this)} title="Gast" currentArray = {this.state.gast_spieler}
                         closePopup={this.toggleGastPopup.bind(this)}/>
                       :null
                     }
@@ -219,10 +219,10 @@ submitHeimMain(stati){
                   {HeimTableBody}
                   </Table>
                   <div>
-                      <button className="button_heim" onClick={this.toggleGastPopup.bind(this)}>Heim anlegen</button>
-                      {this.state.showGastPopup ?
-                        <GastTeam_Form submitGastPopUp={this.submitHeimMain.bind(this)} title="Heim"
-                          closePopup={this.toggleGastPopup.bind(this)}/>
+                      <button className="button_gast" onClick={this.toggleHeimPopup.bind(this)}>Heimteam bearbeiten</button>
+                      {this.state.showHeimPopup ?
+                        <GastTeam_Form submitGastPopUp={this.submitHeimMain.bind(this)} title="Heim" currentArray = {this.state.heim_spieler}
+                          closePopup={this.toggleHeimPopup.bind(this)}/>
                         :null
                       }
                     </div>

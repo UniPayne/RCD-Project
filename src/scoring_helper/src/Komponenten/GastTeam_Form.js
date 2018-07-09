@@ -20,7 +20,7 @@ import '../CSS/gastTeam_form.css';
 class GastTeam_Form extends Component{
   constructor(props) {
     super(props);
-    this.title=props.title;
+    this.title = props.title;
     this.state = {
       perro:'form-control',
       input:'Speichern',
@@ -29,7 +29,7 @@ class GastTeam_Form extends Component{
       spielerVName: '',
       spielerPosition: '',
       spielerPNummer: '',
-      spielerArray: []
+      spielerArray: props.currentArray
     };
 
     this.onSubmit = this.onSubmit.bind(this);
@@ -37,10 +37,15 @@ class GastTeam_Form extends Component{
 
 close(event){
   event.preventDefault();
-  //ganzes Set an Spieler
-  //evtl neuen state für alles erstellen
-  this.props.submitGastPopUp(this.state);
-  this.props.closePopup();
+
+
+  if (this.state.spielerArray.length >= 9){
+    this.props.submitGastPopUp(this.state);
+    this.props.closePopup();
+   }else {
+     alert('Es müssen mindestens 9 Spieler eingetragen werden!');
+  }
+
 }
 
 
@@ -55,12 +60,21 @@ close(event){
         spielerPNummer: this.state.spielerPNummer
       };
 
+      if (  this.state.spielerRNummer ===''||
+        this.state.spielerNName ===''||
+        this.state.spielerVName ===''||
+        this.state.spielerPosition ===''||
+        this.state.spielerPNummer === ''){
+          alert('Sie müssen alle Felder ausfüllen!');
+        }
+
       this.setState({spielerArray:[...this.state.spielerArray, obj],
         spielerRNummer: '',
         spielerNName: '',
         spielerVName: '',
         spielerPosition: '',
         spielerPNummer: ''});
+
 
     }else
       if(this.submitInput.value =='Uebernehmen'){
@@ -134,7 +148,7 @@ render() {
             <div className="rechts_pop">
           <div>
   					<span>Rueckennummer:</span>
-  					<input required type="Number" ref={(ref) => this.gast_SpielerRNummer = ref} onChange={event => this.setState({spielerRNummer: event.target.value})}  value={this.state.spielerRNummer} className={this.state.perro}/>
+  					<input id="" required type="Number" ref={(ref) => this.gast_SpielerRNummer = ref} onChange={event => this.setState({spielerRNummer: event.target.value})}  value={this.state.spielerRNummer} className={this.state.perro}/>
   				</div>
   				<div>
   					<span>Nachname:</span>
