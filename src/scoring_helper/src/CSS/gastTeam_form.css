@@ -23,11 +23,13 @@
 
 .button_div{
   margin-left: 70%;
-}
+  margin-bottom: 2%;
+  }
 
 .gast_pop{
   width: 97%;
-  height: 150px;
+  height: 100px;
+
 }
 
 .gast_pop input{

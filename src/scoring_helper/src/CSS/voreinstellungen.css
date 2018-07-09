@@ -75,7 +75,7 @@ background-color: #F2F2F2;
 
 .vor_button_weiter{
  margin-right: 30%;
- background-color: red;
+
 }
 
 .button_spielinfo{
@@ -84,8 +84,7 @@ background-color: #F2F2F2;
 }
 
 .vor_button_gast_heim{
-  margin-top: 35%;
-  margin-left: 76%;
+  margin-left: 75%;
   margin-bottom: 3%;
-
+  margin-top: 33%;
 }

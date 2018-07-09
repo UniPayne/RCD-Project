@@ -10,18 +10,18 @@
 }
 
 .links{
-  padding-top: 1%;
+  padding-top: 0.6%;
   float:left;
-  margin-left: 0.5%;
+  margin-left: 0.3%;
   width:38%;
-
+position: absolute;
 
 }
 
 .links form{
-
-  width: 250%;
+  width: 49%;
   border: 1px solid gainsbro;
+
 }
 
 .links input{
@@ -29,11 +29,11 @@
   }
 
 .rechts{
-  padding-top: 1.2%;
+  padding-top: 0.4%;
   float: left;
-  width: 55%;
-  margin-left: 5%;
-
+  width: 24%;
+  margin-left: 19.5%;
+position: absolute;
 }
 
 .rechts input{
@@ -69,10 +69,9 @@
 }
 
 .in{
-  width: 17.8%;
+  width: 37.5%;
   text-align: left;
   margin-left: 5px;
-
 }
 
 .rechtsIn{
@@ -83,7 +82,7 @@
 }
 
 .inInput{
-  width: 22.6%;
+  width: 52%;
 
 }
 

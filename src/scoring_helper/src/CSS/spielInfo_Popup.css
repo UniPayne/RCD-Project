@@ -20,13 +20,14 @@ top: 25%;
 bottom: 25%;
 margin: auto;
 background-color: #F2F2F2;
-
+border: solid;
+height: 75%;
 }
 
 .linksPop{
   float: left;
   margin-left: 5%;
-  width:40%;
+  width:41%;
 
 }
 
@@ -42,13 +43,14 @@ background-color: #F2F2F2;
 
 .rechtsPop{
   float: right;
-  margin-right: 5%;
   width: 45%;
+  margin-right: 6%;
   margin-left: 3%;
 
 }
 .rechtsPop label{
   text-align: right;
+  width: 37%;
 }
 
 .rechtsPop input{
