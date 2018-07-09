@@ -242,7 +242,7 @@ submitHeimMain(stati){
                   </Table.Body>
                 </Table>
                 <div>
-                    <button className="button_pop1" onClick={this.toggleGastPopup.bind(this)}>Gastteam anlegen</button>
+                    <button className="button_gast" onClick={this.toggleGastPopup.bind(this)}>Gastteam anlegen</button>
                     {this.state.showGastPopup ?
                       <GastTeam_Form submitGastPopUp={this.submitGastMain.bind(this)}
                         closePopup={this.toggleGastPopup.bind(this)}/>
