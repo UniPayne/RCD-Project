@@ -15,8 +15,8 @@ import { Button } from 'semantic-ui-react';
 import '../CSS/spielInfo_Popup.css';
 
 class GastTeam_Form extends Component{
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       perro:'form-control',
       input:'Speichern',
@@ -25,15 +25,16 @@ class GastTeam_Form extends Component{
       form_gast_SpielerVName: '',
       form_gast_SpielerPosition: '',
       form_gast_SpielerPNummer: '',
-      form_gast_spieler:[]
+      form_gast_spieler: []
     };
 
     this.onSubmit = this.onSubmit.bind(this);
 }
 
 close(event){
+  event.preventDefault();
+  //ganzes Set an Spieler
   this.props.submitGastPopUp(this.state);
-  //this.props.submitGastPopUp(this.state.form_gast_spieler);
   this.props.closePopup();
 }
 
@@ -48,7 +49,8 @@ close(event){
         form_gast_SpielerPosition: this.state.form_gast_SpielerPosition,
         form_gast_SpielerPNummer: this.state.form_gast_SpielerPNummer
       };
-
+      //Einzelne Spieler
+      //this.props.submitGastPopUp(this.state);
       this.setState({form_gast_spieler:[...this.state.form_gast_spieler, obj],
         form_gast_SpielerRNummer: '',
         form_gast_SpielerNName: '',

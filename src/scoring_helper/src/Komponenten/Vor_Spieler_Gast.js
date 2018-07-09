@@ -14,22 +14,35 @@ class Vor_Spieler_Gast extends Component{
   constructor(props){
     super(props);
     this.state={
-      gast_spieler:[],
-      gast_SpielerRNummer:    '',
-      gast_SpielerNName:      '',
-      gast_SpielerVName:      '',
-      gast_SpielerPosition:   '',
-      gast_SpielerPNummer:    '',
+      gast_spieler: [],
+      gast_SpielerRNummer: '',
+      gast_SpielerNName: '',
+      gast_SpielerVName: '',
+      gast_SpielerPosition: '',
+      gast_SpielerPNummer: '',
     }
 };
 
 submitGastTabelle(stati){
-  this.setState({gast_spieler:            stati.form_gast_spieler});
-  this.setState({gast_SpielerRNummer:     stati.form_gast_SpielerRNummer});
-  this.setState({gast_SpielerNName:       stati.form_gast_SpielerNName});
-  this.setState({gast_SpielerVName:       stati.form_gast_SpielerVName});
-  this.setState({gast_SpielerPosition:    stati.form_gast_SpielerPosition});
-  this.setState({gast_SpielerPNummer:     stati.form_gast_SpielerPNummer});
+  this.setState({gast_SpielerRNummer: stati.form_gast_SpielerRNummer}, () => {
+    console.log('RNummer:' + this.state.gast_SpielerRNummer);
+  });
+
+  this.setState({gast_SpielerNName: stati.form_gast_SpielerNName}, () => {
+    console.log('NName:' + this.state.gast_SpielerNName);
+  });
+
+  this.setState({gast_SpielerVName: stati.form_gast_SpielerVName}, () => {
+    console.log('VName:' + this.state.gast_SpielerVName);
+  });
+
+  this.setState({gast_SpielerPosition: stati.form_gast_SpielerPosition}, () => {
+    console.log('Position:' + this.state.gast_SpielerPosition);
+  });
+
+  this.setState({gast_SpielerPNummer: stati.form_gast_SpielerPNummer}, () => {
+    console.log('PNummer:' + this.state.gast_SpielerPNummer);
+  });
 }
 
   render(){

@@ -16,8 +16,8 @@ import '../CSS/spielInfo_Popup.css';
 import '../CSS/uebersicht.css';
 
 class Spielinfos extends Component{
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       form_spielnummer:     '',
       form_spieldatum:      '',
