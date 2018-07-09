@@ -1,15 +1,15 @@
 .SpielInfo_Popup{
   background-color: transparent;
   position: fixed;
- width: 100%;
- height: 100%;
- top: 0;
- left: 0;
- right: 0;
- bottom: 0;
- margin: auto;
- border-style: solid;
- border: 5px solid gainsbro;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   margin: auto;
+   border-style: solid;
+   border: 5px solid gainsbro;
 }
 
 .SpielInfo_Popup_inner{
@@ -19,7 +19,7 @@ right: 25%;
 top: 25%;
 bottom: 25%;
 margin: auto;
-background: white;
+background-color: #F2F2F2;
 }
 
 .linksPop{
@@ -62,5 +62,5 @@ background: white;
   float: right;
   margin-right: 10%;
   margin-bottom: 1%;
-  
+
 }
