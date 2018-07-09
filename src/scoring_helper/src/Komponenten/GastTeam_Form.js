@@ -13,6 +13,8 @@ import Tabelle from "./Tabelle";
 import Spieler from "./Spieler";
 import { Button } from 'semantic-ui-react';
 import '../CSS/spielInfo_Popup.css';
+import '../CSS/gastTeam_form.css';
+
 
 class GastTeam_Form extends Component{
   constructor(props) {
@@ -126,40 +128,42 @@ render() {
   return(
   <div className="SpielInfo_Popup">
     <div className="SpielInfo_Popup_inner">
-  		<div className="container">
-  			<form className="form-horizontal" role="form">
+  		<div>
+  			<form role="form">
   				<h1>Gast Team eintragen</h1>
-  				<div className="input-group">
-  					<span className="input-group-addon">Rueckennummer</span>
+          <div className="gast_pop">
+          <div>
+  					<span>Rueckennummer:</span>
   					<input required type="Number" ref={(ref) => this.gast_SpielerRNummer = ref} onChange={event => this.setState({form_gast_SpielerRNummer: event.target.value})}  value={this.state.form_gast_SpielerRNummer} className={this.state.perro}/>
   				</div>
-  				<div className="input-group">
-  					<span className="input-group-addon">Nachname</span>
+  				<div>
+  					<span>Nachname:</span>
   					<input type="text" required ref={(ref) => this.gast_SpielerNName = ref} onChange={event => this.setState({form_gast_SpielerNName: event.target.value})} value={this.state.form_gast_SpielerNName} className="form-control"  />
   				</div>
-  				<div className="input-group">
-  					<span className="input-group-addon">Vorname</span>
+  				<div>
+  					<span>Vorname:</span>
   					<input type="text" required ref={(ref) => this.gast_SpielerVName = ref} onChange={event => this.setState({form_gast_SpielerVName: event.target.value})} value={this.state.form_gast_SpielerVName} className="form-control"/>
   				</div>
-          <div className="input-group">
-  					<span className="input-group-addon">Position</span>
+          <div>
+  					<span>Position:</span>
   					<input type="Number" required ref={(ref) => this.gast_SpielerPosition = ref} onChange={event => this.setState({form_gast_SpielerPosition: event.target.value})} value={this.state.form_gast_SpielerPosition} className="form-control"/>
   				</div>
-          <div className="input-group">
-  					<span className="input-group-addon">Passnummer</span>
+          <div>
+  					<span>Passnummer:</span>
   					<input type="Number" required ref={(ref) => this.gast_SpielerPNummer = ref} onChange={event => this.setState({form_gast_SpielerPNummer: event.target.value})} value={this.state.form_gast_SpielerPNummer} className="form-control"/>
   				</div>
-  				<div className="form-group">
-  					<div className="col-sm-offset-2 col-sm-10">
-  					  <input type="button"  ref={(ref) => this.submitInput = ref} value={this.state.input} onClick={this.onSubmit.bind(this)} className="btn btn-default"/>
-              <input type="button"  value="Schließen" onClick={this.close.bind(this)} className="btn btn-default"/>
+  				<div>
+          </div>
+        </div>
+  					<div className="button_div">
+  					  <input className="button_speichern" type="button"  ref={(ref) => this.submitInput = ref} value={this.state.input} onClick={this.onSubmit.bind(this)}/>
+              <input className="button_schließen" type="button"  value="Schließen" onClick={this.close.bind(this)} />
   					</div>
-  				</div>
 
   				<input type="hidden" className="row-ref" value="" ref={(ref) => this.rowRef = ref}/>
   			</form>
-  			<div className="container" >
-  				<table className="table table-hover">
+  			<div className="tab_pop">
+  				<table>
   					<thead>
   						<tr>
   							<th>Rückennummer</th>

@@ -29,7 +29,6 @@
   }
 
 .rechts{
-
   padding-top: 1.2%;
   float: left;
   width: 55%;
@@ -95,8 +94,6 @@ label{
 
 }
 
-
-
 .spielerInformationen label{
   text-align:left;
   margin-right: 5%;
@@ -105,7 +102,6 @@ label{
 .nr{
   margin-right: -10%;
   width: 11%;
-
 }
 
 .spielerInformationen{
