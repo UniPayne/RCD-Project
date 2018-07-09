@@ -33,33 +33,12 @@ class Voreinstellungen extends Component {
       zuschauer:              '',
 
       gast_spieler: [],
-      gast_SpielerRNummer: '',
-      gast_SpielerNName: '',
-      gast_SpielerVName: '',
-      gast_SpielerPosition: '',
-      gast_SpielerPNummer: '',
-
-      gast_spieler:           '',
-      gast_SpielerRNummer:    '',
-      gast_SpielerNName:      '',
-      gast_SpielerVName:      '',
-      gast_SpielerPosition:   '',
-      gast_SpielerPNummer:    '',
-
-
-      heim_SpielerRNummer:    '',
-      heim_SpielerNName:      '',
-      heim_SpielerVName:      '',
-      heim_SpielerPosition:   '',
-      heim_SpielerPNummer:    '',
-
+      heim_spieler: [],
 
       showInfoPopup:          false,
       showGastPopup:          false,
       showHeimPopup:          false
     }
-
-    const tmp = this.state.gast_spieler;
 
 }
 toggleInfoPopup() {
@@ -88,110 +67,58 @@ submitSpielinfosMain(stati){
 
 submitGastMain(stati){
 
-  this.setState({gast_spieler: stati.form_gast_spieler}, () => {
+  this.setState({gast_spieler: stati.spielerArray}, () => {
      console.log(this.state.gast_spieler);
    });
 
-
-
-   //Einzelne Spieler
-   //this.props.submitGastPopUp(this.state);
-   // this.setState({form_gast_spieler:[...this.state.form_gast_spieler, obj],
-   //   form_gast_SpielerRNummer: '',
-   //   form_gast_SpielerNName: '',
-   //   form_gast_SpielerVName: '',
-   //   form_gast_SpielerPosition: '',
-   //   form_gast_SpielerPNummer: ''});
-   //const map = [...this.state.gast_spieler];
-
-
-
-
-/*
-  this.setState({gast_spieler: stati.form_gast_spieler});
-  this.setState({gast_SpielerRNummer: stati.form_gast_SpielerRNummer});
-  this.setState({gast_SpielerNName: stati.form_gast_SpielerNName});
-  this.setState({gast_SpielerVName: stati.form_gast_SpielerVName});
-  this.setState({gast_SpielerPosition: stati.form_gast_SpielerPosition});
-  this.setState({gast_SpielerPNummer: stati.form_gast_SpielerPNummer});
-  */
-
-  // mit mapping probieren..
-  //{stati.map}(stati.form_gast_spieler =>
-
-
-        // {spieler.map(spielerI => (
-        //   <Table.Row className="tabInhalt">
-        //     <Table.Cell>{spielerI.nr}</Table.Cell>
-        //     <Table.Cell>{spielerI.name}</Table.Cell>
-        //     <Table.Cell>{spielerI.vorname}</Table.Cell>
-        //     <Table.Cell>{spielerI.posNr}</Table.Cell>
-        //     <Table.Cell>{spielerI.passnr}</Table.Cell>
-        //   </Table.Row>
-        // ))}
-          // this.setState({gast_spieler:[...stati.form_gast_spieler]}, () => {
-          //   console.log('Gast Spieler: ' + this.state.gast_spieler);
-          // });
-  /*
-          this.setState({gast_SpielerRNummer: stati.form_gast_SpielerRNummer}, () => {
-            console.log('ARNummer: ' + this.state.gast_SpielerRNummer);
-          });
-
-          this.setState({gast_SpielerNName: stati.form_gast_SpielerNName}, () => {
-            console.log('ANName:' + this.state.gast_SpielerNName);
-          });
-
-          this.setState({gast_SpielerVName: stati.form_gast_SpielerVName}, () => {
-            console.log('AVName:' + this.state.gast_SpielerVName);
-          });
-
-          this.setState({gast_SpielerPosition: stati.form_gast_SpielerPosition}, () => {
-            console.log('Position:' + this.state.gast_SpielerPosition);
-          });
-
-          this.setState({gast_SpielerPNummer: stati.form_gast_SpielerPNummer}, () => {
-            console.log('PNummer:' + this.state.gast_SpielerPNummer);
-          });
-  */
-
-
-          // this.setState({gast_SpielerRNummer: stati.form_gast_spieler});
-          // this.setState({gast_SpielerNName: stati.form_gast_SpielerNName});
-          // this.setState({gast_SpielerVName: stati.form_gast_SpielerVName});
-          // this.setState({gast_SpielerPNummer: stati.form_gast_SpielerPNummer});
-    // console.log(this.state.gast_spieler);
-    // console.log(this.state.gast_SpielerRNummer);
-    //       this.submitGastTabelle
-    //console.log('RNummer:' + stati.form_gast_SpielerRNummer);
-    //console.log(this.state.gast_SpielerRNummer);
 }
 
 
 submitHeimMain(stati){
-  //Füllen wenn Gast funktioniert wie es soll
+  this.setState({heim_spieler: stati.spielerArray}, () => {
+     console.log(this.state.heim_spieler);
+   });
 }
 
 
 
   render() {
-    const tmp = this.state.gast_spieler || [];
+    const gast = this.state.gast_spieler || [];
+    const heim = this.state.heim_spieler || [];
 
     let GastTableBody;
-    if (tmp.length > 0){
+    if (gast.length > 0){
       GastTableBody=(
     <Table.Body>
       {
-        tmp.map(spielerI => (
+        gast.map(spielerI => (
         <Table.Row className="tabInhalt">
-          <Table.Cell>{spielerI.form_gast_SpielerRNummer}</Table.Cell>
-          <Table.Cell>{spielerI.form_gast_SpielerNName}</Table.Cell>
-          <Table.Cell>{spielerI.form_gast_SpielerVName}</Table.Cell>
-          <Table.Cell>{spielerI.form_gast_SpielerPosition}</Table.Cell>
-          <Table.Cell>{spielerI.form_gast_SpielerPNummer}</Table.Cell>
+          <Table.Cell>{spielerI.spielerRNummer}</Table.Cell>
+          <Table.Cell>{spielerI.spielerNName}</Table.Cell>
+          <Table.Cell>{spielerI.spielerVName}</Table.Cell>
+          <Table.Cell>{spielerI.spielerPosition}</Table.Cell>
+          <Table.Cell>{spielerI.spielerPNummer}</Table.Cell>
         </Table.Row>
       ))}
     </Table.Body>)
   }
+
+  let HeimTableBody;
+  if (heim.length > 0){
+    HeimTableBody=(
+  <Table.Body>
+    {
+      heim.map(spielerI => (
+      <Table.Row className="tabInhalt">
+        <Table.Cell>{spielerI.spielerRNummer}</Table.Cell>
+        <Table.Cell>{spielerI.spielerNName}</Table.Cell>
+        <Table.Cell>{spielerI.spielerVName}</Table.Cell>
+        <Table.Cell>{spielerI.spielerPosition}</Table.Cell>
+        <Table.Cell>{spielerI.spielerPNummer}</Table.Cell>
+      </Table.Row>
+    ))}
+  </Table.Body>)
+}
 
     return (
         <HashRouter>
@@ -279,11 +206,26 @@ submitHeimMain(stati){
             {/*Hier sind die Informationen des Heim Teams eingetragen*/}
             <div className="vor_heim">
                 <label>Heim</label>
-                <Vor_Spieler_Heim/>
-
-
-              <button className="button_heim">Heim</button>
-            </div>
+                  <Table className="spie">
+                    <Table.Header className="header">
+                      <Table.Row>
+                        <Table.HeaderCell>  RueckenNr.  </Table.HeaderCell>
+                        <Table.HeaderCell>  Nachname    </Table.HeaderCell>
+                        <Table.HeaderCell>  Vorname     </Table.HeaderCell>
+                        <Table.HeaderCell>  PosNr.      </Table.HeaderCell>
+                        <Table.HeaderCell>  PassNr.     </Table.HeaderCell>
+                      </Table.Row>
+                    </Table.Header>
+                  {HeimTableBody}
+                  </Table>
+                  <div>
+                      <button className="button_heim" onClick={this.toggleGastPopup.bind(this)}>Heim anlegen</button>
+                      {this.state.showGastPopup ?
+                        <GastTeam_Form submitGastPopUp={this.submitHeimMain.bind(this)} title="Heim"
+                          closePopup={this.toggleGastPopup.bind(this)}/>
+                        :null
+                      }
+                    </div>
           </div>
 
             <div classname="vor_button">
@@ -291,6 +233,7 @@ submitHeimMain(stati){
               <Route path="/Uebersicht" component={Uebersicht}/>
             </div>
           </div>
+        </div>
         </HashRouter>
     );
   }

@@ -24,12 +24,12 @@ class GastTeam_Form extends Component{
     this.state = {
       perro:'form-control',
       input:'Speichern',
-      form_gast_SpielerRNummer: '',
-      form_gast_SpielerNName: '',
-      form_gast_SpielerVName: '',
-      form_gast_SpielerPosition: '',
-      form_gast_SpielerPNummer: '',
-      form_gast_spieler: []
+      spielerRNummer: '',
+      spielerNName: '',
+      spielerVName: '',
+      spielerPosition: '',
+      spielerPNummer: '',
+      spielerArray: []
     };
 
     this.onSubmit = this.onSubmit.bind(this);
@@ -48,34 +48,28 @@ close(event){
     event.preventDefault();
     if (this.submitInput.value== 'Speichern'){
       const obj = {
-        form_gast_SpielerRNummer: this.state.form_gast_SpielerRNummer,
-        form_gast_SpielerNName: this.state.form_gast_SpielerNName,
-        form_gast_SpielerVName: this.state.form_gast_SpielerVName,
-        form_gast_SpielerPosition: this.state.form_gast_SpielerPosition,
-        form_gast_SpielerPNummer: this.state.form_gast_SpielerPNummer
+        spielerRNummer: this.state.spielerRNummer,
+        spielerNName: this.state.spielerNName,
+        spielerVName: this.state.spielerVName,
+        spielerPosition: this.state.spielerPosition,
+        spielerPNummer: this.state.spielerPNummer
       };
-      //Einzelne Spieler
-      //this.props.submitGastPopUp(this.state);
-      this.setState({form_gast_spieler:[...this.state.form_gast_spieler, obj],
-        form_gast_SpielerRNummer: '',
-        form_gast_SpielerNName: '',
-        form_gast_SpielerVName: '',
-        form_gast_SpielerPosition: '',
-        form_gast_SpielerPNummer: ''});
 
-
-
-
-
+      this.setState({spielerArray:[...this.state.spielerArray, obj],
+        spielerRNummer: '',
+        spielerNName: '',
+        spielerVName: '',
+        spielerPosition: '',
+        spielerPNummer: ''});
 
     }else
       if(this.submitInput.value =='Uebernehmen'){
         const position = Number(this.rowRef.value);
-        this.state.form_gast_spieler[position].form_gast_SpielerRNummer = this.gast_SpielerRNummer.value;
-        this.state.form_gast_spieler[position].form_gast_SpielerNName = this.gast_SpielerNName.value;
-        this.state.form_gast_spieler[position].form_gast_SpielerVName = this.gast_SpielerVName.value;
-        this.state.form_gast_spieler[position].form_gast_SpielerPosition = this.gast_SpielerPosition.value;
-        this.state.form_gast_spieler[position].form_gast_SpielerPNummer = this.gast_SpielerPNummer.value;
+        this.state.spieler[position].spielerRNummer = this.gast_SpielerRNummer.value;
+        this.state.spieler[position].spielerNName = this.gast_SpielerNName.value;
+        this.state.spieler[position].spielerVName = this.gast_SpielerVName.value;
+        this.state.spieler[position].spielerPosition = this.gast_SpielerPosition.value;
+        this.state.spieler[position].spielerPNummer = this.gast_SpielerPNummer.value;
         this.state.input = 'Speichern';
         this.clearInputs();
         this.forceUpdate();
@@ -89,37 +83,37 @@ clearInputs() {
   this.gast_SpielerPosition.value = '';
   this.gast_SpielerPNummer.value = '';
 
-  this.state.form_gast_SpielerRNummer = '';
-  this.state.form_gast_SpielerNName  = '';
-  this.state.form_gast_SpielerVName  = '';
-  this.state.form_gast_SpielerPosition = '';
-  this.state.form_gast_SpielerPNummer  = '';
+  this.state.spielerRNummer = '';
+  this.state.spielerNName  = '';
+  this.state.spielerVName  = '';
+  this.state.spielerPosition = '';
+  this.state.spielerPNummer  = '';
 }
 
 deleteRow(row){
-  var position = this.state.form_gast_spieler.indexOf(row);
-  this.setState({form_gast_spieler:this.state.form_gast_spieler.slice(0,position)});
+  var position = this.state.spielerArray.indexOf(row);
+  this.setState({spielerArray:this.state.spielerArray.slice(0,position)});
   this.clearInputs();
 
 }
 
 editRow(row){
-  var position = this.state.form_gast_spieler.indexOf(row);
+  var position = this.state.spielerArray.indexOf(row);
 
-  this.gast_SpielerRNummer.value = this.state.form_gast_spieler[row].form_gast_SpielerRNummer;
-  this.state.form_gast_SpielerRNummer = this.state.form_gast_spieler[row].form_gast_SpielerRNummer;
+  this.gast_SpielerRNummer.value = this.state.spielerArray[row].spielerRNummer;
+  this.state.spielerRNummer = this.state.spielerArray[row].spielerRNummer;
 
-  this.gast_SpielerNName.value = this.state.form_gast_spieler[row].form_gast_SpielerNName;
-  this.state.form_gast_SpielerNName = this.state.form_gast_spieler[row].form_gast_SpielerNName;
+  this.gast_SpielerNName.value = this.state.spielerArray[row].spielerNName;
+  this.state.spielerNName = this.state.spielerArray[row].spielerNName;
 
-  this.gast_SpielerVName.value = this.state.form_gast_spieler[row].form_gast_SpielerVName;
-  this.state.form_gast_SpielerVName = this.state.form_gast_spieler[row].form_gast_SpielerVName;
+  this.gast_SpielerVName.value = this.state.spielerArray[row].spielerVName;
+  this.state.spielerVName = this.state.spielerArray[row].spielerVName;
 
-  this.gast_SpielerPosition.value = this.state.form_gast_spieler[row].form_gast_SpielerPosition;
-  this.state.form_gast_SpielerPosition = this.state.form_gast_spieler[row].form_gast_SpielerPosition;
+  this.gast_SpielerPosition.value = this.state.spielerArray[row].spielerPosition;
+  this.state.spielerPosition = this.state.spielerArray[row].spielerPosition;
 
-  this.gast_SpielerPNummer.value = this.state.form_gast_spieler[row].form_gast_SpielerPNummer;
-  this.state.form_gast_SpielerPNummer = this.state.form_gast_spieler[row].form_gast_SpielerPNummer;
+  this.gast_SpielerPNummer.value = this.state.spielerArray[row].spielerPNummer;
+  this.state.spielerPNummer = this.state.spielerArray[row].spielerPNummer;
 
   this.rowRef.value = row;
   this.state.input = 'Uebernehmen';
@@ -140,25 +134,25 @@ render() {
             <div className="rechts_pop">
           <div>
   					<span>Rueckennummer:</span>
-  					<input required type="Number" ref={(ref) => this.gast_SpielerRNummer = ref} onChange={event => this.setState({form_gast_SpielerRNummer: event.target.value})}  value={this.state.form_gast_SpielerRNummer} className={this.state.perro}/>
+  					<input required type="Number" ref={(ref) => this.gast_SpielerRNummer = ref} onChange={event => this.setState({spielerRNummer: event.target.value})}  value={this.state.spielerRNummer} className={this.state.perro}/>
   				</div>
   				<div>
   					<span>Nachname:</span>
-  					<input type="text" required ref={(ref) => this.gast_SpielerNName = ref} onChange={event => this.setState({form_gast_SpielerNName: event.target.value})} value={this.state.form_gast_SpielerNName} className="form-control"  />
+  					<input type="text" required ref={(ref) => this.gast_SpielerNName = ref} onChange={event => this.setState({spielerNName: event.target.value})} value={this.state.spielerNName} className="form-control"  />
   				</div>
   				<div>
   					<span>Vorname:</span>
-  					<input type="text" required ref={(ref) => this.gast_SpielerVName = ref} onChange={event => this.setState({form_gast_SpielerVName: event.target.value})} value={this.state.form_gast_SpielerVName} className="form-control"/>
+  					<input type="text" required ref={(ref) => this.gast_SpielerVName = ref} onChange={event => this.setState({spielerVName: event.target.value})} value={this.state.spielerVName} className="form-control"/>
   				</div>
         </div>
         <div className="links_pop">
           <div>
   					<span>Position:</span>
-  					<input type="Number" required ref={(ref) => this.gast_SpielerPosition = ref} onChange={event => this.setState({form_gast_SpielerPosition: event.target.value})} value={this.state.form_gast_SpielerPosition} className="form-control"/>
+  					<input type="Number" required ref={(ref) => this.gast_SpielerPosition = ref} onChange={event => this.setState({spielerPosition: event.target.value})} value={this.state.spielerPosition} className="form-control"/>
   				</div>
           <div>
   					<span>Passnummer:</span>
-  					<input type="Number" required ref={(ref) => this.gast_SpielerPNummer = ref} onChange={event => this.setState({form_gast_SpielerPNummer: event.target.value})} value={this.state.form_gast_SpielerPNummer} className="form-control"/>
+  					<input type="Number" required ref={(ref) => this.gast_SpielerPNummer = ref} onChange={event => this.setState({spielerPNummer: event.target.value})} value={this.state.spielerPNummer} className="form-control"/>
   				</div>
   				<div>
           </div>
@@ -185,9 +179,9 @@ render() {
   					</thead>
   					<tbody>
 
-  						{this.state.form_gast_spieler.map((data,index) => {
+  						{this.state.spielerArray.map((data,index) => {
 
-  return <Row editRow= {this.editRow.bind(this)} users = {this.state.form_gast_spieler}  data = {data} key={index} row={index} deleteRow={this.deleteRow.bind(this)} />
+  return <Row editRow= {this.editRow.bind(this)} users = {this.state.spielerArray}  data = {data} key={index} row={index} deleteRow={this.deleteRow.bind(this)} />
   						})}
 
   					</tbody>
@@ -207,15 +201,15 @@ render() {
   	render(){
   		return (
   			<tr>
-  				<td>{this.props.data.form_gast_SpielerRNummer}</td>
+  				<td>{this.props.data.spielerRNummer}</td>
 
-  				<td>{this.props.data.form_gast_SpielerNName}</td>
+  				<td>{this.props.data.spielerNName}</td>
 
-  				<td>{this.props.data.form_gast_SpielerVName}</td>
+  				<td>{this.props.data.spielerVName}</td>
 
-          <td>{this.props.data.form_gast_SpielerPosition}</td>
+          <td>{this.props.data.spielerPosition}</td>
 
-          <td>{this.props.data.form_gast_SpielerPNummer}</td>
+          <td>{this.props.data.spielerPNummer}</td>
 
 
 
