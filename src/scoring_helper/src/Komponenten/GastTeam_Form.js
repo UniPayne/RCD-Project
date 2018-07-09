@@ -12,6 +12,7 @@ import Vor_Spieler_Gast from "./Vor_Spieler_Gast";
 import Tabelle from "./Tabelle";
 import Spieler from "./Spieler";
 import { Button } from 'semantic-ui-react';
+
 import '../CSS/spielInfo_Popup.css';
 import '../CSS/gastTeam_form.css';
 
@@ -132,6 +133,7 @@ render() {
   			<form role="form">
   				<h1>Gast Team eintragen</h1>
           <div className="gast_pop">
+            <div className="rechts_pop">
           <div>
   					<span>Rueckennummer:</span>
   					<input required type="Number" ref={(ref) => this.gast_SpielerRNummer = ref} onChange={event => this.setState({form_gast_SpielerRNummer: event.target.value})}  value={this.state.form_gast_SpielerRNummer} className={this.state.perro}/>
@@ -144,6 +146,8 @@ render() {
   					<span>Vorname:</span>
   					<input type="text" required ref={(ref) => this.gast_SpielerVName = ref} onChange={event => this.setState({form_gast_SpielerVName: event.target.value})} value={this.state.form_gast_SpielerVName} className="form-control"/>
   				</div>
+        </div>
+        <div className="links_pop">
           <div>
   					<span>Position:</span>
   					<input type="Number" required ref={(ref) => this.gast_SpielerPosition = ref} onChange={event => this.setState({form_gast_SpielerPosition: event.target.value})} value={this.state.form_gast_SpielerPosition} className="form-control"/>
@@ -154,6 +158,7 @@ render() {
   				</div>
   				<div>
           </div>
+        </div>
         </div>
   					<div className="button_div">
   					  <input className="button_speichern" type="button"  ref={(ref) => this.submitInput = ref} value={this.state.input} onClick={this.onSubmit.bind(this)}/>
