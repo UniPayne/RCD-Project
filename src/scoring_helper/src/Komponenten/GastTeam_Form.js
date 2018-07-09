@@ -36,8 +36,8 @@ class GastTeam_Form extends Component{
 }
 
 close(event){
+  
   event.preventDefault();
-
 
   if (this.state.spielerArray.length >= 9){
     this.props.submitGastPopUp(this.state);

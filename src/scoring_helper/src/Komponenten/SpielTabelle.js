@@ -10,7 +10,8 @@ import { Icon, Label, Menu, Table } from 'semantic-ui-react'
 class SpielTabelle extends React.Component {
 
 
-    componentDidMount(canvasID,n,x0,y0,radius) {
+    componentDidMount() {
+
         let canvas = ReactDOM.findDOMNode(this.refs.myCanvas);
         let malen = canvas.getContext('2d');
         {/*
@@ -80,10 +81,12 @@ class SpielTabelle extends React.Component {
                     </Table.Header>
                     <Table.Body >
                       <Table.Row className="inhaltT">
+                        <Table.Cell>{console.log('geht das?')}</Table.Cell>
+                        <Table.Cell>{console.log('geht das wirklich nicht?')}</Table.Cell>
                         <Table.Cell><canvas canvas ref="myCanvas" width={20} height={20} /></Table.Cell>
-                        <Table.Cell>j</Table.Cell>
-                        <Table.Cell>c</Table.Cell>
-                        <Table.Cell>d</Table.Cell>
+                        <Table.Cell><canvas id="myCanvas" width={20} height={20}></canvas></Table.Cell>
+                        <Table.Cell></Table.Cell>
+                        <Table.Cell>h</Table.Cell>
                         </Table.Row>
                       </Table.Body>
                       <Table.Body >
