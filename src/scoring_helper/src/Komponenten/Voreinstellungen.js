@@ -194,7 +194,7 @@ submitHeimMain(stati){
                 {GastTableBody}
                 </Table>
                 <div>
-                    <button className="button_gast" onClick={this.toggleGastPopup.bind(this)}>Gastteam bearbeiten</button>
+                    <button className="vor_button_gast_heim" onClick={this.toggleGastPopup.bind(this)}>Gastteam bearbeiten</button>
                     {this.state.showGastPopup ?
                       <GastTeam_Form submitGastPopUp={this.submitGastMain.bind(this)} title="Gast" currentArray = {this.state.gast_spieler}
                         closePopup={this.toggleGastPopup.bind(this)}/>
@@ -219,7 +219,7 @@ submitHeimMain(stati){
                   {HeimTableBody}
                   </Table>
                   <div>
-                      <button className="button_gast" onClick={this.toggleHeimPopup.bind(this)}>Heimteam bearbeiten</button>
+                      <button className="vor_button_gast_heim" onClick={this.toggleHeimPopup.bind(this)}>Heimteam bearbeiten</button>
                       {this.state.showHeimPopup ?
                         <GastTeam_Form submitGastPopUp={this.submitHeimMain.bind(this)} title="Heim" currentArray = {this.state.heim_spieler}
                           closePopup={this.toggleHeimPopup.bind(this)}/>
@@ -228,7 +228,7 @@ submitHeimMain(stati){
                     </div>
           </div>
 
-            <div classname="vor_button">
+            <div classname="vor_button_weiter">
               <NavLink to="/Uebersicht"><button >weiter</button></NavLink>
               <Route path="/Uebersicht" component={Uebersicht}/>
             </div>
