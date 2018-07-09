@@ -32,21 +32,20 @@ class Voreinstellungen extends Component {
       austragungsort:         '',
       zuschauer:              '',
 
-<<<<<<< HEAD
       gast_spieler: [],
       gast_SpielerRNummer: '',
       gast_SpielerNName: '',
       gast_SpielerVName: '',
       gast_SpielerPosition: '',
       gast_SpielerPNummer: '',
-=======
+
       gast_spieler:           '',
       gast_SpielerRNummer:    '',
       gast_SpielerNName:      '',
       gast_SpielerVName:      '',
       gast_SpielerPosition:   '',
       gast_SpielerPNummer:    '',
->>>>>>> 3c2a2f9a3566e0a7ae640ae7b7baf8a40702e6d0
+
 
       heim_SpielerRNummer:    '',
       heim_SpielerNName:      '',
@@ -84,63 +83,7 @@ submitSpielinfosMain(stati){
   this.setState({zuschauer:       stati.form_zuschauer});
 }
 
-<<<<<<< HEAD
 
-
-submitGastMain(stati){
-
-// mit mapping probieren..
-{stati.map}(stati.form_gast_spieler =>
-
-)
-
-
-      // {spieler.map(spielerI => (
-      //   <Table.Row className="tabInhalt">
-      //     <Table.Cell>{spielerI.nr}</Table.Cell>
-      //     <Table.Cell>{spielerI.name}</Table.Cell>
-      //     <Table.Cell>{spielerI.vorname}</Table.Cell>
-      //     <Table.Cell>{spielerI.posNr}</Table.Cell>
-      //     <Table.Cell>{spielerI.passnr}</Table.Cell>
-      //   </Table.Row>
-      // ))}
-        // this.setState({gast_spieler:[...stati.form_gast_spieler]}, () => {
-        //   console.log('Gast Spieler: ' + this.state.gast_spieler);
-        // });
-/*
-        this.setState({gast_SpielerRNummer: stati.form_gast_SpielerRNummer}, () => {
-          console.log('ARNummer: ' + this.state.gast_SpielerRNummer);
-        });
-
-        this.setState({gast_SpielerNName: stati.form_gast_SpielerNName}, () => {
-          console.log('ANName:' + this.state.gast_SpielerNName);
-        });
-
-        this.setState({gast_SpielerVName: stati.form_gast_SpielerVName}, () => {
-          console.log('AVName:' + this.state.gast_SpielerVName);
-        });
-
-        this.setState({gast_SpielerPosition: stati.form_gast_SpielerPosition}, () => {
-          console.log('Position:' + this.state.gast_SpielerPosition);
-        });
-
-        this.setState({gast_SpielerPNummer: stati.form_gast_SpielerPNummer}, () => {
-          console.log('PNummer:' + this.state.gast_SpielerPNummer);
-        });
-*/
-
-
-        // this.setState({gast_SpielerRNummer: stati.form_gast_spieler});
-        // this.setState({gast_SpielerNName: stati.form_gast_SpielerNName});
-        // this.setState({gast_SpielerVName: stati.form_gast_SpielerVName});
-        // this.setState({gast_SpielerPNummer: stati.form_gast_SpielerPNummer});
-        console.log(stati.form_gast_spieler);
-  // console.log(this.state.gast_spieler);
-  // console.log(this.state.gast_SpielerRNummer);
-  //       this.submitGastTabelle
-  //console.log('RNummer:' + stati.form_gast_SpielerRNummer);
-  //console.log(this.state.gast_SpielerRNummer);
-=======
 submitGastMain(stati){
   this.setState({gast_spieler:        stati.form_gast_spieler});
   this.setState({gast_SpielerRNummer: stati.form_gast_SpielerRNummer});
@@ -157,7 +100,56 @@ submitGastMain(stati){
   this.setState({gast_SpielerPosition: stati.form_gast_SpielerPosition});
   this.setState({gast_SpielerPNummer: stati.form_gast_SpielerPNummer});
   */
->>>>>>> 3c2a2f9a3566e0a7ae640ae7b7baf8a40702e6d0
+
+  // mit mapping probieren..
+  //{stati.map}(stati.form_gast_spieler =>
+
+
+        // {spieler.map(spielerI => (
+        //   <Table.Row className="tabInhalt">
+        //     <Table.Cell>{spielerI.nr}</Table.Cell>
+        //     <Table.Cell>{spielerI.name}</Table.Cell>
+        //     <Table.Cell>{spielerI.vorname}</Table.Cell>
+        //     <Table.Cell>{spielerI.posNr}</Table.Cell>
+        //     <Table.Cell>{spielerI.passnr}</Table.Cell>
+        //   </Table.Row>
+        // ))}
+          // this.setState({gast_spieler:[...stati.form_gast_spieler]}, () => {
+          //   console.log('Gast Spieler: ' + this.state.gast_spieler);
+          // });
+  /*
+          this.setState({gast_SpielerRNummer: stati.form_gast_SpielerRNummer}, () => {
+            console.log('ARNummer: ' + this.state.gast_SpielerRNummer);
+          });
+
+          this.setState({gast_SpielerNName: stati.form_gast_SpielerNName}, () => {
+            console.log('ANName:' + this.state.gast_SpielerNName);
+          });
+
+          this.setState({gast_SpielerVName: stati.form_gast_SpielerVName}, () => {
+            console.log('AVName:' + this.state.gast_SpielerVName);
+          });
+
+          this.setState({gast_SpielerPosition: stati.form_gast_SpielerPosition}, () => {
+            console.log('Position:' + this.state.gast_SpielerPosition);
+          });
+
+          this.setState({gast_SpielerPNummer: stati.form_gast_SpielerPNummer}, () => {
+            console.log('PNummer:' + this.state.gast_SpielerPNummer);
+          });
+  */
+
+
+          // this.setState({gast_SpielerRNummer: stati.form_gast_spieler});
+          // this.setState({gast_SpielerNName: stati.form_gast_SpielerNName});
+          // this.setState({gast_SpielerVName: stati.form_gast_SpielerVName});
+          // this.setState({gast_SpielerPNummer: stati.form_gast_SpielerPNummer});
+          console.log(stati.form_gast_spieler);
+    // console.log(this.state.gast_spieler);
+    // console.log(this.state.gast_SpielerRNummer);
+    //       this.submitGastTabelle
+    //console.log('RNummer:' + stati.form_gast_SpielerRNummer);
+    //console.log(this.state.gast_SpielerRNummer);
 }
 
 
