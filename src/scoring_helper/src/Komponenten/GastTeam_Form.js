@@ -130,23 +130,16 @@ render() {
   return(
   <div className="SpielInfo_Popup">
     <div className="SpielInfo_Popup_inner">
-<<<<<<< HEAD
-  		<div className="container">
-  			<form className="form-horizontal" role="form">
+
+  		<div>
+  			<form role="form">
           {
           <h1>{this.title} Team eintragen</h1>
           }
-  				<div className="input-group">
-  					<span className="input-group-addon">Rueckennummer</span>
-=======
-  		<div>
-  			<form role="form">
-  				<h1>Gast Team eintragen</h1>
           <div className="gast_pop">
             <div className="rechts_pop">
           <div>
   					<span>Rueckennummer:</span>
->>>>>>> 5d2f7b95035b3d05b61da7989b13d59c5ace9ab6
   					<input required type="Number" ref={(ref) => this.gast_SpielerRNummer = ref} onChange={event => this.setState({form_gast_SpielerRNummer: event.target.value})}  value={this.state.form_gast_SpielerRNummer} className={this.state.perro}/>
   				</div>
   				<div>
