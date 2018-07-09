@@ -11,6 +11,8 @@ import Uebersicht from "./Uebersicht";
 import Spielinfos from "./Spielinfos";
 import GastTeam_Form from "./GastTeam_Form";
 
+
+
 //CSS
 import "../CSS/home.css";
 import "../CSS/voreinstellungen.css";
@@ -30,23 +32,32 @@ class Voreinstellungen extends Component {
       austragungsort:         '',
       zuschauer:              '',
 
+<<<<<<< HEAD
       gast_spieler: [],
       gast_SpielerRNummer: '',
       gast_SpielerNName: '',
       gast_SpielerVName: '',
       gast_SpielerPosition: '',
       gast_SpielerPNummer: '',
+=======
+      gast_spieler:           '',
+      gast_SpielerRNummer:    '',
+      gast_SpielerNName:      '',
+      gast_SpielerVName:      '',
+      gast_SpielerPosition:   '',
+      gast_SpielerPNummer:    '',
+>>>>>>> 3c2a2f9a3566e0a7ae640ae7b7baf8a40702e6d0
 
-      heim_SpielerRNummer:'',
-      heim_SpielerNName:'',
-      heim_SpielerVName:'',
-      heim_SpielerPosition:'',
-      heim_SpielerPNummer:'',
+      heim_SpielerRNummer:    '',
+      heim_SpielerNName:      '',
+      heim_SpielerVName:      '',
+      heim_SpielerPosition:   '',
+      heim_SpielerPNummer:    '',
 
 
-      showInfoPopup:false,
-      showGastPopup:false,
-      showHeimPopup:false
+      showInfoPopup:          false,
+      showGastPopup:          false,
+      showHeimPopup:          false
     }
 
 }
@@ -73,6 +84,7 @@ submitSpielinfosMain(stati){
   this.setState({zuschauer:       stati.form_zuschauer});
 }
 
+<<<<<<< HEAD
 
 
 submitGastMain(stati){
@@ -128,6 +140,24 @@ submitGastMain(stati){
   //       this.submitGastTabelle
   //console.log('RNummer:' + stati.form_gast_SpielerRNummer);
   //console.log(this.state.gast_SpielerRNummer);
+=======
+submitGastMain(stati){
+  this.setState({gast_spieler:        stati.form_gast_spieler});
+  this.setState({gast_SpielerRNummer: stati.form_gast_SpielerRNummer});
+  this.setState({gast_SpielerNName:   stati.form_gast_SpielerNName});
+  this.setState({gast_SpielerVName:   stati.form_gast_SpielerVName});
+  this.setState({gast_SpielerPNummer: stati.form_gast_SpielerPNummer});
+  console.log(this.state.gast_SpielerRNummer);
+
+/*
+  this.setState({gast_spieler: stati.form_gast_spieler});
+  this.setState({gast_SpielerRNummer: stati.form_gast_SpielerRNummer});
+  this.setState({gast_SpielerNName: stati.form_gast_SpielerNName});
+  this.setState({gast_SpielerVName: stati.form_gast_SpielerVName});
+  this.setState({gast_SpielerPosition: stati.form_gast_SpielerPosition});
+  this.setState({gast_SpielerPNummer: stati.form_gast_SpielerPNummer});
+  */
+>>>>>>> 3c2a2f9a3566e0a7ae640ae7b7baf8a40702e6d0
 }
 
 
