@@ -34,6 +34,7 @@ class GastTeam_Form extends Component{
 close(event){
   event.preventDefault();
   //ganzes Set an Spieler
+  //evtl neuen state für alles erstellen
   this.props.submitGastPopUp(this.state);
   this.props.closePopup();
 }
