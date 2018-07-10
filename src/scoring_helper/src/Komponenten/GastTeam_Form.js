@@ -43,7 +43,7 @@ close(event){
     this.props.closePopup();
    // }else {
      // alert('Es müssen mindestens 9 Spieler eingetragen werden!');
-  }
+  //}
 
 }
 
