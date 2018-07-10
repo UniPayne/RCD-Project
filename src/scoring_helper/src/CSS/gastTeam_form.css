@@ -14,15 +14,21 @@
 }
 
 .button_speichern{
-  margin-right: 5%;
+  margin-right: 4%;
+  margin-left: 4%;
+  
 }
 
 .button_schließen{
 
 }
 
+.button_abbrechen{
+
+}
+
 .button_div{
-  margin-left: 70%;
+  margin-left:40%;
   margin-bottom: 2%;
   }
 

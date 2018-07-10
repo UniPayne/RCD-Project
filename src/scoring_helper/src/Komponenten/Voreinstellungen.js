@@ -235,7 +235,7 @@ submitHeimMain(stati){
                     </div>
           </div>
 
-            <div classname="vor_button_weiter">
+          <div classname="vor_button_weiter">
               <NavLink to="/Uebersicht"><button >weiter</button></NavLink>
               <Route path="/Uebersicht" component={Uebersicht}/>
             </div>
