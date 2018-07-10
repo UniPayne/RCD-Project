@@ -134,7 +134,7 @@ render() {
                           value={this.state.form_zuschauer}/>
                         <br/>
                 </div>
-                <input classname="button_abbrechen" type="button" value="Abbrechen" onClick={this.bye.bind(this)}/>
+                <input classname="button_abbrechen_spielInf" type="button" value="Abbrechen" onClick={this.bye.bind(this)}/>
                 <button className="button_pop" type="button"name="fortfahren" onClick={this.handleSubmit}>Speichern und Fortfahren</button>
             </form>
         </div>

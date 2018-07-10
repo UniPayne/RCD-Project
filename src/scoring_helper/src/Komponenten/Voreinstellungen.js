@@ -157,7 +157,7 @@ submitHeimMain(stati){
 
 
                     <div className="sInfo">
-                      <button className="button_pop" onClick={this.toggleInfoPopup.bind(this)}>Informationen eintragen</button>
+                      <button className="button_inf_eintragen" onClick={this.toggleInfoPopup.bind(this)}>Informationen eintragen</button>
                       {this.state.showInfoPopup ?
 
                       <Spielinfos

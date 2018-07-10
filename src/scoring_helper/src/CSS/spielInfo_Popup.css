@@ -63,7 +63,19 @@ height: 75%;
 
 .button_pop{
   float: right;
+  margin-top: 5%;
   margin-right: 10%;
   margin-bottom: 1%;
+}
 
+
+.button_inf_eintragen{
+  float: right;
+  margin-right: 10%;
+  margin-bottom: 1%;
+}
+
+
+.button_abbrechen_spielInf{
+  background-color: red;
 }
