@@ -110,3 +110,13 @@
 [0706/163353.900:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: Es wurde versucht, auf einen Prozess zuzugreifen, der gerade beendet wurde. (0xc000010a)
 [0706/223209.442:ERROR:process_reader_win.cc(123)] NtOpenThread: {Zugriff verweigert} Ein Prozess hat einen Zugriff auf ein Objekt angefordert, aber ihm wurden nicht die Rechte für den Zugriff erteilt. (0xc0000022)
 [0706/223209.457:ERROR:exception_snapshot_win.cc(88)] thread ID 16100 not found in process
+[0710/011643.770:ERROR:process_reader_win.cc(123)] NtOpenThread: {Zugriff verweigert} Ein Prozess hat einen Zugriff auf ein Objekt angefordert, aber ihm wurden nicht die Rechte für den Zugriff erteilt. (0xc0000022)
+[0710/011643.770:ERROR:process_reader_win.cc(123)] NtOpenThread: {Zugriff verweigert} Ein Prozess hat einen Zugriff auf ein Objekt angefordert, aber ihm wurden nicht die Rechte für den Zugriff erteilt. (0xc0000022)
+[0710/011643.770:ERROR:process_reader_win.cc(123)] NtOpenThread: {Zugriff verweigert} Ein Prozess hat einen Zugriff auf ein Objekt angefordert, aber ihm wurden nicht die Rechte für den Zugriff erteilt. (0xc0000022)
+[0710/011643.770:ERROR:process_reader_win.cc(123)] NtOpenThread: {Zugriff verweigert} Ein Prozess hat einen Zugriff auf ein Objekt angefordert, aber ihm wurden nicht die Rechte für den Zugriff erteilt. (0xc0000022)
+[0710/011643.770:ERROR:process_reader_win.cc(123)] NtOpenThread: {Zugriff verweigert} Ein Prozess hat einen Zugriff auf ein Objekt angefordert, aber ihm wurden nicht die Rechte für den Zugriff erteilt. (0xc0000022)
+[0710/011644.098:ERROR:exception_snapshot_win.cc(88)] thread ID 4028 not found in process
+[0710/011644.098:ERROR:exception_snapshot_win.cc(88)] thread ID 10128 not found in process
+[0710/011644.098:ERROR:exception_snapshot_win.cc(88)] thread ID 1336 not found in process
+[0710/011644.098:ERROR:exception_snapshot_win.cc(88)] thread ID 1020 not found in process
+[0710/011644.098:ERROR:exception_snapshot_win.cc(88)] thread ID 7552 not found in process
