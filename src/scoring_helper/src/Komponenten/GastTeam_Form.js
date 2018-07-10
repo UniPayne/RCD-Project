@@ -36,14 +36,13 @@ class GastTeam_Form extends Component{
 }
 
 close(event){
-  
-  event.preventDefault();
 
-  if (this.state.spielerArray.length >= 9){
+  event.preventDefault();
+  // if (this.state.spielerArray.length >= 9){
     this.props.submitGastPopUp(this.state);
     this.props.closePopup();
-   }else {
-     alert('Es müssen mindestens 9 Spieler eingetragen werden!');
+   // }else {
+     // alert('Es müssen mindestens 9 Spieler eingetragen werden!');
   }
 
 }
@@ -51,42 +50,44 @@ close(event){
 
   onSubmit(event){
     event.preventDefault();
-    if (this.submitInput.value== 'Speichern'){
-      const obj = {
-        spielerRNummer: this.state.spielerRNummer,
-        spielerNName: this.state.spielerNName,
-        spielerVName: this.state.spielerVName,
-        spielerPosition: this.state.spielerPosition,
-        spielerPNummer: this.state.spielerPNummer
-      };
+    if (this.submitInput.value == 'Speichern'){
+        const obj = {
+          spielerRNummer: this.state.spielerRNummer,
+          spielerNName: this.state.spielerNName,
+          spielerVName: this.state.spielerVName,
+          spielerPosition: this.state.spielerPosition,
+          spielerPNummer: this.state.spielerPNummer
+        };
 
-      if (  this.state.spielerRNummer ===''||
-        this.state.spielerNName ===''||
-        this.state.spielerVName ===''||
-        this.state.spielerPosition ===''||
-        this.state.spielerPNummer === ''){
-          alert('Sie müssen alle Felder ausfüllen!');
-        }
+              if (this.state.spielerRNummer ===''||
+                  this.state.spielerNName ===''||
+                  this.state.spielerVName ===''||
+                  this.state.spielerPosition ===''||
+                  this.state.spielerPNummer === ''){
+                    alert('Sie müssen alle Felder ausfüllen!');
+          } else {
+             this.setState({spielerArray:[...this.state.spielerArray, obj],
+                spielerRNummer: '',
+                spielerNName: '',
+                spielerVName: '',
+                spielerPosition: '',
+                spielerPNummer: ''});
 
-      this.setState({spielerArray:[...this.state.spielerArray, obj],
-        spielerRNummer: '',
-        spielerNName: '',
-        spielerVName: '',
-        spielerPosition: '',
-        spielerPNummer: ''});
+              }
 
 
     }else
       if(this.submitInput.value =='Uebernehmen'){
-        const position = Number(this.rowRef.value);
-        this.state.spieler[position].spielerRNummer = this.gast_SpielerRNummer.value;
-        this.state.spieler[position].spielerNName = this.gast_SpielerNName.value;
-        this.state.spieler[position].spielerVName = this.gast_SpielerVName.value;
-        this.state.spieler[position].spielerPosition = this.gast_SpielerPosition.value;
-        this.state.spieler[position].spielerPNummer = this.gast_SpielerPNummer.value;
-        this.state.input = 'Speichern';
-        this.clearInputs();
-        this.forceUpdate();
+          const position = Number(this.rowRef.value);
+          console.log(this.state.spieler);
+          this.state.spielerArray[position].spielerRNummer = this.gast_SpielerRNummer.value;
+          this.state.spielerArray[position].spielerNName = this.gast_SpielerNName.value;
+          this.state.spielerArray[position].spielerVName = this.gast_SpielerVName.value;
+          this.state.spielerArray[position].spielerPosition = this.gast_SpielerPosition.value;
+          this.state.spielerArray[position].spielerPNummer = this.gast_SpielerPNummer.value;
+          this.state.input = 'Speichern';
+          this.clearInputs();
+          this.forceUpdate();
       }
   }
 
@@ -106,7 +107,9 @@ clearInputs() {
 
 deleteRow(row){
   var position = this.state.spielerArray.indexOf(row);
-  this.setState({spielerArray:this.state.spielerArray.slice(0,position)});
+  var array = [...this.state.spielerArray];
+  array.splice(row, 1);
+  this.setState({spielerArray: array});
   this.clearInputs();
 
 }
@@ -148,7 +151,7 @@ render() {
             <div className="rechts_pop">
           <div>
   					<span>Rueckennummer:</span>
-  					<input id="" required type="Number" ref={(ref) => this.gast_SpielerRNummer = ref} onChange={event => this.setState({spielerRNummer: event.target.value})}  value={this.state.spielerRNummer} className={this.state.perro}/>
+  					<input required type="Number" ref={(ref) => this.gast_SpielerRNummer = ref} onChange={event => this.setState({spielerRNummer: event.target.value})}  value={this.state.spielerRNummer} className={this.state.perro}/>
   				</div>
   				<div>
   					<span>Nachname:</span>
