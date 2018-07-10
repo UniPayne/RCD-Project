@@ -66,7 +66,6 @@ submitSpielinfosMain(stati){
 
 
 submitGastMain(stati){
-
   this.setState({gast_spieler: stati.spielerArray}, () => {
      console.log(this.state.gast_spieler);
    });
@@ -161,11 +160,19 @@ submitHeimMain(stati){
                       <button className="button_pop" onClick={this.toggleInfoPopup.bind(this)}>Informationen eintragen</button>
                       {this.state.showInfoPopup ?
 
-                      <Spielinfos submitSpielinfosPopUp={this.submitSpielinfosMain.bind(this)}
+                      <Spielinfos
+                        submitSpielinfosPopUp={this.submitSpielinfosMain.bind(this)}
                         closePopup={this.toggleInfoPopup.bind(this)}
+
+                        currentSpielNr={this.state.spielnummer}
+                        currSpielDatum={this.state.spieldatum}
+                        currLigaName={this.state.liga_name}
+                        currVerbandName={this.state.verband_name}
+                        currGastTeamName={this.state.gastTeam_name}
+                        currHeimTeamName={this.state.heimTeam_name}
+                        currAustragungsOrt={this.state.austragungsort}
+                        currZuschauer={this.state.zuschauer}
                         />
-
-
                     :null
                   }
                 </div>

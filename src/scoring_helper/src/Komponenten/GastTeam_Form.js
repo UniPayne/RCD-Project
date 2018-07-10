@@ -33,20 +33,24 @@ class GastTeam_Form extends Component{
     };
 
     this.onSubmit = this.onSubmit.bind(this);
+    this.bye = this.bye.bind(this);
 }
 
 close(event){
-
   event.preventDefault();
-  // if (this.state.spielerArray.length >= 9){
+   if (this.state.spielerArray.length >= 9){
     this.props.submitGastPopUp(this.state);
     this.props.closePopup();
-   // }else {
-     // alert('Es müssen mindestens 9 Spieler eingetragen werden!');
-  //}
+    }else {
+      alert('Es müssen mindestens 9 Spieler eingetragen werden!');
+  }
 
 }
 
+bye(event){
+  event.preventDefault();
+  this.props.closePopup();
+}
 
   onSubmit(event){
     event.preventDefault();
@@ -137,6 +141,8 @@ editRow(row){
   this.forceUpdate();
 }
 
+
+
 render() {
   return(
   <div className="SpielInfo_Popup">
@@ -176,8 +182,9 @@ render() {
         </div>
         </div>
   					<div className="button_div">
+              <input classname="button_abbrechen" type="button" value="Abbrechen" onClick={this.bye.bind(this)}/>
   					  <input className="button_speichern" type="button"  ref={(ref) => this.submitInput = ref} value={this.state.input} onClick={this.onSubmit.bind(this)}/>
-              <input className="button_schließen" type="button"  value="Schließen" onClick={this.close.bind(this)} />
+              <input className="button_schließen" type="button"  value="Speichern und Schließen" onClick={this.close.bind(this)} />
   					</div>
 
   				<input type="hidden" className="row-ref" value="" ref={(ref) => this.rowRef = ref}/>
