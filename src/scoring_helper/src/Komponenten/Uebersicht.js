@@ -37,6 +37,7 @@ class Uebersicht extends React.Component {
   render() {
     return (
     <div>
+      <div className="wrapper_ue">
       <div className="spielInformationen_links">
         <div className="links">
           <form>
@@ -115,14 +116,17 @@ class Uebersicht extends React.Component {
       <div className="punkte_rechts">
         <Tabelle/>
       </div>
-
-      <div className="spielerInformationen">
-        <Spieler/>
-
-
       </div>
+      
+       <div className="wrapper_ue2">
+        <div className="wrapper_ue">
+          <div className="spielerInformationen">
+            <Spieler/>
+          </div>
+        </div>
       <div className="spielfeld">
         <SpielTabelle/>
+      </div>
       </div>
     </div>
     );
