@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import {Route, NavLink, HashRouter} from "react-router-dom";
 import "../CSS/home.css";
 import Voreinstellungen from "./Voreinstellungen";
+import baseball_feld from '../baseball_feld.png';
 
 
 class Home extends Component {
@@ -9,11 +10,15 @@ class Home extends Component {
     return (
         <HashRouter>
           <div>
+        
+
+          <div className="button_center">
             <NavLink to="/Voreinstellungen">
-                <button classname="position">Spiel starten!</button>
+                <button className="start">Spiel starten</button>
             </NavLink>
             <Route path="/Voreinstellungen" component={Voreinstellungen}/>
           </div>
+        </div>
         </HashRouter>
     );
   }

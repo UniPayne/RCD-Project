@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import {Route, NavLink, HashRouter} from "react-router-dom";
-import logo from '../logo.svg';
+import logo from '../logo.png';
 import { Table, Flag } from 'semantic-ui-react'
 
 //Komponenten
@@ -235,9 +235,9 @@ submitHeimMain(stati){
                     </div>
           </div>
 
-          <div className="vor_button_weiter">
+          <div >
               <NavLink to="/Uebersicht">
-                <button >weiter</button>
+                <button className="vor_button_weiter">weiter</button>
                 {/*
                   s
                   vorSpielnummer ={this.state.spielnummer}

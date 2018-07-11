@@ -9,6 +9,8 @@ import { Button } from 'semantic-ui-react';
 import Tabelle from         "./Tabelle";
 import Spieler from         "./Spieler";
 import SpielTabelle from    "./SpielTabelle";
+import Voreinstellungen from    "./Voreinstellungen";
+
 
 //CSS
 import '../CSS/uebersicht.css';
@@ -117,7 +119,7 @@ class Uebersicht extends React.Component {
         <Tabelle/>
       </div>
       </div>
-      
+
        <div className="wrapper_ue2">
         <div className="wrapper_ue">
           <div className="spielerInformationen">
@@ -127,6 +129,16 @@ class Uebersicht extends React.Component {
       <div className="spielfeld">
         <SpielTabelle/>
       </div>
+
+      <div>
+          <NavLink to="/Voreinstellungen">
+            <button className="button_zurueck" >zurück</button>
+
+          </NavLink>
+          <Route path="/Voreinstellungen" component={Voreinstellungen}/>
+        </div>
+
+
       </div>
     </div>
     );

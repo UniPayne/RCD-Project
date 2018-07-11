@@ -28,7 +28,7 @@ export default  () => (
     </Table.Header>
     <Table.Body>
       {spieler.map(spielerI => (
-        <Table.Row className="tabInhalt">
+        <Table.Row className="tabInhalt_uebersicht">
           <Table.Cell>{spielerI.nr}</Table.Cell>
           <Table.Cell>{spielerI.name}</Table.Cell>
           <Table.Cell>{spielerI.vorname}</Table.Cell>
