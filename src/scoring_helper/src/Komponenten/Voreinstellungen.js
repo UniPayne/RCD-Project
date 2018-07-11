@@ -3,15 +3,10 @@ import {Route, NavLink, HashRouter} from "react-router-dom";
 import logo from '../logo.svg';
 import { Table, Flag } from 'semantic-ui-react'
 
-
 //Komponenten
-import Vor_Spieler_Heim from "./Vor_Spieler_Heim";
-import Vor_Spieler_Gast from "./Vor_Spieler_Gast";
 import Uebersicht from "./Uebersicht";
 import Spielinfos from "./Spielinfos";
 import GastTeam_Form from "./GastTeam_Form";
-
-
 
 //CSS
 import "../CSS/home.css";
@@ -235,7 +230,7 @@ submitHeimMain(stati){
                     </div>
           </div>
 
-          <div classname="vor_button_weiter">
+          <div className="vor_button_weiter">
               <NavLink to="/Uebersicht"><button >weiter</button></NavLink>
               <Route path="/Uebersicht" component={Uebersicht}/>
             </div>
