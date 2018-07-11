@@ -19,14 +19,14 @@ class Uebersicht extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      spielnummer:              '',
-      spieldatum:               '',
-      liga_name:                '',
-      verband_name:             '',
-      gastTeam_name:            '',
-      heimTeam_name:            '',
-      austragungsort:           '',
-      zuschauer:                '',
+      spielnummer:      this.props.vor_spielnummer,
+      spieldatum:       this.props.vor_spieldatum,
+      liga_name:        this.props.vor_liga_name,
+      verband_name:     this.props.vor_verband_name,
+      gastTeam_name:    this.props.vor_gastTeam_name,
+      heimTeam_name:    this.props.vor_heimTeam_name,
+      austragungsort:   this.props.vor_austragungsort,
+      zuschauer:        this.props.vor_zuschauer
     };
 
 }

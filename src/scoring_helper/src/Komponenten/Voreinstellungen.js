@@ -26,9 +26,13 @@ class Voreinstellungen extends Component {
       heimTeam_name:          '',
       austragungsort:         '',
       zuschauer:              '',
+      info_ok: 'false',
+
 
       gast_spieler: [],
+      gast_ok: 'false',
       heim_spieler: [],
+      heim_ok:'false',
 
       showInfoPopup:          false,
       showGastPopup:          false,
@@ -159,6 +163,7 @@ submitHeimMain(stati){
                         submitSpielinfosPopUp={this.submitSpielinfosMain.bind(this)}
                         closePopup={this.toggleInfoPopup.bind(this)}
 
+
                         currentSpielNr={this.state.spielnummer}
                         currSpielDatum={this.state.spieldatum}
                         currLigaName={this.state.liga_name}
@@ -231,7 +236,22 @@ submitHeimMain(stati){
           </div>
 
           <div className="vor_button_weiter">
-              <NavLink to="/Uebersicht"><button >weiter</button></NavLink>
+              <NavLink to="/Uebersicht">
+                <button >weiter</button>
+                {<Uebersicht
+                  vorSpielnummer ={this.state.spielnummer}
+                  vorSpieldatum ={this.state.spieldatum}
+                  vorLiga ={this.state.liga_name}
+                  vorVerband ={this.state.verband_name}
+                  vorGastTeam ={this.state.gastTeam_name}
+                  vorHeimTeam ={this.state.heimTeam_name}
+                  vorAustragungsort ={this.state.austragungsort}
+                  vorZuschauer ={this.state.zuschauer}
+                  vorGast_spieler ={this.state.gast_spieler}
+                  vorHeim_spieler ={this.state.heim_spieler}
+                  />
+                }
+              </NavLink>
               <Route path="/Uebersicht" component={Uebersicht}/>
             </div>
           </div>
