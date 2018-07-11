@@ -9,7 +9,9 @@
    bottom: 0;
    margin: auto;
    border-style: solid;
+   box-sizing: border-box;
    border: 5px solid gainsbro;
+   z-index: 20;
 }
 
 .SpielInfo_Popup_inner{
@@ -21,6 +23,7 @@ bottom: 25%;
 margin: auto;
 background-color: #F2F2F2;
 border: solid;
+box-sizing: border-box;
 height: 75%;
 }
 
@@ -69,11 +72,7 @@ height: 75%;
 }
 
 
-.button_inf_eintragen{
-  float: right;
-  margin-right: 10%;
-  margin-bottom: 1%;
-}
+
 
 
 .button_abbrechen_spielInf{

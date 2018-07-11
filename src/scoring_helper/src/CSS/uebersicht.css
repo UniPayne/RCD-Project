@@ -1,20 +1,33 @@
 .spielInformationen_links{
-
+box-sizing: border-box;
   border-style: solid;
   border-width: 3px;
-  height: 145px;
-  width: 44%;
+  height: 150px;
+  width: 44.5%;
   float: left;
   background-color: #F2F2F2;
+  max-width: 100%;
+
+}
+
+
+
+.wrapper_ue{
+  width: 1345px;
+  max-width: 100%;
+  margin: 0 auto;
 
 }
 
 .links{
+
   padding-top: 0.6%;
   float:left;
-  margin-left: 0.3%;
-  width:38%;
+  margin-left: 0.01%;
+  width:42%;
+  height: 132px;
 position: absolute;
+
 
 }
 
@@ -31,9 +44,10 @@ position: absolute;
 .rechts{
   padding-top: 0.4%;
   float: left;
-  width: 24%;
-  margin-left: 19.5%;
+  width: 23.5%;
+  margin-left: 21.5%;
 position: absolute;
+
 }
 
 .rechts input{
@@ -41,11 +55,7 @@ position: absolute;
 
 }
 
-.button{
-  width: 35%;
-  float: right;
-  margin-right: 7%;
-}
+
 
 .zuschauer{
   margin-top: 0.5%;
@@ -68,6 +78,7 @@ position: absolute;
   width: 85px;
 }
 
+/*label austragungsort*/
 .in{
   width: 37.5%;
   text-align: left;
@@ -93,46 +104,60 @@ label{
 
 }
 
-.spielerInformationen label{
-  text-align:left;
-  margin-right: 5%;
-}
+
 
 .nr{
   margin-right: -10%;
   width: 11%;
 }
 
+/*uebersicht -> spielertablle spieler*/
 .spielerInformationen{
   border-style: solid;
   border-width: 3px;
   height: 320px;
-  width: 23%;
+  width: 24.5%;
   float: left;
   margin-top:0.3%;
   background-color: #F2F2F2;
+box-sizing: border-box;
+
 
 }
 
-
+/*gesammtpunkte oben rechts */
 .punkte_rechts{
   border-style: solid;
   float: right;
   width: 55%;
-  height: 145px;
+  height: 150px;
   background-color: #F2F2F2;
-
+box-sizing: border-box;
 
 }
 
 .spielfeld{
   background-color: #F2F2F2;
-
+box-sizing: border-box;
   border-style: solid;
   border-width: 3px;
   height: 320px;
-  width: 75.8%;
+  width: 75%;
   float: right;
   margin-top:0.3%;
+
+}
+
+.wrapper_ue{
+  width: 1345px;
+  max-width: 100%;
+  margin: 0 auto;
+
+}
+
+.wrapper_ue2{
+  width: 1345px;
+  max-width: 100%;
+  margin: 0 auto;
 
 }
