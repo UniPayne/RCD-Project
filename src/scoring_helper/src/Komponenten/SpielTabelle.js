@@ -81,21 +81,115 @@ class SpielTabelle extends React.Component {
                     </Table.Header>
                     <Table.Body >
                       <Table.Row className="inhaltT">
-                        <Table.Cell>{console.log('geht das?')}</Table.Cell>
-                        <Table.Cell>{console.log('geht das wirklich nicht?')}</Table.Cell>
+                        <Table.Cell>&#9826;</Table.Cell>
+                        <Table.Cell>&#9826;</Table.Cell>
                         <Table.Cell><canvas canvas ref="myCanvas" width={20} height={20} /></Table.Cell>
-                        <Table.Cell><canvas id="myCanvas" width={20} height={20}></canvas></Table.Cell>
-                        <Table.Cell></Table.Cell>
-                        <Table.Cell>h</Table.Cell>
+                        <Table.Cell>&#9826;</Table.Cell>
+                        <Table.Cell>&#9826;</Table.Cell>
+                        <Table.Cell>&#9674; </Table.Cell>
+                        <Table.Cell>&#9826;</Table.Cell>
+                        <Table.Cell>&#9826;</Table.Cell>
+                        <Table.Cell>&#9826;</Table.Cell>
+                        <Table.Cell>&#9826;</Table.Cell>
                         </Table.Row>
                       </Table.Body>
                       <Table.Body >
                         <Table.Row className="inhaltT">
-                          <Table.Cell>a</Table.Cell>
-                          <Table.Cell>b</Table.Cell>
-                          <Table.Cell>c</Table.Cell>
-                          <Table.Cell>d</Table.Cell>
+                          <Table.Cell>&#9826;</Table.Cell>
+                          <Table.Cell>&#9826;</Table.Cell>
+                          <Table.Cell>&#9826;</Table.Cell>
+                          <Table.Cell>&#9826;</Table.Cell>
+                          <Table.Cell>&#9826;</Table.Cell>
+                          <Table.Cell>&#9826;</Table.Cell>
+                          <Table.Cell>&#9826;</Table.Cell>
+                          <Table.Cell>&#9826;</Table.Cell>
+                          <Table.Cell>&#9826;</Table.Cell>
+                          <Table.Cell>&#9826;</Table.Cell>
                           </Table.Row>
+                          <Table.Row className="inhaltT">
+                            <Table.Cell>&#9826;</Table.Cell>
+                            <Table.Cell>&#9826;</Table.Cell>
+                            <Table.Cell>&#9826;</Table.Cell>
+                            <Table.Cell>&#9826;</Table.Cell>
+                            <Table.Cell>&#9826;</Table.Cell>
+                            <Table.Cell>&#9826;</Table.Cell>
+                            <Table.Cell>&#9826;</Table.Cell>
+                            <Table.Cell>&#9826;</Table.Cell>
+                            <Table.Cell>&#9826;</Table.Cell>
+                            <Table.Cell>&#9826;</Table.Cell>
+                            </Table.Row>
+                            <Table.Row className="inhaltT">
+                              <Table.Cell>&#9826;</Table.Cell>
+                              <Table.Cell>&#9826;</Table.Cell>
+                              <Table.Cell>&#9826;</Table.Cell>
+                              <Table.Cell>&#9826;</Table.Cell>
+                              <Table.Cell>&#9826;</Table.Cell>
+                              <Table.Cell>&#9826;</Table.Cell>
+                              <Table.Cell>&#9826;</Table.Cell>
+                              <Table.Cell>&#9826;</Table.Cell>
+                              <Table.Cell>&#9826;</Table.Cell>
+                              <Table.Cell>&#9826;</Table.Cell>
+                              </Table.Row>
+                              <Table.Row className="inhaltT">
+                                <Table.Cell>&#9826;</Table.Cell>
+                                <Table.Cell>&#9826;</Table.Cell>
+                                <Table.Cell>&#9826;</Table.Cell>
+                                <Table.Cell>&#9826;</Table.Cell>
+                                <Table.Cell>&#9826;</Table.Cell>
+                                <Table.Cell>&#9826;</Table.Cell>
+                                <Table.Cell>&#9826;</Table.Cell>
+                                <Table.Cell>&#9826;</Table.Cell>
+                                <Table.Cell>&#9826;</Table.Cell>
+                                <Table.Cell>&#9826;</Table.Cell>
+                                </Table.Row>
+                                <Table.Row className="inhaltT">
+                                  <Table.Cell>&#9826;</Table.Cell>
+                                  <Table.Cell>&#9826;</Table.Cell>
+                                  <Table.Cell>&#9826;</Table.Cell>
+                                  <Table.Cell>&#9826;</Table.Cell>
+                                  <Table.Cell>&#9826;</Table.Cell>
+                                  <Table.Cell>&#9826;</Table.Cell>
+                                  <Table.Cell>&#9826;</Table.Cell>
+                                  <Table.Cell>&#9826;</Table.Cell>
+                                  <Table.Cell>&#9826;</Table.Cell>
+                                  <Table.Cell>&#9826;</Table.Cell>
+                                  </Table.Row>
+                                  <Table.Row className="inhaltT">
+                                    <Table.Cell>&#9826;</Table.Cell>
+                                    <Table.Cell>&#9826;</Table.Cell>
+                                    <Table.Cell>&#9826;</Table.Cell>
+                                    <Table.Cell>&#9826;</Table.Cell>
+                                    <Table.Cell>&#9826;</Table.Cell>
+                                    <Table.Cell>&#9826;</Table.Cell>
+                                    <Table.Cell>&#9826;</Table.Cell>
+                                    <Table.Cell>&#9826;</Table.Cell>
+                                    <Table.Cell>&#9826;</Table.Cell>
+                                    <Table.Cell>&#9826;</Table.Cell>
+                                    </Table.Row>
+                                    <Table.Row className="inhaltT">
+                                      <Table.Cell>&#9826;</Table.Cell>
+                                      <Table.Cell>&#9826;</Table.Cell>
+                                      <Table.Cell>&#9826;</Table.Cell>
+                                      <Table.Cell>&#9826;</Table.Cell>
+                                      <Table.Cell>&#9826;</Table.Cell>
+                                      <Table.Cell>&#9826;</Table.Cell>
+                                      <Table.Cell>&#9826;</Table.Cell>
+                                      <Table.Cell>&#9826;</Table.Cell>
+                                      <Table.Cell>&#9826;</Table.Cell>
+                                      <Table.Cell>&#9826;</Table.Cell>
+                                      </Table.Row>
+                                      <Table.Row className="inhaltT">
+                                        <Table.Cell>&#9826;</Table.Cell>
+                                        <Table.Cell>&#9826;</Table.Cell>
+                                        <Table.Cell>&#9826;</Table.Cell>
+                                        <Table.Cell>&#9826;</Table.Cell>
+                                        <Table.Cell>&#9826;</Table.Cell>
+                                        <Table.Cell>&#9826;</Table.Cell>
+                                        <Table.Cell>&#9826;</Table.Cell>
+                                        <Table.Cell>&#9826;</Table.Cell>
+                                        <Table.Cell>&#9826;</Table.Cell>
+                                        <Table.Cell>&#9826;</Table.Cell>
+                                        </Table.Row>
                         </Table.Body>
                   </Table>
 

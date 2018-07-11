@@ -18,16 +18,24 @@
 .header{
   background-color: #D8D8D8;
   box-shadow: inset 1px 3px 5px -3px rgba(0, 0, 0, 0.5);
-  background-color: red;
-  position: absolute;
-  /*hier abstand zwischen dem text*/
-  width: 46%;
+  width: 47.5%;
 }
+
 
 /*Uebersicht -> tabelleninhalt mit spielern*/
 .tabInhalt{
+  background-color: #EFF5FB;
+  
+  box-shadow: inset 1px 3px 5px -3px rgba(0, 0, 0, 0.5);
+  height: 5px;
+  max-height: 100%;
 
+}
+
+/*voreinstellungen -> tabelleninhalt mit spielern*/
+.tabInhalt_uebersicht{
   background-color: #EFF5FB;
   box-shadow: inset 1px 3px 5px -3px rgba(0, 0, 0, 0.5);
-  height: 23px;
+  height: 100%;
+
 }

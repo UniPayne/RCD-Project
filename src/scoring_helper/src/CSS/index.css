@@ -1,11 +1,25 @@
 body {
-  background-color: #A3EA98;
+  background-color: #F14822;
+  //background-color: #A3EA98;
   padding: 10px;
   margin: 0;
+  background-image: url("baseball_feld.png");
+
+
 }
+
+
 h1{
-  font-family: sans-serif;
+  font-family: cursive;
   text-align: center;
+  color: white;
+  background-color: #088A08;
+  height: 48px;
+  text-shadow: 0 0 10px black;
+  border: solid;
+  border-color: black;
+  border-width: 1px;
+  box-shadow: 5px 10px 18px #888888;
 }
 
 h2, p, ul, li {

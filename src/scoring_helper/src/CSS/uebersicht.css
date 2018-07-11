@@ -161,3 +161,14 @@ box-sizing: border-box;
   margin: 0 auto;
 
 }
+
+
+.button_zurueck{
+  position: absolute;
+margin-left: 30px;
+margin-top: 485px;
+font-size: 20px;
+border-radius: 35px 5px 35px 5px;
+background-color: #A4A4A4;
+
+}
