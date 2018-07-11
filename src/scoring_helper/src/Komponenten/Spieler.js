@@ -17,7 +17,7 @@ const spieler = [
 
 export default  () => (
   <Table className="spie_spieler">
-    <Table.Header className="header">
+    <Table.Header className="header2">
       <Table.Row>
         <Table.HeaderCell>Nr.</Table.HeaderCell>
         <Table.HeaderCell>Name</Table.HeaderCell>
