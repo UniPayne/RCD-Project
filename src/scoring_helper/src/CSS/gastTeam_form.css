@@ -37,7 +37,7 @@
 .button_div{
   margin-left:40%;
   margin-bottom: 2%;
-  
+
   }
 
 .gast_pop{
@@ -63,6 +63,7 @@
   margin-top: 1%;
 }
 
-.tab_pop th{
+.tab_pop table{
   width: 19%;
+  border: solid;
 }
