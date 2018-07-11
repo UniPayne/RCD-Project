@@ -238,7 +238,7 @@ submitHeimMain(stati){
           <div className="vor_button_weiter">
               <NavLink to="/Uebersicht">
                 <button >weiter</button>
-                {<Uebersicht
+                {/*
                   vorSpielnummer ={this.state.spielnummer}
                   vorSpieldatum ={this.state.spieldatum}
                   vorLiga ={this.state.liga_name}
@@ -249,8 +249,7 @@ submitHeimMain(stati){
                   vorZuschauer ={this.state.zuschauer}
                   vorGast ={this.state.gast_spieler}
                   vorHeim ={this.state.heim_spieler}
-                  />
-                }
+              */}
               </NavLink>
               <Route path="/Uebersicht" component={Uebersicht}/>
             </div>
