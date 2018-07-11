@@ -233,10 +233,9 @@ render() {
 
           <td>{this.props.data.spielerPNummer}</td>
 
-
-
   				<td className="glyphicon glyphicon-edit" onClick={() => {this.props.editRow(this.props.row)}} ><button>Bearbeiten</button></td>
-          	<td className="glyphicon glyphicon-trash" value ="Loeschen" onClick={() => {this.props.deleteRow(this.props.row)}}><button>Löschen</button></td>
+
+          <td className="glyphicon glyphicon-trash" value ="Loeschen" onClick={() => {this.props.deleteRow(this.props.row)}}><button>Löschen</button></td>
   			</tr>
 
   		);
