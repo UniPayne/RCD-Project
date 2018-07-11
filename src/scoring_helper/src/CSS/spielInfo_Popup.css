@@ -70,6 +70,9 @@ height: 75%;
   margin-top: 5%;
   margin-right: 10%;
   margin-bottom: 1%;
+  border-radius: 35px 5px 35px 5px;
+  background-color: #A4A4A4;
+
 }
 
 
@@ -78,4 +81,7 @@ height: 75%;
 
 .button_abbrechen_spielInf{
   background-color: red;
+  border-radius: 35px 5px 35px 5px;
+  background-color: #A4A4A4;
+
 }
