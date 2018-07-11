@@ -29,7 +29,8 @@ class GastTeam_Form extends Component{
       spielerVName: '',
       spielerPosition: '',
       spielerPNummer: '',
-      spielerArray: props.currentArray
+      spielerArray: props.currentArray,
+      zeile:''
     };
 
     this.onSubmit = this.onSubmit.bind(this);
@@ -82,8 +83,10 @@ bye(event){
 
     }else
       if(this.submitInput.value =='Uebernehmen'){
-          const position = Number(this.rowRef.value);
-          console.log(this.state.spieler);
+          // const position = Number(this.rowRef.value);
+          // console.log(this.rowRef.value);
+          const position = this.state.zeile;
+          console.log(position);
           this.state.spielerArray[position].spielerRNummer = this.gast_SpielerRNummer.value;
           this.state.spielerArray[position].spielerNName = this.gast_SpielerNName.value;
           this.state.spielerArray[position].spielerVName = this.gast_SpielerVName.value;
@@ -119,6 +122,7 @@ deleteRow(row){
 }
 
 editRow(row){
+  console.log(this.props);
   var position = this.state.spielerArray.indexOf(row);
 
   this.gast_SpielerRNummer.value = this.state.spielerArray[row].spielerRNummer;
@@ -136,7 +140,12 @@ editRow(row){
   this.gast_SpielerPNummer.value = this.state.spielerArray[row].spielerPNummer;
   this.state.spielerPNummer = this.state.spielerArray[row].spielerPNummer;
 
-  this.rowRef.value = row;
+  //this.rowRef.value = row;
+  this.setState({zeile: row}, () => {
+    console.log(this.state.zeile);
+  });
+
+
   this.state.input = 'Uebernehmen';
   this.forceUpdate();
 }
