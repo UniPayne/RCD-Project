@@ -6,8 +6,6 @@ import ReactModal from 'react-modal';
 import { Button } from 'semantic-ui-react';
 
 //Komponenten
-import GastTeam_Form from   "./GastTeam_Form";
-import Spielinfos from      "./Spielinfos";
 import Tabelle from         "./Tabelle";
 import Spieler from         "./Spieler";
 import SpielTabelle from    "./SpielTabelle";

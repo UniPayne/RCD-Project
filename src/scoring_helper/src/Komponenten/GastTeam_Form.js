@@ -1,17 +1,11 @@
 import React, { Component } from "react";
-import {
-  Route,
-  NavLink,
-  HashRouter
-} from "react-router-dom";
+import {Route, NavLink, HashRouter } from "react-router-dom";
 import { Link } from 'react-router-dom';
 import Popup from "reactjs-popup";
-import '../CSS/uebersicht.css';
-import Uebersicht from "./Uebersicht";
-import Tabelle from "./Tabelle";
-import Spieler from "./Spieler";
 import { Button } from 'semantic-ui-react';
 
+//CSS
+import '../CSS/uebersicht.css';
 import '../CSS/spielInfo_Popup.css';
 import '../CSS/gastTeam_form.css';
 
@@ -54,7 +48,7 @@ bye(event){
 
   onSubmit(event){
     event.preventDefault();
-     if (this.submitInput.value == 'Speichern'){
+     if (this.submitInput.value === 'Speichern'){
         const obj = {
           spielerRNummer: this.state.spielerRNummer,
           spielerNName: this.state.spielerNName,
@@ -81,7 +75,7 @@ bye(event){
 
 
     }else
-      if(this.submitInput.value =='Uebernehmen'){
+      if(this.submitInput.value ==='Uebernehmen'){
           const position = this.state.zeile;
           this.state.spielerArray[position].spielerRNummer = this.gast_SpielerRNummer.value;
           this.state.spielerArray[position].spielerNName = this.gast_SpielerNName.value;
@@ -186,7 +180,7 @@ render() {
         </div>
         </div>
   					<div className="button_div">
-              <input classname="button_abbrechen" type="button" value="Abbrechen" onClick={this.bye.bind(this)}/>
+              <input className="button_abbrechen" type="button" value="Abbrechen" onClick={this.bye.bind(this)}/>
   					  <input className="button_speichern" type="button"  ref={(ref) => this.submitInput = ref} value={this.state.input} onClick={this.onSubmit.bind(this)}/>
               <input className="button_schließen" type="button"  value="Speichern und Schließen" onClick={this.close.bind(this)} />
   					</div>
