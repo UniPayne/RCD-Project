@@ -3,7 +3,6 @@
   margin-top: 0.3%;
   height: 70%;
   text-align: center;
-
 }
 
 .headerT{
@@ -14,6 +13,7 @@
 .inhaltT{
   background-color: #EFF5FB;
   box-shadow: inset 1px 3px 5px -3px rgba(0, 0, 0, 0.5);
+  
 }
 
 .header2{

@@ -63,7 +63,12 @@
   margin-top: 1%;
 }
 
-.tab_pop table{
-  width: 19%;
+.tab_fuellen td{
   border: solid;
+  border-width: 0.1px;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  max-height: 50px;
+
 }

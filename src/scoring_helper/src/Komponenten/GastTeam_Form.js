@@ -222,7 +222,7 @@ render() {
 
   	render(){
   		return (
-  			<tr>
+  			<tr className="tab_fuellen">
   				<td>{this.props.data.spielerRNummer}</td>
 
   				<td>{this.props.data.spielerNName}</td>
