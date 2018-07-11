@@ -60,6 +60,8 @@ background-color: #F2F2F2;
   font-weight: bold;
   background-color: #088A08;
   font-size: 19px;
+  color: white;
+  text-shadow: 0 0 10px black;
 }
 
 .vor_heim{
@@ -80,6 +82,7 @@ background-color: #F2F2F2;
   font-weight: bold;
   background-color: #088A08;
   font-size: 19px;
+  text-shadow: 0 0 10px white;
 }
 
 .logo{

@@ -8,6 +8,7 @@ box-sizing: border-box;
   background-color: #F2F2F2;
   max-width: 100%;
 
+
 }
 
 
@@ -20,7 +21,6 @@ box-sizing: border-box;
 }
 
 .links{
-
   padding-top: 0.6%;
   float:left;
   margin-left: 0.01%;
@@ -28,12 +28,12 @@ box-sizing: border-box;
   height: 132px;
 position: absolute;
 
-
 }
 
 .links form{
   width: 49%;
   border: 1px solid gainsbro;
+
 
 }
 
@@ -47,6 +47,7 @@ position: absolute;
   width: 23.5%;
   margin-left: 21.5%;
 position: absolute;
+
 
 }
 
