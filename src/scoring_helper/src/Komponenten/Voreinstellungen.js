@@ -247,8 +247,8 @@ submitHeimMain(stati){
                   vorHeimTeam ={this.state.heimTeam_name}
                   vorAustragungsort ={this.state.austragungsort}
                   vorZuschauer ={this.state.zuschauer}
-                  vorGast_spieler ={this.state.gast_spieler}
-                  vorHeim_spieler ={this.state.heim_spieler}
+                  vorGast ={this.state.gast_spieler}
+                  vorHeim ={this.state.heim_spieler}
                   />
                 }
               </NavLink>
