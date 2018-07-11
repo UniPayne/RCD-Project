@@ -239,6 +239,7 @@ submitHeimMain(stati){
               <NavLink to="/Uebersicht">
                 <button >weiter</button>
                 {/*
+                  s
                   vorSpielnummer ={this.state.spielnummer}
                   vorSpieldatum ={this.state.spieldatum}
                   vorLiga ={this.state.liga_name}
