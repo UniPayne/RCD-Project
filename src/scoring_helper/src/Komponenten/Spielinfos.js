@@ -8,7 +8,6 @@ import { Button } from 'semantic-ui-react';
 import Uebersicht from "./Uebersicht"
 import GastTeam from "./GastTeam_Form";
 import Tabelle from "./Tabelle";
-import Spieler from "./Spieler";
 
 
 //CSS
