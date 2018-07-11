@@ -183,7 +183,7 @@ submitHeimMain(stati){
             </div>
           </div>
 
-          <div className="vor_unten">
+          <div className="vor_heim_gast_border">
 
             {/*Hier sind die Informationen des Gast Teams eingetragen*/}
             <div className="vor_gast">
