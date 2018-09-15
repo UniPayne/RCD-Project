@@ -29,8 +29,8 @@ class Uebersicht extends React.Component {
       heimTeam_name:    this.props.vorHeimTeam,
       austragungsort:   this.props.vorAustragungsort,
       zuschauer:        this.props.vorZuschauer,
-      gastTeam: this.props.vorGast,
-      heimTeam: this.props.vorHeim
+      gastTeam:         this.props.vorGast,
+      heimTeam:         this.props.vorHeim
     };
 
 }
