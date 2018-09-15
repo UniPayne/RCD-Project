@@ -25,7 +25,7 @@ class Spielinfos extends Component{
       form_gastTeam_name:   props.currGastTeamName,
       form_heimTeam_name:   props.currHeimTeamName,
       form_austragungsort:  props.currAustragungsOrt,
-      form_zuschauer:       props.currZuschauer
+      form_zuschauer:       props.currZuschauer,
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);

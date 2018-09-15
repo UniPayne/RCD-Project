@@ -26,13 +26,15 @@ class Voreinstellungen extends Component {
       heimTeam_name:          '',
       austragungsort:         '',
       zuschauer:              '',
-      info_ok: 'false',
+
+      info_ok:                false,
 
 
       gast_spieler: [],
-      gast_ok: 'false',
+      gast_ok:                false,
+
       heim_spieler: [],
-      heim_ok:'false',
+      heim_ok:                false,
 
       showInfoPopup:          false,
       showGastPopup:          false,
@@ -52,6 +54,7 @@ toggleHeimPopup(){
   this.setState({showHeimPopup: !this.state.showHeimPopup});
 }
 
+
 submitSpielinfosMain(stati){
   this.setState({spielnummer:     stati.form_spielnummer});
   this.setState({spieldatum:      stati.form_spieldatum});
@@ -61,6 +64,11 @@ submitSpielinfosMain(stati){
   this.setState({heimTeam_name:   stati.form_heimTeam_name});
   this.setState({austragungsort:  stati.form_austragungsort});
   this.setState({zuschauer:       stati.form_zuschauer});
+  //this.setState({info_ok:         !this.state.info_ok});
+  this.setState((info_ok) => ({
+    this.state.info_ok: !this.state.info_ok
+  }));
+  console.log(this.state.info_ok);
 }
 
 
@@ -125,57 +133,55 @@ submitHeimMain(stati){
             {/*Hier sind die Allgemeinen Spielinformationen eingetragen*/}
             <div className="vor_oben">
               <div>
-          <div className="spielInformationen_links">
-            <div className="links">
-              <form>
-                <label>SpielNr:</label>
-                <input type='number' name="spielnummer" value={this.state.spielnummer} min={0} readOnly /><br/>
-                <label>Verband:</label>
-                <input type='text' name="verband_name" value={this.state.verband_name} maxLength={20} readOnly /><br/>
-                <label>Gast:</label>
-                <input type='text' name="gastTeam_name" maxLength={20} value={this.state.gastTeam_name} readOnly /><br/>
+                <div className="spielInformationen_links">
+                  <div className="links">
+                    <form>
+                      <label>SpielNr:</label>
+                      <input type='number' name="spielnummer" value={this.state.spielnummer} min={0} readOnly /><br/>
+                      <label>Verband:</label>
+                      <input type='text' name="verband_name" value={this.state.verband_name} maxLength={20} readOnly /><br/>
+                      <label>Gast:</label>
+                      <input type='text' name="gastTeam_name" maxLength={20} value={this.state.gastTeam_name} readOnly /><br/>
 
-                <label className="in">Austragungsort:</label>
-                <input className="inInput" type='text' name="austragungsort" value={this.state.austragungsort} maxLength={20} readOnly/><br/>
+                      <label className="in">Austragungsort:</label>
+                      <input className="inInput" type='text' name="austragungsort" value={this.state.austragungsort} maxLength={20} readOnly/><br/>
+                    </form>
+                  </div>
 
-              </form>
-            </div>
-
-            <div className="rechts">
-                <div className="gespieltAm">
-                  <label>Gespielt am:</label>
-                  <input type='Date' name="spielDatum" value={this.state.spieldatum} readOnly/>
-                </div>
-                  <label>Liga:</label>
-                  <input type='text' name="liga_name" maxLength={20} value={this.state.liga_name} readOnly /><br/>
-                  <label>Heim:</label>
-                  <input type='text' name="heimTeam_name" maxLength={20} value={this.state.heimTeam_name} readOnly /><br/>
-                  <div className="zuschauer">
-                    <label>Zuschauer:</label>
-                      <input className="zuschauerInput" name="zuschauer" type='number'value={this.state.zuschauer} min={0} readOnly/>
-
-
-                    <div className="sInfo">
-                      <button className="button_inf_eintragen" onClick={this.toggleInfoPopup.bind(this)}>Informationen eintragen</button>
-                      {this.state.showInfoPopup ?
-
-                      <Spielinfos
-                        submitSpielinfosPopUp={this.submitSpielinfosMain.bind(this)}
-                        closePopup={this.toggleInfoPopup.bind(this)}
+                  <div className="rechts">
+                    <div className="gespieltAm">
+                      <label>Gespielt am:</label>
+                      <input type='Date' name="spielDatum" value={this.state.spieldatum} readOnly/>
+                    </div>
+                    <label>Liga:</label>
+                    <input type='text' name="liga_name" maxLength={20} value={this.state.liga_name} readOnly /><br/>
+                    <label>Heim:</label>
+                    <input type='text' name="heimTeam_name" maxLength={20} value={this.state.heimTeam_name} readOnly /><br/>
+                    <div className="zuschauer">
+                      <label>Zuschauer:</label>
+                        <input className="zuschauerInput" name="zuschauer" type='number'value={this.state.zuschauer} min={0} readOnly/>
 
 
-                        currentSpielNr={this.state.spielnummer}
-                        currSpielDatum={this.state.spieldatum}
-                        currLigaName={this.state.liga_name}
-                        currVerbandName={this.state.verband_name}
-                        currGastTeamName={this.state.gastTeam_name}
-                        currHeimTeamName={this.state.heimTeam_name}
-                        currAustragungsOrt={this.state.austragungsort}
-                        currZuschauer={this.state.zuschauer}
-                        />
-                    :null
-                  }
-                </div>
+                        <div className="sInfo">
+                          <button className="button_inf_eintragen" onClick={this.toggleInfoPopup.bind(this)}>Informationen eintragen</button>
+                          {
+                            this.state.showInfoPopup ?
+                            <Spielinfos
+                              submitSpielinfosPopUp={this.submitSpielinfosMain.bind(this)}
+                              closePopup={this.toggleInfoPopup.bind(this)}
+
+                              currentSpielNr={this.state.spielnummer}
+                              currSpielDatum={this.state.spieldatum}
+                              currLigaName={this.state.liga_name}
+                              currVerbandName={this.state.verband_name}
+                              currGastTeamName={this.state.gastTeam_name}
+                              currHeimTeamName={this.state.heimTeam_name}
+                              currAustragungsOrt={this.state.austragungsort}
+                              currZuschauer={this.state.zuschauer}
+                            />
+                            :null
+                          }
+                        </div>
                   </div>
             </div>
           </div>
