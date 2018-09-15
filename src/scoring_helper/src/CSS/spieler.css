@@ -1,5 +1,6 @@
 .spie{
   max-height: 100%;
+  min-height: 30px;
   width: 98%;
   margin-left: 1%;
   margin-top: 4%;
@@ -21,14 +22,17 @@
   width: 47.5%;
 }
 
-/*hier wird der inhalt der tabelle in gast und heim bei voreinstellungen angezeigts*/
+/*hier wird der inhalt der tabelle in gast und heim bei voreinstellungen angezeigt*/
 /*Uebersicht -> tabelleninhalt mit spielern*/
 .tabInhalt{
   background-color: #EFF5FB;
   box-shadow: inset 1px 3px 5px -3px rgba(0, 0, 0, 0.5);
-  max-height: 0px;
+  height: 25px;
 //background-color: red;
+}
 
+.body{
+  overflow: auto;
 }
 
 /*voreinstellungen -> tabelleninhalt mit spielern*/

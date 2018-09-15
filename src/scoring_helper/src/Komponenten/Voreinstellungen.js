@@ -185,9 +185,9 @@ submitHeimMain(stati){
                             :null
                           }
                         </div>
+                      </div>
+                    </div>
                   </div>
-            </div>
-          </div>
               <img src={logo} className="logo" alt="logo" />
             </div>
           </div>
@@ -202,7 +202,7 @@ submitHeimMain(stati){
               <label>Gast</label>
                 <Table className="spie">
                   <Table.Header className="header">
-                    <Table.Row>
+                    <Table.Row >
                       <Table.HeaderCell>  RueckenNr.  </Table.HeaderCell>
                       <Table.HeaderCell>  Nachname    </Table.HeaderCell>
                       <Table.HeaderCell>  Vorname     </Table.HeaderCell>
@@ -212,17 +212,9 @@ submitHeimMain(stati){
                   </Table.Header>
                 {GastTableBody}
                 </Table>
-                <div>
-                <button
-                    className="vor_button_gast_heim"
-                    onClick={this.toggleGastPopup.bind(this)}>Gastteam bearbeiten</button>
-                    {this.state.showGastPopup ?
-                      <GastTeam_Form submitGastPopUp={this.submitGastMain.bind(this)} title="Gast" currentArray = {this.state.gast_spieler}
-                        closePopup={this.toggleGastPopup.bind(this)}/>
-                      :null
-                    }
-                  </div>
+
                 </div>
+
 {/*Ende Gastteam*/}
 
 
@@ -241,16 +233,29 @@ submitHeimMain(stati){
                     </Table.Header>
                   {HeimTableBody}
                   </Table>
-                  <div>
-                  <button className="vor_button_gast_heim" onClick={this.toggleHeimPopup.bind(this)}>Heimteam bearbeiten</button>
-                      {this.state.showHeimPopup ?
-                        <GastTeam_Form submitGastPopUp={this.submitHeimMain.bind(this)} title="Heim" currentArray = {this.state.heim_spieler}
-                          closePopup={this.toggleHeimPopup.bind(this)}/>
-                        :null
-                      }
-                  </div>
           </div>
 {/*Ende Heimteam*/}
+
+
+{/*Start Button zum hinzufügen der Spieler*/}
+<div>
+<button
+    className="vor_button_gast"
+    onClick={this.toggleGastPopup.bind(this)}>Gastteam bearbeiten</button>
+    {this.state.showGastPopup ?
+      <GastTeam_Form submitGastPopUp={this.submitGastMain.bind(this)} title="Gast" currentArray = {this.state.gast_spieler}
+        closePopup={this.toggleGastPopup.bind(this)}/>
+      :null
+    }
+
+  <button className="vor_button_heim" onClick={this.toggleHeimPopup.bind(this)}>Heimteam bearbeiten</button>
+      {this.state.showHeimPopup ?
+        <GastTeam_Form submitGastPopUp={this.submitHeimMain.bind(this)} title="Heim" currentArray = {this.state.heim_spieler}
+          closePopup={this.toggleHeimPopup.bind(this)}/>
+        :null
+      }
+  </div>
+{/*Ende Button zum hinzufügen der Spieler*/}
 
 
           <div >

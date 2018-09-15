@@ -3,7 +3,7 @@
   max-width: 100%;
   margin: 0 auto;
 
-  height: 500px;
+  max-height: 500px;
 
 }
 
@@ -11,6 +11,7 @@
   float: left;
   width: 100%;
   margin-bottom: 0.3%;
+  margin-left: 9.75%;
 }
 
 .vor_spielInfo{
@@ -50,8 +51,19 @@ float: left;
 width: 49.9%;
 height: 340px;
 background-color: #F2F2F2;
-
+overflow: auto;
 }
+
+.vor_heim{
+border-style: solid;
+box-sizing: border-box;
+float: right;
+width: 49.8%;
+height: 340px;
+background-color: #F2F2F2;
+overflow: auto;
+}
+
 
 .vor_gast label{
   text-align: center;
@@ -64,16 +76,7 @@ background-color: #F2F2F2;
   text-shadow: 0 0 10px black;
 }
 
-.vor_heim{
-border-style: solid;
-box-sizing: border-box;
-float: right;
-width: 49.8%;
-height: 340px;
-margin-bottom: 2%;
-background-color: #F2F2F2;
 
-}
 
 .vor_heim label{
   text-align: center;
@@ -91,16 +94,6 @@ background-color: #F2F2F2;
 
 
 
-.vor_button_weiter{
-
- margin-left: 50%;
-width: 60px;
-height: 30px;
-margin-top: -35px;
- border-radius: 35px 5px 35px 5px;
- background-color: #A4A4A4;
-
-}
 
 .button_spielinfo{
   margin-left: 85%;
@@ -108,17 +101,30 @@ margin-top: -35px;
 
 }
 
-.vor_button_gast_heim{
+.vor_button_gast{
   position: sticky;
-  margin-left: 75%;
-  margin-bottom: 3%;
-  margin-top: 38%;
+  margin-left: 39.5%;
   border-radius: 35px 5px 35px 5px;
   background-color: #A4A4A4;
-
-
 }
 
+.vor_button_heim{
+  float: right;
+  position: sticky;
+  border-radius: 35px 5px 35px 5px;
+  background-color: #A4A4A4;
+}
+
+
+
+.vor_button_weiter{
+ margin-left: 50%;
+width: 60px;
+height: 30px;
+margin-top: 5%;
+ border-radius: 35px 5px 35px 5px;
+ background-color: #A4A4A4;
+}
 
 .wrapper{
   width: 1345px;
