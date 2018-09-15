@@ -31,10 +31,6 @@
 //background-color: red;
 }
 
-.body{
-  overflow: auto;
-}
-
 /*voreinstellungen -> tabelleninhalt mit spielern*/
 .tabInhalt_uebersicht{
   background-color: #EFF5FB;
