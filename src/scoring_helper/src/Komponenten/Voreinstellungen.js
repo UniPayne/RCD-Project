@@ -65,9 +65,6 @@ submitSpielinfosMain(stati){
   this.setState({austragungsort:  stati.form_austragungsort});
   this.setState({zuschauer:       stati.form_zuschauer});
   //this.setState({info_ok:         !this.state.info_ok});
-  this.setState((info_ok) => ({
-    this.state.info_ok: !this.state.info_ok
-  }));
   console.log(this.state.info_ok);
 }
 
