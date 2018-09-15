@@ -89,6 +89,8 @@ submitHeimMain(stati){
     const gast = this.state.gast_spieler || [];
     const heim = this.state.heim_spieler || [];
 
+
+{/*Start definition Gasttabelle*/}
     let GastTableBody;
     if (gast.length > 0){
       GastTableBody=(
@@ -105,7 +107,11 @@ submitHeimMain(stati){
       ))}
     </Table.Body>)
   }
+{/*Ende definition Gasttabelle*/}
 
+
+
+{/*Start definition GHeimtabelle*/}
   let HeimTableBody;
   if (heim.length > 0){
     HeimTableBody=(
@@ -122,12 +128,14 @@ submitHeimMain(stati){
     ))}
   </Table.Body>)
 }
+{/*Ende Definition Heimtabelle*/}
+
 
     return (
         <HashRouter>
           <div>
 
-            {/*Hier sind die Allgemeinen Spielinformationen eingetragen*/}
+{/*Start Spielinformationen*/}
             <div className="vor_oben">
               <div>
                 <div className="spielInformationen_links">
@@ -156,10 +164,8 @@ submitHeimMain(stati){
                     <input type='text' name="heimTeam_name" maxLength={20} value={this.state.heimTeam_name} readOnly /><br/>
                     <div className="zuschauer">
                       <label>Zuschauer:</label>
-                        <input className="zuschauerInput" name="zuschauer" type='number'value={this.state.zuschauer} min={0} readOnly/>
-
-
-                        <div className="sInfo">
+                      <input className="zuschauerInput" name="zuschauer" type='number'value={this.state.zuschauer} min={0} readOnly/>
+                      <div className="sInfo">
                           <button className="button_inf_eintragen" onClick={this.toggleInfoPopup.bind(this)}>Informationen eintragen</button>
                           {
                             this.state.showInfoPopup ?
@@ -185,10 +191,13 @@ submitHeimMain(stati){
               <img src={logo} className="logo" alt="logo" />
             </div>
           </div>
+{/*Ende Spielinfos*/}
+
+
 
           <div className="vor_heim_gast_border">
 
-            {/*Hier sind die Informationen des Gast Teams eingetragen*/}
+{/*Start Gastteam*/}
             <div className="vor_gast">
               <label>Gast</label>
                 <Table className="spie">
@@ -204,16 +213,20 @@ submitHeimMain(stati){
                 {GastTableBody}
                 </Table>
                 <div>
-                    <button className="vor_button_gast_heim" onClick={this.toggleGastPopup.bind(this)}>Gastteam bearbeiten</button>
+                <button
+                    className="vor_button_gast_heim"
+                    onClick={this.toggleGastPopup.bind(this)}>Gastteam bearbeiten</button>
                     {this.state.showGastPopup ?
                       <GastTeam_Form submitGastPopUp={this.submitGastMain.bind(this)} title="Gast" currentArray = {this.state.gast_spieler}
                         closePopup={this.toggleGastPopup.bind(this)}/>
                       :null
                     }
                   </div>
-            </div>
+                </div>
+{/*Ende Gastteam*/}
 
-            {/*Hier sind die Informationen des Heim Teams eingetragen*/}
+
+{/*Start Heimteam*/}
             <div className="vor_heim">
                 <label>Heim</label>
                   <Table className="spie">
@@ -229,14 +242,16 @@ submitHeimMain(stati){
                   {HeimTableBody}
                   </Table>
                   <div>
-                      <button className="vor_button_gast_heim" onClick={this.toggleHeimPopup.bind(this)}>Heimteam bearbeiten</button>
+                  <button className="vor_button_gast_heim" onClick={this.toggleHeimPopup.bind(this)}>Heimteam bearbeiten</button>
                       {this.state.showHeimPopup ?
                         <GastTeam_Form submitGastPopUp={this.submitHeimMain.bind(this)} title="Heim" currentArray = {this.state.heim_spieler}
                           closePopup={this.toggleHeimPopup.bind(this)}/>
                         :null
                       }
-                    </div>
+                  </div>
           </div>
+{/*Ende Heimteam*/}
+
 
           <div >
               <NavLink to="/Uebersicht">
