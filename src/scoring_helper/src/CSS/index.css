@@ -12,10 +12,10 @@ h1{
   color: white;
   background-color: #088A08;
   height: 47px;
-  text-shadow: 0 0 10px black;
+  text-shadow: 0 0 9px black;
   border: solid;
   border-color: black;
-  border-width: 1px;
+  border-width: 0.5px;
   box-shadow: 5px 10px 18px #888888;
   background-image: url("schlaeger.png");
 }
