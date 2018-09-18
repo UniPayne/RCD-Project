@@ -1,8 +1,4 @@
 import React, { Component } from "react";
-import {Route, NavLink, HashRouter } from "react-router-dom";
-import { Link } from 'react-router-dom';
-import Popup from "reactjs-popup";
-import { Button } from 'semantic-ui-react';
 
 //CSS
 import '../CSS/uebersicht.css';
