@@ -101,7 +101,7 @@ class SpielTabelle extends React.Component {
                       <Table.Row className="inhaltT">
                         <Table.Cell>&#9826;</Table.Cell>
                         <Table.Cell><canvas canvas ref="myCanvas" width={20} height={20} /></Table.Cell>
-                        <Table.Cell><canvas  canvas ref="myCanvas2" width={20} height={20} /></Table.Cell>
+                        <Table.Cell>kk</Table.Cell>
 
                         </Table.Row>
                       </Table.Body>
