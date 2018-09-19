@@ -37,8 +37,6 @@ class Voreinstellungen extends Component {
       showHeimPopup:          false,
       heim_spieler:              [],
       heim_ok:                false,
-
-      alleEingaben:           false,
     }
 }
 
@@ -81,10 +79,6 @@ submitHeimMain(stati){
   this.setState({heim_spieler: stati.spielerArray}, () => {
      console.log(this.state.heim_spieler);
    });
-}
-
-checkAllStates(){
-
 }
 
 
