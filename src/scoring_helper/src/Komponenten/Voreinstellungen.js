@@ -309,23 +309,25 @@ submitHeimMain(stati){
 
 
           <div className="navigation_buttons_unten">
-              <NavLink to={{
-                  pathname: '/Uebersicht',
-                  state:{
-                    vorSpielnummer: this.state.spielnummer,
-                    vorSpieldatum: this.state.spieldatum,
-                    vorLiga: this.state.liga_name,
-                    vorVerband: this.state.verband_name,
-                    vorGastTeam: this.state.gastTeam_name,
-                    vorHeimTeam: this.state.heimTeam_name,
-                    vorAustragungsort: this.state.austragungsort,
-                    vorZuschauer: this.state.zuschauer,
-                    vorGast: this.state.gast_spieler,
-                    vorHeim: this.state.heim_spieler,
-                  }}}>
+              <NavLink to='/Uebersicht'>
                 <button className="vor_button_weiter">weiter</button>
               </NavLink>
-              <Route path="/Uebersicht" component={Uebersicht}/>
+              <Route
+                path='/Uebersicht'
+                render={(props) =>
+                  <Uebersicht {...props}
+                    vorSpielnummer={this.state.spielnummer}
+                    vorSpieldatum={this.state.spieldatum}
+                    vorLiga={this.state.liga_name}
+                    vorVerband={this.state.verband_name}
+                    vorGastTeam={this.state.gastTeam_name}
+                    vorHeimTeam={this.state.heimTeam_name}
+                    vorAustragungsort={this.state.austragungsort}
+                    vorZuschauer={this.state.zuschauer}
+                    vorGast={this.state.gast_spieler}
+                    vorHeim={this.state.heim_spieler}
+                    />}
+                    />
             </div>
           </div>
         </div>
