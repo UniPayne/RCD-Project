@@ -27,21 +27,21 @@ class Voreinstellungen extends Component {
       austragungsort:         '',
       zuschauer:              '',
 
+      showInfoPopup:          false,
       info_ok:                false,
 
-
-      gast_spieler: [],
+      showGastPopup:          false,
+      gast_spieler:              [],
       gast_ok:                false,
 
-      heim_spieler: [],
+      showHeimPopup:          false,
+      heim_spieler:              [],
       heim_ok:                false,
 
-      showInfoPopup:          false,
-      showGastPopup:          false,
-      showHeimPopup:          false
+      alleEingaben:           false,
     }
-
 }
+
 toggleInfoPopup() {
   this.setState({showInfoPopup: !this.state.showInfoPopup});
 }
@@ -64,7 +64,7 @@ submitSpielinfosMain(stati){
   this.setState({heimTeam_name:   stati.form_heimTeam_name});
   this.setState({austragungsort:  stati.form_austragungsort});
   this.setState({zuschauer:       stati.form_zuschauer});
-  //this.setState({info_ok:         !this.state.info_ok});
+  this.setState({info_ok:         !this.state.info_ok});
   console.log(this.state.info_ok);
 }
 
@@ -83,6 +83,9 @@ submitHeimMain(stati){
    });
 }
 
+checkAllStates(){
+
+}
 
 
   render() {
@@ -97,7 +100,7 @@ submitHeimMain(stati){
     <Table.Body>
       {
         gast.map(spielerI => (
-        <Table.Row className="tabInhalt">
+        <Table.Row className="tabInhalt" key={spielerI.spielerPNummer.toString()}>
           <Table.Cell>{spielerI.spielerRNummer}</Table.Cell>
           <Table.Cell>{spielerI.spielerNName}</Table.Cell>
           <Table.Cell>{spielerI.spielerVName}</Table.Cell>
@@ -111,14 +114,14 @@ submitHeimMain(stati){
 
 
 
-{/*Start definition GHeimtabelle*/}
+{/*Start definition Heimtabelle*/}
   let HeimTableBody;
   if (heim.length > 0){
     HeimTableBody=(
   <Table.Body>
     {
       heim.map(spielerI => (
-      <Table.Row className="tabInhalt">
+      <Table.Row className="tabInhalt"key={spielerI.spielerPNummer.toString()}>
         <Table.Cell>{spielerI.spielerRNummer}</Table.Cell>
         <Table.Cell>{spielerI.spielerNName}</Table.Cell>
         <Table.Cell>{spielerI.spielerVName}</Table.Cell>
