@@ -7,11 +7,7 @@
   float: left;
   background-color: #F2F2F2;
   max-width: 100%;
-
-
 }
-
-
 
 .wrapper_ue{
   width: 1345px;
@@ -58,8 +54,6 @@ position: absolute;
 
 }
 
-
-
 .zuschauer{
   margin-top: 0.5%;
 }
@@ -73,7 +67,6 @@ position: absolute;
   width: 80.5%;
 
 }
-
 
 .gespieltAm label{
   float: left;
