@@ -2,6 +2,7 @@
   float: left;
   width: 100%;
   margin-bottom: 0.3%;
+
 }
 
 .vor_spielInfo{
@@ -83,6 +84,7 @@ overflow: auto;
   font-size: 19px;
   text-shadow: 0 0 10px white;
 }
+
 
 
 .button_spielinfo{
