@@ -15,7 +15,11 @@ import '../CSS/spielInfo_Popup.css';
 import '../CSS/spieler.css';
 
 class Voreinstellungen extends Component {
-  constructor(props){
+/*
+Das ist der Standard Konstruktor. Für Testzwecke wurde der darunter angelegt.
+Am Ende einfach den unteren wieder löschen.
+
+constructor(props){
     super(props);
     this.state = {
       spielnummer:            '',
@@ -39,6 +43,55 @@ class Voreinstellungen extends Component {
       heim_ok:                false,
     }
 }
+
+Lösche von Hier -->*/
+constructor(props){
+  super(props);
+  this.state = {
+    spielnummer:            '3',
+    spieldatum:             '1111-11-11',
+    liga_name:              '1',
+    verband_name:           '1',
+    gastTeam_name:          '1',
+    heimTeam_name:          '1',
+    austragungsort:         '1',
+    zuschauer:              '1',
+
+    showInfoPopup:          false,
+    info_ok:                false,
+
+    showGastPopup:          false,
+    gast_spieler:
+    [
+    {spielerRNummer: "11", spielerNName: "11", spielerVName: "11", spielerPosition: "11", spielerPNummer: "11"},
+    {spielerRNummer: "12", spielerNName: "12", spielerVName: "12", spielerPosition: "12", spielerPNummer: "12"},
+    {spielerRNummer: "13", spielerNName: "13", spielerVName: "13", spielerPosition: "13", spielerPNummer: "13"},
+    {spielerRNummer: "14", spielerNName: "14", spielerVName: "14", spielerPosition: "14", spielerPNummer: "14"},
+    {spielerRNummer: "15", spielerNName: "15", spielerVName: "15", spielerPosition: "15", spielerPNummer: "15"},
+    {spielerRNummer: "16", spielerNName: "16", spielerVName: "16", spielerPosition: "16", spielerPNummer: "16"},
+    {spielerRNummer: "17", spielerNName: "17", spielerVName: "17", spielerPosition: "17", spielerPNummer: "17"},
+    {spielerRNummer: "18", spielerNName: "18", spielerVName: "18", spielerPosition: "18", spielerPNummer: "18"},
+    {spielerRNummer: "19", spielerNName: "19", spielerVName: "19", spielerPosition: "19", spielerPNummer: "19"}
+    ],
+    gast_ok:                false,
+
+    showHeimPopup:          false,
+    heim_spieler:
+    [
+      {spielerRNummer: "21", spielerNName: "21", spielerVName: "21", spielerPosition: "21", spielerPNummer: "21"},
+      {spielerRNummer: "22", spielerNName: "22", spielerVName: "22", spielerPosition: "22", spielerPNummer: "22"},
+      {spielerRNummer: "23", spielerNName: "23", spielerVName: "23", spielerPosition: "23", spielerPNummer: "23"},
+      {spielerRNummer: "24", spielerNName: "24", spielerVName: "24", spielerPosition: "24", spielerPNummer: "24"},
+      {spielerRNummer: "25", spielerNName: "25", spielerVName: "25", spielerPosition: "25", spielerPNummer: "25"},
+      {spielerRNummer: "26", spielerNName: "26", spielerVName: "26", spielerPosition: "26", spielerPNummer: "26"},
+      {spielerRNummer: "27", spielerNName: "27", spielerVName: "27", spielerPosition: "27", spielerPNummer: "27"},
+      {spielerRNummer: "28", spielerNName: "28", spielerVName: "28", spielerPosition: "28", spielerPNummer: "28"},
+      {spielerRNummer: "29", spielerNName: "29", spielerVName: "29", spielerPosition: "29", spielerPNummer: "29"}
+    ],
+    heim_ok:                false,
+  }
+}
+// <-- bis hier!
 
 toggleInfoPopup() {
   this.setState({showInfoPopup: !this.state.showInfoPopup});
@@ -255,22 +308,22 @@ submitHeimMain(stati){
 {/*Ende Button zum hinzufügen der Spieler*/}
 
 
-          <div >
-              <NavLink to="/Uebersicht">
+          <div className="navigation_buttons_unten">
+              <NavLink to={{
+                  pathname: '/Uebersicht',
+                  state:{
+                    vorSpielnummer: this.state.spielnummer,
+                    vorSpieldatum: this.state.spieldatum,
+                    vorLiga: this.state.liga_name,
+                    vorVerband: this.state.verband_name,
+                    vorGastTeam: this.state.gastTeam_name,
+                    vorHeimTeam: this.state.heimTeam_name,
+                    vorAustragungsort: this.state.austragungsort,
+                    vorZuschauer: this.state.zuschauer,
+                    vorGast: this.state.gast_spieler,
+                    vorHeim: this.state.heim_spieler,
+                  }}}>
                 <button className="vor_button_weiter">weiter</button>
-                {/*
-                  s
-                  vorSpielnummer ={this.state.spielnummer}
-                  vorSpieldatum ={this.state.spieldatum}
-                  vorLiga ={this.state.liga_name}
-                  vorVerband ={this.state.verband_name}
-                  vorGastTeam ={this.state.gastTeam_name}
-                  vorHeimTeam ={this.state.heimTeam_name}
-                  vorAustragungsort ={this.state.austragungsort}
-                  vorZuschauer ={this.state.zuschauer}
-                  vorGast ={this.state.gast_spieler}
-                  vorHeim ={this.state.heim_spieler}
-              */}
               </NavLink>
               <Route path="/Uebersicht" component={Uebersicht}/>
             </div>

@@ -18,6 +18,8 @@ import '../CSS/spielInfo_Popup.css';
 
 
 class Uebersicht extends React.Component {
+
+
   constructor(props) {
     super(props);
     this.state = {
@@ -32,9 +34,7 @@ class Uebersicht extends React.Component {
       gastTeam:         this.props.vorGast,
       heimTeam:         this.props.vorHeim
     };
-
 }
-
 
   render() {
     return (
@@ -136,7 +136,12 @@ class Uebersicht extends React.Component {
 
           </NavLink>
           <Route path="/Voreinstellungen" component={Voreinstellungen}/>
-        </div>
+      </div>
+
+{/*DIES IST EIN TEST UND KANN ANSCHLIE?END GELÖSCHT WERDEN*/}
+      <div>
+        <button onClick={console.log(this.state.spielnummer)}>Test</button>
+      </div>
 
 
       </div>
