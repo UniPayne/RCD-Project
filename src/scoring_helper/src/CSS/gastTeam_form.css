@@ -57,12 +57,16 @@
 
 
 .tab_pop{
-  background-color: red;
   width: 92%;
   margin-left: 5%;
   margin-top: 1%;
   height: 245px;
   overflow: auto;
+}
+
+.tab_pop th{
+background-color:  lightgrey;
+
 }
 
 .tab_fuellen td{
