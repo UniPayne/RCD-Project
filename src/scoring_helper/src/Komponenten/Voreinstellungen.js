@@ -49,13 +49,13 @@ constructor(props){
   super(props);
   this.state = {
     spielnummer:            '3',
-    spieldatum:             '1111-11-11',
-    liga_name:              '1',
-    verband_name:           '1',
-    gastTeam_name:          '1',
-    heimTeam_name:          '1',
-    austragungsort:         '1',
-    zuschauer:              '1',
+    spieldatum:             '2018-07-28',
+    liga_name:              'Bundesliga',
+    verband_name:           'DBV',
+    gastTeam_name:          'Dohren Wild Farmers',
+    heimTeam_name:          'Paderborn Untouchables',
+    austragungsort:         'Paderborn',
+    zuschauer:              '100',
 
     showInfoPopup:          false,
     info_ok:                false,
