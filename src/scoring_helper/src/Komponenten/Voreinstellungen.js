@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {Route, NavLink, HashRouter} from "react-router-dom";
+import {Route, NavLink, HashRouter, Link} from "react-router-dom";
 import logo from '../logo.png';
 import { Table, Flag } from 'semantic-ui-react'
 
@@ -309,9 +309,9 @@ submitHeimMain(stati){
 
 
           <div className="navigation_buttons_unten">
-              <NavLink to='/Uebersicht'>
+              <Link to='/Uebersicht'>
                 <button className="vor_button_weiter">weiter</button>
-              </NavLink>
+              </Link>
               <Route
                 path='/Uebersicht'
                 render={(props) =>
