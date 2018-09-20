@@ -20,22 +20,6 @@ import '../CSS/spielInfo_Popup.css';
 class Uebersicht extends React.Component {
 
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      spielnummer:      this.props.vorSpielnummer,
-      spieldatum:       this.props.vorSpieldatum,
-      liga_name:        this.props.vorLiga,
-      verband_name:     this.props.vorVerband,
-      gastTeam_name:    this.props.vorGastTeam,
-      heimTeam_name:    this.props.vorHeimTeam,
-      austragungsort:   this.props.vorAustragungsort,
-      zuschauer:        this.props.vorZuschauer,
-      gastTeam:         this.props.vorGast,
-      heimTeam:         this.props.vorHeim
-    };
-}
-
   render() {
     return (
     <div>
@@ -46,7 +30,7 @@ class Uebersicht extends React.Component {
             <label>SpielNr:</label>
             <input type='number'
                    name="spielnummer"
-                   value={this.state.spielnummer}
+                   value={this.props.location.spielinfos.spielnummer}
                    min={0}
                    readOnly />
                  <br/>
@@ -54,7 +38,7 @@ class Uebersicht extends React.Component {
             <label>Verband:</label>
             <input type='text'
                    name="verband_name"
-                   value={this.state.verband_name}
+                   value={this.props.location.spielinfos.verband_name}
                    maxLength={20}
                    readOnly />
                  <br/>
@@ -63,7 +47,7 @@ class Uebersicht extends React.Component {
             <input type='text'
                    name="gastTeam_name"
                    maxLength={20}
-                   value={this.state.gastTeam_name}
+                   value={this.props.location.spielinfos.gastTeam_name}
                    readOnly />
                  <br/>
 
@@ -71,7 +55,7 @@ class Uebersicht extends React.Component {
             <input className="inInput"
                    type='text'
                    name="austragungsort"
-                   value={this.state.austragungsort}
+                   value={this.props.location.spielinfos.austragungsort}
                    maxLength={20}
                    readOnly/>
                  <br/>
@@ -83,7 +67,7 @@ class Uebersicht extends React.Component {
               <label>Gespielt am:</label>
               <input type='Date'
                      name="spielDatum"
-                     value={this.state.spieldatum}
+                     value={this.props.location.spielinfos.spieldatum}
                      readOnly/>
             </div>
 
@@ -91,7 +75,7 @@ class Uebersicht extends React.Component {
             <input type='text'
                    name="liga_name"
                    maxLength={20}
-                   value={this.state.liga_name}
+                   value={this.props.location.spielinfos.liga_name}
                    readOnly />
                  <br/>
 
@@ -99,7 +83,7 @@ class Uebersicht extends React.Component {
               <input type='text'
                      name="heimTeam_name"
                      maxLength={20}
-                     value={this.state.heimTeam_name}
+                     value={this.props.location.spielinfos.heimTeam_name}
                      readOnly />
                  <br/>
 
@@ -108,7 +92,7 @@ class Uebersicht extends React.Component {
                     <input className="zuschauerInput"
                            type='number'
                            name="zuschauer"
-                           value={this.state.zuschauer}
+                           value={this.props.location.spielinfos.zuschauer}
                            min={0}
                            readOnly/>
                   </div>
@@ -136,11 +120,6 @@ class Uebersicht extends React.Component {
 
           </NavLink>
           <Route path="/Voreinstellungen" component={Voreinstellungen}/>
-      </div>
-
-{/*DIES IST EIN TEST UND KANN ANSCHLIE?END GELÖSCHT WERDEN*/}
-      <div>
-        <button onClick={console.log(this.state.spielnummer)}>Test</button>
       </div>
 
 

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {Route, NavLink, HashRouter, Link} from "react-router-dom";
+import {Route, Link, HashRouter} from "react-router-dom";
 import logo from '../logo.png';
 import { Table, Flag } from 'semantic-ui-react'
 
@@ -182,7 +182,6 @@ submitHeimMain(stati){
 
 
     return (
-        <HashRouter>
           <div>
 
 {/*Start Spielinformationen*/}
@@ -309,29 +308,15 @@ submitHeimMain(stati){
 
 
           <div className="navigation_buttons_unten">
-              <Link to='/Uebersicht'>
+              <Link to={{
+				  pathname: '/Uebersicht',
+				  spielinfos: this.state
+			  }}>
                 <button className="vor_button_weiter">weiter</button>
               </Link>
-              <Route
-                path='/Uebersicht'
-                render={(props) =>
-                  <Uebersicht {...props}
-                    vorSpielnummer={this.state.spielnummer}
-                    vorSpieldatum={this.state.spieldatum}
-                    vorLiga={this.state.liga_name}
-                    vorVerband={this.state.verband_name}
-                    vorGastTeam={this.state.gastTeam_name}
-                    vorHeimTeam={this.state.heimTeam_name}
-                    vorAustragungsort={this.state.austragungsort}
-                    vorZuschauer={this.state.zuschauer}
-                    vorGast={this.state.gast_spieler}
-                    vorHeim={this.state.heim_spieler}
-                    />}
-                    />
             </div>
           </div>
         </div>
-        </HashRouter>
     );
   }
 }

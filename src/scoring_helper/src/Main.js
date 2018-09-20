@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import {
   Route,
-  NavLink,
+  Switch,
   HashRouter
 } from "react-router-dom";
 import Home from "./Komponenten/Home";
@@ -20,8 +20,8 @@ class Main extends Component {
         <div>
           <h1>Scoring Helper</h1>
             <div className="content">
-            <Route exact path="/" component={Home}/>
-            <Route path="/uebersicht" component={Uebersicht}/>
+            <Route exact path="/" component={Home} />
+            <Route path="/Uebersicht" component={Uebersicht}/>
             <Route path="/Voreinstellungen" component={Voreinstellungen}/>
           </div>
         </div>
