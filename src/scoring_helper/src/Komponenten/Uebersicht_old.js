@@ -5,17 +5,17 @@ import Popup from "reactjs-popup";
 import ReactModal from 'react-modal';
 import { Button } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
-import { Table, Flag } from 'semantic-ui-react'
 
 //Komponenten
-import Tabelle from             "./Tabelle";
-import SpielerHeim from         "./Spieler";
-import SpielTabelle from        "./SpielTabelle";
+import Tabelle from         "./Tabelle";
+import Spieler from         "./Spieler";
+import SpielTabelle from    "./SpielTabelle";
 import Voreinstellungen from    "./Voreinstellungen";
 
 
 //CSS
 import '../CSS/uebersicht.css';
+import '../CSS/spielInfo_Popup.css';
 
 /*
 die alten Values von den Spielinfos
@@ -29,47 +29,7 @@ value={this.props.location.spielinfos.heimTeam_name}
 value={this.props.location.spielinfos.zuschauer}
 */
 class Uebersicht extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      gast_spieler:
-      [
-      {spielerRNummer: "11", spielerNName: "11", spielerVName: "11", spielerPosition: "11", spielerPNummer: "11"},
-      {spielerRNummer: "12", spielerNName: "12", spielerVName: "12", spielerPosition: "12", spielerPNummer: "12"},
-      {spielerRNummer: "13", spielerNName: "13", spielerVName: "13", spielerPosition: "13", spielerPNummer: "13"},
-      {spielerRNummer: "14", spielerNName: "14", spielerVName: "14", spielerPosition: "14", spielerPNummer: "14"},
-      {spielerRNummer: "15", spielerNName: "15", spielerVName: "15", spielerPosition: "15", spielerPNummer: "15"},
-      {spielerRNummer: "16", spielerNName: "16", spielerVName: "16", spielerPosition: "16", spielerPNummer: "16"},
-      {spielerRNummer: "17", spielerNName: "17", spielerVName: "17", spielerPosition: "17", spielerPNummer: "17"},
-      {spielerRNummer: "18", spielerNName: "18", spielerVName: "18", spielerPosition: "18", spielerPNummer: "18"},
-      {spielerRNummer: "19", spielerNName: "19", spielerVName: "19", spielerPosition: "19", spielerPNummer: "19"}
-      ],
-    };
-}
-
-
-
   render() {
-    const gast = this.state.gast_spieler;
-    {/*Start definition Gasttabelle*/}
-    let GastTableBody;
-    if (gast.length > 0){
-      GastTableBody=(
-    <Table.Body>
-      {
-        gast.map(spielerI => (
-        <Table.Row className="tabInhalt" key={spielerI.spielerPNummer.toString()}>
-          <Table.Cell>{spielerI.spielerRNummer}</Table.Cell>
-          <Table.Cell>{spielerI.spielerNName}</Table.Cell>
-          <Table.Cell>{spielerI.spielerVName}</Table.Cell>
-          <Table.Cell>{spielerI.spielerPosition}</Table.Cell>
-          <Table.Cell>{spielerI.spielerPNummer}</Table.Cell>
-        </Table.Row>
-      ))}
-    </Table.Body>)
-  }
-{/*Ende definition Gasttabelle*/}
-
     return (
     <div>
       <div className="wrapper_ue">
@@ -156,28 +116,12 @@ class Uebersicht extends React.Component {
        <div className="wrapper_ue2">
         <div className="wrapper_ue">
           <div className="spielerInformationen">
-            <Table.Header className="header">
-                    <Table.Row >
-                      <Table.HeaderCell>  RueckenNr.  </Table.HeaderCell>
-                      <Table.HeaderCell>  Nachname    </Table.HeaderCell>
-                      <Table.HeaderCell>  Vorname     </Table.HeaderCell>
-                      <Table.HeaderCell>  PosNr.      </Table.HeaderCell>
-                      <Table.HeaderCell>  PassNr.     </Table.HeaderCell>
-                      <Table.HeaderCell>  1           </Table.HeaderCell>
-                      <Table.HeaderCell>  2           </Table.HeaderCell>
-                      <Table.HeaderCell>  3           </Table.HeaderCell>
-                      <Table.HeaderCell>  4           </Table.HeaderCell>
-                      <Table.HeaderCell>  5           </Table.HeaderCell>
-                      <Table.HeaderCell>  6           </Table.HeaderCell>
-                      <Table.HeaderCell>  7           </Table.HeaderCell>
-                      <Table.HeaderCell>  8           </Table.HeaderCell>
-                      <Table.HeaderCell>  9           </Table.HeaderCell>
-                      <Table.HeaderCell> 10           </Table.HeaderCell>
-                    </Table.Row>
-                  </Table.Header>
-                  {GastTableBody}
+            <Spieler/>
           </div>
         </div>
+      <div className="spielfeld">
+        <SpielTabelle/>
+      </div>
 
       <div>
           <NavLink to="/Voreinstellungen">
