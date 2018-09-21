@@ -89,9 +89,12 @@ constructor(props){
       {spielerRNummer: "29", spielerNName: "29", spielerVName: "29", spielerPosition: "29", spielerPNummer: "29"}
     ],
     heim_ok:                false,
+    alles_ok: false,
   }
 }
 // <-- bis hier!
+
+
 
 toggleInfoPopup() {
   this.setState({showInfoPopup: !this.state.showInfoPopup});
@@ -118,6 +121,18 @@ submitSpielinfosMain(stati){
   this.setState({info_ok:         stati.form_info},() => {
   console.log("Voreinstellungen Info_ok: ",this.state.info_ok);
   } );
+  if (this.state.info_ok === true &&
+      this.state.gast_ok === true &&
+      this.state.heim_ok === true){
+        this.setState({alles_ok: true}, () => {
+          console.log("alles:ok: ", this.state.alles_ok);
+        });
+      }
+      else {
+        this.setState({alles_ok: false}, () => {
+          console.log("alles:ok: ", this.state.alles_ok);
+      });
+}
 
 }
 
@@ -129,6 +144,18 @@ submitGastMain(stati){
   this.setState({gast_spieler: stati.spielerArray}, () => {
      console.log(this.state.gast_spieler);
    });
+   if (this.state.info_ok === true &&
+       this.state.gast_ok === true &&
+       this.state.heim_ok === true){
+         this.setState({alles_ok: true}, () => {
+           console.log("alles:ok: ", this.state.alles_ok);
+         });
+       }
+       else {
+         this.setState({alles_ok: false}, () => {
+           console.log("alles:ok: ", this.state.alles_ok);
+       });
+ }
 }
 
 
@@ -139,6 +166,18 @@ submitHeimMain(stati){
   this.setState({heim_spieler: stati.spielerArray}, () => {
      console.log(this.state.heim_spieler);
    });
+   if (this.state.info_ok === true &&
+       this.state.gast_ok === true &&
+       this.state.heim_ok === true){
+         this.setState({alles_ok: true}, () => {
+           console.log("alles:ok: ", this.state.alles_ok);
+         });
+       }
+       else {
+         this.setState({alles_ok: false}, () => {
+           console.log("alles:ok: ", this.state.alles_ok);
+       });
+ }
 }
 
 
@@ -329,7 +368,7 @@ submitHeimMain(stati){
 				  pathname: '/Uebersicht',
 				  spielinfos: this.state
 			  }}>
-                <button className="vor_button_weiter">Spiel Starten</button>
+                <button disabled={!this.state.alles_ok}className="vor_button_weiter">Spiel Starten</button>
               </Link>
             </div>
           </div>
