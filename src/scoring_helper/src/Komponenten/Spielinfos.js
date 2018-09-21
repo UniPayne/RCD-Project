@@ -22,6 +22,7 @@ class Spielinfos extends Component{
       form_heimTeam_name:   props.currHeimTeamName,
       form_austragungsort:  props.currAustragungsOrt,
       form_zuschauer:       props.currZuschauer,
+      form_info:            props.currInfo,
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -31,6 +32,17 @@ class Spielinfos extends Component{
 
   handleChange(event){
     this.setState({[event.target.name]: event.target.value})
+    if (this.state.form_spielnummer !== '' &&
+        this.state.form_spieldatum !== '' &&
+        this.state.form_liga_name !== '' &&
+        this.state.form_verband_name !== '' &&
+        this.state.form_gastTeam_name !== '' &&
+        this.state.form_heimTeam_name !== '' &&
+        this.state.form_austragungsort !== ''){
+          this.setState({form_info: true});
+        }else {
+          this.setState({form_info: false});
+        }
   }
 
   handleSubmit(event){
@@ -41,8 +53,7 @@ class Spielinfos extends Component{
         this.state.form_verband_name === '' ||
         this.state.form_gastTeam_name === '' ||
         this.state.form_heimTeam_name === '' ||
-        this.state.form_austragungsort === '' ||
-        this.state.form_zuschauer === '') {
+        this.state.form_austragungsort === '') {
           alert("Sie müssen alle Felder ausfüllen!");
         }else {
           this.props.submitSpielinfosPopUp(this.state);

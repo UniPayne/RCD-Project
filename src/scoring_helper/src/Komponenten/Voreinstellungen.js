@@ -115,8 +115,10 @@ submitSpielinfosMain(stati){
   this.setState({heimTeam_name:   stati.form_heimTeam_name});
   this.setState({austragungsort:  stati.form_austragungsort});
   this.setState({zuschauer:       stati.form_zuschauer});
-  this.setState({info_ok:         !this.state.info_ok});
-  console.log(this.state.info_ok);
+  this.setState({info_ok:         stati.form_info},() => {
+  console.log("Info_ok: ",this.state.info_ok);
+  } );
+
 }
 
 
@@ -124,7 +126,6 @@ submitGastMain(stati){
   this.setState({gast_spieler: stati.spielerArray}, () => {
      console.log(this.state.gast_spieler);
    });
-
 }
 
 
@@ -230,6 +231,7 @@ submitHeimMain(stati){
                               currHeimTeamName={this.state.heimTeam_name}
                               currAustragungsOrt={this.state.austragungsort}
                               currZuschauer={this.state.zuschauer}
+                              currInfo={this.state.info_ok}
                             />
                             :null
                           }
@@ -292,14 +294,21 @@ submitHeimMain(stati){
     className="vor_button_gast"
     onClick={this.toggleGastPopup.bind(this)}>Gastteam bearbeiten</button>
     {this.state.showGastPopup ?
-      <GastTeam_Form submitGastPopUp={this.submitGastMain.bind(this)} title="Gast" currentArray = {this.state.gast_spieler}
+      <GastTeam_Form
+        submitGastPopUp={this.submitGastMain.bind(this)}
+        title="Gast"
+        currentArray = {this.state.gast_spieler}
         closePopup={this.toggleGastPopup.bind(this)}/>
       :null
     }
 
-  <button className="vor_button_heim" onClick={this.toggleHeimPopup.bind(this)}>Heimteam bearbeiten</button>
+  <button className="vor_button_heim"
+    onClick={this.toggleHeimPopup.bind(this)}>Heimteam bearbeiten</button>
       {this.state.showHeimPopup ?
-        <GastTeam_Form submitGastPopUp={this.submitHeimMain.bind(this)} title="Heim" currentArray = {this.state.heim_spieler}
+        <GastTeam_Form
+          submitGastPopUp={this.submitHeimMain.bind(this)}
+          title="Heim"
+          currentArray = {this.state.heim_spieler}
           closePopup={this.toggleHeimPopup.bind(this)}/>
         :null
       }
@@ -312,7 +321,7 @@ submitHeimMain(stati){
 				  pathname: '/Uebersicht',
 				  spielinfos: this.state
 			  }}>
-                <button className="vor_button_weiter">weiter</button>
+                <button className="vor_button_weiter">Spiel Starten</button>
               </Link>
             </div>
           </div>
@@ -322,47 +331,3 @@ submitHeimMain(stati){
 }
 
 export default Voreinstellungen;
-
-Voreinstellungen.defaultProps = {
-  spielnummer:            '3',
-  spieldatum:             '2018-07-28',
-  liga_name:              'Bundesliga',
-  verband_name:           'DBV',
-  gastTeam_name:          'Dohren Wild Farmers',
-  heimTeam_name:          'Paderborn Untouchables',
-  austragungsort:         'Paderborn',
-  zuschauer:              '100',
-
-  showInfoPopup:          false,
-  info_ok:                false,
-
-  showGastPopup:          false,
-  gast_spieler:
-  [
-  {spielerRNummer: "11", spielerNName: "11", spielerVName: "11", spielerPosition: "11", spielerPNummer: "11"},
-  {spielerRNummer: "12", spielerNName: "12", spielerVName: "12", spielerPosition: "12", spielerPNummer: "12"},
-  {spielerRNummer: "13", spielerNName: "13", spielerVName: "13", spielerPosition: "13", spielerPNummer: "13"},
-  {spielerRNummer: "14", spielerNName: "14", spielerVName: "14", spielerPosition: "14", spielerPNummer: "14"},
-  {spielerRNummer: "15", spielerNName: "15", spielerVName: "15", spielerPosition: "15", spielerPNummer: "15"},
-  {spielerRNummer: "16", spielerNName: "16", spielerVName: "16", spielerPosition: "16", spielerPNummer: "16"},
-  {spielerRNummer: "17", spielerNName: "17", spielerVName: "17", spielerPosition: "17", spielerPNummer: "17"},
-  {spielerRNummer: "18", spielerNName: "18", spielerVName: "18", spielerPosition: "18", spielerPNummer: "18"},
-  {spielerRNummer: "19", spielerNName: "19", spielerVName: "19", spielerPosition: "19", spielerPNummer: "19"}
-  ],
-  gast_ok:                false,
-
-  showHeimPopup:          false,
-  heim_spieler:
-  [
-    {spielerRNummer: "21", spielerNName: "21", spielerVName: "21", spielerPosition: "21", spielerPNummer: "21"},
-    {spielerRNummer: "22", spielerNName: "22", spielerVName: "22", spielerPosition: "22", spielerPNummer: "22"},
-    {spielerRNummer: "23", spielerNName: "23", spielerVName: "23", spielerPosition: "23", spielerPNummer: "23"},
-    {spielerRNummer: "24", spielerNName: "24", spielerVName: "24", spielerPosition: "24", spielerPNummer: "24"},
-    {spielerRNummer: "25", spielerNName: "25", spielerVName: "25", spielerPosition: "25", spielerPNummer: "25"},
-    {spielerRNummer: "26", spielerNName: "26", spielerVName: "26", spielerPosition: "26", spielerPNummer: "26"},
-    {spielerRNummer: "27", spielerNName: "27", spielerVName: "27", spielerPosition: "27", spielerPNummer: "27"},
-    {spielerRNummer: "28", spielerNName: "28", spielerVName: "28", spielerPosition: "28", spielerPNummer: "28"},
-    {spielerRNummer: "29", spielerNName: "29", spielerVName: "29", spielerPosition: "29", spielerPNummer: "29"}
-  ],
-  heim_ok:                false,
-};
