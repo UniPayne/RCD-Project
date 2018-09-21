@@ -56,9 +56,10 @@ box-sizing: border-box;
 float: left;
 width: 49.9%;
 height: 340px;
+border-width: 2px;
 background-color: #F2F2F2;
 overflow: auto;
-
+background-color: rgba(196, 196, 196, 0.2);
 }
 
 .vor_heim{
@@ -67,8 +68,10 @@ box-sizing: border-box;
 float: right;
 width: 49.8%;
 height: 340px;
+border-width: 2px;
 background-color: #F2F2F2;
 overflow: auto;
+background-color: rgba(196, 196, 196, 0.4);
 }
 
 

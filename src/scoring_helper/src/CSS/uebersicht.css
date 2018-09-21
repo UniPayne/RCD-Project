@@ -1,23 +1,16 @@
 .spielInformationen_links{
   box-sizing: border-box;
   border-style: solid;
-  border-width: 3px;
+  border-width: 2px;
   height: 175px;
   width: 44.5%;
   float: left;
   background-color: #F2F2F2;
   max-width: 100%;
-
+  background-color: rgba(196, 196, 196, 0.4);
 }
 
-.headerInformationen{
-  background-color: #088A08;
-  font-weight: bold;
-  text-align: center;
-  color: white;
-  font-size: 18px;
-  text-shadow: 0 0 15px black;
-}
+
 
 .wrapper_ue{
   width: 100%;
@@ -117,17 +110,21 @@ label{
   width: 11%;
 }
 
-/*uebersicht -> spielertablle spieler*/
+/*uebersicht -> spielertablle spieler
+
+Inhalt muss mehr nach rechts..
+
+*/
 .spielerInformationen{
   border-style: solid;
-  border-width: 3px;
-  height: 320px;
+  border-width: 2px;
+  height: 310px;
   width: 100%;
   float: left;
   margin-top:0.3%;
   background-color: #F2F5F2;
   box-sizing: border-box;
-
+  background-color: rgba(196, 196, 196, 0.4);
 
 }
 
@@ -141,11 +138,12 @@ label{
 .punkte_rechts{
   border-style: solid;
   float: right;
+  border-width: 2px;
   width: 55%;
-  height: 150px;
+  height: 175px;
   background-color: #F2F2F2;
   box-sizing: border-box;
-
+  background-color: rgba(196, 196, 196, 0.4);
 }
 
 .spielfeld{
@@ -156,7 +154,8 @@ box-sizing: border-box;
   height: 320px;
   width: 75%;
   float: right;
-  margin-top:0.3%;
+  margin-top: 0.3%;
+
 
 }
 
@@ -178,7 +177,7 @@ box-sizing: border-box;
 .button_zurueck{
   position: absolute;
 margin-left: 30px;
-margin-top: 485px;
+margin-top: 495px;
 font-size: 20px;
 border-radius: 35px 5px 35px 5px;
 background-color: #A4A4A4;
