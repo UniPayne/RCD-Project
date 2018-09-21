@@ -18,7 +18,7 @@ import '../CSS/uebersicht.css';
 import '../CSS/spielInfo_Popup.css';
 
 /*
-Alte render Methode
+die alten Values von den Spielinfos
 value={this.props.location.spielinfos.spielnummer}
 value={this.props.location.spielinfos.verband_name}
 value={this.props.location.spielinfos.gastTeam_name}
