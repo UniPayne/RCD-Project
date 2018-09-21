@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import Popup from "reactjs-popup";
 import ReactModal from 'react-modal';
 import { Button } from 'semantic-ui-react';
+import PropTypes from 'prop-types';
 
 //Komponenten
 import Tabelle from         "./Tabelle";
@@ -16,10 +17,18 @@ import Voreinstellungen from    "./Voreinstellungen";
 import '../CSS/uebersicht.css';
 import '../CSS/spielInfo_Popup.css';
 
-
+/*
+Alte render Methode
+value={this.props.location.spielinfos.spielnummer}
+value={this.props.location.spielinfos.verband_name}
+value={this.props.location.spielinfos.gastTeam_name}
+value={this.props.location.spielinfos.austragungsort}
+value={this.props.location.spielinfos.spieldatum}
+value={this.props.location.spielinfos.liga_name}
+value={this.props.location.spielinfos.heimTeam_name}
+value={this.props.location.spielinfos.zuschauer}
+*/
 class Uebersicht extends React.Component {
-
-
   render() {
     return (
     <div>
@@ -30,7 +39,7 @@ class Uebersicht extends React.Component {
             <label>SpielNr:</label>
             <input type='number'
                    name="spielnummer"
-                   value={this.props.location.spielinfos.spielnummer}
+                   value={1}
                    min={0}
                    readOnly />
                  <br/>
@@ -38,7 +47,7 @@ class Uebersicht extends React.Component {
             <label>Verband:</label>
             <input type='text'
                    name="verband_name"
-                   value={this.props.location.spielinfos.verband_name}
+                   value={"DBV"}
                    maxLength={20}
                    readOnly />
                  <br/>
@@ -47,7 +56,7 @@ class Uebersicht extends React.Component {
             <input type='text'
                    name="gastTeam_name"
                    maxLength={20}
-                   value={this.props.location.spielinfos.gastTeam_name}
+                   value={"Farmers"}
                    readOnly />
                  <br/>
 
@@ -55,7 +64,7 @@ class Uebersicht extends React.Component {
             <input className="inInput"
                    type='text'
                    name="austragungsort"
-                   value={this.props.location.spielinfos.austragungsort}
+                   value={"Bünde"}
                    maxLength={20}
                    readOnly/>
                  <br/>
@@ -67,7 +76,7 @@ class Uebersicht extends React.Component {
               <label>Gespielt am:</label>
               <input type='Date'
                      name="spielDatum"
-                     value={this.props.location.spielinfos.spieldatum}
+                     value={2018-11-1}
                      readOnly/>
             </div>
 
@@ -75,7 +84,7 @@ class Uebersicht extends React.Component {
             <input type='text'
                    name="liga_name"
                    maxLength={20}
-                   value={this.props.location.spielinfos.liga_name}
+                   value={"1. BL"}
                    readOnly />
                  <br/>
 
@@ -83,7 +92,7 @@ class Uebersicht extends React.Component {
               <input type='text'
                      name="heimTeam_name"
                      maxLength={20}
-                     value={this.props.location.spielinfos.heimTeam_name}
+                     value={"PB U"}
                      readOnly />
                  <br/>
 
@@ -92,7 +101,7 @@ class Uebersicht extends React.Component {
                     <input className="zuschauerInput"
                            type='number'
                            name="zuschauer"
-                           value={this.props.location.spielinfos.zuschauer}
+                           value={100}
                            min={0}
                            readOnly/>
                   </div>
@@ -128,5 +137,4 @@ class Uebersicht extends React.Component {
     );
   }
 }
-
 export default Uebersicht;
