@@ -116,13 +116,16 @@ submitSpielinfosMain(stati){
   this.setState({austragungsort:  stati.form_austragungsort});
   this.setState({zuschauer:       stati.form_zuschauer});
   this.setState({info_ok:         stati.form_info},() => {
-  console.log("Info_ok: ",this.state.info_ok);
+  console.log("Voreinstellungen Info_ok: ",this.state.info_ok);
   } );
 
 }
 
 
 submitGastMain(stati){
+  this.setState({gast_ok: stati.form_gast_ok}, () => {
+     console.log("Voreinstellungen GastOk: ", this.state.gast_ok);
+   });
   this.setState({gast_spieler: stati.spielerArray}, () => {
      console.log(this.state.gast_spieler);
    });
@@ -130,6 +133,9 @@ submitGastMain(stati){
 
 
 submitHeimMain(stati){
+  this.setState({heim_ok: stati.form_heim_ok}, () => {
+     console.log("Voreinstellungen HeimOk: ", this.state.heim_ok);
+   });
   this.setState({heim_spieler: stati.spielerArray}, () => {
      console.log(this.state.heim_spieler);
    });
@@ -298,6 +304,7 @@ submitHeimMain(stati){
         submitGastPopUp={this.submitGastMain.bind(this)}
         title="Gast"
         currentArray = {this.state.gast_spieler}
+        gastOk = {this.state.gast_ok}
         closePopup={this.toggleGastPopup.bind(this)}/>
       :null
     }
@@ -309,6 +316,7 @@ submitHeimMain(stati){
           submitGastPopUp={this.submitHeimMain.bind(this)}
           title="Heim"
           currentArray = {this.state.heim_spieler}
+          heimOk = {this.state.heim_ok}
           closePopup={this.toggleHeimPopup.bind(this)}/>
         :null
       }

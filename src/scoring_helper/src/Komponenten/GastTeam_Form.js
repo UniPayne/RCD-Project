@@ -19,7 +19,9 @@ class GastTeam_Form extends Component{
       spielerPosition: '',
       spielerPNummer: '',
       spielerArray: props.currentArray,
-      zeile:''
+      zeile:'',
+      form_heim_ok: props.heimOk,
+      form_gast_ok: props.gastOk,
     };
 
     this.onSubmit = this.onSubmit.bind(this);
@@ -66,6 +68,19 @@ bye(event){
                 spielerVName: '',
                 spielerPosition: '',
                 spielerPNummer: ''});
+                if (this.state.spielerArray.length >= 9){
+                  if (this.title ==="Heim"){
+                    this.setState({form_heim_ok: true}, () => {
+                      console.log("Heim_ok: ", this.state.form_heim_ok);
+                    });
+                  }
+                  if (this.title ==="Gast"){
+                    this.setState({form_gast_ok: true}, () => {
+                      console.log("Gast_ok: ", this.state.form_gast_ok);
+                    });
+                  }
+
+                }
 
               // }
 
