@@ -12,7 +12,7 @@
 }
 
 .wrapper_ue{
-  width: 1345px;
+  width: 100%;
   max-width: 100%;
   margin: 0 auto;
 
@@ -114,14 +114,20 @@ label{
   border-style: solid;
   border-width: 3px;
   height: 320px;
-  width: 24.5%;
+  width: 100%;
   float: left;
   margin-top:0.3%;
-  background-color: #F2F2F2;
-box-sizing: border-box;
+  background-color: #F2F5F2;
+  box-sizing: border-box;
 
 
 }
+
+.headerUebersicht{
+  width: 96%;
+
+}
+
 
 /*gesammtpunkte oben rechts */
 .punkte_rechts{
@@ -130,7 +136,7 @@ box-sizing: border-box;
   width: 55%;
   height: 150px;
   background-color: #F2F2F2;
-box-sizing: border-box;
+  box-sizing: border-box;
 
 }
 
@@ -147,14 +153,14 @@ box-sizing: border-box;
 }
 
 .wrapper_ue{
-  width: 1345px;
+  width: 100%;
   max-width: 100%;
   margin: 0 auto;
 
 }
 
 .wrapper_ue2{
-  width: 1345px;
+  width: 100%;
   max-width: 100%;
   margin: 0 auto;
 

@@ -11,10 +11,14 @@ class SpielTabelle extends React.Component {
 
 
     componentDidMount() {
+      this.setState({
+        canvasSize: {canvasWidth: 800, canvasHeight: 600}
+      })
 
+/*
         let canvas = ReactDOM.findDOMNode(this.refs.myCanvas);
         let malen = canvas.getContext('2d');
-        {/*
+        {
 
   perfekte raute. wird nur nich angezeigt. warum? keiine ahnung
         var angle = 0;
@@ -42,7 +46,7 @@ class SpielTabelle extends React.Component {
         malen.lineWidth = 2;
         //malen.strokeStyle = 'red';
         malen.stroke();
-        */}
+        }
 
         malen.beginPath();
         malen.moveTo(10,19);
@@ -54,93 +58,29 @@ class SpielTabelle extends React.Component {
         //malen.strokeStyle = 'red';
         malen.stroke();
 
+zum ausführen
+        <canvas canvas ref="myCanvas" width={20} height={20} />
 
+*/
 
     }
 
-    componentDidMount2() {
-
-        let canvas = ReactDOM.findDOMNode(this.refs.myCanvas2);
-        let malen = canvas.getContext('2d');
-
-        malen.beginPath();
-        malen.moveTo(20,29);
-        malen.lineTo(28,21);
-        malen.lineTo(20,13);
-        malen.lineTo(12,21);
-        malen.closePath();
-        malen.lineWidth = 2;
-        //malen.strokeStyle = 'red';
-        malen.stroke();
-
-
-      }
-
+    componentDidMount(){
+      const{canvasWidth, canvasHeight} = this.state.canvasSize;
+      this.canvasHex.width = canvasWidth;
+      this.canvasHex.heigh = canvasHeight;
+    }
 
     render() {
         return (
             <div>
 
-                <div>
-                  <Table singleLine className="inf">
-                    <Table.Header className="headerT">
-                      <Table.Row>
-                        <Table.HeaderCell>1</Table.HeaderCell>
-                        <Table.HeaderCell>2</Table.HeaderCell>
-                        <Table.HeaderCell>3</Table.HeaderCell>
-                        <Table.HeaderCell>4</Table.HeaderCell>
-                        <Table.HeaderCell>5</Table.HeaderCell>
-                        <Table.HeaderCell>6</Table.HeaderCell>
-                        <Table.HeaderCell>7</Table.HeaderCell>
-                        <Table.HeaderCell>8</Table.HeaderCell>
-                        <Table.HeaderCell>9</Table.HeaderCell>
-                        <Table.HeaderCell>10</Table.HeaderCell>
-                      </Table.Row>
-                    </Table.Header>
-                    <Table.Body >
-                      <Table.Row className="inhaltT">
-                        <Table.Cell>&#9826;</Table.Cell>
-                        <Table.Cell><canvas canvas ref="myCanvas" width={20} height={20} /></Table.Cell>
-                        <Table.Cell>kk</Table.Cell>
 
-                        </Table.Row>
-                      </Table.Body>
-                      <Table.Body >
-                        <Table.Row className="inhaltT">
+              <canvas ref={canvasHex => this. canvasHex }> </canvas>
 
-                          </Table.Row>
-                          <Table.Row className="inhaltT">
-                            <Table.Cell>&#9826;</Table.Cell>
 
-                            </Table.Row>
-                            <Table.Row className="inhaltT">
-                              <Table.Cell>&#9826;</Table.Cell>
 
-                              </Table.Row>
-                              <Table.Row className="inhaltT">
-                                <Table.Cell>&#9826;</Table.Cell>
 
-                                </Table.Row>
-                                <Table.Row className="inhaltT">
-                                  <Table.Cell>&#9826;</Table.Cell>
-
-                                  </Table.Row>
-                                  <Table.Row className="inhaltT">
-                                    <Table.Cell>&#9826;</Table.Cell>
-
-                                    </Table.Row>
-                                    <Table.Row className="inhaltT">
-                                      <Table.Cell>&#9826;</Table.Cell>
-
-                                      </Table.Row>
-                                      <Table.Row className="inhaltT">
-                                        <Table.Cell>&#9826;</Table.Cell>
-
-                                        </Table.Row>
-                        </Table.Body>
-                  </Table>
-
-                </div>
             </div>
         );
     }
