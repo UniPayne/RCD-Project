@@ -196,6 +196,7 @@ submitHeimMain(stati){
             <div className="vor_oben">
               <div>
                 <div className="spielInformationen_links">
+                  <div className="headerInformationen">Informationen</div>
                   <div className="links">
                     <form>
                       <label>SpielNr:</label>

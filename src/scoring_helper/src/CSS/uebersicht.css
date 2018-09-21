@@ -2,13 +2,21 @@
   box-sizing: border-box;
   border-style: solid;
   border-width: 3px;
-  height: 150px;
+  height: 175px;
   width: 44.5%;
   float: left;
   background-color: #F2F2F2;
   max-width: 100%;
 
+}
 
+.headerInformationen{
+  background-color: #088A08;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  text-shadow: 0 0 15px black;
 }
 
 .wrapper_ue{
@@ -144,7 +152,7 @@ label{
   background-color: #F2F2F2;
 box-sizing: border-box;
   border-style: solid;
-  border-width: 3px;
+  border-width: 2px;
   height: 320px;
   width: 75%;
   float: right;
@@ -174,5 +182,6 @@ margin-top: 485px;
 font-size: 20px;
 border-radius: 35px 5px 35px 5px;
 background-color: #A4A4A4;
-
+font-weight: bold;
+width: 150px;
 }

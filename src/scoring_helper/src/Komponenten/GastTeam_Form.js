@@ -160,7 +160,7 @@ render() {
   		<div>
   			<form role="form">
           {
-          <h1>{this.title} Team eintragen</h1>
+          <div className="ueberschrift">{this.title} Team eintragen</div>
           }
           <div className="gast_pop">
             <div className="rechts_pop">
@@ -190,11 +190,8 @@ render() {
           </div>
         </div>
         </div>
-  					<div className="button_div">
-              <input className="button_abbrechen" type="button" value="Abbrechen" onClick={this.bye.bind(this)}/>
-  					  <input className="button_speichern" type="button"  ref={(ref) => this.submitInput = ref} value={this.state.input} onClick={this.onSubmit.bind(this)}/>
-              <input className="button_schließen" type="button"  value="Speichern und Schließen" onClick={this.close.bind(this)} />
-  					</div>
+
+            {/*hier waren die buttons  */}
 
   				<input type="hidden" className="row-ref" value="" ref={(ref) => this.rowRef = ref}/>
   			</form>
@@ -219,7 +216,14 @@ render() {
 
   					</tbody>
   				</table>
+
+
   			</div>
+        <div className="button_div">
+          <input className="button_abbrechen" type="button" value="Abbrechen" onClick={this.bye.bind(this)}/>
+          <input className="button_speichern" type="button"  ref={(ref) => this.submitInput = ref} value={this.state.input} onClick={this.onSubmit.bind(this)}/>
+          <input className="button_schließen" type="button"  value="Speichern und Schließen" onClick={this.close.bind(this)} />
+        </div>
   		</div>
     </div>
   </div>
