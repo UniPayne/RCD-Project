@@ -28,12 +28,37 @@ height: 75%;
 
 }
 
+/*  */
+.ueberschrift2{
+  font-size: 38px;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: red;
+  background-color: #088A08;
+  color: white;
+  height: 45px;
+  border: solid;
+  border-width: 0.5px;
+  border-color: black;
+  border-right-style: none;
+  border-left-style: none;
+  box-shadow: 0px 3px 4px #888888;
+  text-shadow: 0 0 15px black;
+}
+
+
 .linksPop{
   float: left;
   margin-left: 5%;
   width:41%;
 
 }
+
+.wrapper_pop{
+  margin-top: 15px;
+}
+
 
 .linksPop input{
   margin: left;
@@ -66,18 +91,19 @@ height: 75%;
 }
 
 .button_pop{
-  float: right;
-  margin-top: 5%;
-  margin-right: 10%;
+  margin-top: 2%;
+  margin-right: 5%;
   margin-bottom: 1%;
   border-radius: 35px 5px 35px 5px;
   background-color: #A4A4A4;
-
+  font-weight: bold;
+  width: 190px;
 }
 
 .button_abbrechen_spielInf{
-  margin-top: 5%;
+  margin-top: 2%;
   border-radius: 35px 5px 35px 5px;
   background-color: #A4A4A4;
-
+  font-weight: bold;
+  width: 90px;
 }

@@ -59,7 +59,7 @@ height: 340px;
 border-width: 2px;
 background-color: #F2F2F2;
 overflow: auto;
-background-color: rgba(196, 196, 196, 0.2);
+background-color: rgba(196, 196, 196, 0.4);
 }
 
 .vor_heim{
@@ -71,7 +71,7 @@ height: 340px;
 border-width: 2px;
 background-color: #F2F2F2;
 overflow: auto;
-background-color: rgba(196, 196, 196, 0.4);
+background-color: rgba(196, 196, 196, 0.5);
 }
 
 

@@ -71,8 +71,8 @@ render() {
   return (
     <div className="SpielInfo_Popup">
         <div className="SpielInfo_Popup_inner">
-            <h1>Spielinformationen</h1>
-            <form>
+            <h1 className="ueberschrift2">Spielinformationen</h1>
+            <form className="wrapper_pop">
                 <div className="linksPop">
                     <label>SpielNr:</label>
                         <input  type='text'
@@ -140,9 +140,13 @@ render() {
                           value={this.state.form_zuschauer}/>
                         <br/>
                 </div>
-                <input className="button_abbrechen_spielInf" type="button" value="Abbrechen" onClick={this.bye.bind(this)}/>
-                <button className="button_pop" type="button"name="fortfahren" onClick={this.handleSubmit}>Speichern und Fortfahren</button>
+                <div>
+                  <input className="button_abbrechen_spielInf" type="button" value="Abbrechen" onClick={this.bye.bind(this)}/>
+                  <button className="button_pop" type="button"name="fortfahren" onClick={this.handleSubmit}>Speichern und Fortfahren</button>
+                  
+                </div>
             </form>
+
         </div>
       </div>
 

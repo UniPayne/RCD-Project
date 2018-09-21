@@ -7,7 +7,7 @@
   float: left;
   background-color: #F2F2F2;
   max-width: 100%;
-  background-color: rgba(196, 196, 196, 0.4);
+  background-color: rgba(196, 196, 196, 0.5);
 }
 
 
@@ -156,8 +156,9 @@ box-sizing: border-box;
   float: right;
   margin-top: 0.3%;
 
-
 }
+
+
 
 .wrapper_ue{
   width: 100%;
