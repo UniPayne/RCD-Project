@@ -4,6 +4,7 @@ import React, { Component } from "react";
 import '../CSS/uebersicht.css';
 import '../CSS/spielInfo_Popup.css';
 import '../CSS/gastTeam_form.css';
+import CanvasDraw from "react-canvas-draw";
 
 
 class GastTeam_Form extends Component{
@@ -13,11 +14,24 @@ class GastTeam_Form extends Component{
     this.state = {
       perro:'form-control',
       input:'Speichern',
+
       spielerRNummer: '',
       spielerNName: '',
       spielerVName: '',
       spielerPosition: '',
       spielerPNummer: '',
+      spieleri1:'',
+      spieleri2:'',
+      spieleri3:'',
+      spieleri4:'',
+      spieleri5:'',
+      spieleri6:'',
+      spieleri7:'',
+      spieleri8:'',
+      spieleri9:'',
+      spieleri10:'',
+      spieleri11:'',
+
       spielerArray: props.currentArray,
       zeile:'',
       form_heim_ok: props.heimOk,
@@ -52,7 +66,18 @@ bye(event){
           spielerNName: this.state.spielerNName,
           spielerVName: this.state.spielerVName,
           spielerPosition: this.state.spielerPosition,
-          spielerPNummer: this.state.spielerPNummer
+          spielerPNummer: this.state.spielerPNummer,
+          spieleri1: this.state.spieleri1,
+          spieleri2: this.state.spieleri2,
+          spieleri3: this.state.spieleri3,
+          spieleri4: this.state.spieleri4,
+          spieleri5: this.state.spieleri5,
+          spieleri6: this.state.spieleri6,
+          spieleri7: this.state.spieleri7,
+          spieleri8: this.state.spieleri8,
+          spieleri9: this.state.spieleri9,
+          spieleri10: this.state.spieleri10,
+          spieleri11: this.state.spieleri11,
         };
 
               // if (this.state.spielerRNummer ===''||
@@ -67,7 +92,8 @@ bye(event){
                 spielerNName: '',
                 spielerVName: '',
                 spielerPosition: '',
-                spielerPNummer: ''});
+                spielerPNummer: '',
+                spieleri1:''});
                 if (this.state.spielerArray.length >= 9){
                   if (this.title ==="Heim"){
                     this.setState({form_heim_ok: true}, () => {

@@ -182,9 +182,7 @@ class Uebersicht extends React.Component {
       <div>
           <NavLink to="/Voreinstellungen">
             <button className="button_zurueck" >zurück</button>
-
           </NavLink>
-          <Route path="/Voreinstellungen" component={Voreinstellungen}/>
       </div>
 
 
