@@ -2,17 +2,21 @@ import React, { Component } from "react";
 import {Route, Link, HashRouter} from "react-router-dom";
 import logo from '../logo.png';
 import { Table, Flag } from 'semantic-ui-react'
+import ReactDOM from 'react-dom';
+import {Layer, Rect, Stage, Group, Shape} from "react-konva";
 
 //Komponenten
 import Uebersicht from "./Uebersicht";
 import Spielinfos from "./Spielinfos";
 import GastTeam_Form from "./GastTeam_Form";
 
+
 //CSS
 import "../CSS/home.css";
 import "../CSS/voreinstellungen.css";
 import '../CSS/spielInfo_Popup.css';
 import '../CSS/spieler.css';
+import '../CSS/canvas.css';
 
 class Voreinstellungen extends Component {
 /*
@@ -98,7 +102,7 @@ constructor(props){
     [
       {spielerRNummer: "21", spielerNName: "21", spielerVName: "21", spielerPosition: "21", spielerPNummer: "21",
       spieleri1: "",spieleri2: "",spieleri3: "",spieleri4: "",spieleri5: "",spieleri6: "",
-      spieleri7: "",spieleri8: "",spieleri9: "",spieleri10: "",spieleri11: ""},
+      spieleri7: "",spieleri8: "",spieleri9: "",spieleri10: "",spieleri11: "", blaa: "blubberfasel"},
       {spielerRNummer: "22", spielerNName: "22", spielerVName: "22", spielerPosition: "22", spielerPNummer: "22",
       spieleri1: "",spieleri2: "",spieleri3: "",spieleri4: "",spieleri5: "",spieleri6: "",
       spieleri7: "",spieleri8: "",spieleri9: "",spieleri10: "",spieleri11: ""},
@@ -370,8 +374,17 @@ submitHeimMain(stati){
         {/*<button disabled={!(this.state.info_ok && this.state.gast_ok && this.state.heim_ok) }className="vor_button_weiter">Spiel Starten</button>*/}
                 <button className="vor_button_weiter">Spiel Starten</button>
               </Link>
+
+              <Link to={{
+                pathname: '/Canvas'
+              }}>
+                <button>
+                  Canvas
+                </button>
+              </Link>
             </div>
           </div>
+
         </div>
     );
   }

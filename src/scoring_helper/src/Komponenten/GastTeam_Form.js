@@ -1,36 +1,65 @@
 import React, { Component } from "react";
+import CanvasDraw from "react-canvas-draw";
+import ReactDOM from "react-dom";
+
 
 //CSS
 import '../CSS/uebersicht.css';
 import '../CSS/spielInfo_Popup.css';
 import '../CSS/gastTeam_form.css';
-import CanvasDraw from "react-canvas-draw";
+
 
 
 class GastTeam_Form extends Component{
+
   constructor(props) {
     super(props);
     this.title = props.title;
     this.state = {
       perro:'form-control',
       input:'Speichern',
+      field: '',
 
       spielerRNummer: '',
       spielerNName: '',
       spielerVName: '',
       spielerPosition: '',
       spielerPNummer: '',
-      spieleri1:'',
-      spieleri2:'',
-      spieleri3:'',
-      spieleri4:'',
-      spieleri5:'',
-      spieleri6:'',
-      spieleri7:'',
-      spieleri8:'',
-      spieleri9:'',
-      spieleri10:'',
-      spieleri11:'',
+      inning: [
+        {ifeld:'1',strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+        {ifeld:'2',strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+        {ifeld:'',strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+        {ifeld:'',strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+        {ifeld:'',strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+        {ifeld:'',strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+        {ifeld:'',strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+        {ifeld:'',strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+        {ifeld:'',strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+        {ifeld:'',strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+        {ifeld:'',strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''}
+                  ],
 
       spielerArray: props.currentArray,
       zeile:'',
@@ -50,7 +79,6 @@ close(event){
     // }else {
       // alert('Es müssen mindestens 9 Spieler eingetragen werden!');
   // }
-
 }
 
 bye(event){
@@ -67,7 +95,7 @@ bye(event){
           spielerVName: this.state.spielerVName,
           spielerPosition: this.state.spielerPosition,
           spielerPNummer: this.state.spielerPNummer,
-          spieleri1: this.state.spieleri1,
+          inning: this.state.inning,
           spieleri2: this.state.spieleri2,
           spieleri3: this.state.spieleri3,
           spieleri4: this.state.spieleri4,
@@ -85,15 +113,15 @@ bye(event){
                   // this.state.spielerVName ===''||
                   // this.state.spielerPosition ===''||
                   // this.state.spielerPNummer === ''){
-                  //   alert('Sie müssen alle Felder ausfüllen!');
+                  //   alert('Sie müssen alle Felder ausfüllen!')
+                  ;
           // } else {
              this.setState({spielerArray:[...this.state.spielerArray, obj],
                 spielerRNummer: '',
                 spielerNName: '',
                 spielerVName: '',
                 spielerPosition: '',
-                spielerPNummer: '',
-                spieleri1:''});
+                spielerPNummer: ''});
                 if (this.state.spielerArray.length >= 9){
                   if (this.title ==="Heim"){
                     this.setState({form_heim_ok: true}, () => {
