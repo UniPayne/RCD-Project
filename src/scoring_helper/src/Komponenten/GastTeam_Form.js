@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import CanvasDraw from "react-canvas-draw";
 import ReactDOM from "react-dom";
 
+//Komponenten
+import Canvas from "./Canvas";
 
 //CSS
 import '../CSS/uebersicht.css';
@@ -26,37 +28,47 @@ class GastTeam_Form extends Component{
       spielerPosition: '',
       spielerPNummer: '',
       inning: [
-        {ifeld:'1',strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
         flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
         cs1_2:'', cs2_3:''},
-        {ifeld:'2',strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
         flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
         cs1_2:'', cs2_3:''},
-        {ifeld:'',strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
         flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
         cs1_2:'', cs2_3:''},
-        {ifeld:'',strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
         flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
         cs1_2:'', cs2_3:''},
-        {ifeld:'',strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
         flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
         cs1_2:'', cs2_3:''},
-        {ifeld:'',strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
         flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
         cs1_2:'', cs2_3:''},
-        {ifeld:'',strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
         flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
         cs1_2:'', cs2_3:''},
-        {ifeld:'',strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
         flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
         cs1_2:'', cs2_3:''},
-        {ifeld:'',strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
         flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
         cs1_2:'', cs2_3:''},
-        {ifeld:'',strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
         flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
         cs1_2:'', cs2_3:''},
-        {ifeld:'',strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
         flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
         cs1_2:'', cs2_3:''}
                   ],

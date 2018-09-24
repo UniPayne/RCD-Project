@@ -157,7 +157,7 @@ class Uebersicht extends React.Component {
         <div className="wrapper_ue">
           <div className="spielerInformationen">
             <Table.Header className="headerUebersicht">
-                    <Table.Row >
+                    <Table.Row>
                       <Table.HeaderCell>  RueckenNr.  </Table.HeaderCell>
                       <Table.HeaderCell>  Nachname    </Table.HeaderCell>
                       <Table.HeaderCell>  Vorname     </Table.HeaderCell>

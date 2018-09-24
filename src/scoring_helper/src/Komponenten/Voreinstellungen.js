@@ -9,6 +9,7 @@ import {Layer, Rect, Stage, Group, Shape} from "react-konva";
 import Uebersicht from "./Uebersicht";
 import Spielinfos from "./Spielinfos";
 import GastTeam_Form from "./GastTeam_Form";
+import Canvas from "./Canvas";
 
 
 //CSS
@@ -373,14 +374,6 @@ submitHeimMain(stati){
 			  }}>
         {/*<button disabled={!(this.state.info_ok && this.state.gast_ok && this.state.heim_ok) }className="vor_button_weiter">Spiel Starten</button>*/}
                 <button className="vor_button_weiter">Spiel Starten</button>
-              </Link>
-
-              <Link to={{
-                pathname: '/Canvas'
-              }}>
-                <button>
-                  Canvas
-                </button>
               </Link>
             </div>
           </div>
