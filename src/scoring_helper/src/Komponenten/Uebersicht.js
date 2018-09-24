@@ -8,10 +8,11 @@ import PropTypes from 'prop-types';
 import { Table, Flag } from 'semantic-ui-react'
 
 //Komponenten
-import Tabelle from             "./Tabelle";
-import SpielerHeim from         "./Spieler";
-import SpielTabelle from        "./SpielTabelle";
-import Voreinstellungen from    "./Voreinstellungen";
+import Tabelle            from    "./Tabelle";
+import SpielerHeim        from    "./Spieler";
+import SpielTabelle       from    "./SpielTabelle";
+import Voreinstellungen   from    "./Voreinstellungen";
+import Canvas             from    "./Canvas";
 
 
 //CSS
@@ -34,15 +35,411 @@ class Uebersicht extends React.Component {
     this.state = {
       gast_spieler:
       [
-      {spielerRNummer: "11", spielerNName: "11", spielerVName: "11", spielerPosition: "11", spielerPNummer: "11"},
-      {spielerRNummer: "12", spielerNName: "12", spielerVName: "12", spielerPosition: "12", spielerPNummer: "12"},
-      {spielerRNummer: "13", spielerNName: "13", spielerVName: "13", spielerPosition: "13", spielerPNummer: "13"},
-      {spielerRNummer: "14", spielerNName: "14", spielerVName: "14", spielerPosition: "14", spielerPNummer: "14"},
-      {spielerRNummer: "15", spielerNName: "15", spielerVName: "15", spielerPosition: "15", spielerPNummer: "15"},
-      {spielerRNummer: "16", spielerNName: "16", spielerVName: "16", spielerPosition: "16", spielerPNummer: "16"},
-      {spielerRNummer: "17", spielerNName: "17", spielerVName: "17", spielerPosition: "17", spielerPNummer: "17"},
-      {spielerRNummer: "18", spielerNName: "18", spielerVName: "18", spielerPosition: "18", spielerPNummer: "18"},
-      {spielerRNummer: "19", spielerNName: "19", spielerVName: "19", spielerPosition: "19", spielerPNummer: "19"}
+      {spielerRNummer: "11", spielerNName: "11", spielerVName: "11", spielerPosition: "11", spielerPNummer: "11",
+        inning: [
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''}]},
+      {spielerRNummer: "12", spielerNName: "12", spielerVName: "12", spielerPosition: "12", spielerPNummer: "12",
+        inning: [
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''}]},
+      {spielerRNummer: "13", spielerNName: "13", spielerVName: "13", spielerPosition: "13", spielerPNummer: "13",
+        inning: [
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''}]},
+      {spielerRNummer: "14", spielerNName: "14", spielerVName: "14", spielerPosition: "14", spielerPNummer: "14",
+        inning: [
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''}]},
+      {spielerRNummer: "15", spielerNName: "15", spielerVName: "15", spielerPosition: "15", spielerPNummer: "15",
+        inning: [
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''}]},
+      {spielerRNummer: "16", spielerNName: "16", spielerVName: "16", spielerPosition: "16", spielerPNummer: "16",
+        inning: [
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''}]},
+      {spielerRNummer: "17", spielerNName: "17", spielerVName: "17", spielerPosition: "17", spielerPNummer: "17",
+        inning: [
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''}]},
+      {spielerRNummer: "18", spielerNName: "18", spielerVName: "18", spielerPosition: "18", spielerPNummer: "18",
+        inning: [
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''}]},
+      {spielerRNummer: "19", spielerNName: "19", spielerVName: "19", spielerPosition: "19", spielerPNummer: "19",
+        inning: [
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''},
+
+        {ifeld:<Canvas/>,strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false,out_by:'',
+        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
+        cs1_2:'', cs2_3:''}]}
       ],
     };
 }
@@ -64,6 +461,17 @@ class Uebersicht extends React.Component {
           <Table.Cell>{spielerI.spielerVName}</Table.Cell>
           <Table.Cell>{spielerI.spielerPosition}</Table.Cell>
           <Table.Cell>{spielerI.spielerPNummer} </Table.Cell>
+          <Table.Cell>{spielerI.inning[0].ifeld} </Table.Cell>
+          <Table.Cell>{spielerI.inning[1].ifeld} </Table.Cell>
+          <Table.Cell>{spielerI.inning[2].ifeld} </Table.Cell>
+          <Table.Cell>{spielerI.inning[3].ifeld} </Table.Cell>
+          <Table.Cell>{spielerI.inning[4].ifeld} </Table.Cell>
+          <Table.Cell>{spielerI.inning[5].ifeld} </Table.Cell>
+          <Table.Cell>{spielerI.inning[6].ifeld} </Table.Cell>
+          <Table.Cell>{spielerI.inning[7].ifeld} </Table.Cell>
+          <Table.Cell>{spielerI.inning[8].ifeld} </Table.Cell>
+          <Table.Cell>{spielerI.inning[9].ifeld} </Table.Cell>
+          <Table.Cell>{spielerI.inning[10].ifeld} </Table.Cell>
         </Table.Row>
       ))}
     </Table.Body>)
