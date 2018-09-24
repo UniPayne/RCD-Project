@@ -63,7 +63,7 @@ class Uebersicht extends React.Component {
           <Table.Cell>{spielerI.spielerNName}</Table.Cell>
           <Table.Cell>{spielerI.spielerVName}</Table.Cell>
           <Table.Cell>{spielerI.spielerPosition}</Table.Cell>
-          <Table.Cell>{spielerI.spielerPNummer}</Table.Cell>
+          <Table.Cell>{spielerI.spielerPNummer} </Table.Cell>
         </Table.Row>
       ))}
     </Table.Body>)
@@ -175,7 +175,17 @@ class Uebersicht extends React.Component {
                       <Table.HeaderCell> 10           </Table.HeaderCell>
                     </Table.Row>
                   </Table.Header>
+                  <Table.Body >
+                    <Table.Row className="inhaltT">
+                      <Table.Cell><canvas ref={canvasHex => this.canvasHex =canvasHex}> </canvas></Table.Cell>
+                      <Table.Cell><canvas ref={canvasHex => this.canvasHex =canvasHex}> </canvas></Table.Cell>
+
+
+
+                    </Table.Row>
+                  </Table.Body>
                   {GastTableBody}
+
           </div>
         </div>
 
