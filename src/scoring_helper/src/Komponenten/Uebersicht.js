@@ -175,15 +175,6 @@ class Uebersicht extends React.Component {
                       <Table.HeaderCell> 10           </Table.HeaderCell>
                     </Table.Row>
                   </Table.Header>
-                  <Table.Body >
-                    <Table.Row className="inhaltT">
-                      <Table.Cell><canvas ref={canvasHex => this.canvasHex =canvasHex}> </canvas></Table.Cell>
-                      <Table.Cell><canvas ref={canvasHex => this.canvasHex =canvasHex}> </canvas></Table.Cell>
-
-
-
-                    </Table.Row>
-                  </Table.Body>
                   {GastTableBody}
 
           </div>

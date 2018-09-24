@@ -23,13 +23,10 @@ class Canvas extends React.Component {
 
     render() {
         return (
-            <Rect
-                x={100} y={60} radius={50}
-                fill='yellow' stroke='black'
-                strokeWidth={this.state.isMouseInside ? 5 : 1}
-                onMouseEnter={this.handleMouseEnter}
-                onMouseLeave={this.handleMouseLeave}
-            />
+
+          <div>
+            <canvas ref={canvasHex => this.canvasHex =canvasHex}></canvas>
+            </div>
         );
     }
 }
