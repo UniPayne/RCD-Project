@@ -581,6 +581,7 @@ class Uebersicht extends React.Component {
                       <Table.HeaderCell>  8           </Table.HeaderCell>
                       <Table.HeaderCell>  9           </Table.HeaderCell>
                       <Table.HeaderCell> 10           </Table.HeaderCell>
+                      <Table.HeaderCell> 11           </Table.HeaderCell>
                     </Table.Row>
                   </Table.Header>
                   {GastTableBody}
