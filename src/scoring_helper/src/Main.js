@@ -7,6 +7,7 @@ import {
 import Home from "./Komponenten/Home";
 import Uebersicht from "./Komponenten/Uebersicht";
 import Voreinstellungen from "./Komponenten/Voreinstellungen";
+import Canvas from "./Komponenten/Canvas"
 
 
 
@@ -23,6 +24,7 @@ class Main extends Component {
             <Route exact path="/" component={Home} />
             <Route path="/Uebersicht" component={Uebersicht}/>
             <Route path="/Voreinstellungen" component={Voreinstellungen}/>
+            <Route path='/Canvas' component={Canvas}/>
           </div>
         </div>
       </HashRouter>
