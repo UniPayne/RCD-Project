@@ -9,17 +9,21 @@ import { Icon, Label, Menu, Table } from 'semantic-ui-react'
 import "../CSS/spielTabelle.css";
 
 class SpielTabelle extends React.Component {
+    constructor(props){
+    super(props);
+    this.state={
+        hexsize: 20
+  }
+}
+
+
+
   componentWillMount() {
     this.setState({
       canvasSize: {canvasWidth: 100, canvasHeight: 50}
     })
   }
 
-//  constructor(props){
-  //  super(props);
-    //this.state={
-//      hexsize: 20
-  //  }
 
 
 
@@ -79,9 +83,9 @@ zum ausführen
       const { canvasWidth, canvasHeight } = this.state.canvasSize;
       this.canvasHex.width = canvasWidth;
       this.canvasHex.height = canvasHeight;
-      //this.drawRaute(this.canvasHex, {x: 50, y: 50})
+      this.drawRaute(this.canvasHex, {x: 50, y: 50})
     }
-    /*
+
 
     drawRaute(canvasID, center){
       for (let i = 0; i<=5; i++){
@@ -111,7 +115,7 @@ zum ausführen
         ctx.storke();
         ctx.closePath();
     }
-*/
+
 
 
 
