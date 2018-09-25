@@ -33,6 +33,7 @@ class Uebersicht extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      inning: 0,
       gast_spieler:
       [
       {spielerRNummer: "11", spielerNName: "11", spielerVName: "11", spielerPosition: "11", spielerPNummer: "11",
@@ -442,8 +443,20 @@ class Uebersicht extends React.Component {
         cs1_2:'', cs2_3:''}]}
       ],
     };
+
+    this.inningChecker = this.inningChecker.bind(this);
 }
 
+inningChecker(event){
+  if(this.state.inning <=10){
+    console.log("Vorher: ", this.state.inning);
+    this.setState({inning: this.state.inning+=1}, () => {
+      console.log("Nachher: ",this.state.inning);
+    })
+  }else {
+    console.log("Geht nicht weiter");
+  }
+}
 
 
   render() {
@@ -524,7 +537,7 @@ class Uebersicht extends React.Component {
               <label>Gespielt am:</label>
               <input type='Date'
                      name="spielDatum"
-                     value={2018-11-1}
+                     value={"2018-11-01"}
                      readOnly/>
             </div>
 
@@ -585,17 +598,17 @@ class Uebersicht extends React.Component {
                     </Table.Row>
                   </Table.Header>
                   {GastTableBody}
-
           </div>
         </div>
 
-      <div>
+      <div className="button_zurueck">
           <NavLink to="/Voreinstellungen">
-            <button className="button_zurueck" >zurück</button>
+            <button >Abbrechen</button>
           </NavLink>
+          <button
+            onClick={this.inningChecker}>Start</button>
+
       </div>
-
-
       </div>
     </div>
     );
