@@ -9,12 +9,17 @@ import { Table, Flag } from 'semantic-ui-react';
 
 
 import Uebersicht from "./Uebersicht";
+import Canvas             from    "./Canvas";
 
 
 class SpielPopup extends Component{
+  super(props);
+  this.state= {
+    //Hier weiter machen!
+  }
 render() {
   return {
-    
+
   }
 };
 }
