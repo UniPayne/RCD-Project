@@ -5,4 +5,18 @@ import Popup from "reactjs-popup";
 import ReactModal from 'react-modal';
 import { Button } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
-import { Table, Flag } from 'semantic-ui-react'
+import { Table, Flag } from 'semantic-ui-react';
+
+
+import Uebersicht from "./Uebersicht";
+
+
+class SpielPopup extends Component{
+render() {
+  return {
+    
+  }
+};
+}
+
+export default SpielPopup;
