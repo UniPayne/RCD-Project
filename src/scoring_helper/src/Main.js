@@ -7,7 +7,8 @@ import {
 import Home from "./Komponenten/Home";
 import Uebersicht from "./Komponenten/Uebersicht";
 import Voreinstellungen from "./Komponenten/Voreinstellungen";
-import Canvas from "./Komponenten/Canvas"
+import Canvas from "./Komponenten/Canvas";
+import SpielPopup from "./Komponenten/SpielPopup";
 
 
 
@@ -25,6 +26,7 @@ class Main extends Component {
             <Route path="/Uebersicht" component={Uebersicht}/>
             <Route path="/Voreinstellungen" component={Voreinstellungen}/>
             <Route path='/Canvas' component={Canvas}/>
+            <Route path='/SpielPopup' component={SpielPopup}/>
           </div>
         </div>
       </HashRouter>

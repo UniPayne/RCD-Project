@@ -1674,8 +1674,6 @@ toggleSpielPopup(){
           {
             this.state.showSpielPopup ?
             <SpielPopup
-
-
               inning={this.state.inning}
               outs={this.state.outs}
               hitsGastInning={this.state.hitsGastInning}
