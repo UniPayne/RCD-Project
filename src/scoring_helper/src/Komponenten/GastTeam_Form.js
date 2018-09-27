@@ -27,6 +27,7 @@ class GastTeam_Form extends Component{
       spielerVName: '',
       spielerPosition: '',
       spielerPNummer: '',
+      schlagPosition: 1,
       inning: [
         {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
         strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false, out_by0_1:'',
@@ -142,16 +143,7 @@ bye(event){
           spielerPosition: this.state.spielerPosition,
           spielerPNummer: this.state.spielerPNummer,
           inning: this.state.inning,
-          spieleri2: this.state.spieleri2,
-          spieleri3: this.state.spieleri3,
-          spieleri4: this.state.spieleri4,
-          spieleri5: this.state.spieleri5,
-          spieleri6: this.state.spieleri6,
-          spieleri7: this.state.spieleri7,
-          spieleri8: this.state.spieleri8,
-          spieleri9: this.state.spieleri9,
-          spieleri10: this.state.spieleri10,
-          spieleri11: this.state.spieleri11,
+          schlagPosition: this.state.spielerArray.length
         };
 
               // if (this.state.spielerRNummer ===''||
@@ -168,6 +160,7 @@ bye(event){
                 spielerVName: '',
                 spielerPosition: '',
                 spielerPNummer: ''});
+
                 if (this.state.spielerArray.length >= 9){
                   if (this.title ==="Heim"){
                     this.setState({form_heim_ok: true}, () => {
