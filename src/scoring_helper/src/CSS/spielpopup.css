@@ -35,3 +35,14 @@
 .inhalt{
   overflow: auto;
 }
+
+
+.button_pop_{
+  margin-top: 2%;
+  margin-right: 0%;
+  margin-bottom: 1%;
+  border-radius: 35px 5px 35px 5px;
+  background-color: #A4A4A4;
+  font-weight: bold;
+  width: 85px;
+}

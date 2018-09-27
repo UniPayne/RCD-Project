@@ -3,32 +3,33 @@ import { render } from 'react-dom';
 import { Stage, Layer, Rect, Text } from 'react-konva';
 import Konva from 'konva';
 
-//.css
-import "../CSS/canvas.css"
 
 
 class Canvas extends React.Component {
+    constructor() {
+        super();
+        this.state = { isMouseInside: false};
+        this.handleMouseEnter = this.handleMouseEnter.bind(this);
+        this.handleMouseLeave = this.handleMouseLeave.bind(this);
+    }
 
-  componentDidMount() {
-    const canvas = this.refs.canvas
-    const ctx = canvas.getContext("2d")
+    handleMouseEnter() {
+        this.setState({ isMouseInside: true});
+    }
 
-    const img = this.refs.image
-    ctx.beginPath();
-    ctx.moveTo(40,16);    //Startpunkt oben in der Mitte
-    ctx.lineTo(16,40);    //Mitte links
-    ctx.lineTo(40,64);    //Unten Mitte
-    ctx.lineTo(64,40);    //Mitte Rechts
-    ctx.lineTo(40,16);    //Zurück nach Oben
-    ctx.strokeStyle = "gray"; //mach die Linie grau
-    ctx.lineWidth = 3;
-    ctx.stroke();
-    ctx.closePath();
-}
+    handleMouseLeave() {
+        this.setState({ isMouseInside: false});
+    }
 
     render() {
         return (
-            <canvas ref="canvas" className="spielfeld" height="80px" width="80px"></canvas>
+            <Rect
+                x={100} y={60} radius={50}
+                fill='yellow' stroke='black'
+                strokeWidth={this.state.isMouseInside ? 5 : 1}
+                onMouseEnter={this.handleMouseEnter}
+                onMouseLeave={this.handleMouseLeave}
+            />
         );
     }
 }

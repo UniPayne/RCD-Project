@@ -1615,16 +1615,16 @@ render() {
   if((currentGastSpieler.inning[this.state.inning].atBat) === true){
     Action=(
       <div>
-        <Button onClick={this.baseOnBalls.bind(this)}>BB</Button>
-        <Button onClick={this.hit.bind(this)}>1B</Button>
-        <Button onClick={this.twoBases.bind(this)}>2B</Button>
-        <Button onClick={this.triple.bind(this)}>3B</Button>
-        <Button onClick={this.homerun.bind(this)}>HR</Button>
-        <Button onClick={this.hitByPitch.bind(this)}>HP</Button>
-        <Button onClick={this.fieldersChoice.bind(this)}>FC</Button>
-        <Button onClick={this.strikeout.bind(this)}>K</Button>
-        <Button onClick={this.strikeoutLooking.bind(this)}>K Looking</Button>
-        <Button onClick={this.outDialog.bind(this)}>Out By...</Button>
+        <Button className= "button_pop_" onClick={this.baseOnBalls.bind(this)}>BB</Button>
+        <Button className= "button_pop_" onClick={this.hit.bind(this)}>1B</Button>
+        <Button className= "button_pop_" onClick={this.twoBases.bind(this)}>2B</Button>
+        <Button className= "button_pop_" onClick={this.triple.bind(this)}>3B</Button>
+        <Button className= "button_pop_" onClick={this.homerun.bind(this)}>HR</Button>
+        <Button className= "button_pop_" onClick={this.hitByPitch.bind(this)}>HP</Button>
+        <Button className= "button_pop_" onClick={this.fieldersChoice.bind(this)}>FC</Button>
+        <Button className= "button_pop_" onClick={this.strikeout.bind(this)}>K</Button>
+        <Button className= "button_pop_" onClick={this.strikeoutLooking.bind(this)}>K Looking</Button>
+        <Button className= "button_pop_" onClick={this.outDialog.bind(this)}>Out By...</Button>
       </div>
     )
   } else if ((currentGastSpieler.inning[this.state.inning].atBat) === false &&
