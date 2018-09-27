@@ -25,5 +25,13 @@
   width: 90%;
   background:white;
   overflow: auto;
+}
 
+.spielablauf_table.table.td{
+  width: 45%;
+  background-color: yellow;
+}
+
+.inhalt{
+  overflow: auto;
 }
