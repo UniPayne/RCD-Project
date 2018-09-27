@@ -1,7 +1,7 @@
 .spielinformationen_Inning_oben{
-  margin-left: 5%;
-  background-color: gray;
-  width: 90%;
+  margin-left: 3%;
+  background-color: #A4A4A4;
+  width: 95%;
 }
 
 .inning_info_label_header{
@@ -9,6 +9,7 @@
   width: 5%;
   font-size: 20px;
   margin-right: 5%;
+  width: 60px;
 
 }
 
@@ -20,9 +21,9 @@
 }
 
 .spielablauf_table{
-  margin-left: 5%;
-  margin-right: 5%;
-  width: 90%;
+  margin-left: 3%;
+  margin-right: 3%;
+  width: 95%;
   background:white;
   overflow: auto;
 }
@@ -45,4 +46,8 @@
   background-color: #A4A4A4;
   font-weight: bold;
   width: 85px;
+}
+
+.spielerInfos label{
+  width: 140px;
 }

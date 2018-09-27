@@ -1651,7 +1651,7 @@ if(this.state.gastTurn === true){
   Spieler=(
       <tr>
         <td className="spielerInfos">
-          <label>Nachname: {currentGastSpieler.spielerNName}</label>
+          <label> Nachname: {currentGastSpieler.spielerNName}</label>
           <label> , Vorname: {currentGastSpieler.spielerVName}</label>
           <label>, Nummer: {currentGastSpieler.spielerRNummer}</label>
           {currentGastSpieler.inning[this.state.inning].ifeld}
