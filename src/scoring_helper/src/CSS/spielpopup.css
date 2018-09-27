@@ -51,3 +51,14 @@
 .spielerInfos label{
   width: 140px;
 }
+
+
+.inning_Ende_Button{
+  margin-top: 2%;
+  margin-right: 0%;
+  margin-bottom: 1%;
+  border-radius: 35px 5px 35px 5px;
+  background-color: white;
+  font-weight: bold;
+  width: 90px;
+}
