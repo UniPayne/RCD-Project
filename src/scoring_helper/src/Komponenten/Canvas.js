@@ -24,7 +24,6 @@ class Canvas extends React.Component {
     render() {
         return (
           <canvas ref="canvas" className="spielfeld" height="80px" width="80px"></canvas>
-            />
         );
     }
 }

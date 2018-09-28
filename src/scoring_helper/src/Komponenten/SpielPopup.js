@@ -68,6 +68,8 @@ class SpielPopup extends Component{
       punkteHeimteam: 0,
 
       gastTurn: true,
+      spielerGespieltGast: [],
+      spielerGespieltHeim: [],
 
       gast_spieler:
       [
@@ -1518,8 +1520,13 @@ class SpielPopup extends Component{
       ],
     };
 
+
 }
 
+componentDidMount(){
+  this.setState({spielerGespieltGast: [...this.state.spielerGespieltGast, this.state.gast_spieler[this.state.letzterSpielerGast]]});
+  this.setState({spielerGespieltHeim: [...this.state.spielerGespieltHeim, this.state.heim_spieler[this.state.letzterSpielerHeim]]});
+}
 
 inningreset(){
   if (this.state.gastTurn === true){
@@ -1552,51 +1559,66 @@ baseOnBalls(){
     newState.gast_spieler[this.state.letzterSpielerGast].inning[this.state.inning].bb = true;
     newState.gast_spieler[this.state.letzterSpielerGast].inning[this.state.inning].atBat = false;
     newState.gast_spieler[this.state.letzterSpielerGast].inning[this.state.inning].onBase = true;
-    this.male_linie_home_eins(this.state.gast_spieler[this.state.letzterSpielerGast].inning[this.state.inning].ifeld).bind(this);
-
+    newState.letzterSpielerGast++;
+    this.setState(newState);
+    this.setState({spielerGespieltGast: [...this.state.spielerGespieltGast, this.state.gast_spieler[this.state.letzterSpielerGast]]}, () => {
+      console.log(this.state.spielerGespieltGast);
+    });
   } else {
     newState.heim_spieler[this.state.letzterSpielerHeim].inning[this.state.inning].bb = true;
-
+    this.setState(newState);
   }
-  this.setState(newState);
+
+
 }
 
 hit(){
 
 }
+
 twoBases(){
 
 }
+
 triple(){
 
 }
+
 homerun(){
 
 }
+
 hitByPitch(){
 
 }
+
 fieldersChoice(){
 
 }
 strikeout(){
 
 }
+
 strikeoutLooking(){
 
 }
+
 outDialog(){
 
 }
+
 stolenBase(){
 
 }
+
 runnerOneBase(){
 
 }
+
 runnerTwoBases(){
 
 }
+
 runnerThreeBases(){
 
 }
@@ -1605,9 +1627,6 @@ flyout(){
 
 }
 
-male_linie_home_eins(canvas){
-  return canvas;
-}
 
 render() {
   const heim = this.state.gast_spieler;
@@ -1615,7 +1634,6 @@ render() {
   const inning = this.state.inning+1;
   const currentGastSpieler = gast[this.state.letzterSpielerGast];
   const currentHeimSpieler = heim[this.state.letzterSpielerHeim];
-
   let Spieler;
   let Action;
 
@@ -1659,11 +1677,10 @@ if(this.state.gastTurn === true){
   Spieler=(
       <tr>
         <td className="spielerInfos">
-          <label> Nachname: {currentGastSpieler.spielerNName}</label>
+          <label>Nachname: {currentGastSpieler.spielerNName}</label>
           <label>Vorname: {currentGastSpieler.spielerVName}</label>
           <label>Nummer: {currentGastSpieler.spielerRNummer}</label>
           {this.state.gast_spieler[this.state.letzterSpielerGast].inning[this.state.inning].ifeld}
-          <Canvas/>
         </td>
         <td className="SpielerAktionen">
           {Action}
