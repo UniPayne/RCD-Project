@@ -1517,6 +1517,7 @@ class SpielPopup extends Component{
             ],}
       ],
     };
+
 }
 
 
@@ -1548,16 +1549,16 @@ baseOnBalls(){
   let newState = Object.assign({}, this.state);
 
   if (this.state.gastTurn === true) {
-    //spieler = this.state.gast_spieler[this.state.letzterSpielerGast];
-    //spieler = "gast_spieler[" + this.state.letzterSpielerGast + "].inning[" + this.state.inning + "].bb"
     newState.gast_spieler[this.state.letzterSpielerGast].inning[this.state.inning].bb = true;
+    newState.gast_spieler[this.state.letzterSpielerGast].inning[this.state.inning].atBat = false;
+    newState.gast_spieler[this.state.letzterSpielerGast].inning[this.state.inning].onBase = true;
+    this.male_linie_home_eins(this.state.gast_spieler[this.state.letzterSpielerGast].inning[this.state.inning].ifeld).bind(this);
 
   } else {
     newState.heim_spieler[this.state.letzterSpielerHeim].inning[this.state.inning].bb = true;
-    //spieler = this.state.heim_spieler[this.state.letzterSpielerHeim];
+
   }
   this.setState(newState);
-  console.log(this.state.gast_spieler[this.state.letzterSpielerGast].inning[this.state.inning].bb);
 }
 
 hit(){
@@ -1600,6 +1601,14 @@ runnerThreeBases(){
 
 }
 
+flyout(){
+
+}
+
+male_linie_home_eins(canvas){
+  return canvas;
+}
+
 render() {
   const heim = this.state.gast_spieler;
   const gast = this.state.heim_spieler;
@@ -1622,6 +1631,7 @@ render() {
         <Button className= "button_pop_" onClick={this.fieldersChoice.bind(this)}>FC</Button>
         <Button className= "button_pop_" onClick={this.strikeout.bind(this)}>K</Button>
         <Button className= "button_pop_" onClick={this.strikeoutLooking.bind(this)}>K Looking</Button>
+        <Button className= "button_pop_" onClick={this.flyout.bind(this)}>Flyout</Button>
         <Button className= "button_pop_" onClick={this.outDialog.bind(this)}>Out By...</Button>
       </div>
     )
@@ -1650,8 +1660,8 @@ if(this.state.gastTurn === true){
       <tr>
         <td className="spielerInfos">
           <label> Nachname: {currentGastSpieler.spielerNName}</label>
-          <label> , Vorname: {currentGastSpieler.spielerVName}</label>
-          <label>, Nummer: {currentGastSpieler.spielerRNummer}</label>
+          <label>Vorname: {currentGastSpieler.spielerVName}</label>
+          <label>Nummer: {currentGastSpieler.spielerRNummer}</label>
           {currentGastSpieler.inning[this.state.inning].ifeld}
         </td>
         <td className="SpielerAktionen">
