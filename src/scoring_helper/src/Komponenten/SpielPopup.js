@@ -1545,21 +1545,19 @@ inningreset(){
 }
 
 baseOnBalls(){
-  let spieler;
+  let newState = Object.assign({}, this.state);
+
   if (this.state.gastTurn === true) {
     //spieler = this.state.gast_spieler[this.state.letzterSpielerGast];
     //spieler = "gast_spieler[" + this.state.letzterSpielerGast + "].inning[" + this.state.inning + "].bb"
-    spieler = this.state.gast_spieler;
+    newState.gast_spieler[this.state.letzterSpielerGast].inning[this.state.inning].bb = true;
 
   } else {
-    spieler = "heim_spieler[" + this.state.letzterSpielerHeim + "].inning[" + this.state.inning + "].bb"
+    newState.heim_spieler[this.state.letzterSpielerHeim].inning[this.state.inning].bb = true;
     //spieler = this.state.heim_spieler[this.state.letzterSpielerHeim];
   }
-  this.setState({[spieler]: true});
-
-  this.setState({atBat: false});
-  this.setState({})
-
+  this.setState(newState);
+  console.log(this.state.gast_spieler[this.state.letzterSpielerGast].inning[this.state.inning].bb);
 }
 
 hit(){
