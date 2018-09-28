@@ -1523,10 +1523,12 @@ class SpielPopup extends Component{
 
 }
 
-componentDidMount(){
+/*componentDidMount(){
   this.setState({spielerGespieltGast: [...this.state.spielerGespieltGast, this.state.gast_spieler[this.state.letzterSpielerGast]]});
   this.setState({spielerGespieltHeim: [...this.state.spielerGespieltHeim, this.state.heim_spieler[this.state.letzterSpielerHeim]]});
-}
+  this.setState({spielerGespieltGast: []});
+  this.setState({spielerGespieltHeim: []});
+}*/
 
 inningreset(){
   if (this.state.gastTurn === true){
@@ -1537,6 +1539,7 @@ inningreset(){
     this.setState({team_name: this.state.heimTeam_name});
 
     this.setState({gastTurn: !this.state.gastTurn});
+    this.setState({spielerGespieltGast: []});
   }else {
     this.setState({inninghalf: 'Top'});
     this.setState({hitsHeimteam: (this.state.hitsInning +=this.state.hitsHeimteam)});
@@ -1546,6 +1549,7 @@ inningreset(){
 
     this.setState({gastTurn: !this.state.gastTurn});
     this.setState({inning: this.state.inning+=1});
+    this.setState({spielerGespieltHeim: []});
   }
     this.setState({outs: 0});
     this.setState({hitsInning: 0});
@@ -1634,6 +1638,9 @@ render() {
   const inning = this.state.inning+1;
   const currentGastSpieler = gast[this.state.letzterSpielerGast];
   const currentHeimSpieler = heim[this.state.letzterSpielerHeim];
+
+
+
   let Spieler;
   let Action;
 
@@ -1672,21 +1679,26 @@ render() {
   }
 
 
+  const spielerGast = this.state.spielerGespieltGast || [];
 
 if(this.state.gastTurn === true){
   Spieler=(
-      <tr>
+    <tr>
+    {
+      spielerGast.map(spielerI => (
         <td className="spielerInfos">
-          <label>Nachname: {currentGastSpieler.spielerNName}</label>
-          <label>Vorname: {currentGastSpieler.spielerVName}</label>
-          <label>Nummer: {currentGastSpieler.spielerRNummer}</label>
-          {this.state.gast_spieler[this.state.letzterSpielerGast].inning[this.state.inning].ifeld}
+          <label>Nachname: {spielerI.spielerNName}</label>
+          <label>Vorname: {spielerI.spielerVName}</label>
+          <label>Nummer: {spielerI.spielerRNummer}</label>
+          {spielerI.inning[this.state.inning].ifeld}
         </td>
         <td className="SpielerAktionen">
           {Action}
         </td>
-      </tr>
-      )
+    ))}
+  </tr>
+)
+
     } else {
   Spieler=(
         <tr>
