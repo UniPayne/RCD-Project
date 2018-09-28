@@ -1662,7 +1662,8 @@ if(this.state.gastTurn === true){
           <label> Nachname: {currentGastSpieler.spielerNName}</label>
           <label>Vorname: {currentGastSpieler.spielerVName}</label>
           <label>Nummer: {currentGastSpieler.spielerRNummer}</label>
-          {currentGastSpieler.inning[this.state.inning].ifeld}
+          {this.state.gast_spieler[this.state.letzterSpielerGast].inning[this.state.inning].ifeld}
+          <Canvas/>
         </td>
         <td className="SpielerAktionen">
           {Action}
