@@ -1585,17 +1585,39 @@ inningreset(){
 // }
 // }
 baseOnBalls(spielerI) {
-  // console.log(spielerI);
-  let spieler = Object.assign({}, spielerI);
+let spieler = Object.assign({}, spielerI);
+spieler.inning[this.state.inning].onBase = true;
+spieler.inning[this.state.inning].atBat = false;
+spieler.inning[this.state.inning].bb = true;
+this.setState({spieler}, () => {
   console.log(spieler);
-  spielerI.inning[this.state.inning].bb = true;
-  this.setState(spieler);
-  // spielerI.inning[this.state.inning].onBase = true;
-  // spielerI.inning[this.state.inning].atBat = false;
-  // console.log(spielerI);
-  //newState.spielerI.inning[this.state.inning].onBase = true;
-  //newState.spielerI.inning[this.state.inning].atBat = false;
-}
+});
+  if(this.state.gastTurn === true){
+    if(this.state.letzterSpielerGast <=this.state.gast_spieler.length){
+      let newState =  Object.assign({}, this.state);
+      newState.letzterSpielerGast+=1;
+      newState.spielerGespieltGast.push(newState.gast_spieler[newState.letzterSpielerGast]);
+      console.log(newState.letzterSpielerGast);
+      this.setState(newState);
+      }else{
+        let newState =  Object.assign({}, this.state);
+        newState.letzterSpielerGast = 0;
+        this.setState(newState);
+    }
+  }else{
+    if(this.state.letzterSpielerHeim <= this.state.heim_spieler.length){
+      let newState =  Object.assign({}, this.state);
+      newState.letzterSpielerHeim+=1;
+      newState.spielerGespieltHeim.push(newState.heim_spieler[newState.letzterSpielerHeim]);
+      console.log(newState.letzterSpielerHeim);
+      this.setState(newState);
+      }else{
+        let newState =  Object.assign({}, this.state);
+        newState.letzterSpielerHeim = 0;
+        this.setState(newState);
+    }
+    }
+  }
 
 
 hit(){
