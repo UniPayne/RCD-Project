@@ -156,7 +156,6 @@ Inhalt muss mehr nach rechts..
   width: 75%;
   float: right;
   margin-top: 0.3%;
-
 }
 
 
@@ -165,24 +164,22 @@ Inhalt muss mehr nach rechts..
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
-
 }
 
 .wrapper_ue2{
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
-
 }
 
 
 .button_zurueck{
   position: absolute;
-margin-left: 30px;
-margin-top: 495px;
-font-size: 20px;
-border-radius: 35px 5px 35px 5px;
-background-color: #A4A4A4;
-font-weight: bold;
-width: 150px;
+  margin-left: 30px;
+  margin-top: 495px;
+  font-size: 20px;
+  border-radius: 35px 5px 35px 5px;
+  background-color: #A4A4A4;
+  font-weight: bold;
+  width: 150px;
 }

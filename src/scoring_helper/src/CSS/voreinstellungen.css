@@ -12,9 +12,6 @@
   float: left;
   background-color: #F2F2F2;
   margin-bottom: 0.3%;
-
-
-
 }
 
 
@@ -42,19 +39,19 @@ img {
    height: 170px;
 
 }
-
+/*
 .vor_heim_gast_border{
-//  width: 160px;
   height: 50px;
   max-width: 100%;
   margin: 0 auto;
 }
+*/
 
 .vor_gast{
 border-style: solid;
 box-sizing: border-box;
 float: left;
-width: 49.9%;
+width: 49.7%;
 height: 340px;
 border-width: 2px;
 background-color: #F2F2F2;
@@ -66,7 +63,7 @@ background-color: rgba(196, 196, 196, 0.4);
 border-style: solid;
 box-sizing: border-box;
 float: right;
-width: 49.8%;
+width: 49.7%;
 height: 340px;
 border-width: 2px;
 background-color: #F2F2F2;
@@ -74,9 +71,7 @@ overflow: auto;
 background-color: rgba(196, 196, 196, 0.5);
 }
 
-
 .vor_gast label{
-
   text-align: center;
   width: 100%;
   margin: center;
@@ -86,7 +81,6 @@ background-color: rgba(196, 196, 196, 0.5);
   color: white;
   text-shadow: 0 0 15px black;
 }
-
 
 
 .vor_heim label{
@@ -101,48 +95,47 @@ background-color: rgba(196, 196, 196, 0.5);
 }
 
 
-
 .button_spielinfo{
   margin-left: 85%;
   margin-top: 17%;
   font-weight: bold;
-
 }
 
 .vor_button_gast{
   position: sticky;
   margin-top: 4px;
+  margin-left: 4%;
   border-radius: 35px 5px 35px 5px;
   background-color: #A4A4A4;
   font-weight: bold;
-  width: 120px;
+  width: 150px;
 }
 
 .vor_button_heim{
   float: right;
-  margin-right: 40.5%;
+  margin-right: 35.5%;
   margin-top: 4px;
   position: sticky;
   border-radius: 35px 5px 35px 5px;
   background-color: #A4A4A4;
   font-weight: bold;
-  width: 120px;
+  width: 160px;
 }
-
 
 
 .vor_button_weiter{
- margin-left: 60%;
-width: 150px;
-height: 55px;
-margin-top: 0%;
-font-weight: bold;
-font-size: 20px;
- border-radius: 35px 5px 35px 5px;
- background-color: #A4A4A4;
+  margin-left: 70%;
+  width: 200px;
+  height: 55px;
+  margin-top: 0%;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 35px 5px 35px 5px;
+  background-color: #A4A4A4;
 }
 
 .wrapper{
+  background-color: red;
   width: 1345px;
   max-width: 100%;
   margin: 0 auto;

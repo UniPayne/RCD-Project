@@ -16,12 +16,12 @@ class Canvas extends React.Component {
   ctx.lineTo(40,64);    //Unten Mitte
   ctx.lineTo(64,40);    //Mitte Rechts
   ctx.lineTo(40,16);    //Zurück nach Oben
-  ctx.strokeStyle = "gray"; //mach die Linie grau
+  ctx.strokeStyle = "gray"; //macht die Linie grau
   ctx.lineWidth = 3;
   ctx.stroke();
   ctx.closePath();
 }
-// 
+//
 // static homeZuEinsVoll(feld){
 //   console.log(feld);
 //   this.ctx = feld.getContext("2d");
