@@ -1523,12 +1523,10 @@ class SpielPopup extends Component{
 
 }
 
-/*componentDidMount(){
+componentDidMount(){
   this.setState({spielerGespieltGast: [...this.state.spielerGespieltGast, this.state.gast_spieler[this.state.letzterSpielerGast]]});
   this.setState({spielerGespieltHeim: [...this.state.spielerGespieltHeim, this.state.heim_spieler[this.state.letzterSpielerHeim]]});
-  this.setState({spielerGespieltGast: []});
-  this.setState({spielerGespieltHeim: []});
-}*/
+}
 
 inningreset(){
   if (this.state.gastTurn === true){
@@ -1558,19 +1556,31 @@ inningreset(){
 
 baseOnBalls(){
   let newState = Object.assign({}, this.state);
-
   if (this.state.gastTurn === true) {
     newState.gast_spieler[this.state.letzterSpielerGast].inning[this.state.inning].bb = true;
     newState.gast_spieler[this.state.letzterSpielerGast].inning[this.state.inning].atBat = false;
     newState.gast_spieler[this.state.letzterSpielerGast].inning[this.state.inning].onBase = true;
-    newState.letzterSpielerGast++;
+      if( this.state.letzterSpielerGast < this.state.gast_spieler.length-2){
+          newState.letzterSpielerGast+=1;
+          newState.spielerGespieltGast.push(this.state.gast_spieler[this.state.letzterSpielerGast+1]);
+        } else {
+          newState.letzterSpielerGast = 0;
+        }
+
     this.setState(newState);
-    this.setState({spielerGespieltGast: [...this.state.spielerGespieltGast, this.state.gast_spieler[this.state.letzterSpielerGast]]}, () => {
-      console.log(this.state.spielerGespieltGast);
-    });
+    console.log(this.state.letzterSpielerGast);
   } else {
     newState.heim_spieler[this.state.letzterSpielerHeim].inning[this.state.inning].bb = true;
+    newState.heim_spieler[this.state.letzterSpielerheim].inning[this.state.inning].atBat = false;
+    newState.heim_spieler[this.state.letzterSpielerHeim].inning[this.state.inning].onBase = true;
+    if( this.state.letzterSpielerHeim < this.state.heim_spieler.length-1){
+    newState.letzterSpielerHeim+=1;
+    newState.spielerGespieltHeim.push(this.state.heim_spieler[this.state.letzterSpielerHeim+1]);
+  } else {
+    newState.letzterSpielerHeim = 1;
+  }
     this.setState(newState);
+
   }
 
 
@@ -1683,9 +1693,11 @@ render() {
 
 if(this.state.gastTurn === true){
   Spieler=(
-    <tr>
+    <div>
     {
+
       spielerGast.map(spielerI => (
+          <tr>
         <td className="spielerInfos">
           <label>Nachname: {spielerI.spielerNName}</label>
           <label>Vorname: {spielerI.spielerVName}</label>
@@ -1695,8 +1707,10 @@ if(this.state.gastTurn === true){
         <td className="SpielerAktionen">
           {Action}
         </td>
+        </tr>
     ))}
-  </tr>
+  </div>
+
 )
 
     } else {
@@ -1753,9 +1767,7 @@ if(this.state.gastTurn === true){
       <div className="spielablauf">
         <Table className="spielablauf_table">
           <tbody className="inhalt">
-
               {Spieler}
-
           </tbody>
         </Table>
       </div>
