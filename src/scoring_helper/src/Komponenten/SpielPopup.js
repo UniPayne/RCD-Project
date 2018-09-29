@@ -10,6 +10,7 @@ import { Table, Flag } from 'semantic-ui-react';
 import Uebersicht         from    "./Uebersicht";
 import Canvas             from    "./Canvas";
 import Voreinstellungen   from    "./Voreinstellungen";
+import FlyoutPopup        from    "./Spielpopups/FlyoutPopup";
 
 
 //CSS
@@ -70,6 +71,7 @@ class SpielPopup extends Component{
       gastTurn: true,
       spielerGespieltGast: [],
       spielerGespieltHeim: [],
+      flyoutPopup: false,
 
       gast_spieler:
       [
@@ -1724,10 +1726,20 @@ outDialog(spielerI){
 }
 
 flyout(spielerI){
+  {this.state.showPopup ?
+    <FlyoutPopup
+      text='Geben Sie den Text ein'
+      closePopup={this.togglePopup.bind(this)}
+    />
+    : null
+  }
+  this.setState({flyoutPopup: !this.state.flyoutPopup});
   let spieler = Object.assign({}, spielerI);
   this.setState({spieler}, () => {
     console.log(spieler);
   });
+  this.setState({outs: (this.state.outs +=1)});
+  this.nextPlayer();
 }
 
 stolenBase(spielerI){
