@@ -6,6 +6,7 @@ import { Button } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { Table, Flag } from 'semantic-ui-react';
 
+import '../CSS/Flyoutpopup.css';
 
 
 class FlyoutPopup extends React.Component {

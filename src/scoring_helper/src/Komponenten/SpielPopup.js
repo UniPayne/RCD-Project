@@ -10,7 +10,7 @@ import { Table, Flag } from 'semantic-ui-react';
 import Uebersicht         from    "./Uebersicht";
 import Canvas             from    "./Canvas";
 import Voreinstellungen   from    "./Voreinstellungen";
-import FlyoutPopup        from    "./Spielpopups/FlyoutPopup";
+import FlyoutPopup        from    "./FlyoutPopup";
 
 
 //CSS
@@ -1538,11 +1538,19 @@ this.coughtStealing = this.coughtStealing.bind(this);
 this.runnerOneBase = this.runnerOneBase.bind(this);
 this.runnerTwoBases = this.runnerTwoBases.bind(this);
 this.runnerThreeBases = this.runnerThreeBases.bind(this);
+this.toggleFlyoutPopup = this.toggleFlyoutPopup.bind(this);
 }
 
 componentDidMount(){
   this.setState({spielerGespieltGast: [...this.state.spielerGespieltGast, this.state.gast_spieler[this.state.letzterSpielerGast]]});
   this.setState({spielerGespieltHeim: [...this.state.spielerGespieltHeim, this.state.heim_spieler[this.state.letzterSpielerHeim]]});
+}
+
+toggleFlyoutPopup(spielerI) {
+  this.setState({flyoutPopup: true}, () =>{
+    console.log(this.state.flyoutPopup);
+  });
+  this.flyout(spielerI);
 }
 
 inningreset(){
@@ -1726,15 +1734,10 @@ outDialog(spielerI){
 }
 
 flyout(spielerI){
-  {this.state.showPopup ?
-    <FlyoutPopup
-      text='Geben Sie den Text ein'
-      closePopup={this.togglePopup.bind(this)}
-    />
-    : null
-  }
-  this.setState({flyoutPopup: !this.state.flyoutPopup});
   let spieler = Object.assign({}, spielerI);
+  spieler.inning[this.state.inning].onBase = false;
+  spieler.inning[this.state.inning].atBat = false;
+  spieler.inning[this.state.inning].out = true;
   this.setState({spieler}, () => {
     console.log(spieler);
   });
@@ -1819,7 +1822,7 @@ if(this.state.gastTurn === true){
             <Button className= "button_pop_" onClick={() => this.fieldersChoice(spielerI)}>FC</Button>
             <Button className= "button_pop_" onClick={() => this.strikeout(spielerI)}>K</Button>
             <Button className= "button_pop_" onClick={() => this.strikeoutLooking(spielerI)}>K Looking</Button>
-            <Button className= "button_pop_" onClick={() => this.flyout(spielerI)}>Flyout</Button>
+            <Button className= "button_pop_" onClick={() => this.toggleFlyoutPopup(spielerI)}>Flyout</Button>
             <Button className= "button_pop_" onClick={() => this.outDialog(spielerI)}>Out By...</Button>
           </td>
         ) : (
@@ -1867,6 +1870,15 @@ if(this.state.gastTurn === true){
       }
     </Table.Body>
     )
+
+        {this.state.flyoutPopup ?
+          <FlyoutPopup
+            text='Geben Sie den Text ein'
+            closePopup={this.toggleFlyoutPopup.bind(this)}
+          />
+          : null
+        }
+
   }
 
 
