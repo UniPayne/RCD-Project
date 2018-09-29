@@ -1547,7 +1547,7 @@ inningreset(){
 
     this.setState({gastTurn: !this.state.gastTurn});
     this.setState({inning: this.state.inning+=1});
-    this.setState({spielerGespieltHeim: []});
+    this.setState({spielerGespieltHeim: this.state.heim_spieler[this.state.letzterSpielerHeim].inning[this.state.inning+1]});
   }
     this.setState({outs: 0});
     this.setState({hitsInning: 0});
@@ -1560,7 +1560,6 @@ baseOnBalls(){
     newState.gast_spieler[this.state.letzterSpielerGast].inning[this.state.inning].bb = true;
     newState.gast_spieler[this.state.letzterSpielerGast].inning[this.state.inning].atBat = false;
     newState.gast_spieler[this.state.letzterSpielerGast].inning[this.state.inning].onBase = true;
-    Canvas.homeZuEinsVoll(newState.gast_spieler[this.state.letzterSpielerGast].inning[this.state.inning].ifeld);
       if( newState.letzterSpielerGast < newState.gast_spieler.length){
           newState.letzterSpielerGast+=1;
           newState.spielerGespieltGast.push(newState.gast_spieler[newState.letzterSpielerGast]);
@@ -1571,10 +1570,19 @@ baseOnBalls(){
           this.setState(newState);
         }
   } else {
-
+    newState.heim_spieler[this.state.letzterSpielerHeim].inning[this.state.inning].bb = true;
+    newState.heim_spieler[this.state.letzterSpielerHeim].inning[this.state.inning].atBat = false;
+    newState.heim_spieler[this.state.letzterSpielerHeim].inning[this.state.inning].onBase = true;
+      if( newState.letzterSpielerHeim < newState.heim_spieler.length){
+          newState.letzterSpielerHeim+=1;
+          newState.spielerGespieltHeim.push(newState.heim_spieler[newState.letzterSpielerHeim]);
+          console.log(newState.letzterSpielerHeim);
+          this.setState(newState);
+        } else {
+          newState.letzterSpielerHeim = 0;
+          this.setState(newState);
   }
-
-
+}
 }
 
 hit(){
@@ -1684,10 +1692,10 @@ render() {
 
 if(this.state.gastTurn === true){
   Spieler=(
-    <div>
+    <Table.Body>
     {
       spielerGast.map(spielerI => (
-          <tr>
+          <Table.Row key={spielerI.spielerPNummer.toString()}>
         <td className="spielerInfos">
           <label>Nachname: {spielerI.spielerNName}</label>
           <label>Vorname: {spielerI.spielerVName}</label>
@@ -1697,19 +1705,19 @@ if(this.state.gastTurn === true){
         <td className="SpielerAktionen">
           {Action}
         </td>
-        </tr>
+      </Table.Row>
     ))
   }
-  </div>
+</Table.Body>
 
 )
 
     } else {
   Spieler=(
-    <div>
+    <Table.Body>
       {
         spielerHeim.map(spielerI => (
-      <tr>
+  <Table.Row key={spielerI.spielerPNummer.toString()}>
     <td className="spielerInfos">
       <label>Nachname: {spielerI.spielerNName}</label>
       <label>Vorname: {spielerI.spielerVName}</label>
@@ -1719,10 +1727,10 @@ if(this.state.gastTurn === true){
     <td className="SpielerAktionen">
       {Action}
     </td>
-    </tr>
+  </Table.Row>
         ))
       }
-      </div>
+    </Table.Body>
     )
   }
 

@@ -21,17 +21,19 @@ class Canvas extends React.Component {
   ctx.stroke();
   ctx.closePath();
 }
-
-static homeZuEinsVoll(feld){
-  // const {ctx, x,y,width,height} = feld;
-  // feld.beginPath();
-  // ctx.strokeStyle = "blue";
-  // ctx.lineWidth = 4;
-  // ctx.moveTo(40,64);
-  // ctx.lineTo(64,40);
-  // ctx.closePath();
-
-}
+// 
+// static homeZuEinsVoll(feld){
+//   console.log(feld);
+//   this.ctx = feld.getContext("2d");
+//   var ctx = feld.target.getContext('2d');
+//   feld.beginPath();
+//   ctx.strokeStyle = "blue";
+//   ctx.lineWidth = 4;
+//   ctx.moveTo(40,64);
+//   ctx.lineTo(64,40);
+//   ctx.closePath();
+//
+// }
 
 
     render() {
