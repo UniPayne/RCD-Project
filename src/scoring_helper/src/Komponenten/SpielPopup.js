@@ -1585,16 +1585,19 @@ inningreset(){
 // }
 // }
 baseOnBalls(spielerI) {
-  console.log(spielerI);
+  // console.log(spielerI);
   let spieler = Object.assign({}, spielerI);
-  spieler.inning[this.state.inning].bb = true;
-  spieler.inning[this.state.inning].onBase = true;
-  spieler.inning[this.state.inning].atBat = false;
   console.log(spieler);
+  spielerI.inning[this.state.inning].bb = true;
   this.setState(spieler);
+  // spielerI.inning[this.state.inning].onBase = true;
+  // spielerI.inning[this.state.inning].atBat = false;
+  // console.log(spielerI);
   //newState.spielerI.inning[this.state.inning].onBase = true;
   //newState.spielerI.inning[this.state.inning].atBat = false;
 }
+
+
 hit(){
 
 }
@@ -1664,40 +1667,6 @@ render() {
   let Spieler;
   let Action;
 
-  if((currentGastSpieler.inning[this.state.inning].atBat) === true){
-    Action=(
-      <div>
-        <Button className= "button_pop_" onClick={ () => this.baseOnBalls("a")}>BB</Button>
-        <Button className= "button_pop_" onClick={this.hit.bind(this)}>1B</Button>
-        <Button className= "button_pop_" onClick={this.twoBases.bind(this)}>2B</Button>
-        <Button className= "button_pop_" onClick={this.triple.bind(this)}>3B</Button>
-        <Button className= "button_pop_" onClick={this.homerun.bind(this)}>HR</Button>
-        <Button className= "button_pop_" onClick={this.hitByPitch.bind(this)}>HP</Button>
-        <Button className= "button_pop_" onClick={this.fieldersChoice.bind(this)}>FC</Button>
-        <Button className= "button_pop_" onClick={this.strikeout.bind(this)}>K</Button>
-        <Button className= "button_pop_" onClick={this.strikeoutLooking.bind(this)}>K Looking</Button>
-        <Button className= "button_pop_" onClick={this.flyout.bind(this)}>Flyout</Button>
-        <Button className= "button_pop_" onClick={this.outDialog.bind(this)}>Out By...</Button>
-      </div>
-    )
-  } else if ((currentGastSpieler.inning[this.state.inning].atBat) === false &&
-              (currentGastSpieler.inning[this.state.inning].onBase) === true) {
-    Action=(
-      <div>
-        <Button onClick={this.stolenBase.bind(this)}>SB</Button>
-        <Button onClick={this.runnerOneBase.bind(this)}>Runner Advanced 1B</Button>
-        <Button onClick={this.runnerTwoBases.bind(this)}>Runner Advanced 2B</Button>
-        <Button onClick={this.runnerThreeBases.bind(this)}>Runner Advanced 3B</Button>
-      </div>
-    )
-
-  } else {
-    Action = (
-      <div>
-      </div>
-    )
-  }
-
 
 if(this.state.gastTurn === true){
   Spieler=(
@@ -1711,7 +1680,7 @@ if(this.state.gastTurn === true){
           <label>Nummer: {spielerI.spielerRNummer}</label>
         </td>
         <td>
-          {spielerI.inning[this.state.inning].ifeld}
+        {spielerI.inning[this.state.inning].ifeld}
         </td>
         {
           spielerI.inning[this.state.inning].atBat ? (
