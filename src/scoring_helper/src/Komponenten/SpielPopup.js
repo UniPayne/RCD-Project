@@ -1537,7 +1537,7 @@ inningreset(){
     this.setState({team_name: this.state.heimTeam_name});
 
     this.setState({gastTurn: !this.state.gastTurn});
-    this.setState({spielerGespieltGast: []});
+    this.setState({spielerGespieltGast: this.state.gast_spieler[this.state.letzterSpielerGast].inning[this.state.inning+1]});
   }else {
     this.setState({inninghalf: 'Top'});
     this.setState({hitsHeimteam: (this.state.hitsInning +=this.state.hitsHeimteam)});
@@ -1560,26 +1560,17 @@ baseOnBalls(){
     newState.gast_spieler[this.state.letzterSpielerGast].inning[this.state.inning].bb = true;
     newState.gast_spieler[this.state.letzterSpielerGast].inning[this.state.inning].atBat = false;
     newState.gast_spieler[this.state.letzterSpielerGast].inning[this.state.inning].onBase = true;
-      if( this.state.letzterSpielerGast < this.state.gast_spieler.length-2){
+    Canvas.homeZuEinsVoll(newState.gast_spieler[this.state.letzterSpielerGast].inning[this.state.inning].ifeld);
+      if( newState.letzterSpielerGast < newState.gast_spieler.length){
           newState.letzterSpielerGast+=1;
-          newState.spielerGespieltGast.push(this.state.gast_spieler[this.state.letzterSpielerGast+1]);
+          newState.spielerGespieltGast.push(newState.gast_spieler[newState.letzterSpielerGast]);
+          console.log(newState.letzterSpielerGast);
+          this.setState(newState);
         } else {
           newState.letzterSpielerGast = 0;
+          this.setState(newState);
         }
-
-    this.setState(newState);
-    console.log(this.state.letzterSpielerGast);
   } else {
-    newState.heim_spieler[this.state.letzterSpielerHeim].inning[this.state.inning].bb = true;
-    newState.heim_spieler[this.state.letzterSpielerheim].inning[this.state.inning].atBat = false;
-    newState.heim_spieler[this.state.letzterSpielerHeim].inning[this.state.inning].onBase = true;
-    if( this.state.letzterSpielerHeim < this.state.heim_spieler.length-1){
-    newState.letzterSpielerHeim+=1;
-    newState.spielerGespieltHeim.push(this.state.heim_spieler[this.state.letzterSpielerHeim+1]);
-  } else {
-    newState.letzterSpielerHeim = 1;
-  }
-    this.setState(newState);
 
   }
 
@@ -1648,7 +1639,8 @@ render() {
   const inning = this.state.inning+1;
   const currentGastSpieler = gast[this.state.letzterSpielerGast];
   const currentHeimSpieler = heim[this.state.letzterSpielerHeim];
-
+  const spielerGast = this.state.spielerGespieltGast || [];
+  const spielerHeim = this.state.spielerGespieltHeim || [];
 
 
   let Spieler;
@@ -1689,13 +1681,11 @@ render() {
   }
 
 
-  const spielerGast = this.state.spielerGespieltGast || [];
 
 if(this.state.gastTurn === true){
   Spieler=(
     <div>
     {
-
       spielerGast.map(spielerI => (
           <tr>
         <td className="spielerInfos">
@@ -1708,23 +1698,33 @@ if(this.state.gastTurn === true){
           {Action}
         </td>
         </tr>
-    ))}
+    ))
+  }
   </div>
 
 )
 
     } else {
   Spieler=(
-        <tr>
-          <td className="spielerInfos">
-            <label>Nachname: {currentHeimSpieler.spielerNName}, Vorname: {currentHeimSpieler.spielerVName}, Nummer: {currentHeimSpieler.spielerRNummer}</label>
-          </td>
-          <td className="SpielerAktionen">
-            {Action}
-          </td>
-        </tr>
-        )
+    <div>
+      {
+        spielerHeim.map(spielerI => (
+      <tr>
+    <td className="spielerInfos">
+      <label>Nachname: {spielerI.spielerNName}</label>
+      <label>Vorname: {spielerI.spielerVName}</label>
+      <label>Nummer: {spielerI.spielerRNummer}</label>
+      {spielerI.inning[this.state.inning].ifeld}
+    </td>
+    <td className="SpielerAktionen">
+      {Action}
+    </td>
+    </tr>
+        ))
       }
+      </div>
+    )
+  }
 
 
 

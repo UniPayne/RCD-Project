@@ -21,6 +21,19 @@ class Canvas extends React.Component {
   ctx.stroke();
   ctx.closePath();
 }
+
+static homeZuEinsVoll(feld){
+  // const {ctx, x,y,width,height} = feld;
+  // feld.beginPath();
+  // ctx.strokeStyle = "blue";
+  // ctx.lineWidth = 4;
+  // ctx.moveTo(40,64);
+  // ctx.lineTo(64,40);
+  // ctx.closePath();
+
+}
+
+
     render() {
         return (
           <canvas ref="canvas" className="spielfeld" height="80px" width="80px"></canvas>
