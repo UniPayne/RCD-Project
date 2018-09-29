@@ -1546,11 +1546,15 @@ componentDidMount(){
   this.setState({spielerGespieltHeim: [...this.state.spielerGespieltHeim, this.state.heim_spieler[this.state.letzterSpielerHeim]]});
 }
 
-toggleFlyoutPopup(spielerI) {
-  this.setState({flyoutPopup: true}, () =>{
-    console.log(this.state.flyoutPopup);
-  });
-  this.flyout(spielerI);
+async toggleFlyoutPopup(spielerI){
+//Asynchronität boxt mich komplett raus...
+await this.setState({flyoutPopup: !this.state.flyoutPopup}, () => {
+        this.flyout(spielerI);
+  })
+
+
+
+
 }
 
 inningreset(){
@@ -1589,6 +1593,7 @@ nextPlayer(){
         let newState =  Object.assign({}, this.state);
         newState.letzterSpielerGast = 0;
         this.setState(newState);
+
     }
   }else{
     if(this.state.letzterSpielerHeim <= this.state.heim_spieler.length){
@@ -1603,8 +1608,24 @@ nextPlayer(){
         this.setState(newState);
     }
     }
+    console.log("Gast: ", this.state.punkteGastteam);
 }
 
+
+punkteCheck(spielerI){
+  console.log(spielerI);
+  if (this.state.gastTurn === true){
+    if (spielerI.inning[this.state.inning].offenseBase >=4) {
+      spielerI.inning[this.state.inning].onBase = false;
+      this.setState({punkteGastteam: this.state.punkteGastteam+=1});
+    }
+  } else {
+    if (spielerI.inning[this.state.inning].offenseBase >=4) {
+      spielerI.inning[this.state.inning].onBase = false;
+      this.setState({punkteGastteam: this.state.punkteHeimteam+=1});
+    }
+  }
+}
 
 baseOnBalls(spielerI) {
 let spieler = Object.assign({}, spielerI);
@@ -1619,14 +1640,13 @@ this.nextPlayer();
 }
 
 
+
 hit(spielerI){
   let spieler = Object.assign({}, spielerI);
   spieler.inning[this.state.inning].onBase = true;
   spieler.inning[this.state.inning].atBat = false;
   spieler.inning[this.state.inning].b1 = true;
   spieler.inning[this.state.inning].offenseBase = 1;
-
-
   this.setState({spieler}, () => {
     console.log(spieler);
   });
@@ -1662,9 +1682,11 @@ triple(spielerI){
 
 homerun(spielerI){
   let spieler = Object.assign({}, spielerI);
-  spieler.inning[this.state.inning].onBase = true;
+  spieler.inning[this.state.inning].onBase = false;
   spieler.inning[this.state.inning].atBat = false;
-  spieler.inning[this.state.inning].b4 = true;
+  spieler.inning[this.state.inning].hr = true;
+  spieler.inning[this.state.inning].offenseBase = 4;
+  this.punkteCheck(spieler);
   this.setState({spieler}, () => {
     console.log(spieler);
   });
@@ -1688,7 +1710,8 @@ fieldersChoice(spielerI){
   let spieler = Object.assign({}, spielerI);
   spieler.inning[this.state.inning].onBase = true;
   spieler.inning[this.state.inning].atBat = false;
-  spieler.inning[this.state.inning].offenseBase = 1;
+  spieler.inning[this.state.inning].offenseBase = +1;
+  this.punkteCheck(spieler);
   this.setState({spieler}, () => {
     console.log(spieler);
   });
@@ -1747,6 +1770,8 @@ flyout(spielerI){
 
 stolenBase(spielerI){
   let spieler = Object.assign({}, spielerI);
+  spieler.inning[this.state.inning].offenseBase +=1;
+  this.punkteCheck(spieler);
   this.setState({spieler}, () => {
     console.log(spieler);
   });
@@ -1754,6 +1779,8 @@ stolenBase(spielerI){
 
 runnerOneBase(spielerI){
   let spieler = Object.assign({}, spielerI);
+  spieler.inning[this.state.inning].offenseBase +=1;
+  this.punkteCheck(spieler);
   this.setState({spieler}, () => {
     console.log(spieler);
   });
@@ -1761,6 +1788,8 @@ runnerOneBase(spielerI){
 
 runnerTwoBases(spielerI){
   let spieler = Object.assign({}, spielerI);
+  spieler.inning[this.state.inning].offenseBase +=2;
+  this.punkteCheck(spieler);
   this.setState({spieler}, () => {
     console.log(spieler);
   });
@@ -1768,6 +1797,8 @@ runnerTwoBases(spielerI){
 
 runnerThreeBases(spielerI){
   let spieler = Object.assign({}, spielerI);
+  spieler.inning[this.state.inning].offenseBase+=3;
+  this.punkteCheck(spieler);
   this.setState({spieler}, () => {
     console.log(spieler);
   });
@@ -1777,6 +1808,8 @@ runnerThreeBases(spielerI){
 
 coughtStealing(spielerI) {
   let spieler = Object.assign({}, spielerI);
+  spieler.inning[this.state.inning].out = true;
+  spieler.inning[this.state.inning].onBase = false;
   this.setState({spieler}, () => {
     console.log(spieler);
   });
@@ -1914,6 +1947,14 @@ if(this.state.gastTurn === true){
             </td>
             <td>
               <button className="inning_Ende_Button" onClick={this.inningreset.bind(this)}>Inning beenden</button>
+            </td>
+            <td>
+              <label className="inning_info_label_header">{this.state.gastTeam_name}: </label>
+              <label className="inning_info_label_content">{this.state.punkteGastteam}</label>
+            </td>
+          <td>
+              <label className="inning_info_label_header">{this.state.heimTeam_name}: </label>
+              <label className="inning_info_label_content">{this.state.punkteHeimteam}</label>
             </td>
           </tr>
           </tbody>
