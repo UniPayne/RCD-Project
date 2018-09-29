@@ -1520,7 +1520,7 @@ class SpielPopup extends Component{
       ],
     };
 
-
+this.baseOnBalls = this.baseOnBalls.bind(this);
 }
 
 componentDidMount(){
@@ -1554,37 +1554,47 @@ inningreset(){
     this.setState({punkteInning: 0});
 }
 
-baseOnBalls(){
-  let newState = Object.assign({}, this.state);
-  if (this.state.gastTurn === true) {
-    newState.gast_spieler[this.state.letzterSpielerGast].inning[this.state.inning].bb = true;
-    newState.gast_spieler[this.state.letzterSpielerGast].inning[this.state.inning].atBat = false;
-    newState.gast_spieler[this.state.letzterSpielerGast].inning[this.state.inning].onBase = true;
-      if( newState.letzterSpielerGast < newState.gast_spieler.length){
-          newState.letzterSpielerGast+=1;
-          newState.spielerGespieltGast.push(newState.gast_spieler[newState.letzterSpielerGast]);
-          console.log(newState.letzterSpielerGast);
-          this.setState(newState);
-        } else {
-          newState.letzterSpielerGast = 0;
-          this.setState(newState);
-        }
-  } else {
-    newState.heim_spieler[this.state.letzterSpielerHeim].inning[this.state.inning].bb = true;
-    newState.heim_spieler[this.state.letzterSpielerHeim].inning[this.state.inning].atBat = false;
-    newState.heim_spieler[this.state.letzterSpielerHeim].inning[this.state.inning].onBase = true;
-      if( newState.letzterSpielerHeim < newState.heim_spieler.length){
-          newState.letzterSpielerHeim+=1;
-          newState.spielerGespieltHeim.push(newState.heim_spieler[newState.letzterSpielerHeim]);
-          console.log(newState.letzterSpielerHeim);
-          this.setState(newState);
-        } else {
-          newState.letzterSpielerHeim = 0;
-          this.setState(newState);
-  }
+// baseOnBalls(){
+//   let newState = Object.assign({}, this.state);
+//   if (this.state.gastTurn === true) {
+//     newState.gast_spieler[this.state.letzterSpielerGast].inning[this.state.inning].bb = true;
+//     newState.gast_spieler[this.state.letzterSpielerGast].inning[this.state.inning].atBat = false;
+//     newState.gast_spieler[this.state.letzterSpielerGast].inning[this.state.inning].onBase = true;
+//       if( newState.letzterSpielerGast < newState.gast_spieler.length){
+//           newState.letzterSpielerGast+=1;
+//           newState.spielerGespieltGast.push(newState.gast_spieler[newState.letzterSpielerGast]);
+//           console.log(newState.letzterSpielerGast);
+//           this.setState(newState);
+//         } else {
+//           newState.letzterSpielerGast = 0;
+//           this.setState(newState);
+//         }
+//   } else {
+//     newState.heim_spieler[this.state.letzterSpielerHeim].inning[this.state.inning].bb = true;
+//     newState.heim_spieler[this.state.letzterSpielerHeim].inning[this.state.inning].atBat = false;
+//     newState.heim_spieler[this.state.letzterSpielerHeim].inning[this.state.inning].onBase = true;
+//       if( newState.letzterSpielerHeim < newState.heim_spieler.length){
+//           newState.letzterSpielerHeim+=1;
+//           newState.spielerGespieltHeim.push(newState.heim_spieler[newState.letzterSpielerHeim]);
+//           console.log(newState.letzterSpielerHeim);
+//           this.setState(newState);
+//         } else {
+//           newState.letzterSpielerHeim = 0;
+//           this.setState(newState);
+//   }
+// }
+// }
+baseOnBalls(spielerI) {
+  console.log(spielerI);
+  let spieler = Object.assign({}, spielerI);
+  spieler.inning[this.state.inning].bb = true;
+  spieler.inning[this.state.inning].onBase = true;
+  spieler.inning[this.state.inning].atBat = false;
+  console.log(spieler);
+  this.setState(spieler);
+  //newState.spielerI.inning[this.state.inning].onBase = true;
+  //newState.spielerI.inning[this.state.inning].atBat = false;
 }
-}
-
 hit(){
 
 }
@@ -1657,7 +1667,7 @@ render() {
   if((currentGastSpieler.inning[this.state.inning].atBat) === true){
     Action=(
       <div>
-        <Button className= "button_pop_" onClick={this.baseOnBalls.bind(this)}>BB</Button>
+        <Button className= "button_pop_" onClick={ () => this.baseOnBalls("a")}>BB</Button>
         <Button className= "button_pop_" onClick={this.hit.bind(this)}>1B</Button>
         <Button className= "button_pop_" onClick={this.twoBases.bind(this)}>2B</Button>
         <Button className= "button_pop_" onClick={this.triple.bind(this)}>3B</Button>
@@ -1689,22 +1699,53 @@ render() {
   }
 
 
-
 if(this.state.gastTurn === true){
   Spieler=(
     <Table.Body>
     {
       spielerGast.map(spielerI => (
-          <Table.Row key={spielerI.spielerPNummer.toString()}>
+      <Table.Row key={spielerI.spielerPNummer.toString()}>
         <td className="spielerInfos">
           <label>Nachname: {spielerI.spielerNName}</label>
           <label>Vorname: {spielerI.spielerVName}</label>
           <label>Nummer: {spielerI.spielerRNummer}</label>
+        </td>
+        <td>
           {spielerI.inning[this.state.inning].ifeld}
         </td>
+        {
+          spielerI.inning[this.state.inning].atBat ? (
+          <td className="SpielerAktionen">
+            <Button className= "button_pop_" onClick={ () => this.baseOnBalls(spielerI)}>BB</Button>
+            <Button className= "button_pop_" onClick={this.hit.bind(this)}>1B</Button>
+            <Button className= "button_pop_" onClick={this.twoBases.bind(this)}>2B</Button>
+            <Button className= "button_pop_" onClick={this.triple.bind(this)}>3B</Button>
+            <Button className= "button_pop_" onClick={this.homerun.bind(this)}>HR</Button>
+            <Button className= "button_pop_" onClick={this.hitByPitch.bind(this)}>HP</Button>
+            <Button className= "button_pop_" onClick={this.fieldersChoice.bind(this)}>FC</Button>
+            <Button className= "button_pop_" onClick={this.strikeout.bind(this)}>K</Button>
+            <Button className= "button_pop_" onClick={this.strikeoutLooking.bind(this)}>K Looking</Button>
+            <Button className= "button_pop_" onClick={this.flyout.bind(this)}>Flyout</Button>
+            <Button className= "button_pop_" onClick={this.outDialog.bind(this)}>Out By...</Button>
+          </td>
+        ) : (
+          <td>
+          </td>
+        )
+      }
+        {spielerI.inning[this.state.inning].onBase ? (
         <td className="SpielerAktionen">
-          {Action}
+          <Button onClick={this.stolenBase.bind(this)}>SB</Button>
+          <Button onClick={this.runnerOneBase.bind(this)}>Runner Advanced 1B</Button>
+          <Button onClick={this.runnerTwoBases.bind(this)}>Runner Advanced 2B</Button>
+          <Button onClick={this.runnerThreeBases.bind(this)}>Runner Advanced 3B</Button>
         </td>
+        ): (
+          <td>
+          </td>
+        )
+      }
+
       </Table.Row>
     ))
   }
