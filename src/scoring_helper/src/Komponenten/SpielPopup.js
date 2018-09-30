@@ -4686,7 +4686,7 @@ if(this.state.gastTurn === true){
                 <Button className= "button_pop_" onClick={() => this.triple(spielerI)}>3B</Button>
                 <Button className= "button_pop_" onClick={() => this.homerun(spielerI)}>HR</Button>
                 <Button className= "button_pop_" onClick={() => this.hitByPitch(spielerI)}>HP</Button>
-                <Button className= "button_pop_" onClick={() => this.fieldersChoice(spielerI)}>FC</Button>
+                {/*<Button className= "button_pop_" onClick={() => this.fieldersChoice(spielerI)}>FC</Button>*/}
                 <Button className= "button_pop_" onClick={() => this.strikeout(spielerI)}>K</Button>
                 <Button className= "button_pop_" onClick={() => this.strikeoutLooking(spielerI)}>K Looking</Button>
                 <Button className= "button_pop_" onClick={() => this.toggleFlyoutPopup(spielerI)}>Flyout</Button>
