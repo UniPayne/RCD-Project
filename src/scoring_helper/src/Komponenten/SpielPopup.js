@@ -1551,35 +1551,80 @@ async toggleFlyoutPopup(spielerI){
 await this.setState({flyoutPopup: !this.state.flyoutPopup}, () => {
         this.flyout(spielerI);
   })
-
-
-
-
 }
 
-inningreset(){
-  if (this.state.gastTurn === true){
-    this.setState({inninghalf: 'Bottom'});
-    this.setState({hitsGastteam: (this.state.hitsInning +=this.state.hitsGastteam)});
-    this.setState({errorsGastteam: (this.state.errorsGastteam += this.state.errorsInning)});
-    this.setState({punkteGastteam: (this.state.punkte += this.state.hitsInning)});
-    this.setState({team_name: this.state.heimTeam_name});
-    this.setState({gastTurn: !this.state.gastTurn});
-    this.setState({spielerGespieltGast: this.state.gast_spieler[this.state.letzterSpielerGast].inning[this.state.inning+1]});
-  }else {
-    this.setState({inninghalf: 'Top'});
-    this.setState({hitsHeimteam: (this.state.hitsInning +=this.state.hitsHeimteam)});
-    this.setState({errorsHeimteam: (this.state.errorsHeimteam += this.state.errorsInning)});
-    this.setState({punkteHeimteam: (this.state.punkteHeimteam += this.state.punkteInning)});
-    this.setState({team_name: this.state.gastTeam_name});
 
-    this.setState({gastTurn: !this.state.gastTurn});
-    this.setState({inning: this.state.inning+=1});
-    this.setState({spielerGespieltHeim: this.state.heim_spieler[this.state.letzterSpielerHeim].inning[this.state.inning+1]});
+//  old version if new works, delete
+// inningreset(){
+//   if (this.state.gastTurn === true){
+//     this.setState({inninghalf: 'Bottom'});
+//     this.setState({hitsGastteam: (this.state.hitsInning +=this.state.hitsGastteam)});
+//     this.setState({errorsGastteam: (this.state.errorsGastteam += this.state.errorsInning)});
+//     this.setState({punkteGastteam: (this.state.punkte += this.state.hitsInning)});
+//     this.setState({team_name: this.state.heimTeam_name});
+//     this.setState({gastTurn: !this.state.gastTurn});
+//     this.setState({spielerGespieltGast: []}, () => {
+//       console.log(this.state.spielerGespieltGast);
+//     });
+//     this.setState({spielerGespieltGast: this.state.gast_spieler[this.state.letzterSpielerGast+1]}, () => {
+//       console.log(this.state.spielerGespieltGast);
+//
+//     });
+//   }else {
+//     this.setState({inninghalf: 'Top'});
+//     this.setState({hitsHeimteam: (this.state.hitsInning +=this.state.hitsHeimteam)});
+//     this.setState({errorsHeimteam: (this.state.errorsHeimteam += this.state.errorsInning)});
+//     this.setState({punkteHeimteam: (this.state.punkteHeimteam += this.state.punkteInning)});
+//     this.setState({team_name: this.state.gastTeam_name});
+//
+//     this.setState({gastTurn: !this.state.gastTurn});
+//     this.setState({inning: this.state.inning+=1});
+//     this.setState({spielerGespieltHeim: []});
+//     this.setState({spielerGespieltHeim: this.state.heim_spieler[this.state.letzterSpielerHeim]});
+//   }
+//     this.setState({outs: 0});
+//     this.setState({hitsInning: 0});
+//     this.setState({punkteInning: 0});
+// }
+
+inningreset(){
+  let newState =  Object.assign({}, this.state);
+  if (newState.gastTurn === true){
+    newState.inninghalf = 'Bottom';
+    newState.hitsGastteam += newState.hitsInning;
+    newState.errorsHeimteam += newState.errorsInning;
+    newState.punkteGastteam += newState.punkteInning;
+    newState.team_name = newState.gastTeam_name;
+    newState.spielerGespieltGast.length = 0;
+      if(newState.letzterSpielerGast < newState.gast_spieler.length+1){
+        newState.spielerGespieltGast.push(newState.gast_spieler[newState.letzterSpielerGast]);
+      }else{
+        newState.letzterSpielerGast = 0;
+        newState.spielerGespieltGast.push(newState.gast_spieler[newState.letzterSpielerGast]);
+      }
+  }else{
+    let newState =  Object.assign({}, this.state);
+    newState.inninghalf = 'Top';
+    newState.hitsHeimteam += newState.hitsInning;
+    newState.errorsGastteam += newState.errorsInning;
+    newState.punkteHeimteam += newState.punkteInning;
+    newState.team_name = newState.gastTeam_name;
+    newState.inning+=1;
+    newState.spielerGespieltHeim.length = 0;
+      if(newState.letzterSpielerHeim < newState.heim_spieler.length+1){
+        newState.spielerGespieltHeim.push(newState.heim_spieler[newState.letzterSpielerHeim]);
+      }else{
+        newState.letzterSpielerHeim = 0;
+        newState.spielerGespieltHeim.push(newState.heim_spieler[newState.letzterSpielerHeim]);
+      }
   }
-    this.setState({outs: 0});
-    this.setState({hitsInning: 0});
-    this.setState({punkteInning: 0});
+  newState.outs = 0;
+  newState.hitsInning = 0;
+  newState.punkteInning = 0;
+  this.setState(newState);
+  this.setState({gastTurn: !this.state.gastTurn}, () => {
+    console.log(this.state.gastTurn);
+  });
 }
 
 nextPlayer(){
@@ -1814,19 +1859,11 @@ coughtStealing(spielerI) {
   });
 }
 
+
 render() {
-  const heim = this.state.gast_spieler;
-  const gast = this.state.heim_spieler;
-  const inning = this.state.inning+1;
-  const currentGastSpieler = gast[this.state.letzterSpielerGast];
-  const currentHeimSpieler = heim[this.state.letzterSpielerHeim];
-  const spielerGast = this.state.spielerGespieltGast || [];
-  const spielerHeim = this.state.spielerGespieltHeim || [];
-
-
+  const spielerGast = this.state.spielerGespieltGast;
+  const spielerHeim = this.state.spielerGespieltHeim;
   let Spieler;
-  let Action;
-
 
 if(this.state.gastTurn === true){
   Spieler=(
@@ -1954,10 +1991,10 @@ if(this.state.gastTurn === true){
         <Table>
           <tbody>
           <tr>
-            <td>
-              <label className="inning_info_label_header">Team:</label>
-              <label className="inning_info_label_content">{this.state.team_name}</label>
-            </td>
+                <td>
+                  <label className="inning_info_label_header">Team:</label>
+                  <label className="inning_info_label_content">{this.state.team_name}</label>
+                </td>
             <td>
               <label className="inning_info_label_header">Outs:</label>
               <label className="inning_info_label_content">{this.state.outs}</label>
@@ -1972,9 +2009,7 @@ if(this.state.gastTurn === true){
             </td>
             <td>
               <label className="inning_info_label_content">{this.state.inninghalf}</label>
-              <label className="inning_info_label_header">of the</label>
-              <label className="inning_info_label_content">{inning}</label>
-              <label className="inning_info_label_header">Inning</label>
+              <label className="inning_info_label_content">{this.state.inning+1}</label>
             </td>
             <td>
               <button className="inning_Ende_Button" onClick={this.inningreset.bind(this)}>Inning beenden</button>
