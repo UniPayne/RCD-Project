@@ -1608,7 +1608,6 @@ nextPlayer(){
         this.setState(newState);
     }
     }
-    console.log("Gast: ", this.state.punkteGastteam);
 }
 
 
@@ -1884,37 +1883,69 @@ if(this.state.gastTurn === true){
 </Table.Body>
 )
     } else {
-  Spieler=(
-    <Table.Body>
-      {
-        spielerHeim.map(spielerI => (
-  <Table.Row key={spielerI.spielerPNummer.toString()}>
-    <td className="spielerInfos">
-      <label>Nachname: {spielerI.spielerNName}</label>
-      <label>Vorname: {spielerI.spielerVName}</label>
-      <label>Nummer: {spielerI.spielerRNummer}</label>
-      {spielerI.inning[this.state.inning].ifeld}
-    </td>
-    <td className="SpielerAktionen">
-      {Action}
-    </td>
-  </Table.Row>
+      Spieler=(
+        <Table.Body>
+        {
+          spielerHeim.map(spielerI => (
+          <Table.Row key={spielerI.spielerPNummer.toString()}>
+            <td className="spielerInfos">
+              <label>Nachname: {spielerI.spielerNName}</label>
+              <label>Vorname: {spielerI.spielerVName}</label>
+              <label>Nummer: {spielerI.spielerRNummer}</label>
+            </td>
+            <td>
+            {spielerI.inning[this.state.inning].ifeld}
+            </td>
+            {
+              spielerI.inning[this.state.inning].atBat ? (
+              <td className="SpielerAktionen">
+                <Button className= "button_pop_" onClick={() => this.baseOnBalls(spielerI)}>BB</Button>
+                <Button className= "button_pop_" onClick={() => this.hit(spielerI)}>1B</Button>
+                <Button className= "button_pop_" onClick={() => this.twoBases(spielerI)}>2B</Button>
+                <Button className= "button_pop_" onClick={() => this.triple(spielerI)}>3B</Button>
+                <Button className= "button_pop_" onClick={() => this.homerun(spielerI)}>HR</Button>
+                <Button className= "button_pop_" onClick={() => this.hitByPitch(spielerI)}>HP</Button>
+                <Button className= "button_pop_" onClick={() => this.fieldersChoice(spielerI)}>FC</Button>
+                <Button className= "button_pop_" onClick={() => this.strikeout(spielerI)}>K</Button>
+                <Button className= "button_pop_" onClick={() => this.strikeoutLooking(spielerI)}>K Looking</Button>
+                <Button className= "button_pop_" onClick={() => this.toggleFlyoutPopup(spielerI)}>Flyout</Button>
+                <Button className= "button_pop_" onClick={() => this.outDialog(spielerI)}>Out By...</Button>
+              </td>
+            ) : (
+              <td>
+              </td>
+            )
+          }
+          {
+            spielerI.inning[this.state.inning].onBase ? (
+              <td className="SpielerAktionen">
+                <Button className= "button_pop_" onClick={() => this.stolenBase(spielerI)}>SB</Button>
+                <Button className= "button_pop_" onClick={() => this.coughtStealing(spielerI)}>CS</Button>
+                <Button className= "button_pop_" onClick={() => this.runnerOneBase(spielerI)}>Runner Advanced 1B</Button>
+                <Button className= "button_pop_" onClick={() => this.runnerTwoBases(spielerI)}>Runner Advanced 2B</Button>
+                <Button className= "button_pop_" onClick={() => this.runnerThreeBases(spielerI)}>Runner Advanced 3B</Button>
+              </td>
+              ):(
+              <td>
+              </td>
+            )
+          }
+          {spielerI.inning[this.state.inning].out ? (<td></td>):(<td></td>)}
+          </Table.Row>
         ))
       }
     </Table.Body>
     )
-
-        {this.state.flyoutPopup ?
-          <FlyoutPopup
-            text='Geben Sie den Text ein'
-            closePopup={this.toggleFlyoutPopup.bind(this)}
-          />
-          : null
-        }
-
   }
 
 
+  {this.state.flyoutPopup ?
+    <FlyoutPopup
+      text='Geben Sie den Text ein'
+      closePopup={this.toggleFlyoutPopup.bind(this)}
+    />
+    : null
+  }
 
 
   return (
