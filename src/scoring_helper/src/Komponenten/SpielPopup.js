@@ -4336,6 +4336,7 @@ inningreset(){
     newState.errorsHeimteam += newState.errorsInning;
     newState.punkteGastteam += newState.punkteInning;
     newState.spielerGespieltGast.length = 0;
+    newState.inningGast +=1;
       if(newState.letzterSpielerGast < newState.gast_spieler.length+1){
         newState.spielerGespieltGast.push(newState.gast_spieler[newState.letzterSpielerGast]);
       }else{
@@ -4343,13 +4344,11 @@ inningreset(){
         newState.spielerGespieltGast.push(newState.gast_spieler[newState.letzterSpielerGast]);
       }
   }else{
-    let newState =  Object.assign({}, this.state);
     newState.hitsHeimteam += newState.hitsInning;
     newState.errorsGastteam += newState.errorsInning;
     newState.punkteHeimteam += newState.punkteInning;
-
-    newState.inning+=1;
     newState.spielerGespieltHeim.length = 0;
+    newState.inningHeim +=1;
       if(newState.letzterSpielerHeim < newState.heim_spieler.length+1){
         newState.spielerGespieltHeim.push(newState.heim_spieler[newState.letzterSpielerHeim]);
       }else{
@@ -4377,7 +4376,7 @@ inningreset(){
 
 nextPlayer(){
   if(this.state.gastTurn === true){
-    if(this.state.letzterSpielerGast <= this.state.gast_spieler.length){
+    if(this.state.letzterSpielerGast < this.state.gast_spieler.length-1){
       let newState =  Object.assign({}, this.state);
       newState.letzterSpielerGast+=1;
       newState.spielerGespieltGast.push(newState.gast_spieler[newState.letzterSpielerGast]);
@@ -4385,11 +4384,13 @@ nextPlayer(){
       }else{
         let newState =  Object.assign({}, this.state);
         newState.letzterSpielerGast = 0;
+        newState.inningGast +=1;
+        newState.spielerGespieltGast.push(newState.gast_spieler[newState.letzterSpielerGast]);
         this.setState(newState);
 
     }
   }else{
-    if(this.state.letzterSpielerHeim <= this.state.heim_spieler.length){
+    if(this.state.letzterSpielerHeim < this.state.heim_spieler.length-1){
       let newState =  Object.assign({}, this.state);
       newState.letzterSpielerHeim+=1;
       newState.spielerGespieltHeim.push(newState.heim_spieler[newState.letzterSpielerHeim]);
@@ -4618,17 +4619,17 @@ if(this.state.gastTurn === true){
     <Table.Body>
     {
       spielerGast.map(spielerI => (
-      <Table.Row key={spielerI.spielerPNummer.toString()}>
+      <Table.Row>
         <td className="spielerInfos">
           <label>Nachname: {spielerI.spielerNName}</label>
           <label>Vorname: {spielerI.spielerVName}</label>
           <label>Nummer: {spielerI.spielerRNummer}</label>
         </td>
         <td>
-        {spielerI.inning[this.state.inning].ifeld}
+        {spielerI.inning[this.state.inningGast].ifeld}
         </td>
         {
-          spielerI.inning[this.state.inning].atBat ? (
+          spielerI.inning[this.state.inningGast].atBat ? (
           <td className="SpielerAktionen">
             <Button className= "button_pop_" onClick={() => this.baseOnBalls(spielerI)}>BB</Button>
             <Button className= "button_pop_" onClick={() => this.hit(spielerI)}>1B</Button>
@@ -4648,7 +4649,7 @@ if(this.state.gastTurn === true){
         )
       }
       {
-        spielerI.inning[this.state.inning].onBase ? (
+        spielerI.inning[this.state.inningGast].onBase ? (
           <td className="SpielerAktionen">
             <Button className= "button_pop_" onClick={() => this.stolenBase(spielerI)}>SB</Button>
             <Button className= "button_pop_" onClick={() => this.coughtStealing(spielerI)}>CS</Button>
@@ -4661,7 +4662,7 @@ if(this.state.gastTurn === true){
           </td>
         )
       }
-      {spielerI.inning[this.state.inning].out ? (<td></td>):(<td></td>)}
+      {spielerI.inning[this.state.inningGast].out ? (<td></td>):(<td></td>)}
       </Table.Row>
     ))
   }
@@ -4672,17 +4673,17 @@ if(this.state.gastTurn === true){
         <Table.Body>
         {
           spielerHeim.map(spielerI => (
-          <Table.Row key={spielerI.spielerPNummer.toString()}>
+          <Table.Row>
             <td className="spielerInfos">
               <label>Nachname: {spielerI.spielerNName}</label>
               <label>Vorname: {spielerI.spielerVName}</label>
               <label>Nummer: {spielerI.spielerRNummer}</label>
             </td>
             <td>
-            {spielerI.inning[this.state.inning].ifeld}
+            {spielerI.inning[this.state.inningHeim].ifeld}
             </td>
             {
-              spielerI.inning[this.state.inning].atBat ? (
+              spielerI.inning[this.state.inningHeim].atBat ? (
               <td className="SpielerAktionen">
                 <Button className= "button_pop_" onClick={() => this.baseOnBalls(spielerI)}>BB</Button>
                 <Button className= "button_pop_" onClick={() => this.hit(spielerI)}>1B</Button>
@@ -4702,7 +4703,7 @@ if(this.state.gastTurn === true){
             )
           }
           {
-            spielerI.inning[this.state.inning].onBase ? (
+            spielerI.inning[this.state.inningHeim].onBase ? (
               <td className="SpielerAktionen">
                 <Button className= "button_pop_" onClick={() => this.stolenBase(spielerI)}>SB</Button>
                 <Button className= "button_pop_" onClick={() => this.coughtStealing(spielerI)}>CS</Button>
@@ -4715,7 +4716,7 @@ if(this.state.gastTurn === true){
               </td>
             )
           }
-          {spielerI.inning[this.state.inning].out ? (<td></td>):(<td></td>)}
+          {spielerI.inning[this.state.inningHeim].out ? (<td></td>):(<td></td>)}
           </Table.Row>
         ))
       }
