@@ -1590,11 +1590,9 @@ await this.setState({flyoutPopup: !this.state.flyoutPopup}, () => {
 inningreset(){
   let newState =  Object.assign({}, this.state);
   if (newState.gastTurn === true){
-    newState.inninghalf = 'Bottom';
     newState.hitsGastteam += newState.hitsInning;
     newState.errorsHeimteam += newState.errorsInning;
     newState.punkteGastteam += newState.punkteInning;
-    newState.team_name = newState.gastTeam_name;
     newState.spielerGespieltGast.length = 0;
       if(newState.letzterSpielerGast < newState.gast_spieler.length+1){
         newState.spielerGespieltGast.push(newState.gast_spieler[newState.letzterSpielerGast]);
@@ -1604,11 +1602,10 @@ inningreset(){
       }
   }else{
     let newState =  Object.assign({}, this.state);
-    newState.inninghalf = 'Top';
     newState.hitsHeimteam += newState.hitsInning;
     newState.errorsGastteam += newState.errorsInning;
     newState.punkteHeimteam += newState.punkteInning;
-    newState.team_name = newState.gastTeam_name;
+
     newState.inning+=1;
     newState.spielerGespieltHeim.length = 0;
       if(newState.letzterSpielerHeim < newState.heim_spieler.length+1){
@@ -1622,9 +1619,18 @@ inningreset(){
   newState.hitsInning = 0;
   newState.punkteInning = 0;
   this.setState(newState);
+  if(this.state.gastTurn === true){
+    this.setState({team_name: this.state.heimTeam_name});
+    this.setState({inninghalf: 'Bottom'});
+  } else{
+    this.setState({team_name: this.state.gastTeam_name});
+    this.setState({inning: this.state.inning+1});
+    this.setState({inninghalf: 'Top'});
+  }
   this.setState({gastTurn: !this.state.gastTurn}, () => {
     console.log(this.state.gastTurn);
   });
+
 }
 
 nextPlayer(){
