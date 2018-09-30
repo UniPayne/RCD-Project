@@ -1625,6 +1625,15 @@ nextPlayer(){
     }
 }
 
+outsCheck(){
+  //Hier überprüfen ob irgendwelche Outs gemacht worden sind. Dann den Rest deaktivieren
+  //Schauen wie man es machen kann, dass die Reacts angesprochen werden
+  //Schauen wie man die Canvas Objekte beim Inningreset reseten kann.
+}
+
+runnerCheck(){
+//Hier schauen dass jede Base nur einmalig besetzt werden darf.
+}
 
 punkteCheck(spielerI){
   console.log(spielerI);
