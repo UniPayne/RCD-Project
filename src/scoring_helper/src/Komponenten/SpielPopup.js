@@ -48,9 +48,7 @@ class SpielPopup extends Component{
       zuschauer:      '300',
 // Bis hier
 
-      inning: 1,
-      inningGast: 0,
-      inningHeim:0,
+      inning: 0,
       inninghalf: 'Top',
       letzterSpielerHeim: 0,
       letzterSpielerGast: 0,
@@ -4322,7 +4320,7 @@ componentDidMount(){
 }
 
 async toggleFlyoutPopup(spielerI){
-//Asynchronität boxt mich komplett raus...
+//Asynchronität läst mich nicht rein
 await this.setState({flyoutPopup: !this.state.flyoutPopup}, () => {
         this.flyout(spielerI);
   })
@@ -4336,7 +4334,6 @@ inningreset(){
     newState.errorsHeimteam += newState.errorsInning;
     newState.punkteGastteam += newState.punkteInning;
     newState.spielerGespieltGast.length = 0;
-    newState.inningGast +=1;
       if(newState.letzterSpielerGast < newState.gast_spieler.length+1){
         newState.spielerGespieltGast.push(newState.gast_spieler[newState.letzterSpielerGast]);
       }else{
@@ -4348,7 +4345,6 @@ inningreset(){
     newState.errorsGastteam += newState.errorsInning;
     newState.punkteHeimteam += newState.punkteInning;
     newState.spielerGespieltHeim.length = 0;
-    newState.inningHeim +=1;
       if(newState.letzterSpielerHeim < newState.heim_spieler.length+1){
         newState.spielerGespieltHeim.push(newState.heim_spieler[newState.letzterSpielerHeim]);
       }else{
@@ -4384,7 +4380,6 @@ nextPlayer(){
       }else{
         let newState =  Object.assign({}, this.state);
         newState.letzterSpielerGast = 0;
-        newState.inningGast +=1;
         newState.spielerGespieltGast.push(newState.gast_spieler[newState.letzterSpielerGast]);
         this.setState(newState);
 
@@ -4626,10 +4621,10 @@ if(this.state.gastTurn === true){
           <label>Nummer: {spielerI.spielerRNummer}</label>
         </td>
         <td>
-        {spielerI.inning[this.state.inningGast].ifeld}
+        {spielerI.inning[this.state.inning].ifeld}
         </td>
         {
-          spielerI.inning[this.state.inningGast].atBat ? (
+          spielerI.inning[this.state.inning].atBat ? (
           <td className="SpielerAktionen">
             <Button className= "button_pop_" onClick={() => this.baseOnBalls(spielerI)}>BB</Button>
             <Button className= "button_pop_" onClick={() => this.hit(spielerI)}>1B</Button>
@@ -4649,7 +4644,7 @@ if(this.state.gastTurn === true){
         )
       }
       {
-        spielerI.inning[this.state.inningGast].onBase ? (
+        spielerI.inning[this.state.inning].onBase ? (
           <td className="SpielerAktionen">
             <Button className= "button_pop_" onClick={() => this.stolenBase(spielerI)}>SB</Button>
             <Button className= "button_pop_" onClick={() => this.coughtStealing(spielerI)}>CS</Button>
@@ -4662,7 +4657,7 @@ if(this.state.gastTurn === true){
           </td>
         )
       }
-      {spielerI.inning[this.state.inningGast].out ? (<td></td>):(<td></td>)}
+      {spielerI.inning[this.state.inning].out ? (<td></td>):(<td></td>)}
       </Table.Row>
     ))
   }
@@ -4680,10 +4675,10 @@ if(this.state.gastTurn === true){
               <label>Nummer: {spielerI.spielerRNummer}</label>
             </td>
             <td>
-            {spielerI.inning[this.state.inningHeim].ifeld}
+            {spielerI.inning[this.state.inning].ifeld}
             </td>
             {
-              spielerI.inning[this.state.inningHeim].atBat ? (
+              spielerI.inning[this.state.inning].atBat ? (
               <td className="SpielerAktionen">
                 <Button className= "button_pop_" onClick={() => this.baseOnBalls(spielerI)}>BB</Button>
                 <Button className= "button_pop_" onClick={() => this.hit(spielerI)}>1B</Button>
@@ -4703,7 +4698,7 @@ if(this.state.gastTurn === true){
             )
           }
           {
-            spielerI.inning[this.state.inningHeim].onBase ? (
+            spielerI.inning[this.state.inning].onBase ? (
               <td className="SpielerAktionen">
                 <Button className= "button_pop_" onClick={() => this.stolenBase(spielerI)}>SB</Button>
                 <Button className= "button_pop_" onClick={() => this.coughtStealing(spielerI)}>CS</Button>
@@ -4716,7 +4711,7 @@ if(this.state.gastTurn === true){
               </td>
             )
           }
-          {spielerI.inning[this.state.inningHeim].out ? (<td></td>):(<td></td>)}
+          {spielerI.inning[this.state.inning].out ? (<td></td>):(<td></td>)}
           </Table.Row>
         ))
       }
@@ -4758,7 +4753,7 @@ if(this.state.gastTurn === true){
             </td>
             <td>
               <label className="inning_info_label_content">{this.state.inninghalf}</label>
-              <label className="inning_info_label_content">{this.state.inning}</label>
+              <label className="inning_info_label_content">{this.state.inning+1}</label>
             </td>
             <td>
               <button className="inning_Ende_Button" onClick={this.inningreset.bind(this)}>Inning beenden</button>
