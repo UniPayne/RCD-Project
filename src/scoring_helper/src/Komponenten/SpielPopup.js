@@ -68,6 +68,7 @@ class SpielPopup extends Component{
       errorsHeimteam: 0,
       punkteHeimteam: 0,
 
+
       gastTurn: true,
       spielerGespieltGast: [],
       spielerGespieltHeim: [],
@@ -152,11 +153,10 @@ class SpielPopup extends Component{
           out_by1_2:'',out_by2_3:'', out_by3_4:'', b1: false, b2: false, b3: false, hr: false, bb1_2: false, bb2_3: false, bb3_4: false,
           hp: false,
           flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
-          cs1_2:'', cs2_3:''}
-
-            ]},
+          cs1_2:'', cs2_3:''},]
+		  },
       {spielerRNummer: "12", spielerNName: "12", spielerVName: "12", spielerPosition: "12", spielerPNummer: "12", schlagPosition: 1,
-        inning: [
+         inning: [
           {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
           strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false, out_by0_1:'',
           out_by1_2:'',out_by2_3:'', out_by3_4:'', b1: false, b2: false, b3: false, hr: false, bb1_2: false, bb2_3: false, bb3_4: false,
@@ -232,11 +232,10 @@ class SpielPopup extends Component{
           out_by1_2:'',out_by2_3:'', out_by3_4:'', b1: false, b2: false, b3: false, hr: false, bb1_2: false, bb2_3: false, bb3_4: false,
           hp: false,
           flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
-          cs1_2:'', cs2_3:''}
-
-            ],},
+          cs1_2:'', cs2_3:''},]
+		  },
       {spielerRNummer: "13", spielerNName: "13", spielerVName: "13", spielerPosition: "13", spielerPNummer: "13", schlagPosition: 2,
-        inning: [
+                inning: [
           {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
           strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false, out_by0_1:'',
           out_by1_2:'',out_by2_3:'', out_by3_4:'', b1: false, b2: false, b3: false, hr: false, bb1_2: false, bb2_3: false, bb3_4: false,
@@ -312,11 +311,10 @@ class SpielPopup extends Component{
           out_by1_2:'',out_by2_3:'', out_by3_4:'', b1: false, b2: false, b3: false, hr: false, bb1_2: false, bb2_3: false, bb3_4: false,
           hp: false,
           flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
-          cs1_2:'', cs2_3:''}
-
-            ],},
+          cs1_2:'', cs2_3:''},]
+		  },
       {spielerRNummer: "14", spielerNName: "14", spielerVName: "14", spielerPosition: "14", spielerPNummer: "14", schlagPosition: 3,
-        inning: [
+         inning: [
           {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
           strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false, out_by0_1:'',
           out_by1_2:'',out_by2_3:'', out_by3_4:'', b1: false, b2: false, b3: false, hr: false, bb1_2: false, bb2_3: false, bb3_4: false,
@@ -392,9 +390,8 @@ class SpielPopup extends Component{
           out_by1_2:'',out_by2_3:'', out_by3_4:'', b1: false, b2: false, b3: false, hr: false, bb1_2: false, bb2_3: false, bb3_4: false,
           hp: false,
           flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
-          cs1_2:'', cs2_3:''}
-
-            ],},
+          cs1_2:'', cs2_3:''},]
+		  },
       {spielerRNummer: "15", spielerNName: "15", spielerVName: "15", spielerPosition: "15", spielerPNummer: "15", schlagPosition: 4,
         inning: [
           {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
@@ -472,9 +469,8 @@ class SpielPopup extends Component{
           out_by1_2:'',out_by2_3:'', out_by3_4:'', b1: false, b2: false, b3: false, hr: false, bb1_2: false, bb2_3: false, bb3_4: false,
           hp: false,
           flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
-          cs1_2:'', cs2_3:''}
-
-            ],},
+          cs1_2:'', cs2_3:''},]
+		  },
       {spielerRNummer: "16", spielerNName: "16", spielerVName: "16", spielerPosition: "16", spielerPNummer: "16", schlagPosition: 5,
         inning: [
           {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
@@ -552,9 +548,8 @@ class SpielPopup extends Component{
           out_by1_2:'',out_by2_3:'', out_by3_4:'', b1: false, b2: false, b3: false, hr: false, bb1_2: false, bb2_3: false, bb3_4: false,
           hp: false,
           flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
-          cs1_2:'', cs2_3:''}
-
-            ],},
+          cs1_2:'', cs2_3:''},]
+		  },
       {spielerRNummer: "17", spielerNName: "17", spielerVName: "17", spielerPosition: "17", spielerPNummer: "17", schlagPosition: 6,
         inning: [
           {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
@@ -632,9 +627,8 @@ class SpielPopup extends Component{
           out_by1_2:'',out_by2_3:'', out_by3_4:'', b1: false, b2: false, b3: false, hr: false, bb1_2: false, bb2_3: false, bb3_4: false,
           hp: false,
           flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
-          cs1_2:'', cs2_3:''}
-
-            ],},
+          cs1_2:'', cs2_3:''},]
+      },
       {spielerRNummer: "18", spielerNName: "18", spielerVName: "18", spielerPosition: "18", spielerPNummer: "18", schlagPosition: 7,
         inning: [
           {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
@@ -712,9 +706,8 @@ class SpielPopup extends Component{
           out_by1_2:'',out_by2_3:'', out_by3_4:'', b1: false, b2: false, b3: false, hr: false, bb1_2: false, bb2_3: false, bb3_4: false,
           hp: false,
           flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
-          cs1_2:'', cs2_3:''}
-
-            ],},
+          cs1_2:'', cs2_3:''},]
+		  },
       {spielerRNummer: "19", spielerNName: "19", spielerVName: "19", spielerPosition: "19", spielerPNummer: "19", schlagPosition: 8,
         inning: [
           {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
@@ -792,9 +785,8 @@ class SpielPopup extends Component{
           out_by1_2:'',out_by2_3:'', out_by3_4:'', b1: false, b2: false, b3: false, hr: false, bb1_2: false, bb2_3: false, bb3_4: false,
           hp: false,
           flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
-          cs1_2:'', cs2_3:''}
-
-            ],}
+          cs1_2:'', cs2_3:''},]
+		  },
       ],
 
       heim_spieler:
@@ -876,11 +868,10 @@ class SpielPopup extends Component{
           out_by1_2:'',out_by2_3:'', out_by3_4:'', b1: false, b2: false, b3: false, hr: false, bb1_2: false, bb2_3: false, bb3_4: false,
           hp: false,
           flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
-          cs1_2:'', cs2_3:''}
-
-            ]},
+          cs1_2:'', cs2_3:''},]
+		  },
       {spielerRNummer: "22", spielerNName: "22", spielerVName: "22", spielerPosition: "22", spielerPNummer: "22", schlagPosition: 1,
-        inning: [
+         inning: [
           {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
           strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false, out_by0_1:'',
           out_by1_2:'',out_by2_3:'', out_by3_4:'', b1: false, b2: false, b3: false, hr: false, bb1_2: false, bb2_3: false, bb3_4: false,
@@ -956,11 +947,10 @@ class SpielPopup extends Component{
           out_by1_2:'',out_by2_3:'', out_by3_4:'', b1: false, b2: false, b3: false, hr: false, bb1_2: false, bb2_3: false, bb3_4: false,
           hp: false,
           flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
-          cs1_2:'', cs2_3:''}
-
-            ],},
+          cs1_2:'', cs2_3:''},]
+		  },
       {spielerRNummer: "23", spielerNName: "23", spielerVName: "23", spielerPosition: "23", spielerPNummer: "23", schlagPosition: 2,
-        inning: [
+                inning: [
           {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
           strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false, out_by0_1:'',
           out_by1_2:'',out_by2_3:'', out_by3_4:'', b1: false, b2: false, b3: false, hr: false, bb1_2: false, bb2_3: false, bb3_4: false,
@@ -1036,11 +1026,10 @@ class SpielPopup extends Component{
           out_by1_2:'',out_by2_3:'', out_by3_4:'', b1: false, b2: false, b3: false, hr: false, bb1_2: false, bb2_3: false, bb3_4: false,
           hp: false,
           flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
-          cs1_2:'', cs2_3:''}
-
-            ],},
+          cs1_2:'', cs2_3:''},]
+		  },
       {spielerRNummer: "24", spielerNName: "24", spielerVName: "24", spielerPosition: "24", spielerPNummer: "24", schlagPosition: 3,
-        inning: [
+         inning: [
           {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
           strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false, out_by0_1:'',
           out_by1_2:'',out_by2_3:'', out_by3_4:'', b1: false, b2: false, b3: false, hr: false, bb1_2: false, bb2_3: false, bb3_4: false,
@@ -1116,9 +1105,8 @@ class SpielPopup extends Component{
           out_by1_2:'',out_by2_3:'', out_by3_4:'', b1: false, b2: false, b3: false, hr: false, bb1_2: false, bb2_3: false, bb3_4: false,
           hp: false,
           flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
-          cs1_2:'', cs2_3:''}
-
-            ],},
+          cs1_2:'', cs2_3:''},]
+		  },
       {spielerRNummer: "25", spielerNName: "25", spielerVName: "25", spielerPosition: "25", spielerPNummer: "25", schlagPosition: 4,
         inning: [
           {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
@@ -1196,9 +1184,8 @@ class SpielPopup extends Component{
           out_by1_2:'',out_by2_3:'', out_by3_4:'', b1: false, b2: false, b3: false, hr: false, bb1_2: false, bb2_3: false, bb3_4: false,
           hp: false,
           flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
-          cs1_2:'', cs2_3:''}
-
-            ],},
+          cs1_2:'', cs2_3:''},]
+		  },
       {spielerRNummer: "26", spielerNName: "26", spielerVName: "26", spielerPosition: "26", spielerPNummer: "26", schlagPosition: 5,
         inning: [
           {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
@@ -1276,9 +1263,8 @@ class SpielPopup extends Component{
           out_by1_2:'',out_by2_3:'', out_by3_4:'', b1: false, b2: false, b3: false, hr: false, bb1_2: false, bb2_3: false, bb3_4: false,
           hp: false,
           flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
-          cs1_2:'', cs2_3:''}
-
-            ],},
+          cs1_2:'', cs2_3:''},]
+		  },
       {spielerRNummer: "27", spielerNName: "27", spielerVName: "27", spielerPosition: "27", spielerPNummer: "27", schlagPosition: 6,
         inning: [
           {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
@@ -1356,9 +1342,8 @@ class SpielPopup extends Component{
           out_by1_2:'',out_by2_3:'', out_by3_4:'', b1: false, b2: false, b3: false, hr: false, bb1_2: false, bb2_3: false, bb3_4: false,
           hp: false,
           flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
-          cs1_2:'', cs2_3:''}
-
-            ],},
+          cs1_2:'', cs2_3:''},]
+      },
       {spielerRNummer: "28", spielerNName: "28", spielerVName: "28", spielerPosition: "28", spielerPNummer: "28", schlagPosition: 7,
         inning: [
           {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
@@ -1436,9 +1421,8 @@ class SpielPopup extends Component{
           out_by1_2:'',out_by2_3:'', out_by3_4:'', b1: false, b2: false, b3: false, hr: false, bb1_2: false, bb2_3: false, bb3_4: false,
           hp: false,
           flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
-          cs1_2:'', cs2_3:''}
-
-            ],},
+          cs1_2:'', cs2_3:''},]
+		  },
       {spielerRNummer: "29", spielerNName: "29", spielerVName: "29", spielerPosition: "29", spielerPNummer: "29", schlagPosition: 8,
         inning: [
           {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
@@ -1516,9 +1500,8 @@ class SpielPopup extends Component{
           out_by1_2:'',out_by2_3:'', out_by3_4:'', b1: false, b2: false, b3: false, hr: false, bb1_2: false, bb2_3: false, bb3_4: false,
           hp: false,
           flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
-          cs1_2:'', cs2_3:''}
-
-            ],}
+          cs1_2:'', cs2_3:''},]
+		  },
       ],
     };
 
@@ -1547,44 +1530,59 @@ componentDidMount(){
 }
 
 async toggleFlyoutPopup(spielerI){
-//Asynchronität boxt mich komplett raus...
+//Asynchronität läst mich nicht rein
 await this.setState({flyoutPopup: !this.state.flyoutPopup}, () => {
         this.flyout(spielerI);
   })
-
-
-
-
 }
 
-inningreset(){
-  if (this.state.gastTurn === true){
-    this.setState({inninghalf: 'Bottom'});
-    this.setState({hitsGastteam: (this.state.hitsInning +=this.state.hitsGastteam)});
-    this.setState({errorsGastteam: (this.state.errorsGastteam += this.state.errorsInning)});
-    this.setState({punkteGastteam: (this.state.punkte += this.state.hitsInning)});
-    this.setState({team_name: this.state.heimTeam_name});
-    this.setState({gastTurn: !this.state.gastTurn});
-    this.setState({spielerGespieltGast: this.state.gast_spieler[this.state.letzterSpielerGast].inning[this.state.inning+1]});
-  }else {
-    this.setState({inninghalf: 'Top'});
-    this.setState({hitsHeimteam: (this.state.hitsInning +=this.state.hitsHeimteam)});
-    this.setState({errorsHeimteam: (this.state.errorsHeimteam += this.state.errorsInning)});
-    this.setState({punkteHeimteam: (this.state.punkteHeimteam += this.state.punkteInning)});
-    this.setState({team_name: this.state.gastTeam_name});
 
-    this.setState({gastTurn: !this.state.gastTurn});
-    this.setState({inning: this.state.inning+=1});
-    this.setState({spielerGespieltHeim: this.state.heim_spieler[this.state.letzterSpielerHeim].inning[this.state.inning+1]});
+inningreset(){
+  let newState =  Object.assign({}, this.state);
+  if (newState.gastTurn === true){
+    newState.hitsGastteam += newState.hitsInning;
+    newState.errorsHeimteam += newState.errorsInning;
+    newState.punkteGastteam += newState.punkteInning;
+    newState.spielerGespieltGast.length = 0;
+      if(newState.letzterSpielerGast < newState.gast_spieler.length+1){
+        newState.spielerGespieltGast.push(newState.gast_spieler[newState.letzterSpielerGast]);
+      }else{
+        newState.letzterSpielerGast = 0;
+        newState.spielerGespieltGast.push(newState.gast_spieler[newState.letzterSpielerGast]);
+      }
+  }else{
+    newState.hitsHeimteam += newState.hitsInning;
+    newState.errorsGastteam += newState.errorsInning;
+    newState.punkteHeimteam += newState.punkteInning;
+    newState.spielerGespieltHeim.length = 0;
+      if(newState.letzterSpielerHeim < newState.heim_spieler.length+1){
+        newState.spielerGespieltHeim.push(newState.heim_spieler[newState.letzterSpielerHeim]);
+      }else{
+        newState.letzterSpielerHeim = 0;
+        newState.spielerGespieltHeim.push(newState.heim_spieler[newState.letzterSpielerHeim]);
+      }
   }
-    this.setState({outs: 0});
-    this.setState({hitsInning: 0});
-    this.setState({punkteInning: 0});
+  newState.outs = 0;
+  newState.hitsInning = 0;
+  newState.punkteInning = 0;
+  this.setState(newState);
+  if(this.state.gastTurn === true){
+    this.setState({team_name: this.state.heimTeam_name});
+    this.setState({inninghalf: 'Bottom'});
+  } else{
+    this.setState({team_name: this.state.gastTeam_name});
+    this.setState({inning: this.state.inning+1});
+    this.setState({inninghalf: 'Top'});
+  }
+  this.setState({gastTurn: !this.state.gastTurn}, () => {
+    console.log(this.state.gastTurn);
+  });
+
 }
 
 nextPlayer(){
   if(this.state.gastTurn === true){
-    if(this.state.letzterSpielerGast <= this.state.gast_spieler.length){
+    if(this.state.letzterSpielerGast < this.state.gast_spieler.length-1){
       let newState =  Object.assign({}, this.state);
       newState.letzterSpielerGast+=1;
       newState.spielerGespieltGast.push(newState.gast_spieler[newState.letzterSpielerGast]);
@@ -1592,11 +1590,12 @@ nextPlayer(){
       }else{
         let newState =  Object.assign({}, this.state);
         newState.letzterSpielerGast = 0;
+        newState.spielerGespieltGast.push(newState.gast_spieler[newState.letzterSpielerGast]);
         this.setState(newState);
 
     }
   }else{
-    if(this.state.letzterSpielerHeim <= this.state.heim_spieler.length){
+    if(this.state.letzterSpielerHeim < this.state.heim_spieler.length-1){
       let newState =  Object.assign({}, this.state);
       newState.letzterSpielerHeim+=1;
       newState.spielerGespieltHeim.push(newState.heim_spieler[newState.letzterSpielerHeim]);
@@ -1608,9 +1607,17 @@ nextPlayer(){
         this.setState(newState);
     }
     }
-    console.log("Gast: ", this.state.punkteGastteam);
 }
 
+outsCheck(){
+  //Hier überprüfen ob irgendwelche Outs gemacht worden sind. Dann den Rest deaktivieren
+  //Schauen wie man es machen kann, dass die Reacts angesprochen werden
+  //Schauen wie man die Canvas Objekte beim Inningreset reseten kann.
+}
+
+runnerCheck(){
+//Hier schauen dass jede Base nur einmalig besetzt werden darf.
+}
 
 punkteCheck(spielerI){
   console.log(spielerI);
@@ -1815,26 +1822,18 @@ coughtStealing(spielerI) {
   });
 }
 
+
 render() {
-  const heim = this.state.gast_spieler;
-  const gast = this.state.heim_spieler;
-  const inning = this.state.inning+1;
-  const currentGastSpieler = gast[this.state.letzterSpielerGast];
-  const currentHeimSpieler = heim[this.state.letzterSpielerHeim];
-  const spielerGast = this.state.spielerGespieltGast || [];
-  const spielerHeim = this.state.spielerGespieltHeim || [];
-
-
+  const spielerGast = this.state.spielerGespieltGast;
+  const spielerHeim = this.state.spielerGespieltHeim;
   let Spieler;
-  let Action;
-
 
 if(this.state.gastTurn === true){
   Spieler=(
     <Table.Body>
     {
       spielerGast.map(spielerI => (
-      <Table.Row key={spielerI.spielerPNummer.toString()}>
+      <Table.Row>
         <td className="spielerInfos">
           <label>Nachname: {spielerI.spielerNName}</label>
           <label>Vorname: {spielerI.spielerVName}</label>
@@ -1884,37 +1883,69 @@ if(this.state.gastTurn === true){
 </Table.Body>
 )
     } else {
-  Spieler=(
-    <Table.Body>
-      {
-        spielerHeim.map(spielerI => (
-  <Table.Row key={spielerI.spielerPNummer.toString()}>
-    <td className="spielerInfos">
-      <label>Nachname: {spielerI.spielerNName}</label>
-      <label>Vorname: {spielerI.spielerVName}</label>
-      <label>Nummer: {spielerI.spielerRNummer}</label>
-      {spielerI.inning[this.state.inning].ifeld}
-    </td>
-    <td className="SpielerAktionen">
-      {Action}
-    </td>
-  </Table.Row>
+      Spieler=(
+        <Table.Body>
+        {
+          spielerHeim.map(spielerI => (
+          <Table.Row>
+            <td className="spielerInfos">
+              <label>Nachname: {spielerI.spielerNName}</label>
+              <label>Vorname: {spielerI.spielerVName}</label>
+              <label>Nummer: {spielerI.spielerRNummer}</label>
+            </td>
+            <td>
+            {spielerI.inning[this.state.inning].ifeld}
+            </td>
+            {
+              spielerI.inning[this.state.inning].atBat ? (
+              <td className="SpielerAktionen">
+                <Button className= "button_pop_" onClick={() => this.baseOnBalls(spielerI)}>BB</Button>
+                <Button className= "button_pop_" onClick={() => this.hit(spielerI)}>1B</Button>
+                <Button className= "button_pop_" onClick={() => this.twoBases(spielerI)}>2B</Button>
+                <Button className= "button_pop_" onClick={() => this.triple(spielerI)}>3B</Button>
+                <Button className= "button_pop_" onClick={() => this.homerun(spielerI)}>HR</Button>
+                <Button className= "button_pop_" onClick={() => this.hitByPitch(spielerI)}>HP</Button>
+                {/*<Button className= "button_pop_" onClick={() => this.fieldersChoice(spielerI)}>FC</Button>*/}
+                <Button className= "button_pop_" onClick={() => this.strikeout(spielerI)}>K</Button>
+                <Button className= "button_pop_" onClick={() => this.strikeoutLooking(spielerI)}>K Looking</Button>
+                <Button className= "button_pop_" onClick={() => this.toggleFlyoutPopup(spielerI)}>Flyout</Button>
+                <Button className= "button_pop_" onClick={() => this.outDialog(spielerI)}>Out By...</Button>
+              </td>
+            ) : (
+              <td>
+              </td>
+            )
+          }
+          {
+            spielerI.inning[this.state.inning].onBase ? (
+              <td className="SpielerAktionen">
+                <Button className= "button_pop_" onClick={() => this.stolenBase(spielerI)}>SB</Button>
+                <Button className= "button_pop_" onClick={() => this.coughtStealing(spielerI)}>CS</Button>
+                <Button className= "button_pop_" onClick={() => this.runnerOneBase(spielerI)}>Runner Advanced 1B</Button>
+                <Button className= "button_pop_" onClick={() => this.runnerTwoBases(spielerI)}>Runner Advanced 2B</Button>
+                <Button className= "button_pop_" onClick={() => this.runnerThreeBases(spielerI)}>Runner Advanced 3B</Button>
+              </td>
+              ):(
+              <td>
+              </td>
+            )
+          }
+          {spielerI.inning[this.state.inning].out ? (<td></td>):(<td></td>)}
+          </Table.Row>
         ))
       }
     </Table.Body>
     )
-
-        {this.state.flyoutPopup ?
-          <FlyoutPopup
-            text='Geben Sie den Text ein'
-            closePopup={this.toggleFlyoutPopup.bind(this)}
-          />
-          : null
-        }
-
   }
 
 
+  {this.state.flyoutPopup ?
+    <FlyoutPopup
+      text='Geben Sie den Text ein'
+      closePopup={this.toggleFlyoutPopup.bind(this)}
+    />
+    : null
+  }
 
 
   return (
@@ -1923,10 +1954,10 @@ if(this.state.gastTurn === true){
         <Table>
           <tbody>
           <tr>
-            <td>
-              <label className="inning_info_label_header">Team:</label>
-              <label className="inning_info_label_content">{this.state.team_name}</label>
-            </td>
+                <td>
+                  <label className="inning_info_label_header">Team:</label>
+                  <label className="inning_info_label_content">{this.state.team_name}</label>
+                </td>
             <td>
               <label className="inning_info_label_header">Outs:</label>
               <label className="inning_info_label_content">{this.state.outs}</label>
@@ -1941,9 +1972,7 @@ if(this.state.gastTurn === true){
             </td>
             <td>
               <label className="inning_info_label_content">{this.state.inninghalf}</label>
-              <label className="inning_info_label_header">of the</label>
-              <label className="inning_info_label_content">{inning}</label>
-              <label className="inning_info_label_header">Inning</label>
+              <label className="inning_info_label_content">{this.state.inning+1}</label>
             </td>
             <td>
               <button className="inning_Ende_Button" onClick={this.inningreset.bind(this)}>Inning beenden</button>
