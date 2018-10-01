@@ -1,21 +1,29 @@
 .spielinformationen_Inning_oben{
-  margin-left: 1.5%;
-  background-color: #A4A4A4;
-  width: 96%;
+  margin-left: 1%;
+  background-color: #088A08;
+  width: 98%;
+
 }
 
 .inning_info_label_header{
   font-weight: bold;
   width: 125px;
+  float: left;
   font-size: 20px;
-  margin-right: 5%;
+  text-align: left;
 }
 
 
 .inning_info_label_content{
-  width: 125px;
+  width: 130px;
   font-size: 20px;
   margin-right: 5%;
+}
+
+.team_point{
+  font-weight: bold;
+  width: 55px;
+  text-align: left;
 }
 
 .spielablauf_table{
@@ -37,17 +45,24 @@
 
 
 .button_pop_{
-  margin-top: 2%;
-  margin-right: 0%;
-  margin-bottom: 1%;
-  border-radius: 35px 5px 35px 5px;
-  background-color: #A4A4A4;
+  border: 1px solid #268a16;
+  display: inline-block;
+  color: black;
+  font-size: 15px;
+  padding: 1px 15px;
+  border-radius: 6px;
   font-weight: bold;
-  width: 85px;
+  background-color: #A4A4A4;
+  text-decoration: none;
+  width: 110px;
+  cursor: pointer;
+  margin-right: 2px;
+  margin-bottom: 2px;
+  float: right;
 }
 
 .spielerInfos label{
-  width: 140px;
+  width: 150px;
 }
 
 .inning_Ende_Button{
@@ -58,4 +73,17 @@
   background-color: white;
   font-weight: bold;
   width: 90px;
+}
+
+
+.but_ord{
+  width: 500px;
+  float: left;
+  height: 80px;
+}
+
+.but_ord2{
+  width: 590px;
+  float: right;
+  height: 80px;
 }
