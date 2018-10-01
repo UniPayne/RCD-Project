@@ -27,9 +27,9 @@
 }
 
 .spielablauf_table{
-  margin-left: 1.5%;
+  margin-left: 1%;
   margin-right: 3%;
-  width: 96%;
+  width: 98%;
   background:white;
   overflow: auto;
 }
@@ -70,11 +70,22 @@
   margin-right: 0%;
   margin-bottom: 1%;
   border-radius: 35px 5px 35px 5px;
-  background-color: white;
+  background-color: #A4A4A4;
   font-weight: bold;
   width: 90px;
 }
 
+.outs_hits_errors{
+  font-weight: bold;
+
+}
+
+.outs_hits_errors2{
+  font-weight: bold;
+  text-align: left;
+  width: 17px;
+
+}
 
 .but_ord{
   width: 500px;

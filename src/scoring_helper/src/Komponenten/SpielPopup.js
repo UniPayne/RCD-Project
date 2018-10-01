@@ -1835,6 +1835,7 @@ if(this.state.gastTurn === true){
       spielerGast.map(spielerI => (
       <Table.Row>
         <td className="spielerInfos">
+          <label>Schlagposition: {spielerI.schlagPosition+1}</label>
           <label>Nachname: {spielerI.spielerNName}</label>
           <label>Vorname: {spielerI.spielerVName}</label>
           <label>Nummer: {spielerI.spielerRNummer}</label>
@@ -1889,6 +1890,7 @@ if(this.state.gastTurn === true){
           spielerHeim.map(spielerI => (
           <Table.Row>
             <td className="spielerInfos">
+              <label>Schlagposition: {spielerI.schlagPosition+1}</label>
               <label>Nachname: {spielerI.spielerNName}</label>
               <label>Vorname: {spielerI.spielerVName}</label>
               <label>Nummer: {spielerI.spielerRNummer}</label>
@@ -1963,28 +1965,28 @@ if(this.state.gastTurn === true){
               <label className="outs_hits_errors">Outs:</label>
             </td>
             <td>
-              <label className="inning_info_label_content">{this.state.outs}</label>
+              <label className="outs_hits_errors2">{this.state.outs}</label>
             </td>
 
             <td>
-              <label className="inning_info_label_header">Hits:</label>
+              <label className="outs_hits_errors">Hits:</label>
             </td>
             <td>
-              <label className="inning_info_label_content">{this.state.hitsInning}</label>
-            </td>
-
-            <td>
-              <label className="inning_info_label_header">Errors:</label>
+              <label className="outs_hits_errors2">{this.state.hitsInning}</label>
             </td>
 
             <td>
-              <label className="inning_info_label_content">{this.state.errorsInning} </label>
+              <label className="outs_hits_errors">Errors:</label>
+            </td>
+
+            <td>
+              <label className="outs_hits_errors2">{this.state.errorsInning} </label>
             </td>
 
 
             <td>
-              <label className="inning_info_label_content">{this.state.inninghalf}</label>
-              <label className="inning_info_label_content">{this.state.inning+1}</label>
+              <label className="outs_hits_errors">{this.state.inninghalf}: </label>
+              <label className="outs_hits_errors2">{this.state.inning+1}</label>
             </td>
             <td>
               <button className="inning_Ende_Button" onClick={this.inningreset.bind(this)}>Inning beenden</button>

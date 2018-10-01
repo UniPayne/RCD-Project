@@ -277,7 +277,7 @@ cs2_3_3(){
 
     render() {
         return (
-          <div>
+          <div className="buttons">
               <canvas ref="canvas" className="spielfeld" height="80px" width="80px"></canvas>
               <button onClick={this.bb.bind(this)}>BB</button>
               <button onClick={this.hit.bind(this)}>1B</button>

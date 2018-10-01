@@ -4,3 +4,21 @@
   width:  80px;
   height: 80px;
 }
+
+
+.buttons button{
+  border: 1px solid #268a16;
+  display: inline-block;
+  color: black;
+  font-size: 15px;
+  padding: 1px 15px;
+  border-radius: 6px;
+  font-weight: bold;
+  background-color: #A4A4A4;
+  text-decoration: none;
+  width: 80px;
+  cursor: pointer;
+  margin-right: 2px;
+  margin-bottom: 2px;
+  float: right;
+}
