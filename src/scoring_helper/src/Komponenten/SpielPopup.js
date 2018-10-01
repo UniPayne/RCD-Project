@@ -1834,8 +1834,10 @@ if(this.state.gastTurn === true){
     {
       spielerGast.map(spielerI => (
       <Table.Row>
+        <td className="nr">
+          <label>{spielerI.schlagPosition+1}</label>
+        </td>
         <td className="spielerInfos">
-          <label>Schlagposition: {spielerI.schlagPosition+1}</label>
           <label>Nachname: {spielerI.spielerNName}</label>
           <label>Vorname: {spielerI.spielerVName}</label>
           <label>Nummer: {spielerI.spielerRNummer}</label>
@@ -1890,7 +1892,7 @@ if(this.state.gastTurn === true){
           spielerHeim.map(spielerI => (
           <Table.Row>
             <td className="spielerInfos">
-              <label>Schlagposition: {spielerI.schlagPosition+1}</label>
+              <label>{spielerI.schlagPosition+1}</label>
               <label>Nachname: {spielerI.spielerNName}</label>
               <label>Vorname: {spielerI.spielerVName}</label>
               <label>Nummer: {spielerI.spielerRNummer}</label>

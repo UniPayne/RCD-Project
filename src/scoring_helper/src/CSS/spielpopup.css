@@ -52,7 +52,13 @@
 }
 
 
+.nr{
+  font-size: 30px;
+  font-weight: bold;
+  text-align: left;
+  width: 40px;
 
+}
 
 .inhalt{
   overflow: auto;
