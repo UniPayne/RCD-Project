@@ -1949,8 +1949,8 @@ if(this.state.gastTurn === true){
 
 
   return (
-    <h1>Scoring Helper</h1>
     <div>
+      <h1>Scoring Helper</h1>
       <div className="spielinformationen_Inning_oben">
         <Table>
           <tbody>
@@ -1960,7 +1960,7 @@ if(this.state.gastTurn === true){
                   <label className="inning_info_label_content">{this.state.team_name}</label>
                 </td>
             <td>
-              <label className="outs_hits_errors">Outs:</label>              
+              <label className="outs_hits_errors">Outs:</label>
             </td>
             <td>
               <label className="inning_info_label_content">{this.state.outs}</label>
