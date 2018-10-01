@@ -155,7 +155,6 @@ class SpielPopup extends Component{
           flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
           cs1_2:'', cs2_3:''},]
 		  },
-
       {spielerRNummer: "12", spielerNName: "12", spielerVName: "12", spielerPosition: "12", spielerPNummer: "12", schlagPosition: 1,
          inning: [
           {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
@@ -235,7 +234,6 @@ class SpielPopup extends Component{
           flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
           cs1_2:'', cs2_3:''},]
 		  },
-
       {spielerRNummer: "13", spielerNName: "13", spielerVName: "13", spielerPosition: "13", spielerPNummer: "13", schlagPosition: 2,
                 inning: [
           {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
@@ -315,7 +313,6 @@ class SpielPopup extends Component{
           flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
           cs1_2:'', cs2_3:''},]
 		  },
-
       {spielerRNummer: "14", spielerNName: "14", spielerVName: "14", spielerPosition: "14", spielerPNummer: "14", schlagPosition: 3,
          inning: [
           {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
@@ -395,7 +392,6 @@ class SpielPopup extends Component{
           flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
           cs1_2:'', cs2_3:''},]
 		  },
-
       {spielerRNummer: "15", spielerNName: "15", spielerVName: "15", spielerPosition: "15", spielerPNummer: "15", schlagPosition: 4,
         inning: [
           {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
@@ -475,7 +471,6 @@ class SpielPopup extends Component{
           flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
           cs1_2:'', cs2_3:''},]
 		  },
-
       {spielerRNummer: "16", spielerNName: "16", spielerVName: "16", spielerPosition: "16", spielerPNummer: "16", schlagPosition: 5,
         inning: [
           {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
@@ -555,7 +550,6 @@ class SpielPopup extends Component{
           flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
           cs1_2:'', cs2_3:''},]
 		  },
-
       {spielerRNummer: "17", spielerNName: "17", spielerVName: "17", spielerPosition: "17", spielerPNummer: "17", schlagPosition: 6,
         inning: [
           {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
@@ -635,7 +629,6 @@ class SpielPopup extends Component{
           flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
           cs1_2:'', cs2_3:''},]
       },
-
       {spielerRNummer: "18", spielerNName: "18", spielerVName: "18", spielerPosition: "18", spielerPNummer: "18", schlagPosition: 7,
         inning: [
           {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
@@ -715,7 +708,6 @@ class SpielPopup extends Component{
           flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
           cs1_2:'', cs2_3:''},]
 		  },
-
       {spielerRNummer: "19", spielerNName: "19", spielerVName: "19", spielerPosition: "19", spielerPNummer: "19", schlagPosition: 8,
         inning: [
           {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
@@ -878,7 +870,6 @@ class SpielPopup extends Component{
           flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
           cs1_2:'', cs2_3:''},]
 		  },
-
       {spielerRNummer: "22", spielerNName: "22", spielerVName: "22", spielerPosition: "22", spielerPNummer: "22", schlagPosition: 1,
          inning: [
           {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
@@ -958,7 +949,6 @@ class SpielPopup extends Component{
           flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
           cs1_2:'', cs2_3:''},]
 		  },
-
       {spielerRNummer: "23", spielerNName: "23", spielerVName: "23", spielerPosition: "23", spielerPNummer: "23", schlagPosition: 2,
                 inning: [
           {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
@@ -1038,7 +1028,6 @@ class SpielPopup extends Component{
           flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
           cs1_2:'', cs2_3:''},]
 		  },
-
       {spielerRNummer: "24", spielerNName: "24", spielerVName: "24", spielerPosition: "24", spielerPNummer: "24", schlagPosition: 3,
          inning: [
           {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
@@ -1118,7 +1107,6 @@ class SpielPopup extends Component{
           flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
           cs1_2:'', cs2_3:''},]
 		  },
-
       {spielerRNummer: "25", spielerNName: "25", spielerVName: "25", spielerPosition: "25", spielerPNummer: "25", schlagPosition: 4,
         inning: [
           {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
@@ -1198,7 +1186,6 @@ class SpielPopup extends Component{
           flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
           cs1_2:'', cs2_3:''},]
 		  },
-
       {spielerRNummer: "26", spielerNName: "26", spielerVName: "26", spielerPosition: "26", spielerPNummer: "26", schlagPosition: 5,
         inning: [
           {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
@@ -1278,7 +1265,6 @@ class SpielPopup extends Component{
           flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
           cs1_2:'', cs2_3:''},]
 		  },
-
       {spielerRNummer: "27", spielerNName: "27", spielerVName: "27", spielerPosition: "27", spielerPNummer: "27", schlagPosition: 6,
         inning: [
           {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
@@ -1358,7 +1344,6 @@ class SpielPopup extends Component{
           flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
           cs1_2:'', cs2_3:''},]
       },
-
       {spielerRNummer: "28", spielerNName: "28", spielerVName: "28", spielerPosition: "28", spielerPNummer: "28", schlagPosition: 7,
         inning: [
           {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
@@ -1438,7 +1423,6 @@ class SpielPopup extends Component{
           flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
           cs1_2:'', cs2_3:''},]
 		  },
-
       {spielerRNummer: "29", spielerNName: "29", spielerVName: "29", spielerPosition: "29", spielerPNummer: "29", schlagPosition: 8,
         inning: [
           {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
