@@ -21,7 +21,7 @@ class SpielPopup extends Component{
     super(props);
     this.state = {
 
-/*
+
       gastTeam_name:  this.props.location.spielinfos.gastTeam_name,
       heimTeam_name:  this.props.location.spielinfos.heimTeam_name,
       team_name: this.props.location.spielinfos.gastTeam_name,
@@ -33,10 +33,10 @@ class SpielPopup extends Component{
       spieldatum: this.props.location.spielinfos.spieldatum,
       liga_name: this.props.location.spielinfos.liga_name,
       zuschauer: this.props.location.spielinfos.zuschauer,
-*/
 
 
 
+/*
       gastTeam_name:  'Dohren Wild Farmers',
       heimTeam_name:  'Paderborn Untouchables',
       team_name:      'Dohren Wild Farmers',
@@ -46,7 +46,7 @@ class SpielPopup extends Component{
       spieldatum:     '2018-11-01',
       liga_name:      '1. BL',
       zuschauer:      '300',
-
+*/
 
       inning: 0,
       inninghalf: 'Top',
@@ -73,8 +73,8 @@ class SpielPopup extends Component{
       spielerGespieltGast: [],
       spielerGespieltHeim: [],
       flyoutPopup: false,
-
-      gast_spieler:
+      spielEnde: false,
+/*      gast_spieler:
       [
       {spielerRNummer: "11", spielerNName: "pperredsd", spielerVName: "sdsfffdff", spielerPosition: "11", spielerPNummer: "11", schlagPosition: 0,
         inning: [
@@ -1502,7 +1502,7 @@ class SpielPopup extends Component{
           flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
           cs1_2:'', cs2_3:''},]
 		  },
-      ],
+    ],*/
 
 };
 this.baseOnBalls = this.baseOnBalls.bind(this);
@@ -1539,45 +1539,47 @@ await this.setState({flyoutPopup: !this.state.flyoutPopup}, () => {
 
 inningreset(){
   let newState =  Object.assign({}, this.state);
-  if (newState.gastTurn === true){
-    newState.hitsGastteam += newState.hitsInning;
-    newState.errorsHeimteam += newState.errorsInning;
-    newState.punkteGastteam += newState.punkteInning;
-    newState.spielerGespieltGast.length = 0;
-      if(newState.letzterSpielerGast < newState.gast_spieler.length+1){
-        newState.spielerGespieltGast.push(newState.gast_spieler[newState.letzterSpielerGast]);
-      }else{
-        newState.letzterSpielerGast = 0;
-        newState.spielerGespieltGast.push(newState.gast_spieler[newState.letzterSpielerGast]);
-      }
-  }else{
-    newState.hitsHeimteam += newState.hitsInning;
-    newState.errorsGastteam += newState.errorsInning;
-    newState.punkteHeimteam += newState.punkteInning;
-    newState.spielerGespieltHeim.length = 0;
-      if(newState.letzterSpielerHeim < newState.heim_spieler.length+1){
-        newState.spielerGespieltHeim.push(newState.heim_spieler[newState.letzterSpielerHeim]);
-      }else{
-        newState.letzterSpielerHeim = 0;
-        newState.spielerGespieltHeim.push(newState.heim_spieler[newState.letzterSpielerHeim]);
-      }
+  if (newState.inning <= 8){
+    if (newState.gastTurn === true){
+      newState.hitsGastteam += newState.hitsInning;
+      newState.errorsHeimteam += newState.errorsInning;
+      newState.punkteGastteam += newState.punkteInning;
+      newState.spielerGespieltGast.length = 0;
+        if(newState.letzterSpielerGast < newState.gast_spieler.length+1){
+          newState.spielerGespieltGast.push(newState.gast_spieler[newState.letzterSpielerGast]);
+        }else{
+          newState.letzterSpielerGast = 0;
+          newState.spielerGespieltGast.push(newState.gast_spieler[newState.letzterSpielerGast]);
+        }
+    }else{
+      newState.hitsHeimteam += newState.hitsInning;
+      newState.errorsGastteam += newState.errorsInning;
+      newState.punkteHeimteam += newState.punkteInning;
+      newState.spielerGespieltHeim.length = 0;
+        if(newState.letzterSpielerHeim < newState.heim_spieler.length+1){
+          newState.spielerGespieltHeim.push(newState.heim_spieler[newState.letzterSpielerHeim]);
+        }else{
+          newState.letzterSpielerHeim = 0;
+          newState.spielerGespieltHeim.push(newState.heim_spieler[newState.letzterSpielerHeim]);
+        }
+    }
+    newState.outs = 0;
+    newState.hitsInning = 0;
+    newState.punkteInning = 0;
+    this.setState(newState);
+    if(this.state.gastTurn === true){
+      this.setState({team_name: this.state.heimTeam_name});
+      this.setState({inninghalf: 'Bottom'});
+    } else{
+      this.setState({team_name: this.state.gastTeam_name});
+      this.setState({inning: this.state.inning+1});
+      this.setState({inninghalf: 'Top'});
+    }
+    this.setState({gastTurn: !this.state.gastTurn}, () => {
+      console.log(this.state.gastTurn);
+    });
   }
-  newState.outs = 0;
-  newState.hitsInning = 0;
-  newState.punkteInning = 0;
-  this.setState(newState);
-  if(this.state.gastTurn === true){
-    this.setState({team_name: this.state.heimTeam_name});
-    this.setState({inninghalf: 'Bottom'});
-  } else{
-    this.setState({team_name: this.state.gastTeam_name});
-    this.setState({inning: this.state.inning+1});
-    this.setState({inninghalf: 'Top'});
-  }
-  this.setState({gastTurn: !this.state.gastTurn}, () => {
-    console.log(this.state.gastTurn);
-  });
-
+  this.setState({spielEnde: !this.state.spielEnde});
 }
 
 nextPlayer(){
@@ -1838,9 +1840,14 @@ if(this.state.gastTurn === true){
           <label>{spielerI.schlagPosition+1}</label>
         </td>
         <td className="spielerInfos">
-          <label>Nachname: {spielerI.spielerNName}</label>
-          <label>Vorname: {spielerI.spielerVName}</label>
-          <label>Nummer: {spielerI.spielerRNummer}</label>
+          <label>Nachname: </label>
+          <label>Vorname: </label>
+          <label>Nummer: </label>
+        </td>
+        <td className="spielerinfoNr">
+          {spielerI.spielerNName} <br/>
+          {spielerI.spielerVName} <br/>
+          {spielerI.spielerRNummer} <br/>
         </td>
         <td>
         {spielerI.inning[this.state.inning].ifeld}
@@ -1899,11 +1906,10 @@ if(this.state.gastTurn === true){
               <label>Vorname: </label>
               <label>Nummer: </label>
             </td>
-            {spielerI.spielerNName}
-{spielerI.spielerVName}
-{spielerI.spielerRNummer}
-            <td>
-
+            <td className="spielerinfoNr">
+              {spielerI.spielerNName} <br/>
+              {spielerI.spielerVName} <br/>
+              {spielerI.spielerRNummer} <br/>
             </td>
 
             <td>
@@ -1960,6 +1966,19 @@ if(this.state.gastTurn === true){
     : null
   }
 
+  {this.state.spielEnde ? (
+    <div>
+      <Link to={{
+        pathname: '/SpielEnde',
+        spiel: this.state
+      }}>
+
+      <button>Spiel Beenden</button>
+      </Link>
+    </div>
+  )
+    : null
+  }
 
   return (
     <div>

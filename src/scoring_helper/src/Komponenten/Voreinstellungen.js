@@ -1526,8 +1526,10 @@ submitHeimMain(stati){
           				  pathname: '/SpielPopup',
           				  spielinfos: this.state
           			  }}>
-                  <button disabled={!(this.state.info_ok && this.state.gast_ok && this.state.heim_ok) }className="vor_button_weiter">Spiel Starten</button>
-                        {/*  <button className="vor_button_weiter">Spiel Starten</button>*/}
+                {/*   <button disabled={!(this.state.info_ok && this.state.gast_ok && this.state.heim_ok) }className="vor_button_weiter">Spiel Starten</button>
+*/}
+                         <button className="vor_button_weiter">Spiel Starten</button>
+
                         </Link>
                       </div>
                   </div>

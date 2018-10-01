@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import {Route, Link, HashRouter} from "react-router-dom";
 import Voreinstellungen from "./Voreinstellungen";
-import baseball_feld from '../baseball_feld.png';
+//import baseball_feld from '../baseball_feld.png';
 
 
 import "../CSS/home.css";

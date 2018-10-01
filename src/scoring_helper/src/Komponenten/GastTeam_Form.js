@@ -365,7 +365,6 @@ deleteRow(row){
   array.splice(row, 1);
   this.setState({spielerArray: array});
   this.clearInputs();
-
 }
 
 editRow(row){

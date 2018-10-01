@@ -280,9 +280,10 @@ cs2_3_3(){
           <div >
             <table>
               <td>
+                {/* hier noch ref genauer angucken*/}
                 <canvas ref="canvas" className="spielfeld" height="80px" width="80px"></canvas>
               </td>
-              <td className="buttons">              
+              <td className="buttons">
                 <button onClick={this.bb.bind(this)}>BB</button>
                 <button onClick={this.hit.bind(this)}>1B</button>
                 <button onClick={this.zweiBases.bind(this)}>2B</button>

@@ -64,6 +64,13 @@
   overflow: auto;
 }
 
+.spielerinfoNr{
+  width: 100px;
+}
+
+.spielerInfos{
+  width: 90px;
+}
 
 .button_pop_{
   border: 1px solid #268a16;
