@@ -273,12 +273,12 @@ class GastTeam_Form extends Component{
 
 close(event){
   event.preventDefault();
-   // if (this.state.spielerArray.length >= 9){
+   if (this.state.spielerArray.length >= 9){
     this.props.submitGastPopUp(this.state);
     this.props.closePopup();
-    // }else {
-      // alert('Es müssen mindestens 9 Spieler eingetragen werden!');
-  // }
+    }else {
+       alert('Es müssen mindestens 9 Spieler eingetragen werden!');
+   }
 }
 
 bye(event){
@@ -299,14 +299,14 @@ bye(event){
           schlagPosition: this.state.spielerArray.length
         };
 
-              // if (this.state.spielerRNummer ===''||
-                  // this.state.spielerNName ===''||
-                  // this.state.spielerVName ===''||
-                  // this.state.spielerPosition ===''||
-                  // this.state.spielerPNummer === ''){
-                  //   alert('Sie müssen alle Felder ausfüllen!')
+              if (this.state.spielerRNummer ===''||
+                  this.state.spielerNName ===''||
+                  this.state.spielerVName ===''||
+                  this.state.spielerPosition ===''||
+                  this.state.spielerPNummer === ''){
+                    alert('Sie müssen alle Felder ausfüllen!')
                   ;
-          // } else {
+          } else {
              this.setState({spielerArray:[...this.state.spielerArray, obj],
                 spielerRNummer: '',
                 spielerNName: '',
@@ -314,7 +314,7 @@ bye(event){
                 spielerPosition: '',
                 spielerPNummer: ''});
 
-                if (this.state.spielerArray.length >= 9){
+                if (this.state.spielerArray.length >= 8){
                   if (this.title ==="Heim"){
                     this.setState({form_heim_ok: true}, () => {
                       console.log("Heim_ok: ", this.state.form_heim_ok);
@@ -328,7 +328,7 @@ bye(event){
 
                 }
 
-              // }
+              }
 
 
     }else

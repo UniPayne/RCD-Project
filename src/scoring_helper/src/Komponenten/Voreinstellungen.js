@@ -53,14 +53,14 @@ Lösche von Hier -->*/
 constructor(props){
   super(props);
   this.state = {
-    spielnummer:            '3',
-    spieldatum:             '2018-07-28',
-    liga_name:              'Bundesliga',
-    verband_name:           'DBV',
-    gastTeam_name:          'Dohren Wild Farmers',
-    heimTeam_name:          'Paderborn Untouchables',
-    austragungsort:         'Paderborn',
-    zuschauer:              '100',
+    spielnummer:            '',
+    spieldatum:             '',
+    liga_name:              '',
+    verband_name:           '',
+    gastTeam_name:          '',
+    heimTeam_name:          '',
+    austragungsort:         '',
+    zuschauer:              '',
 
     showInfoPopup:          false,
     info_ok:                false,
@@ -71,7 +71,7 @@ constructor(props){
     showHeimPopup:          false,
     gast_spieler:
     [
-    {spielerRNummer: "11", spielerNName: "11", spielerVName: "11", spielerPosition: "11", schlagPosition: 0, spielerPNummer: "11",
+    {spielerRNummer: "11", spielerNName: "Hansson", spielerVName: "Hans", spielerPosition: "11", schlagPosition: 0, spielerPNummer: "11",
       inning: [
         {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
         strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false, out_by0_1:'',
@@ -151,7 +151,7 @@ constructor(props){
         cs1_2:'', cs2_3:''}
 
           ]},
-    {spielerRNummer: "12", spielerNName: "12", spielerVName: "12", spielerPosition: "12", schlagPosition: 1, spielerPNummer: "12",
+    {spielerRNummer: "12", spielerNName: "Peterson", spielerVName: "Peter", spielerPosition: "12", schlagPosition: 1, spielerPNummer: "12",
       inning: [
         {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
         strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false, out_by0_1:'',
@@ -231,7 +231,7 @@ constructor(props){
         cs1_2:'', cs2_3:''}
 
           ],},
-    {spielerRNummer: "13", spielerNName: "13", spielerVName: "13", spielerPosition: "13", schlagPosition: 2, spielerPNummer: "13",
+    {spielerRNummer: "13", spielerNName: "Gustavson", spielerVName: "Gustav", spielerPosition: "13", schlagPosition: 2, spielerPNummer: "13",
       inning: [
         {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
         strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false, out_by0_1:'',
@@ -311,7 +311,7 @@ constructor(props){
         cs1_2:'', cs2_3:''}
 
           ],},
-    {spielerRNummer: "14", spielerNName: "14", spielerVName: "14", spielerPosition: "14", schlagPosition: 3, spielerPNummer: "14",
+    {spielerRNummer: "14", spielerNName: "Olafson", spielerVName: "Olaf", spielerPosition: "14", schlagPosition: 3, spielerPNummer: "14",
       inning: [
         {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
         strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false, out_by0_1:'',
@@ -391,7 +391,7 @@ constructor(props){
         cs1_2:'', cs2_3:''}
 
           ],},
-    {spielerRNummer: "15", spielerNName: "15", spielerVName: "15", spielerPosition: "15", schlagPosition: 4, spielerPNummer: "15",
+    {spielerRNummer: "15", spielerNName: "Hendrikson", spielerVName: "Hendrik", spielerPosition: "15", schlagPosition: 4, spielerPNummer: "15",
       inning: [
         {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
         strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false, out_by0_1:'',
@@ -471,7 +471,7 @@ constructor(props){
         cs1_2:'', cs2_3:''}
 
           ],},
-    {spielerRNummer: "16", spielerNName: "16", spielerVName: "16", spielerPosition: "16", schlagPosition: 5, spielerPNummer: "16",
+    {spielerRNummer: "16", spielerNName: "Gretedottir", spielerVName: "Grete", spielerPosition: "16", schlagPosition: 5, spielerPNummer: "16",
       inning: [
         {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
         strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false, out_by0_1:'',
@@ -551,7 +551,7 @@ constructor(props){
         cs1_2:'', cs2_3:''}
 
           ],},
-    {spielerRNummer: "17", spielerNName: "17", spielerVName: "17", spielerPosition: "17", schlagPosition: 6, spielerPNummer: "17",
+    {spielerRNummer: "17", spielerNName: "Tomson", spielerVName: "Tom", spielerPosition: "17", schlagPosition: 6, spielerPNummer: "17",
       inning: [
         {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
         strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false, out_by0_1:'',
@@ -631,7 +631,7 @@ constructor(props){
         cs1_2:'', cs2_3:''}
 
           ],},
-    {spielerRNummer: "18", spielerNName: "18", spielerVName: "18", spielerPosition: "18", schlagPosition: 7, spielerPNummer: "18",
+    {spielerRNummer: "18", spielerNName: "Timson", spielerVName: "Tim", spielerPosition: "18", schlagPosition: 7, spielerPNummer: "18",
       inning: [
         {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
         strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false, out_by0_1:'',
@@ -711,92 +711,13 @@ constructor(props){
         cs1_2:'', cs2_3:''}
 
           ],},
-    {spielerRNummer: "19", spielerNName: "19", spielerVName: "19", spielerPosition: "19", schlagPosition: 8, spielerPNummer: "19",
-      inning: [
-        {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
-        strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false, out_by0_1:'',
-        out_by1_2:'',out_by2_3:'', out_by3_4:'', b1: false, b2: false, b3: false, hr: false, bb1_2: false, bb2_3: false, bb3_4: false,
-        hp: false,
-        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
-        cs1_2:'', cs2_3:''},
 
-        {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
-        strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false, out_by0_1:'',
-        out_by1_2:'',out_by2_3:'', out_by3_4:'', b1: false, b2: false, b3: false, hr: false, bb1_2: false, bb2_3: false, bb3_4: false,
-        hp: false,
-        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
-        cs1_2:'', cs2_3:''},
-
-        {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
-        strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false, out_by0_1:'',
-        out_by1_2:'',out_by2_3:'', out_by3_4:'', b1: false, b2: false, b3: false, hr: false, bb1_2: false, bb2_3: false, bb3_4: false,
-        hp: false,
-        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
-        cs1_2:'', cs2_3:''},
-
-        {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
-        strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false, out_by0_1:'',
-        out_by1_2:'',out_by2_3:'', out_by3_4:'', b1: false, b2: false, b3: false, hr: false, bb1_2: false, bb2_3: false, bb3_4: false,
-        hp: false,
-        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
-        cs1_2:'', cs2_3:''},
-
-        {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
-        strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false, out_by0_1:'',
-        out_by1_2:'',out_by2_3:'', out_by3_4:'', b1: false, b2: false, b3: false, hr: false, bb1_2: false, bb2_3: false, bb3_4: false,
-        hp: false,
-        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
-        cs1_2:'', cs2_3:''},
-
-        {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
-        strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false, out_by0_1:'',
-        out_by1_2:'',out_by2_3:'', out_by3_4:'', b1: false, b2: false, b3: false, hr: false, bb1_2: false, bb2_3: false, bb3_4: false,
-        hp: false,
-        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
-        cs1_2:'', cs2_3:''},
-
-        {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
-        strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false, out_by0_1:'',
-        out_by1_2:'',out_by2_3:'', out_by3_4:'', b1: false, b2: false, b3: false, hr: false, bb1_2: false, bb2_3: false, bb3_4: false,
-        hp: false,
-        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
-        cs1_2:'', cs2_3:''},
-
-        {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
-        strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false, out_by0_1:'',
-        out_by1_2:'',out_by2_3:'', out_by3_4:'', b1: false, b2: false, b3: false, hr: false, bb1_2: false, bb2_3: false, bb3_4: false,
-        hp: false,
-        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
-        cs1_2:'', cs2_3:''},
-
-        {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
-        strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false, out_by0_1:'',
-        out_by1_2:'',out_by2_3:'', out_by3_4:'', b1: false, b2: false, b3: false, hr: false, bb1_2: false, bb2_3: false, bb3_4: false,
-        hp: false,
-        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
-        cs1_2:'', cs2_3:''},
-
-        {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
-        strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false, out_by0_1:'',
-        out_by1_2:'',out_by2_3:'', out_by3_4:'', b1: false, b2: false, b3: false, hr: false, bb1_2: false, bb2_3: false, bb3_4: false,
-        hp: false,
-        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
-        cs1_2:'', cs2_3:''},
-
-        {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
-        strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false, out_by0_1:'',
-        out_by1_2:'',out_by2_3:'', out_by3_4:'', b1: false, b2: false, b3: false, hr: false, bb1_2: false, bb2_3: false, bb3_4: false,
-        hp: false,
-        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
-        cs1_2:'', cs2_3:''}
-
-          ],}
     ],
 
     //heim_spieler: this.props.location.spielinfos.heim_spieler,
     heim_spieler:
     [
-    {spielerRNummer: "21", spielerNName: "21", spielerVName: "21", spielerPosition: "21", schlagPosition: 0, spielerPNummer: "21",
+    {spielerRNummer: "21", spielerNName: "Timoson", spielerVName: "Timo", spielerPosition: "21", schlagPosition: 0, spielerPNummer: "21",
       inning: [
         {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
         strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false, out_by0_1:'',
@@ -876,7 +797,7 @@ constructor(props){
         cs1_2:'', cs2_3:''}
 
           ]},
-    {spielerRNummer: "22", spielerNName: "22", spielerVName: "22", spielerPosition: "22", schlagPosition: 1, spielerPNummer: "22",
+    {spielerRNummer: "22", spielerNName: "Antonson", spielerVName: "Anton", spielerPosition: "22", schlagPosition: 1, spielerPNummer: "22",
       inning: [
         {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
         strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false, out_by0_1:'',
@@ -956,7 +877,7 @@ constructor(props){
         cs1_2:'', cs2_3:''}
 
           ],},
-    {spielerRNummer: "23", spielerNName: "23", spielerVName: "23", spielerPosition: "23", schlagPosition: 2, spielerPNummer: "23",
+    {spielerRNummer: "23", spielerNName: "Gabrielson", spielerVName: "Gabriel", spielerPosition: "23", schlagPosition: 2, spielerPNummer: "23",
       inning: [
         {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
         strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false, out_by0_1:'',
@@ -1036,7 +957,7 @@ constructor(props){
         cs1_2:'', cs2_3:''}
 
           ],},
-    {spielerRNummer: "24", spielerNName: "24", spielerVName: "24", spielerPosition: "24", schlagPosition: 3, spielerPNummer: "24",
+    {spielerRNummer: "24", spielerNName: "Johannesos", spielerVName: "Johannes", spielerPosition: "24", schlagPosition: 3, spielerPNummer: "24",
       inning: [
         {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
         strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false, out_by0_1:'',
@@ -1116,7 +1037,7 @@ constructor(props){
         cs1_2:'', cs2_3:''}
 
           ],},
-    {spielerRNummer: "25", spielerNName: "25", spielerVName: "25", spielerPosition: "25", schlagPosition: 4, spielerPNummer: "25",
+    {spielerRNummer: "25", spielerNName: "Danielson", spielerVName: "Daniel", spielerPosition: "25", schlagPosition: 4, spielerPNummer: "25",
       inning: [
         {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
         strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false, out_by0_1:'',
@@ -1196,7 +1117,7 @@ constructor(props){
         cs1_2:'', cs2_3:''}
 
           ],},
-    {spielerRNummer: "26", spielerNName: "26", spielerVName: "26", spielerPosition: "26", schlagPosition: 5, spielerPNummer: "26",
+    {spielerRNummer: "26", spielerNName: "Theoson", spielerVName: "Theo", spielerPosition: "26", schlagPosition: 5, spielerPNummer: "26",
       inning: [
         {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
         strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false, out_by0_1:'',
@@ -1276,7 +1197,7 @@ constructor(props){
         cs1_2:'', cs2_3:''}
 
           ],},
-    {spielerRNummer: "27", spielerNName: "27", spielerVName: "27", spielerPosition: "27", schlagPosition: 6, spielerPNummer: "27",
+    {spielerRNummer: "27", spielerNName: "Martinson", spielerVName: "Martin", spielerPosition: "27", schlagPosition: 6, spielerPNummer: "27",
       inning: [
         {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
         strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false, out_by0_1:'',
@@ -1356,7 +1277,7 @@ constructor(props){
         cs1_2:'', cs2_3:''}
 
           ],},
-    {spielerRNummer: "28", spielerNName: "28", spielerVName: "28", spielerPosition: "28", schlagPosition: 7, spielerPNummer: "28",
+    {spielerRNummer: "28", spielerNName: "Michaelson", spielerVName: "Michael", spielerPosition: "28", schlagPosition: 7, spielerPNummer: "28",
       inning: [
         {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
         strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false, out_by0_1:'',
@@ -1436,86 +1357,7 @@ constructor(props){
         cs1_2:'', cs2_3:''}
 
           ],},
-    {spielerRNummer: "29", spielerNName: "29", spielerVName: "29", spielerPosition: "29", schlagPosition: 8, spielerPNummer: "29",
-      inning: [
-        {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
-        strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false, out_by0_1:'',
-        out_by1_2:'',out_by2_3:'', out_by3_4:'', b1: false, b2: false, b3: false, hr: false, bb1_2: false, bb2_3: false, bb3_4: false,
-        hp: false,
-        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
-        cs1_2:'', cs2_3:''},
 
-        {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
-        strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false, out_by0_1:'',
-        out_by1_2:'',out_by2_3:'', out_by3_4:'', b1: false, b2: false, b3: false, hr: false, bb1_2: false, bb2_3: false, bb3_4: false,
-        hp: false,
-        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
-        cs1_2:'', cs2_3:''},
-
-        {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
-        strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false, out_by0_1:'',
-        out_by1_2:'',out_by2_3:'', out_by3_4:'', b1: false, b2: false, b3: false, hr: false, bb1_2: false, bb2_3: false, bb3_4: false,
-        hp: false,
-        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
-        cs1_2:'', cs2_3:''},
-
-        {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
-        strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false, out_by0_1:'',
-        out_by1_2:'',out_by2_3:'', out_by3_4:'', b1: false, b2: false, b3: false, hr: false, bb1_2: false, bb2_3: false, bb3_4: false,
-        hp: false,
-        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
-        cs1_2:'', cs2_3:''},
-
-        {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
-        strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false, out_by0_1:'',
-        out_by1_2:'',out_by2_3:'', out_by3_4:'', b1: false, b2: false, b3: false, hr: false, bb1_2: false, bb2_3: false, bb3_4: false,
-        hp: false,
-        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
-        cs1_2:'', cs2_3:''},
-
-        {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
-        strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false, out_by0_1:'',
-        out_by1_2:'',out_by2_3:'', out_by3_4:'', b1: false, b2: false, b3: false, hr: false, bb1_2: false, bb2_3: false, bb3_4: false,
-        hp: false,
-        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
-        cs1_2:'', cs2_3:''},
-
-        {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
-        strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false, out_by0_1:'',
-        out_by1_2:'',out_by2_3:'', out_by3_4:'', b1: false, b2: false, b3: false, hr: false, bb1_2: false, bb2_3: false, bb3_4: false,
-        hp: false,
-        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
-        cs1_2:'', cs2_3:''},
-
-        {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
-        strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false, out_by0_1:'',
-        out_by1_2:'',out_by2_3:'', out_by3_4:'', b1: false, b2: false, b3: false, hr: false, bb1_2: false, bb2_3: false, bb3_4: false,
-        hp: false,
-        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
-        cs1_2:'', cs2_3:''},
-
-        {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
-        strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false, out_by0_1:'',
-        out_by1_2:'',out_by2_3:'', out_by3_4:'', b1: false, b2: false, b3: false, hr: false, bb1_2: false, bb2_3: false, bb3_4: false,
-        hp: false,
-        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
-        cs1_2:'', cs2_3:''},
-
-        {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
-        strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false, out_by0_1:'',
-        out_by1_2:'',out_by2_3:'', out_by3_4:'', b1: false, b2: false, b3: false, hr: false, bb1_2: false, bb2_3: false, bb3_4: false,
-        hp: false,
-        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
-        cs1_2:'', cs2_3:''},
-
-        {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
-        strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false, out_by0_1:'',
-        out_by1_2:'',out_by2_3:'', out_by3_4:'', b1: false, b2: false, b3: false, hr: false, bb1_2: false, bb2_3: false, bb3_4: false,
-        hp: false,
-        flyout:'', runnerMoved1_2:'', runnerMoved2_3:'', runnerMoved3_4:'', error1:'', error2:'', error3:'',
-        cs1_2:'', cs2_3:''}
-
-          ],}
     ],
     heim_ok:                false,
   };
@@ -1684,8 +1526,8 @@ submitHeimMain(stati){
           				  pathname: '/SpielPopup',
           				  spielinfos: this.state
           			  }}>
-                  {/*<button disabled={!(this.state.info_ok && this.state.gast_ok && this.state.heim_ok) }className="vor_button_weiter">Spiel Starten</button>*/}
-                          <button className="vor_button_weiter">Spiel Starten</button>
+                  <button disabled={!(this.state.info_ok && this.state.gast_ok && this.state.heim_ok) }className="vor_button_weiter">Spiel Starten</button>
+                        {/*  <button className="vor_button_weiter">Spiel Starten</button>*/}
                         </Link>
                       </div>
                   </div>

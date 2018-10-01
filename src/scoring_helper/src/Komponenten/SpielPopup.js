@@ -20,8 +20,8 @@ class SpielPopup extends Component{
   constructor(props){
     super(props);
     this.state = {
-    /*Die fürs Programm wichtige
 
+/*
       gastTeam_name:  this.props.location.spielinfos.gastTeam_name,
       heimTeam_name:  this.props.location.spielinfos.heimTeam_name,
       team_name: this.props.location.spielinfos.gastTeam_name,
@@ -33,10 +33,10 @@ class SpielPopup extends Component{
       spieldatum: this.props.location.spielinfos.spieldatum,
       liga_name: this.props.location.spielinfos.liga_name,
       zuschauer: this.props.location.spielinfos.zuschauer,
-
 */
 
-// Folgenden Block nach der Testphase löschen
+
+
       gastTeam_name:  'Dohren Wild Farmers',
       heimTeam_name:  'Paderborn Untouchables',
       team_name:      'Dohren Wild Farmers',
@@ -46,7 +46,7 @@ class SpielPopup extends Component{
       spieldatum:     '2018-11-01',
       liga_name:      '1. BL',
       zuschauer:      '300',
-// Bis hier
+
 
       inning: 0,
       inninghalf: 'Top',
@@ -76,7 +76,7 @@ class SpielPopup extends Component{
 
       gast_spieler:
       [
-      {spielerRNummer: "11", spielerNName: "11", spielerVName: "11", spielerPosition: "11", spielerPNummer: "11", schlagPosition: 0,
+      {spielerRNummer: "11", spielerNName: "pperredsd", spielerVName: "sdsfffdff", spielerPosition: "11", spielerPNummer: "11", schlagPosition: 0,
         inning: [
           {ifeld:<Canvas/>,atBat: true, onBase: false, active: false, offenseBase: 0, out: false, outString0_1: '', outString1_2: '', outString2_3: '',outString3_4: '',
           strikeout:false, strikeout_looking:false, bb:false,sb1_2:false,sb2_3:false,sb3_4:false, out_by0_1:'',
@@ -1503,8 +1503,8 @@ class SpielPopup extends Component{
           cs1_2:'', cs2_3:''},]
 		  },
       ],
-    };
 
+};
 this.baseOnBalls = this.baseOnBalls.bind(this);
 this.hit = this.hit.bind(this);
 this.twoBases = this.twoBases.bind(this);
@@ -1854,7 +1854,7 @@ if(this.state.gastTurn === true){
             <Button className= "button_pop_" onClick={() => this.triple(spielerI)}>3B</Button>
             <Button className= "button_pop_" onClick={() => this.homerun(spielerI)}>HR</Button>
             <Button className= "button_pop_" onClick={() => this.hitByPitch(spielerI)}>HP</Button>
-            <Button className= "button_pop_" onClick={() => this.fieldersChoice(spielerI)}>FC</Button>
+            {/*<Button className= "button_pop_" onClick={() => this.fieldersChoice(spielerI)}>FC</Button>*/}
             <Button className= "button_pop_" onClick={() => this.strikeout(spielerI)}>K</Button>
             <Button className= "button_pop_" onClick={() => this.strikeoutLooking(spielerI)}>K Looking</Button>
             <Button className= "button_pop_" onClick={() => this.toggleFlyoutPopup(spielerI)}>Flyout</Button>
@@ -1891,12 +1891,21 @@ if(this.state.gastTurn === true){
         {
           spielerHeim.map(spielerI => (
           <Table.Row>
-            <td className="spielerInfos">
+            <td className="nr">
               <label>{spielerI.schlagPosition+1}</label>
-              <label>Nachname: {spielerI.spielerNName}</label>
-              <label>Vorname: {spielerI.spielerVName}</label>
-              <label>Nummer: {spielerI.spielerRNummer}</label>
             </td>
+            <td className="spielerInfos">
+              <label>Nachname: </label>
+              <label>Vorname: </label>
+              <label>Nummer: </label>
+            </td>
+            {spielerI.spielerNName}
+{spielerI.spielerVName}
+{spielerI.spielerRNummer}
+            <td>
+
+            </td>
+
             <td>
             {spielerI.inning[this.state.inning].ifeld}
             </td>
