@@ -98,6 +98,7 @@ height: 75%;
   background-color: #A4A4A4;
   font-weight: bold;
   width: 190px;
+  cursor: pointer;
 }
 
 .button_abbrechen_spielInf{
@@ -106,4 +107,5 @@ height: 75%;
   background-color: #A4A4A4;
   font-weight: bold;
   width: 90px;
+  cursor: pointer;
 }

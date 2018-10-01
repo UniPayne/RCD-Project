@@ -9,6 +9,7 @@
     "react-dom": "^16.4.0",
     "react-konva": "^1.7.15",
     "react-modal": "^3.5.1",
+    "react-promise": "^2.0.3",
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4",
     "react-table": "^6.8.6",

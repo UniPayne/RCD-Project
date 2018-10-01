@@ -20,7 +20,7 @@ class Main extends Component {
     return (
       <HashRouter>
         <div>
-          <h1>Scoring Helper</h1>
+        
             <div className="content">
             <Route exact path="/" component={Home} />
             <Route path="/Uebersicht" component={Uebersicht}/>

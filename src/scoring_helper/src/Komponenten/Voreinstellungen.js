@@ -1620,7 +1620,7 @@ submitHeimMain(stati){
 
     return (
           <div>
-
+<h1>Scoring Helper</h1>
 {/*Start Spielinformationen*/}
             <div className="vor_oben">
               <div>
@@ -1673,8 +1673,21 @@ submitHeimMain(stati){
                             :null
                           }
                         </div>
+
+
                       </div>
                     </div>
+                  </div>
+                  <div className="spielStartenbox">
+                    <div>
+                        <Link to={{
+          				  pathname: '/SpielPopup',
+          				  spielinfos: this.state
+          			  }}>
+                  {/*<button disabled={!(this.state.info_ok && this.state.gast_ok && this.state.heim_ok) }className="vor_button_weiter">Spiel Starten</button>*/}
+                          <button className="vor_button_weiter">Spiel Starten</button>
+                        </Link>
+                      </div>
                   </div>
               <img src={logo} className="logo" alt="logo" />
             </div>
@@ -1754,18 +1767,11 @@ submitHeimMain(stati){
   </div>
 {/*Ende Button zum hinzufügen der Spieler*/}
 
+{/*
+          hier war der Spiel Starteb Button vorher
+*/}
 
-          <div className="navigation_buttons_unten">
-              <Link to={{
-				  pathname: '/SpielPopup',
-				  spielinfos: this.state
-			  }}>
-        {/*<button disabled={!(this.state.info_ok && this.state.gast_ok && this.state.heim_ok) }className="vor_button_weiter">Spiel Starten</button>*/}
-                <button className="vor_button_weiter">Spiel Starten</button>
-              </Link>
-            </div>
           </div>
-
         </div>
     );
   }

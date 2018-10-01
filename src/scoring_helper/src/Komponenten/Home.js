@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import {Route, Link, HashRouter} from "react-router-dom";
-import "../CSS/home.css";
 import Voreinstellungen from "./Voreinstellungen";
 import baseball_feld from '../baseball_feld.png';
+
+
+import "../CSS/home.css";
 
 
 class Home extends Component {
@@ -10,8 +12,8 @@ class Home extends Component {
     return (
           <div>
 
-
-          <div className="button_center">
+          <label className="titel">Scoring Helper</label>
+            <div className="button_center">
             <Link to="/Voreinstellungen">
                 <button className="start">Spiel starten</button>
             </Link>

@@ -38,7 +38,7 @@
   background-color: #A4A4A4;
   font-weight: bold;
   width: 100px;
-
+  cursor: pointer;
 }
 
 .button_schließen{
@@ -46,6 +46,7 @@
   background-color: #A4A4A4;
   font-weight: bold;
   width: 180px;
+  cursor: pointer;
 }
 
 .button_abbrechen{
@@ -53,12 +54,14 @@
   background-color: #A4A4A4;
   font-weight: bold;
   width: 95px;
+  cursor: pointer;
 }
 
 .button_div{
   margin-left:30%;
   margin-bottom: 1%;
   margin-top: 2%;
+  cursor: pointer;
   }
 
 .gast_pop{
