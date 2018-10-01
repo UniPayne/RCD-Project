@@ -5,6 +5,9 @@
   height: 80px;
 }
 
+.buttons{
+  width: 1200px;
+}
 
 .buttons button{
   border: 1px solid #268a16;
@@ -16,7 +19,8 @@
   font-weight: bold;
   background-color: #A4A4A4;
   text-decoration: none;
-  width: 80px;
+  width: 90px;
+  height: 20px;
   cursor: pointer;
   margin-right: 2px;
   margin-bottom: 2px;

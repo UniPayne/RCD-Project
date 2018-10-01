@@ -277,31 +277,37 @@ cs2_3_3(){
 
     render() {
         return (
-          <div className="buttons">
-              <canvas ref="canvas" className="spielfeld" height="80px" width="80px"></canvas>
-              <button onClick={this.bb.bind(this)}>BB</button>
-              <button onClick={this.hit.bind(this)}>1B</button>
-              <button onClick={this.zweiBases.bind(this)}>2B</button>
-              <button onClick={this.triple.bind(this)}>3B</button>
-              <button onClick={this.homerun.bind(this)}>HR</button>
-              <button onClick={this.strikeoutEins.bind(this)}>K1</button>
-              <button onClick={this.strikeoutZwei.bind(this)}>K2</button>
-              <button onClick={this.strikeoutDrei.bind(this)}>K3</button>
-              <button onClick={this.strikeoutEins.bind(this)}>F1</button>
-              <button onClick={this.strikeoutZwei.bind(this)}>F2</button>
-              <button onClick={this.strikeoutDrei.bind(this)}>F3</button>
-              <button onClick={this.runnerMoved1_2.bind(this)}>X1-2</button>
-              <button onClick={this.runnerMoved1_3.bind(this)}>X1-3</button>
-              <button onClick={this.runnerMoved1_4.bind(this)}>X1-4</button>
-              <button onClick={this.runnerMoved2_3.bind(this)}>X2-3</button>
-              <button onClick={this.runnerMoved2_4.bind(this)}>X2-4</button>
-              <button onClick={this.runnerMoved3_4.bind(this)}>X3-4</button>
-              <button onClick={this.cs1_2_1.bind(this)}>CS1-2I</button>
-              <button onClick={this.cs1_2_2.bind(this)}>CS1-2II</button>
-              <button onClick={this.cs1_2_3.bind(this)}>CS1-2III</button>
-              <button onClick={this.cs2_3_1.bind(this)}>CS2-3I</button>
-              <button onClick={this.cs2_3_2.bind(this)}>CS2-3II</button>
-              <button onClick={this.cs2_3_3.bind(this)}>CS2-3III</button>
+          <div >
+            <table>
+              <td>
+                <canvas ref="canvas" className="spielfeld" height="80px" width="80px"></canvas>
+              </td>
+              <td className="buttons">              
+                <button onClick={this.bb.bind(this)}>BB</button>
+                <button onClick={this.hit.bind(this)}>1B</button>
+                <button onClick={this.zweiBases.bind(this)}>2B</button>
+                <button onClick={this.triple.bind(this)}>3B</button>
+                <button onClick={this.homerun.bind(this)}>HR</button>
+                <button onClick={this.strikeoutEins.bind(this)}>K1</button>
+                <button onClick={this.strikeoutZwei.bind(this)}>K2</button>
+                <button onClick={this.strikeoutDrei.bind(this)}>K3</button>
+                <button onClick={this.strikeoutEins.bind(this)}>F1</button>
+                <button onClick={this.strikeoutZwei.bind(this)}>F2</button>
+                <button onClick={this.strikeoutDrei.bind(this)}>F3</button>
+                <button onClick={this.runnerMoved1_2.bind(this)}>X1-2</button>
+                <button onClick={this.runnerMoved1_3.bind(this)}>X1-3</button>
+                <button onClick={this.runnerMoved1_4.bind(this)}>X1-4</button>
+                <button onClick={this.runnerMoved2_3.bind(this)}>X2-3</button>
+                <button onClick={this.runnerMoved2_4.bind(this)}>X2-4</button>
+                <button onClick={this.runnerMoved3_4.bind(this)}>X3-4</button>
+                <button onClick={this.cs1_2_1.bind(this)}>CS1-2I</button>
+                <button onClick={this.cs1_2_2.bind(this)}>CS1-2II</button>
+                <button onClick={this.cs1_2_3.bind(this)}>CS1-2III</button>
+                <button onClick={this.cs2_3_1.bind(this)}>CS2-3I</button>
+                <button onClick={this.cs2_3_2.bind(this)}>CS2-3II</button>
+                <button onClick={this.cs2_3_3.bind(this)}>CS2-3III</button>
+              </td>
+            </table>
 
 
               {/*

@@ -1900,7 +1900,7 @@ if(this.state.gastTurn === true){
             </td>
             {
               spielerI.inning[this.state.inning].atBat ? (
-              <td className="SpielerAktionen">
+              <td>
                 <Button className= "button_pop_" onClick={() => this.baseOnBalls(spielerI)}>BB</Button>
                 <Button className= "button_pop_" onClick={() => this.hit(spielerI)}>1B</Button>
                 <Button className= "button_pop_" onClick={() => this.twoBases(spielerI)}>2B</Button>
@@ -1989,15 +1989,11 @@ if(this.state.gastTurn === true){
               <label className="outs_hits_errors2">{this.state.inning+1}</label>
             </td>
             <td>
-              <button className="inning_Ende_Button" onClick={this.inningreset.bind(this)}>Inning beenden</button>
+              <label className="team1">{this.state.gastTeam_name}: {this.state.punkteGastteam}</label>
+              <label className="team2">{this.state.heimTeam_name}: {this.state.punkteHeimteam}</label>
             </td>
             <td>
-              <label className="inning_info_label_header">{this.state.gastTeam_name}: </label>
-              <label className="inning_info_label_content">{this.state.punkteGastteam}</label>
-            </td>
-          <td>
-              <label className="inning_info_label_header">{this.state.heimTeam_name}: </label>
-              <label className="inning_info_label_content">{this.state.punkteHeimteam}</label>
+              <button className="inning_Ende_Button" onClick={this.inningreset.bind(this)}>Inning beenden</button>
             </td>
           </tr>
           </tbody>

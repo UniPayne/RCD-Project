@@ -39,6 +39,21 @@
   background-color: yellow;
 }
 
+.team1{
+  margin-left: 40px;
+  font-weight: bold;
+  width: 200px;
+}
+
+.team2{
+  font-weight: bold;
+  width: 220px;
+  margin-right: 90px;
+}
+
+
+
+
 .inhalt{
   overflow: auto;
 }
